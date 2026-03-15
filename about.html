@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Havlek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="services.html" class="hover:text-brand transition">Services</a>
+                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="about.html" class="text-brand">About</a>
+                <a href="contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block hover:text-brand">Home</a>
+            <a href="services.html" class="block hover:text-brand">Services</a>
+            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="about.html" class="block text-brand">About</a>
+            <a href="contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight fade-in">About Havlek</h1>
+            <p class="mt-6 text-xl text-gray-500 fade-in">Worldwide online solutions, based in Vancouver, Canada.</p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold">Who We Are</h2>
+                <p class="mt-8 text-lg text-gray-600 leading-relaxed">Hong Marketing Inc. (DBA: Havlek) is a worldwide service provider for businesses looking for comprehensive online solutions. Located in Vancouver, Canada, we have serviced a multitude of clients from industries such as:</p>
+                <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
+                        <span class="text-brand text-xl">&#10003;</span>
+                        <span class="font-medium">Professional Marketing Services</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
+                        <span class="text-brand text-xl">&#10003;</span>
+                        <span class="font-medium">E-commerce</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
+                        <span class="text-brand text-xl">&#10003;</span>
+                        <span class="font-medium">Apple and Android App</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
+                        <span class="text-brand text-xl">&#10003;</span>
+                        <span class="font-medium">Advanced Technology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold">Comprehensive Solutions</h2>
+                <p class="mt-8 text-lg text-gray-600 leading-relaxed">Our clients have the unique experience of a comprehensive online business solution. NOT ONLY do we provide web-design and cloud infrastructure specialists to your business, but our experienced marketing team will help your business thrive in the competitive online market.</p>
+                <div class="mt-10 space-y-4">
+                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
+                        <h4 class="font-semibold">Web Design</h4>
+                        <p class="mt-1 text-gray-500">Adapted to proven search engine-friendly optimizations</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
+                        <h4 class="font-semibold">Consultations & Tips</h4>
+                        <p class="mt-1 text-gray-500">Establish online goals and determine priorities</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
+                        <h4 class="font-semibold">Search Engine Marketing</h4>
+                        <p class="mt-1 text-gray-500">Highest rank in Google, Yahoo, MSN</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
+                        <h4 class="font-semibold">Marketing Consultation</h4>
+                        <p class="mt-1 text-gray-500">Social Media and Search Engine Marketing</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
+                        <h4 class="font-semibold">Customer Service</h4>
+                        <p class="mt-1 text-gray-500">Amazing customer service for optimal management because it's all about you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Expertise -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold">Technical Expertise</h2>
+                <p class="mt-8 text-lg text-gray-600 leading-relaxed">We are also technical experts in the following technologies:</p>
+                <div class="mt-10 grid sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
+                        <div class="text-4xl mb-3">🟢</div>
+                        <h4 class="font-bold text-lg">Node.js</h4>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
+                        <div class="text-4xl mb-3">🐧</div>
+                        <h4 class="font-bold text-lg">LAMP Stack</h4>
+                        <p class="text-sm text-gray-500 mt-1">Linux. Apache. MySQL. PHP</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
+                        <div class="text-4xl mb-3">📱</div>
+                        <h4 class="font-bold text-lg">Mobile Platform Development</h4>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
+                        <div class="text-4xl mb-3">🔍</div>
+                        <h4 class="font-bold text-lg">Search Engine Marketing</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold">Your Strategy Partner</h2>
+                <p class="mt-8 text-lg text-gray-600 leading-relaxed">Havlek supports all kinds of businesses. From family owned businesses looking to expand their reach to large corporations looking for a fresh take on interactive internet marketing, Havlek ensures the utmost success for you.</p>
+                <p class="mt-6 text-lg text-gray-600 leading-relaxed">Havlek Inc. provides you with a Strategy Partner to guide you along the best and latest internet business optimizations. We know how to approach internet sales targets as a whole, rather than as disconnected parts of a puzzle.</p>
+                <p class="mt-6 text-lg text-gray-600 leading-relaxed">With a combined 10 years of technology and online marketing experience, our specialists know that the success of your project is the ONLY viable solution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+            <h2 class="text-3xl md:text-5xl font-bold">Let's work together</h2>
+            <p class="mt-6 text-gray-400 text-lg">Ready to transform your online presence?</p>
+            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="services.html" class="hover:text-white transition">Services</a>
+                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

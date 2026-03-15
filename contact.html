@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Havlek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="services.html" class="hover:text-brand transition">Services</a>
+                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="about.html" class="hover:text-brand transition">About</a>
+                <a href="contact.html" class="text-brand">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block hover:text-brand">Home</a>
+            <a href="services.html" class="block hover:text-brand">Services</a>
+            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="about.html" class="block hover:text-brand">About</a>
+            <a href="contact.html" class="block text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight fade-in">Get in Touch</h1>
+            <p class="mt-6 text-xl text-gray-500 fade-in">We'd love to hear about your project.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+
+            <!-- Contact Info -->
+            <div class="fade-in">
+                <h2 class="text-3xl font-bold">Contact Information</h2>
+                <div class="mt-10 space-y-8">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-brand text-xl shrink-0">&#9993;</div>
+                        <div>
+                            <h4 class="font-semibold">Email</h4>
+                            <a href="mailto:info@havlek.ca" class="text-brand hover:underline">info@havlek.ca</a>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-brand text-xl shrink-0">&#9906;</div>
+                        <div>
+                            <h4 class="font-semibold">Address</h4>
+                            <p class="text-gray-500">#111 16033 108 Ave.<br>PO Box 74057 Fraser Heights PO<br>Surrey, BC, V4N 1P0<br>Canada</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-brand text-xl shrink-0">&#127760;</div>
+                        <div>
+                            <h4 class="font-semibold">Website</h4>
+                            <p class="text-gray-500">havlek.ca</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="fade-in">
+                <h2 class="text-3xl font-bold">Send a Message</h2>
+                <form id="contactForm" class="mt-10 space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" name="from_name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" name="from_email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                        <input type="text" name="subject" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea name="message" rows="5" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition resize-none"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="w-full px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Send Message</button>
+                    <p id="formStatus" class="text-center text-sm hidden"></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="services.html" class="hover:text-white transition">Services</a>
+                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // EmailJS
+        emailjs.init('agctcI-cQSuJCE7ZO');
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const status = document.getElementById('formStatus');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            emailjs.sendForm('service_v3intqz', 'template_uujbypl', this)
+                .then(() => {
+                    status.textContent = 'Message sent successfully!';
+                    status.className = 'text-center text-sm text-green-600';
+                    status.classList.remove('hidden');
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                    this.reset();
+                })
+                .catch(() => {
+                    status.textContent = 'Something went wrong. Please email us directly.';
+                    status.className = 'text-center text-sm text-red-600';
+                    status.classList.remove('hidden');
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>

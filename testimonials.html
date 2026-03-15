@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials — Havlek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="services.html" class="hover:text-brand transition">Services</a>
+                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="testimonials.html" class="text-brand">Testimonials</a>
+                <a href="about.html" class="hover:text-brand transition">About</a>
+                <a href="contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block hover:text-brand">Home</a>
+            <a href="services.html" class="block hover:text-brand">Services</a>
+            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="testimonials.html" class="block text-brand">Testimonials</a>
+            <a href="about.html" class="block hover:text-brand">About</a>
+            <a href="contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight fade-in">Testimonials</h1>
+            <p class="mt-6 text-xl text-gray-500 fade-in">What our clients have to say about working with us.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 space-y-12">
+
+            <!-- Testimonial 1 -->
+            <div class="p-10 rounded-3xl bg-gray-50 fade-in">
+                <div class="text-brand text-6xl leading-none mb-6">"</div>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">Hiring Henry allowed us to maximize results on a number of projects where we were expecting to hire several new staff but had the work done in less time with better results and for lower cost. We will continue to use Henry to help manage our projects going forward wherever possible. Great Results, Expert, High Integrity.</p>
+                <div class="mt-8 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white font-bold text-lg">B</div>
+                    <div>
+                        <p class="font-semibold text-lg">Bruce</p>
+                        <p class="text-gray-500">President of Uniserve, Vancouver, BC</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="p-10 rounded-3xl bg-gray-50 fade-in">
+                <div class="text-brand text-6xl leading-none mb-6">"</div>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">On behalf of my team, I would absolutely recommend Henry's eCommerce and web development services. He is responsive, quick and always goes above and beyond the task at hand. I have never experienced a day where Henry wasn't accessible, he provides a peace of mind and takes care of urgent issues immediately. Henry came to our rescue after the first year of our website launch and assisted us with various back-end upgrades and front-end updates to optimize the speed and sever architecture.</p>
+                <div class="mt-8 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white font-bold text-lg">J</div>
+                    <div>
+                        <p class="font-semibold text-lg">Julia</p>
+                        <p class="text-gray-500">eCommerce Manager of Saje, Vancouver, BC</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="p-10 rounded-3xl bg-gray-50 fade-in">
+                <div class="text-brand text-6xl leading-none mb-6">"</div>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">Henry is doing such a great job for us and we would highly recommend his multi-faceted services to fit any of your specific needs. We rely heavily on his expertise with online marketing and on software development for our business. Henry basically launched our business and kept it a success for us. We will continue to work with Henry for many and more profitable years to come!</p>
+                <div class="mt-8 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white font-bold text-lg">I</div>
+                    <div>
+                        <p class="font-semibold text-lg">Ivy</p>
+                        <p class="text-gray-500">G.M. of Sunny Sports, Los Angeles, CA</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+            <h2 class="text-3xl md:text-5xl font-bold">Ready to become our next success story?</h2>
+            <p class="mt-6 text-gray-400 text-lg">Let's build something great together.</p>
+            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="services.html" class="hover:text-white transition">Services</a>
+                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

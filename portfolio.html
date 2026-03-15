@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Havlek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="services.html" class="hover:text-brand transition">Services</a>
+                <a href="portfolio.html" class="text-brand">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="about.html" class="hover:text-brand transition">About</a>
+                <a href="contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block hover:text-brand">Home</a>
+            <a href="services.html" class="block hover:text-brand">Services</a>
+            <a href="portfolio.html" class="block text-brand">Portfolio</a>
+            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="about.html" class="block hover:text-brand">About</a>
+            <a href="contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight fade-in">Portfolio</h1>
+            <p class="mt-6 text-xl text-gray-500 fade-in">A showcase of our work across platforms and industries.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Categories -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">⚡</div>
+                <h3 class="text-2xl font-bold">PHP & Zend Framework</h3>
+                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">5 projects</p>
+            </div>
+
+            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🛒</div>
+                <h3 class="text-2xl font-bold">Magento, X-Cart, Zen Cart</h3>
+                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">5 projects</p>
+            </div>
+
+            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">💎</div>
+                <h3 class="text-2xl font-bold">Ruby on Rails</h3>
+                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">1 project</p>
+            </div>
+
+            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📝</div>
+                <h3 class="text-2xl font-bold">CMS — Joomla, Drupal, WordPress</h3>
+                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">6 projects</p>
+            </div>
+
+            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📱</div>
+                <h3 class="text-2xl font-bold">Mobile — Apple & Android</h3>
+                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">3 projects</p>
+            </div>
+
+            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">👥</div>
+                <h3 class="text-2xl font-bold">Facebook Application</h3>
+                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">Social media apps</p>
+            </div>
+
+            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in md:col-span-2 lg:col-span-1">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📈</div>
+                <h3 class="text-2xl font-bold">Online Marketing</h3>
+                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">SEO & PPC campaigns</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid grid-cols-3 gap-8 text-center">
+                <div class="fade-in">
+                    <p class="text-4xl md:text-6xl font-bold text-brand">20+</p>
+                    <p class="mt-2 text-gray-500 text-sm">Projects Delivered</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-4xl md:text-6xl font-bold text-brand">7</p>
+                    <p class="mt-2 text-gray-500 text-sm">Specializations</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-4xl md:text-6xl font-bold text-brand">10+</p>
+                    <p class="mt-2 text-gray-500 text-sm">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+            <h2 class="text-3xl md:text-5xl font-bold">Want to see more?</h2>
+            <p class="mt-6 text-gray-400 text-lg">Get in touch to discuss your next project.</p>
+            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="services.html" class="hover:text-white transition">Services</a>
+                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
