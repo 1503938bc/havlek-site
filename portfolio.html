@@ -21,18 +21,30 @@
             grid-template-rows: 1fr;
             opacity: 1;
         }
-        .projects-panel > div {
-            overflow: hidden;
-        }
+        .projects-panel > div { overflow: hidden; }
         .category-card { cursor: pointer; }
-        .category-card.active {
-            background: #1a73e8 !important;
-            color: white;
-        }
+        .category-card.active { background: #1a73e8 !important; color: white; }
         .category-card.active p { color: rgb(191 219 254) !important; }
         .category-card.active .chevron { transform: rotate(180deg); }
         .chevron { transition: transform 0.3s ease; }
         .tag { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; }
+        .project-card { cursor: pointer; }
+        .modal-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            transform: scale(0.95) translateY(10px);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
     </style>
     <script>
         tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
@@ -97,20 +109,19 @@
                 <div class="projects-panel mt-4" id="panel-php">
                     <div>
                         <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="jysk-ecommerce">
                                 <h4 class="font-semibold text-lg">JYSK E-commerce</h4>
+                                <p class="mt-1 text-sm text-gray-500">E-commerce platform on Amazon Cloud</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
                                     <span class="tag bg-blue-100 text-blue-700">MySQL</span>
                                     <span class="tag bg-blue-100 text-blue-700">MS SQL Server</span>
-                                    <span class="tag bg-purple-100 text-purple-700">Amazon Auto Scaling</span>
-                                    <span class="tag bg-purple-100 text-purple-700">CDN</span>
-                                    <span class="tag bg-green-100 text-green-700">Microsoft Dynamics NAV</span>
-                                    <span class="tag bg-green-100 text-green-700">OrderDynamics</span>
-                                    <span class="tag bg-amber-100 text-amber-700">Google Analytics</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Amazon Cloud</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="uniserve-cloud">
                                 <h4 class="font-semibold text-lg">Uniserve Cloud</h4>
+                                <p class="mt-1 text-sm text-gray-500">Cloud provisioning on Joyent SmartMachines</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-blue-100 text-blue-700">PHP</span>
                                     <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
@@ -118,19 +129,24 @@
                                     <span class="tag bg-purple-100 text-purple-700">Joyent API</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="galaxy-telecom">
                                 <h4 class="font-semibold text-lg">Galaxy Telecom</h4>
+                                <p class="mt-1 text-sm text-gray-500">VoIP provisioning & billing systems</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="tag bg-blue-100 text-blue-700">White Label</span>
-                                    <span class="tag bg-green-100 text-green-700">Wholesale VoIP</span>
-                                    <span class="tag bg-amber-100 text-amber-700">Turn-Key</span>
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Python</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Perl</span>
+                                    <span class="tag bg-purple-100 text-purple-700">OPENSIP</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="sunny-sports">
                                 <h4 class="font-semibold text-lg">Sunny Sports</h4>
+                                <p class="mt-1 text-sm text-gray-500">E-commerce with Quickbook & UPS integration</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-blue-100 text-blue-700">PHP</span>
                                     <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Magento</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
                                 </div>
                             </div>
                         </div>
@@ -153,37 +169,34 @@
                 <div class="projects-panel mt-4" id="panel-magento">
                     <div>
                         <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="jysk-magento">
                                 <h4 class="font-semibold text-lg">JYSK</h4>
+                                <p class="mt-1 text-sm text-gray-500">Magento e-commerce with ERP integration</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
-                                    <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
                                     <span class="tag bg-blue-100 text-blue-700">Magento</span>
                                     <span class="tag bg-blue-100 text-blue-700">MySQL</span>
                                     <span class="tag bg-purple-100 text-purple-700">Amazon EC2</span>
-                                    <span class="tag bg-purple-100 text-purple-700">CDN</span>
-                                    <span class="tag bg-purple-100 text-purple-700">Load Balancer</span>
-                                    <span class="tag bg-green-100 text-green-700">Microsoft Dynamics NAV</span>
+                                    <span class="tag bg-green-100 text-green-700">Dynamics NAV</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="saje">
                                 <h4 class="font-semibold text-lg">Saje</h4>
+                                <p class="mt-1 text-sm text-gray-500">Natural wellness e-commerce platform</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
-                                    <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
                                     <span class="tag bg-blue-100 text-blue-700">Magento</span>
                                     <span class="tag bg-blue-100 text-blue-700">MySQL</span>
                                     <span class="tag bg-purple-100 text-purple-700">Amazon EC2</span>
-                                    <span class="tag bg-purple-100 text-purple-700">CDN</span>
-                                    <span class="tag bg-purple-100 text-purple-700">Load Balancer</span>
                                     <span class="tag bg-green-100 text-green-700">Compass ERP</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="scooterdepot">
                                 <h4 class="font-semibold text-lg">Scooterdepot</h4>
+                                <p class="mt-1 text-sm text-gray-500">Motorsports dealer e-commerce</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-blue-100 text-blue-700">Magento</span>
-                                    <span class="tag bg-green-100 text-green-700">eCommerce</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-amber-100 text-amber-700">Quickbook</span>
+                                    <span class="tag bg-amber-100 text-amber-700">UPS</span>
                                 </div>
                             </div>
                         </div>
@@ -206,13 +219,13 @@
                 <div class="projects-panel mt-4" id="panel-rails">
                     <div>
                         <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="rails-project">
                                 <h4 class="font-semibold text-lg">Ruby on Rails Project</h4>
+                                <p class="mt-1 text-sm text-gray-500">Cloud-hosted with load balancer</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-red-100 text-red-700">Ruby on Rails</span>
                                     <span class="tag bg-blue-100 text-blue-700">MySQL</span>
                                     <span class="tag bg-purple-100 text-purple-700">Joyent Cloud</span>
-                                    <span class="tag bg-purple-100 text-purple-700">Load Balancer</span>
                                 </div>
                             </div>
                         </div>
@@ -235,8 +248,9 @@
                 <div class="projects-panel mt-4" id="panel-cms">
                     <div>
                         <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="goodbye-graffiti">
                                 <h4 class="font-semibold text-lg">Goodbye Graffiti</h4>
+                                <p class="mt-1 text-sm text-gray-500">Real-time dispatch & job monitoring</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-blue-100 text-blue-700">PHP</span>
                                     <span class="tag bg-blue-100 text-blue-700">Joomla</span>
@@ -244,16 +258,18 @@
                                     <span class="tag bg-amber-100 text-amber-700">Real Time Dispatch</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="ingram-micro">
                                 <h4 class="font-semibold text-lg">Ingram Micro Commerce & Lifecycle Services</h4>
+                                <p class="mt-1 text-sm text-gray-500">Global logistics & supply chain</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-blue-100 text-blue-700">CMS</span>
                                     <span class="tag bg-purple-100 text-purple-700">AWS</span>
                                     <span class="tag bg-green-100 text-green-700">Global Logistics</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="bcwwa">
                                 <h4 class="font-semibold text-lg">BC Water & Waste Association</h4>
+                                <p class="mt-1 text-sm text-gray-500">Not-for-profit water professionals portal</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-blue-100 text-blue-700">ASP.NET</span>
                                     <span class="tag bg-blue-100 text-blue-700">SQL Server</span>
@@ -279,20 +295,23 @@
                 <div class="projects-panel mt-4" id="panel-mobile">
                     <div>
                         <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="vcrc">
                                 <h4 class="font-semibold text-lg">VCRC</h4>
+                                <p class="mt-1 text-sm text-gray-500">Canadian Citizenship practice test app</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-green-100 text-green-700">PhoneGap</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="accesswire">
                                 <h4 class="font-semibold text-lg">Accesswire</h4>
+                                <p class="mt-1 text-sm text-gray-500">News reader & press release app</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-gray-100 text-gray-700">Objective-C</span>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="elle-china">
                                 <h4 class="font-semibold text-lg">Elle China</h4>
+                                <p class="mt-1 text-sm text-gray-500">Fashion magazine for women</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-gray-100 text-gray-700">Objective-C</span>
                                 </div>
@@ -317,8 +336,9 @@
                 <div class="projects-panel mt-4" id="panel-facebook">
                     <div>
                         <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="facebook-app">
                                 <h4 class="font-semibold text-lg">Facebook App</h4>
+                                <p class="mt-1 text-sm text-gray-500">Social media application development</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
                                     <span class="tag bg-blue-100 text-blue-700">Social Media</span>
                                     <span class="tag bg-blue-100 text-blue-700">App Development</span>
@@ -344,11 +364,14 @@
                 <div class="projects-panel mt-4" id="panel-marketing">
                     <div>
                         <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
-                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-                                <h4 class="font-semibold text-lg">Google Adwords</h4>
+                            <div class="project-card p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-brand/30 transition" data-project="google-adwords">
+                                <h4 class="font-semibold text-lg">Google Adwords / PPC</h4>
+                                <p class="mt-1 text-sm text-gray-500">PPC campaigns with responsive design</p>
                                 <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="tag bg-amber-100 text-amber-700">PPC Campaigns</span>
-                                    <span class="tag bg-amber-100 text-amber-700">Google Ads</span>
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Joomla</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-amber-100 text-amber-700">Responsive Design</span>
                                 </div>
                             </div>
                         </div>
@@ -409,7 +432,342 @@
         </div>
     </footer>
 
+    <!-- Modal -->
+    <div id="projectModal" class="modal-overlay fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60" id="modalBackdrop"></div>
+        <div class="modal-content relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto">
+            <button id="modalClose" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition text-gray-500 hover:text-gray-700 z-10">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="p-8" id="modalBody"></div>
+        </div>
+    </div>
+
     <script>
+        // Project data
+        const projects = {
+            'jysk-ecommerce': {
+                title: 'JYSK E-commerce',
+                tech: [
+                    { label: 'Language', value: 'PHP' },
+                    { label: 'Database', value: 'MySQL, MS SQL Server' },
+                    { label: 'Platform', value: 'Amazon Auto Scaling Cloud, CDN' },
+                    { label: 'ERP', value: 'Microsoft Dynamics NAV, OrderDynamics' },
+                    { label: 'Others', value: 'Google Analytics' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'MS SQL Server', color: 'blue' },
+                    { text: 'Amazon Auto Scaling', color: 'purple' },
+                    { text: 'CDN', color: 'purple' },
+                    { text: 'Microsoft Dynamics NAV', color: 'green' },
+                    { text: 'OrderDynamics', color: 'green' },
+                    { text: 'Google Analytics', color: 'amber' }
+                ],
+                description: 'JYSK is one of the leading and fastest-growing retailers in the world. First-established in 1979 in Denmark, the company is now present in 34 countries with over 2000 stores. JYSK ecommerce platform, www.jysk.ca, is built based on Magento, hosted by Amazon Cloud using ELB, EC2, CDN, SES and etc. The ecommerce platform also connects ERP system, order and shipping processing system.',
+                website: 'https://www.jysk.ca/'
+            },
+            'uniserve-cloud': {
+                title: 'Uniserve Cloud',
+                tech: [
+                    { label: 'Language', value: 'PHP, Zend Framework' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Other', value: 'Joyent API' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Zend Framework', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Joyent API', color: 'purple' }
+                ],
+                description: 'Uniserve is a public company which provides internet service in Canada. Uniserve Cloud proudly operates on Joyent SmartMachines. This site is based on Zend Framework, and calls Joyent cloud API to create user, provision machine and generate bill.'
+            },
+            'galaxy-telecom': {
+                title: 'Galaxy Telecom',
+                tech: [
+                    { label: 'Language', value: 'PHP, Python, Perl' },
+                    { label: 'Database', value: 'MS-SQL, MySQL' },
+                    { label: 'Other', value: 'OPENSIP' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Python', color: 'blue' },
+                    { text: 'Perl', color: 'blue' },
+                    { text: 'MS-SQL', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'OPENSIP', color: 'purple' }
+                ],
+                description: 'Technologies from Galaxy Telecom VoIP core technology includes provision, billing and SIP. Hong Outsourcing provides design and coding for provisioning system covering ATA models and E911 module, plus the billing system supporting wholesalers and retailers. We made the billing system 60 times faster!',
+                about: 'Galaxy Telecom provides wholesale, white-labeled, turn-key telephony services and powers phone service across Canada.',
+                website: 'http://galaxytelecom.net/'
+            },
+            'sunny-sports': {
+                title: 'Sunny Sports',
+                tech: [
+                    { label: 'Language', value: 'PHP & Zend Framework & Magento' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Other', value: 'API with Quickbook, UPS' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Zend Framework', color: 'blue' },
+                    { text: 'Magento', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Quickbook API', color: 'green' },
+                    { text: 'UPS API', color: 'green' }
+                ],
+                description: 'Hong Outsourcing managed and redeveloped technology for complicated order statuses. We tracked and analysed different ad channels, created role-based permission system, and customized checkout procedure.',
+                about: 'Sunny Sports Inc is a licensed and bonded Authorized Motorsports dealer in California with over 90,000 sq ft warehouse and showroom.',
+                website: 'http://www.scooterdepot.us/'
+            },
+            'jysk-magento': {
+                title: 'JYSK (Magento)',
+                tech: [
+                    { label: 'Language', value: 'PHP & Zend Framework & Magento' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Hosting', value: 'Amazon Cloud EC2, CDN, Load Balancer' },
+                    { label: 'ERP', value: 'Microsoft Dynamics NAV' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Zend Framework', color: 'blue' },
+                    { text: 'Magento', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Amazon EC2', color: 'purple' },
+                    { text: 'CDN', color: 'purple' },
+                    { text: 'Load Balancer', color: 'purple' },
+                    { text: 'Microsoft Dynamics NAV', color: 'green' }
+                ],
+                features: ['Support both English and French', 'Dynamically sync inventory with ERP', 'Distribute orders to west/east coast warehouses'],
+                about: 'JYSK is one of the leading and fastest-growing retailers in the world with over 2000 stores in 34 countries.',
+                website: 'http://www.jysk.ca/'
+            },
+            'saje': {
+                title: 'Saje',
+                tech: [
+                    { label: 'Language', value: 'PHP & Zend Framework & Magento' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Hosting', value: 'Amazon Cloud EC2, CDN, Load Balancer' },
+                    { label: 'ERP', value: 'Compass ERP' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Zend Framework', color: 'blue' },
+                    { text: 'Magento', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Amazon EC2', color: 'purple' },
+                    { text: 'CDN', color: 'purple' },
+                    { text: 'Load Balancer', color: 'purple' },
+                    { text: 'Compass ERP', color: 'green' }
+                ],
+                features: ['Dynamically sync inventory/orders with ERP'],
+                about: 'Saje provides 100% natural wellness products. As of 2014, 22 locations across BC, Alberta, Winnipeg and Ontario.',
+                website: 'http://www.saje.ca/'
+            },
+            'scooterdepot': {
+                title: 'Scooterdepot',
+                tech: [
+                    { label: 'Language', value: 'PHP & Zend Framework & Magento' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Other', value: 'API with Quickbook, UPS' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Zend Framework', color: 'blue' },
+                    { text: 'Magento', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Quickbook API', color: 'green' },
+                    { text: 'UPS API', color: 'green' }
+                ],
+                features: ['Manage complicated order statuses', 'Role-based permissions', 'Custom checkout', 'Ad channel tracking'],
+                about: 'Sunny Sports Inc is a licensed motorsports dealer in California.'
+            },
+            'rails-project': {
+                title: 'Ruby on Rails Project',
+                tech: [
+                    { label: 'Language', value: 'Ruby on Rails' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Other', value: 'Hosted on Joyent Cloud with load balancer' }
+                ],
+                tags: [
+                    { text: 'Ruby on Rails', color: 'red' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Joyent Cloud', color: 'purple' },
+                    { text: 'Load Balancer', color: 'purple' }
+                ]
+            },
+            'goodbye-graffiti': {
+                title: 'Goodbye Graffiti',
+                tech: [
+                    { label: 'Language', value: 'PHP & Joomla' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Other', value: 'Real Time Dispatch System' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Joomla', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Real Time Dispatch', color: 'amber' }
+                ],
+                features: ['Assign work orders to technicians', 'Monitor jobs on Google map'],
+                about: 'Goodbye Graffiti Inc. started in Vancouver in 1997. First graffiti removal company in North America, now the largest in the world.',
+                website: 'http://www.goodbyegraffiti.com/'
+            },
+            'ingram-micro': {
+                title: 'Ingram Micro Commerce & Lifecycle Services',
+                tech: [
+                    { label: 'Platform', value: 'CMS, AWS' },
+                    { label: 'Other', value: 'Global Logistics' }
+                ],
+                tags: [
+                    { text: 'CMS', color: 'blue' },
+                    { text: 'AWS', color: 'purple' },
+                    { text: 'Global Logistics', color: 'green' }
+                ],
+                about: 'Ingram Micro provides supply chain and product lifecycle solutions for fast-growing brands to Global 2000 enterprises.',
+                website: 'http://www.ingrammicroservices.com'
+            },
+            'bcwwa': {
+                title: 'BC Water & Waste Association',
+                tech: [
+                    { label: 'Language', value: 'ASP.NET' },
+                    { label: 'Database', value: 'SQL Server' }
+                ],
+                tags: [
+                    { text: 'ASP.NET', color: 'blue' },
+                    { text: 'SQL Server', color: 'blue' }
+                ],
+                about: 'BCWWA is a not-for-profit representing over 4,000 water professionals responsible for water, sewer and stormwater systems in BC and the Yukon.',
+                website: 'http://www.bcwwa.org'
+            },
+            'vcrc': {
+                title: 'VCRC (Virtual Citizenship Resource Centre)',
+                tech: [
+                    { label: 'Language', value: 'PhoneGap' }
+                ],
+                tags: [
+                    { text: 'PhoneGap', color: 'green' }
+                ],
+                about: 'VCRC is a pioneer in online citizenship services, provided by S.U.C.C.E.S.S. and funded by Citizenship and Immigration Canada. Canadian Citizenship Practice test app.'
+            },
+            'accesswire': {
+                title: 'Accesswire',
+                tech: [
+                    { label: 'Language', value: 'Objective-C' }
+                ],
+                tags: [
+                    { text: 'Objective-C', color: 'gray' }
+                ],
+                about: 'Accesswire is a news reader app for creating news streams from favorite sites. Clients can submit and track press releases directly from the app.',
+                website: 'http://goo.gl/3S8NI'
+            },
+            'elle-china': {
+                title: 'Elle China',
+                tech: [
+                    { label: 'Language', value: 'Objective-C' }
+                ],
+                tags: [
+                    { text: 'Objective-C', color: 'gray' }
+                ],
+                about: 'Fashion magazine for women',
+                website: 'http://itunes.apple.com/us/app/elle-ming-xing/id436941307?mt=8'
+            },
+            'facebook-app': {
+                title: 'Facebook App',
+                tags: [
+                    { text: 'Social Media', color: 'blue' },
+                    { text: 'App Development', color: 'blue' }
+                ],
+                description: 'Social media application development'
+            },
+            'google-adwords': {
+                title: 'Google Adwords / PPC',
+                tech: [
+                    { label: 'Language', value: 'PHP & Joomla' },
+                    { label: 'Database', value: 'MySQL' },
+                    { label: 'Other', value: 'Responsive design' }
+                ],
+                tags: [
+                    { text: 'PHP', color: 'blue' },
+                    { text: 'Joomla', color: 'blue' },
+                    { text: 'MySQL', color: 'blue' },
+                    { text: 'Responsive Design', color: 'amber' }
+                ]
+            }
+        };
+
+        const tagColors = {
+            blue:   'bg-blue-100 text-blue-700',
+            purple: 'bg-purple-100 text-purple-700',
+            green:  'bg-green-100 text-green-700',
+            amber:  'bg-amber-100 text-amber-700',
+            red:    'bg-red-100 text-red-700',
+            gray:   'bg-gray-100 text-gray-700'
+        };
+
+        function openModal(projectId) {
+            const p = projects[projectId];
+            if (!p) return;
+
+            let html = '<h2 class="text-2xl font-bold pr-8">' + p.title + '</h2>';
+
+            // Tags
+            html += '<div class="mt-4 flex flex-wrap gap-2">';
+            (p.tags || []).forEach(t => {
+                html += '<span class="tag ' + tagColors[t.color] + '">' + t.text + '</span>';
+            });
+            html += '</div>';
+
+            // Tech stack table
+            if (p.tech && p.tech.length) {
+                html += '<div class="mt-6"><h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Tech Stack</h3>';
+                html += '<div class="space-y-2">';
+                p.tech.forEach(t => {
+                    html += '<div class="flex gap-3"><span class="text-sm font-medium text-gray-500 min-w-[80px]">' + t.label + '</span><span class="text-sm text-gray-900">' + t.value + '</span></div>';
+                });
+                html += '</div></div>';
+            }
+
+            // Features
+            if (p.features && p.features.length) {
+                html += '<div class="mt-6"><h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Key Features</h3>';
+                html += '<ul class="space-y-1">';
+                p.features.forEach(f => {
+                    html += '<li class="text-sm text-gray-700 flex items-start gap-2"><span class="text-brand mt-0.5">&#10003;</span>' + f + '</li>';
+                });
+                html += '</ul></div>';
+            }
+
+            // Description
+            if (p.description) {
+                html += '<div class="mt-6"><h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Description</h3>';
+                html += '<p class="text-sm text-gray-700 leading-relaxed">' + p.description + '</p></div>';
+            }
+
+            // About
+            if (p.about) {
+                html += '<div class="mt-6"><h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">About</h3>';
+                html += '<p class="text-sm text-gray-700 leading-relaxed">' + p.about + '</p></div>';
+            }
+
+            // Website
+            if (p.website) {
+                html += '<div class="mt-6"><a href="' + p.website + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition">';
+                html += 'Visit Website <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+                html += '</a></div>';
+            }
+
+            document.getElementById('modalBody').innerHTML = html;
+            document.getElementById('projectModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
         // Mobile menu toggle
         document.getElementById('menuBtn').addEventListener('click', () => {
             document.getElementById('mobileMenu').classList.toggle('hidden');
@@ -431,16 +789,29 @@
                 const panel = document.getElementById('panel-' + category);
                 const isOpen = panel.classList.contains('open');
 
-                // Close all panels
                 document.querySelectorAll('.projects-panel').forEach(p => p.classList.remove('open'));
                 document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
 
-                // Toggle clicked panel (if it wasn't already open)
                 if (!isOpen) {
                     panel.classList.add('open');
                     card.classList.add('active');
                 }
             });
+        });
+
+        // Project card click -> open modal
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openModal(card.dataset.project);
+            });
+        });
+
+        // Close modal
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+        document.getElementById('modalBackdrop').addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
         });
     </script>
 </body>
