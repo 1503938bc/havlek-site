@@ -16,11 +16,11 @@
         tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
     </script>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
 
     <!-- Nav -->
     <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <a href="index.html">
                 <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-8">
             </a>
@@ -38,7 +38,7 @@
                 </svg>
             </button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
             <a href="index.html" class="block hover:text-brand">Home</a>
             <a href="services.html" class="block text-brand">Services</a>
             <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
@@ -49,60 +49,60 @@
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight fade-in">Our Services</h1>
+    <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Our Services</h1>
             <p class="mt-6 text-xl text-gray-500 fade-in">Full-stack development and digital marketing expertise.</p>
         </div>
     </section>
 
     <!-- Services Grid -->
-    <section class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8">
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">⚡</div>
                 <h3 class="text-2xl font-bold">PHP & Zend Framework</h3>
                 <p class="mt-4 text-gray-500">Enterprise-grade PHP applications built on the Zend Framework for robust, scalable backend solutions.</p>
             </div>
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">🛒</div>
                 <h3 class="text-2xl font-bold">Adobe Commerce (Magento), X-Cart, Zen Cart</h3>
                 <p class="mt-4 text-gray-500">Complete e-commerce solutions from setup to optimization, using industry-leading platforms.</p>
             </div>
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">💎</div>
                 <h3 class="text-2xl font-bold">Ruby on Rails</h3>
                 <p class="mt-4 text-gray-500">Rapid application development with Ruby on Rails for fast, elegant web applications.</p>
             </div>
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">📝</div>
                 <h3 class="text-2xl font-bold">Content Management System (CMS)</h3>
                 <p class="mt-4 text-gray-500">Joomla, Drupal, WordPress — custom themes, plugins, and full CMS implementations.</p>
             </div>
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">📱</div>
                 <h3 class="text-2xl font-bold">Mobile (Apple & Android)</h3>
                 <p class="mt-4 text-gray-500">Native mobile application development for both iOS and Android platforms.</p>
             </div>
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">👥</div>
                 <h3 class="text-2xl font-bold">Facebook Application</h3>
                 <p class="mt-4 text-gray-500">Custom Facebook applications to engage your audience and extend your social media reach.</p>
             </div>
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">📈</div>
                 <h3 class="text-2xl font-bold">Online Marketing</h3>
                 <p class="mt-4 text-gray-500">Pay Per Click (PPC) campaigns, SEO, and comprehensive search engine marketing strategies.</p>
             </div>
 
-            <div class="group p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="group p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="text-5xl mb-6">☁️</div>
                 <h3 class="text-2xl font-bold">Amazon Cloud Computing</h3>
                 <p class="mt-4 text-gray-500">Amazon EC2 enables you to increase or decrease capacity within minutes. Commission one, hundreds, or thousands of server instances with auto-scaling to maximize performance and minimize cost.</p>
@@ -112,9 +112,9 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center fade-in">
-            <h2 class="text-3xl md:text-5xl font-bold">Need a custom solution?</h2>
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Need a custom solution?</h2>
             <p class="mt-6 text-gray-400 text-lg">Let's discuss your project requirements.</p>
             <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Get in Touch</a>
         </div>
@@ -122,7 +122,7 @@
 
     <!-- Footer -->
     <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
                     <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">

@@ -85,11 +85,11 @@
         tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
     </script>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
 
     <!-- Nav -->
     <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <a href="index.html">
                 <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-8">
             </a>
@@ -107,7 +107,7 @@
                 </svg>
             </button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
             <a href="index.html" class="block hover:text-brand">Home</a>
             <a href="services.html" class="block hover:text-brand">Services</a>
             <a href="portfolio.html" class="block text-brand">Portfolio</a>
@@ -118,20 +118,20 @@
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight fade-in">Portfolio</h1>
+    <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Portfolio</h1>
             <p class="mt-6 text-xl text-gray-500 fade-in">A showcase of our work across platforms and industries.</p>
         </div>
     </section>
 
     <!-- Portfolio Categories -->
-    <section class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6 space-y-6">
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
 
             <!-- PHP & Zend Framework -->
             <div>
-                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="php">
+                <div class="category-card flex items-center justify-between p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="php">
                     <div class="flex items-center gap-6">
                         <div class="text-5xl">⚡</div>
                         <div>
@@ -191,7 +191,7 @@
 
             <!-- Magento, X-Cart, Zen Cart -->
             <div>
-                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="magento">
+                <div class="category-card flex items-center justify-between p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="magento">
                     <div class="flex items-center gap-6">
                         <div class="text-5xl">🛒</div>
                         <div>
@@ -241,7 +241,7 @@
 
             <!-- Ruby on Rails -->
             <div>
-                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="rails">
+                <div class="category-card flex items-center justify-between p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="rails">
                     <div class="flex items-center gap-6">
                         <div class="text-5xl">💎</div>
                         <div>
@@ -270,7 +270,7 @@
 
             <!-- CMS -->
             <div>
-                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="cms">
+                <div class="category-card flex items-center justify-between p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="cms">
                     <div class="flex items-center gap-6">
                         <div class="text-5xl">📝</div>
                         <div>
@@ -317,7 +317,7 @@
 
             <!-- Mobile -->
             <div>
-                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="mobile">
+                <div class="category-card flex items-center justify-between p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="mobile">
                     <div class="flex items-center gap-6">
                         <div class="text-5xl">📱</div>
                         <div>
@@ -358,7 +358,7 @@
 
             <!-- Facebook Application -->
             <div>
-                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="facebook">
+                <div class="category-card flex items-center justify-between p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="facebook">
                     <div class="flex items-center gap-6">
                         <div class="text-5xl">👥</div>
                         <div>
@@ -386,7 +386,7 @@
 
             <!-- Online Marketing -->
             <div>
-                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="marketing">
+                <div class="category-card flex items-center justify-between p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="marketing">
                     <div class="flex items-center gap-6">
                         <div class="text-5xl">📈</div>
                         <div>
@@ -418,8 +418,8 @@
     </section>
 
     <!-- Stats -->
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-6">
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-3 gap-8 text-center">
                 <div class="fade-in">
                     <p class="text-4xl md:text-6xl font-bold text-brand">16</p>
@@ -438,8 +438,8 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
             <h2 class="text-3xl md:text-5xl font-bold">Want to see more?</h2>
             <p class="mt-6 text-gray-400 text-lg">Get in touch to discuss your next project.</p>
             <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
@@ -448,7 +448,7 @@
 
     <!-- Footer -->
     <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
                     <img src="https://www.havlek.ca/templates/ja_puresite/images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
