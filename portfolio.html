@@ -45,6 +45,41 @@
         .modal-overlay.active .modal-content {
             transform: scale(1) translateY(0);
         }
+        .screenshot-gallery {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 8px;
+        }
+        .screenshot-gallery::-webkit-scrollbar { height: 6px; }
+        .screenshot-gallery::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+        .screenshot-gallery::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+        .screenshot-gallery img {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            max-height: 260px;
+            width: auto;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        .screenshot-gallery.single img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+        }
+        .screenshot-placeholder {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+        }
     </style>
     <script>
         tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
@@ -439,7 +474,7 @@
             <button id="modalClose" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition text-gray-500 hover:text-gray-700 z-10">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
-            <div class="p-8" id="modalBody"></div>
+            <div class="p-8 pt-8" id="modalBody"></div>
         </div>
     </div>
 
@@ -448,6 +483,7 @@
         const projects = {
             'jysk-ecommerce': {
                 title: 'JYSK E-commerce',
+                screenshots: ['https://www.havlek.ca/images/jysk637.png'],
                 tech: [
                     { label: 'Language', value: 'PHP' },
                     { label: 'Database', value: 'MySQL, MS SQL Server' },
@@ -470,6 +506,7 @@
             },
             'uniserve-cloud': {
                 title: 'Uniserve Cloud',
+                screenshots: ['https://lh5.googleusercontent.com/oNgi-wPqQFRFRUAf03L1RkAzcx5RCk-0yP8ORsdLTUgCHr_dPu9tEXgP12gnTU1E_zAaVb8_mpd0ZWHWb1tAgQyLBvGoX9AgI-GF0j-00cKroI0zcIiBvWK6'],
                 tech: [
                     { label: 'Language', value: 'PHP, Zend Framework' },
                     { label: 'Database', value: 'MySQL' },
@@ -504,6 +541,7 @@
             },
             'sunny-sports': {
                 title: 'Sunny Sports',
+                screenshots: ['https://lh6.googleusercontent.com/Kf2n4ALfVoHCmYj1C3gvw7gsOnFQcikeYAANisCRfGqubFcEr_ZikXwJDTzYGeVb5uJlv0xOY5UpvlSGXv6SLkHPeCruB8Iiu7ey9p_tmvuxZlY4PznEY0RC', 'https://lh5.googleusercontent.com/tzPL9DLJiQbV8iU1JhHxa7pOdQKU296-15PULJT7geWwG7JzusJywyJm9QNdYT83juLKam8MHKykGupKXdATEUdzOJ_l9SnKBfBb5HKqtH8N2kbSuyL8WXnz'],
                 tech: [
                     { label: 'Language', value: 'PHP & Zend Framework & Magento' },
                     { label: 'Database', value: 'MySQL' },
@@ -599,6 +637,7 @@
             },
             'goodbye-graffiti': {
                 title: 'Goodbye Graffiti',
+                screenshots: ['https://www.havlek.ca/images/goodbyegraffiti420.png'],
                 tech: [
                     { label: 'Language', value: 'PHP & Joomla' },
                     { label: 'Database', value: 'MySQL' },
@@ -630,6 +669,7 @@
             },
             'bcwwa': {
                 title: 'BC Water & Waste Association',
+                screenshots: ['https://www.havlek.ca/images/aspnet.jpg'],
                 tech: [
                     { label: 'Language', value: 'ASP.NET' },
                     { label: 'Database', value: 'SQL Server' }
@@ -643,6 +683,7 @@
             },
             'vcrc': {
                 title: 'VCRC (Virtual Citizenship Resource Centre)',
+                screenshots: ['https://lh3.googleusercontent.com/9ubVot8J3XysjW-DYawNmdktj7JHr6pTWPUSO-70cDtfwz0RhGuLFrCfVgkNw4LawgX5HMFmF4BMj8vW7IsvAzoYDCeaovIYw_rKjxoj1sK4N1pwrjjk0Tt1', 'https://lh5.googleusercontent.com/znrMY3_IKfw8iR6kdl1kP0d-L4O8zbMhCnhjPwflv8B35r1ayxlNuCuZ8W-k6SEyygGSi1r3HpjoX2Xd-874EB64UpM-fHdIu6F6hd8NcNvoALwPFefAyYPJ', 'https://lh6.googleusercontent.com/XWLkIg6YGQ-_nCyJSleBgzknE_KZUEZMHXFFK3UcOSUwU5VzwoU4Vwg4u7yAOycp4AEad4E3MBbwc7Op1n_JJeZ2k7i8DoMkMZ1DAMYAgzeJXcUmaTlg4qmK'],
                 tech: [
                     { label: 'Language', value: 'PhoneGap' }
                 ],
@@ -653,6 +694,7 @@
             },
             'accesswire': {
                 title: 'Accesswire',
+                screenshots: ['https://lh3.googleusercontent.com/TLSHMlCBmplRBrUq9FsfPVsK8cnUs92J_NeQmyUcO4g-3jjy9zcvz8YMmyGNUGLZcIC_zNIhcu0oV_9BRygJMM19YO6arZUnfAq6jD5xszQPn4oxQ9bTk0Bi', 'https://lh4.googleusercontent.com/V_JRndARPClAJXyGi-nfrBb01GXc1kOp1grHSz8_2Z547Pa4Cw3Y5JLsnHCBB1j_pNzfven1VG0pVvvUT4Lyb5hwFCreorOMr7DZn1NCj79w1WLmmmoSvW5q'],
                 tech: [
                     { label: 'Language', value: 'Objective-C' }
                 ],
@@ -664,6 +706,7 @@
             },
             'elle-china': {
                 title: 'Elle China',
+                screenshots: ['https://lh5.googleusercontent.com/lsCjD0NGE5ZfTGCK9LgDYXTHw-HXjagYJon1AbMgd5PCd9tly2vd-wlsYiaI0Z7K7fgY8Xd5g3Ijl16Xhx3Pu3ItRQDWCzf3yEy2gIYIaH3Il3_NS8siQAr_', 'https://lh4.googleusercontent.com/KnwhmJgdVofwcQTMISsxq3xOK09ARFm6ONfq3tZypdeK4BgFMtKubA6Ij_LFnR4G7I19UyHpjlBa3R7V2X5uzMHYNVJQ4uuhOxokM0BCxkLj4XNmV1XELHTu', 'https://lh6.googleusercontent.com/nJgQ3fsNOpQS48IG5UeOeaQnuTEWtuuY2chgsW2UZWcF1VHa0Vh3L_FQin7B0RIhXIwTsr6yhZMSFhzOxHcfd6kxtMK-OmIU0mCPSIGC0-QW6Q9pYyF6Z0nE'],
                 tech: [
                     { label: 'Language', value: 'Objective-C' }
                 ],
@@ -706,11 +749,39 @@
             gray:   'bg-gray-100 text-gray-700'
         };
 
+        const placeholderGradients = [
+            'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+            'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+            'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+            'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
+            'linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)',
+            'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)'
+        ];
+
         function openModal(projectId) {
             const p = projects[projectId];
             if (!p) return;
 
-            let html = '<h2 class="text-2xl font-bold pr-8">' + p.title + '</h2>';
+            let html = '';
+
+            // Screenshots or placeholder
+            if (p.screenshots && p.screenshots.length) {
+                const singleClass = p.screenshots.length === 1 ? ' single' : '';
+                html += '<div class="screenshot-gallery' + singleClass + '" style="margin:-2rem -2rem 1.5rem -2rem; padding:2rem 2rem 0.5rem 2rem; background:#f9fafb; border-radius:1rem 1rem 0 0;">';
+                p.screenshots.forEach(url => {
+                    html += '<img src="' + url + '" alt="' + p.title + ' screenshot" loading="lazy">';
+                });
+                html += '</div>';
+            } else {
+                const gradientIndex = Math.abs(projectId.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % placeholderGradients.length;
+                html += '<div class="screenshot-placeholder" style="margin:-2rem -2rem 1.5rem -2rem; padding:2rem; border-radius:1rem 1rem 0 0; background:' + placeholderGradients[gradientIndex] + ';">';
+                html += '<span style="font-size:1.5rem; opacity:0.9;">' + p.title + '</span>';
+                html += '</div>';
+            }
+
+            html += '<h2 class="text-2xl font-bold pr-8">' + p.title + '</h2>';
 
             // Tags
             html += '<div class="mt-4 flex flex-wrap gap-2">';
