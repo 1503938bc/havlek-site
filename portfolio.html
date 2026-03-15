@@ -11,6 +11,28 @@
         .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .projects-panel {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+        }
+        .projects-panel.open {
+            grid-template-rows: 1fr;
+            opacity: 1;
+        }
+        .projects-panel > div {
+            overflow: hidden;
+        }
+        .category-card { cursor: pointer; }
+        .category-card.active {
+            background: #1a73e8 !important;
+            color: white;
+        }
+        .category-card.active p { color: rgb(191 219 254) !important; }
+        .category-card.active .chevron { transform: rotate(180deg); }
+        .chevron { transition: transform 0.3s ease; }
+        .tag { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; }
     </style>
     <script>
         tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
@@ -58,48 +80,280 @@
 
     <!-- Portfolio Categories -->
     <section class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="max-w-6xl mx-auto px-6 space-y-6">
 
-            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
-                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">⚡</div>
-                <h3 class="text-2xl font-bold">PHP & Zend Framework</h3>
-                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">5 projects</p>
+            <!-- PHP & Zend Framework -->
+            <div>
+                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="php">
+                    <div class="flex items-center gap-6">
+                        <div class="text-5xl">⚡</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">PHP & Zend Framework</h3>
+                            <p class="mt-1 text-gray-500 transition">4 projects</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+                <div class="projects-panel mt-4" id="panel-php">
+                    <div>
+                        <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">JYSK E-commerce</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MS SQL Server</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Amazon Auto Scaling</span>
+                                    <span class="tag bg-purple-100 text-purple-700">CDN</span>
+                                    <span class="tag bg-green-100 text-green-700">Microsoft Dynamics NAV</span>
+                                    <span class="tag bg-green-100 text-green-700">OrderDynamics</span>
+                                    <span class="tag bg-amber-100 text-amber-700">Google Analytics</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Uniserve Cloud</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Joyent API</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Galaxy Telecom</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">White Label</span>
+                                    <span class="tag bg-green-100 text-green-700">Wholesale VoIP</span>
+                                    <span class="tag bg-amber-100 text-amber-700">Turn-Key</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Sunny Sports</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
-                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🛒</div>
-                <h3 class="text-2xl font-bold">Magento, X-Cart, Zen Cart</h3>
-                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">5 projects</p>
+            <!-- Magento, X-Cart, Zen Cart -->
+            <div>
+                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="magento">
+                    <div class="flex items-center gap-6">
+                        <div class="text-5xl">🛒</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Magento, X-Cart, Zen Cart</h3>
+                            <p class="mt-1 text-gray-500 transition">3 projects</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+                <div class="projects-panel mt-4" id="panel-magento">
+                    <div>
+                        <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">JYSK</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Magento</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Amazon EC2</span>
+                                    <span class="tag bg-purple-100 text-purple-700">CDN</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Load Balancer</span>
+                                    <span class="tag bg-green-100 text-green-700">Microsoft Dynamics NAV</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Saje</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Zend Framework</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Magento</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Amazon EC2</span>
+                                    <span class="tag bg-purple-100 text-purple-700">CDN</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Load Balancer</span>
+                                    <span class="tag bg-green-100 text-green-700">Compass ERP</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Scooterdepot</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">Magento</span>
+                                    <span class="tag bg-green-100 text-green-700">eCommerce</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
-                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">💎</div>
-                <h3 class="text-2xl font-bold">Ruby on Rails</h3>
-                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">1 project</p>
+            <!-- Ruby on Rails -->
+            <div>
+                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="rails">
+                    <div class="flex items-center gap-6">
+                        <div class="text-5xl">💎</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Ruby on Rails</h3>
+                            <p class="mt-1 text-gray-500 transition">1 project</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+                <div class="projects-panel mt-4" id="panel-rails">
+                    <div>
+                        <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Ruby on Rails Project</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-red-100 text-red-700">Ruby on Rails</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Joyent Cloud</span>
+                                    <span class="tag bg-purple-100 text-purple-700">Load Balancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
-                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📝</div>
-                <h3 class="text-2xl font-bold">CMS — Joomla, Drupal, WordPress</h3>
-                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">6 projects</p>
+            <!-- CMS -->
+            <div>
+                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="cms">
+                    <div class="flex items-center gap-6">
+                        <div class="text-5xl">📝</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">CMS — Joomla, Drupal, WordPress</h3>
+                            <p class="mt-1 text-gray-500 transition">3 projects</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+                <div class="projects-panel mt-4" id="panel-cms">
+                    <div>
+                        <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Goodbye Graffiti</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">PHP</span>
+                                    <span class="tag bg-blue-100 text-blue-700">Joomla</span>
+                                    <span class="tag bg-blue-100 text-blue-700">MySQL</span>
+                                    <span class="tag bg-amber-100 text-amber-700">Real Time Dispatch</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Ingram Micro Commerce & Lifecycle Services</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">CMS</span>
+                                    <span class="tag bg-purple-100 text-purple-700">AWS</span>
+                                    <span class="tag bg-green-100 text-green-700">Global Logistics</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">BC Water & Waste Association</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">ASP.NET</span>
+                                    <span class="tag bg-blue-100 text-blue-700">SQL Server</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
-                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📱</div>
-                <h3 class="text-2xl font-bold">Mobile — Apple & Android</h3>
-                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">3 projects</p>
+            <!-- Mobile -->
+            <div>
+                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="mobile">
+                    <div class="flex items-center gap-6">
+                        <div class="text-5xl">📱</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Mobile — Apple & Android</h3>
+                            <p class="mt-1 text-gray-500 transition">3 projects</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+                <div class="projects-panel mt-4" id="panel-mobile">
+                    <div>
+                        <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">VCRC</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-green-100 text-green-700">PhoneGap</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Accesswire</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-gray-100 text-gray-700">Objective-C</span>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Elle China</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-gray-100 text-gray-700">Objective-C</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in">
-                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">👥</div>
-                <h3 class="text-2xl font-bold">Facebook Application</h3>
-                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">Social media apps</p>
+            <!-- Facebook Application -->
+            <div>
+                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="facebook">
+                    <div class="flex items-center gap-6">
+                        <div class="text-5xl">👥</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Facebook Application</h3>
+                            <p class="mt-1 text-gray-500 transition">1 project</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+                <div class="projects-panel mt-4" id="panel-facebook">
+                    <div>
+                        <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Facebook App</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-blue-100 text-blue-700">Social Media</span>
+                                    <span class="tag bg-blue-100 text-blue-700">App Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="group relative p-8 rounded-2xl bg-gray-50 hover:bg-brand hover:text-white transition-all duration-300 fade-in md:col-span-2 lg:col-span-1">
-                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📈</div>
-                <h3 class="text-2xl font-bold">Online Marketing</h3>
-                <p class="mt-3 text-gray-500 group-hover:text-blue-100 transition">SEO & PPC campaigns</p>
+            <!-- Online Marketing -->
+            <div>
+                <div class="category-card flex items-center justify-between p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition-all duration-300 fade-in" data-category="marketing">
+                    <div class="flex items-center gap-6">
+                        <div class="text-5xl">📈</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Online Marketing</h3>
+                            <p class="mt-1 text-gray-500 transition">1 project</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+                <div class="projects-panel mt-4" id="panel-marketing">
+                    <div>
+                        <div class="grid sm:grid-cols-2 gap-4 px-4 pb-2">
+                            <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <h4 class="font-semibold text-lg">Google Adwords</h4>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="tag bg-amber-100 text-amber-700">PPC Campaigns</span>
+                                    <span class="tag bg-amber-100 text-amber-700">Google Ads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -110,7 +364,7 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="grid grid-cols-3 gap-8 text-center">
                 <div class="fade-in">
-                    <p class="text-4xl md:text-6xl font-bold text-brand">20+</p>
+                    <p class="text-4xl md:text-6xl font-bold text-brand">16</p>
                     <p class="mt-2 text-gray-500 text-sm">Projects Delivered</p>
                 </div>
                 <div class="fade-in">
@@ -150,20 +404,44 @@
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
         document.getElementById('menuBtn').addEventListener('click', () => {
             document.getElementById('mobileMenu').classList.toggle('hidden');
         });
+
+        // Year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Fade-in observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Category expand/collapse
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const category = card.dataset.category;
+                const panel = document.getElementById('panel-' + category);
+                const isOpen = panel.classList.contains('open');
+
+                // Close all panels
+                document.querySelectorAll('.projects-panel').forEach(p => p.classList.remove('open'));
+                document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+
+                // Toggle clicked panel (if it wasn't already open)
+                if (!isOpen) {
+                    panel.classList.add('open');
+                    card.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
