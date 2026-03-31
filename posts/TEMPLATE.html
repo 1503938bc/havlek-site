@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} — Havlek Blog</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="author" content="Havlek Team">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <link rel="canonical" href="https://havlek.ca/posts/{{SLUG}}.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:url" content="https://havlek.ca/posts/{{SLUG}}.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/{{SLUG}}.png">
+    <meta property="article:published_time" content="{{DATE_ISO}}">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="{{CATEGORY}}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/{{SLUG}}.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{TITLE}}",
+        "description": "{{META_DESCRIPTION}}",
+        "datePublished": "{{DATE_ISO}}",
+        "dateModified": "{{DATE_ISO}}",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/{{SLUG}}.html"
+        },
+        "image": "https://havlek.ca/posts/images/{{SLUG}}.png",
+        "keywords": "{{KEYWORDS}}"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1rem 1.5rem; margin: 2rem 0; background: #f8fafc; font-style: italic; font-size: 1.1rem; }
+        .prose pre { background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 0.75rem; overflow-x: auto; margin: 1.5rem 0; font-size: 0.9rem; }
+        .prose code { font-family: 'Fira Code', monospace; }
+        .prose a { color: #1a73e8; text-decoration: underline; }
+        .prose figure { margin: 2rem 0; }
+        .prose figcaption { text-align: center; color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+    <!-- NAVIGATION (same as other pages) -->
+
+    <!-- ARTICLE HERO -->
+
+    <!-- ARTICLE BODY with .prose class -->
+
+    <!-- KEY TAKEAWAYS -->
+
+    <!-- SOURCES section with links to original articles -->
+
+    <!-- RELATED ARTICLES -->
+
+    <!-- FOOTER (same as other pages) -->
+</body>
+</html>
