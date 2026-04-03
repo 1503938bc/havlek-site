@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Google warns quantum computers could crack encryption 20x sooner than expected. Here's what businesses need to know about post-quantum cryptography migration.">
+    <meta name="keywords" content="quantum computing, post-quantum cryptography, Google quantum warning, encryption security, PQC migration, NIST standards, cybersecurity 2026, business encryption">
+    <link rel="canonical" href="https://havlek.ca/posts/2026-04-02-google-quantum-encryption-warning-business-guide.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Google's Quantum Encryption Warning: What Every Business Needs to Do Now">
+    <meta property="og:description" content="Google warns quantum computers could crack encryption 20x sooner than expected. Here's what businesses need to know about post-quantum cryptography migration.">
+    <meta property="og:url" content="https://havlek.ca/posts/2026-04-02-google-quantum-encryption-warning-business-guide.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/2026-04-02-google-quantum-encryption-warning-business-guide.png">
+    <meta property="article:published_time" content="2026-04-02">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="Cybersecurity">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Google's Quantum Encryption Warning: What Every Business Needs to Do Now">
+    <meta name="twitter:description" content="Google warns quantum computers could crack encryption 20x sooner than expected. Here's what businesses need to know about post-quantum cryptography migration.">
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-04-02-google-quantum-encryption-warning-business-guide.png">
+
+    <title>Google's Quantum Encryption Warning: What Every Business Needs to Do Now — Havlek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
+        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
+        .prose pre { background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 0.75rem; overflow-x: auto; margin: 1.5rem 0; font-size: 0.9rem; }
+        .prose code { font-family: 'Fira Code', monospace; }
+        .prose a { color: #1a73e8; text-decoration: underline; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Google's Quantum Encryption Warning: What Every Business Needs to Do Now",
+        "description": "Google warns quantum computers could crack encryption 20x sooner than expected. Here's what businesses need to know about post-quantum cryptography migration.",
+        "datePublished": "2026-04-02",
+        "dateModified": "2026-04-02",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/2026-04-02-google-quantum-encryption-warning-business-guide.html"
+        },
+        "image": "https://havlek.ca/posts/images/2026-04-02-google-quantum-encryption-warning-business-guide.png",
+        "articleSection": "Cybersecurity",
+        "wordCount": 1150,
+        "keywords": ["quantum computing", "post-quantum cryptography", "encryption", "cybersecurity", "NIST PQC", "business security"]
+    }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="../index.html" class="hover:text-brand transition">Home</a>
+                <a href="../services.html" class="hover:text-brand transition">Services</a>
+                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="../about.html" class="hover:text-brand transition">About</a>
+                <a href="../blog.html" class="text-brand">Blog</a>
+                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="../index.html" class="block hover:text-brand">Home</a>
+            <a href="../services.html" class="block hover:text-brand">Services</a>
+            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="../about.html" class="block hover:text-brand">About</a>
+            <a href="../blog.html" class="block text-brand">Blog</a>
+            <a href="../contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="pt-20 sm:pt-24">
+        <div class="h-72 sm:h-96 bg-gradient-to-br from-red-900 via-rose-800 to-orange-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full mb-6 fade-in">Cybersecurity</span>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight fade-in">Google's Quantum Encryption Warning: What Every Business Needs to Do Now</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Meta -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-100 fade-in">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold">H</div>
+            <span class="font-medium text-gray-700">Havlek Team</span>
+        </div>
+        <span>&middot;</span>
+        <span>April 2, 2026</span>
+        <span>&middot;</span>
+        <span>7 min read</span>
+
+        <!-- Share -->
+        <div class="ml-auto flex items-center gap-3">
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhavlek.ca%2Fposts%2F2026-04-02-google-quantum-encryption-warning-business-guide.html&text=Google%27s%20Quantum%20Encryption%20Warning%3A%20What%20Every%20Business%20Needs%20to%20Do%20Now" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhavlek.ca%2Fposts%2F2026-04-02-google-quantum-encryption-warning-business-guide.html" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <button onclick="navigator.clipboard.writeText(window.location.href)" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Copy link">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-lg leading-relaxed text-gray-700 prose fade-in">
+
+        <p>On March 31, Google dropped a whitepaper that should have every CTO, CISO, and business leader paying attention: quantum computers may be able to crack the encryption that protects most of the internet — including your company's data — with <strong>20 times fewer resources</strong> than anyone previously thought possible. The timeline for a quantum-capable attack just shortened dramatically, and the window for businesses to prepare is closing faster than most realize.</p>
+
+        <p>This isn't a theoretical concern for the distant future. Google's own researchers are recommending organizations begin migrating to post-quantum cryptography <em>now</em>, and NIST compliance deadlines for federal systems start in January 2027. If your business handles sensitive data, processes online payments, or stores customer information — and in 2026, that means virtually everyone — this directly affects you.</p>
+
+        <h2>What Google Actually Found</h2>
+
+        <p>Google's Quantum AI team, led by Ryan Babbush and Hartmut Neven, published research demonstrating that a quantum computer with fewer than 500,000 physical qubits could break 256-bit elliptic curve cryptography (ECC) in a matter of minutes. ECC is the backbone of encryption across the modern internet — it secures everything from HTTPS connections and email to cryptocurrency wallets and enterprise VPNs.</p>
+
+        <blockquote>
+            <p>Previous estimates suggested breaking ECC would require a quantum machine with approximately 10 million qubits — a machine that seemed decades away. Google's optimized approach reduces that requirement by a factor of 20, compressing what felt like a distant threat into a much nearer horizon.</p>
+        </blockquote>
+
+        <p>To put it plainly: Google's most powerful quantum processor today, Willow, has 105 qubits. A 500,000-qubit machine doesn't exist yet. But the pace of quantum hardware development is accelerating, and Google itself has announced a 2029 target for migrating its own internal systems to quantum-resistant encryption. When the company building these machines says the timeline is urgent, it's worth listening.</p>
+
+        <p>Notably, Google took the unusual step of using zero-knowledge proofs to verify their findings without revealing the specific algorithm that enables the attack. They engaged with the U.S. government, Coinbase, the Ethereum Foundation, and Stanford's Institute for Blockchain Research before publication — a responsible disclosure approach that signals how seriously they view the implications.</p>
+
+        <h2>Why This Matters Beyond Cryptocurrency</h2>
+
+        <p>Most of the early coverage has focused on the cryptocurrency angle — and with good reason. Bitcoin and other blockchain networks rely heavily on ECC for transaction signing and wallet security. But the business implications extend far beyond digital currencies.</p>
+
+        <p>The same elliptic curve cryptography that protects Bitcoin also secures:</p>
+
+        <ul>
+            <li><strong>TLS/SSL connections</strong> — the HTTPS that protects every web transaction your business processes</li>
+            <li><strong>Email encryption</strong> — S/MIME and PGP implementations used for sensitive business communications</li>
+            <li><strong>VPN tunnels</strong> — the encrypted connections your remote workforce depends on daily</li>
+            <li><strong>Code signing</strong> — the certificates that verify software updates haven't been tampered with</li>
+            <li><strong>API authentication</strong> — the tokens and certificates securing your microservices and integrations</li>
+        </ul>
+
+        <p>There's also the "harvest now, decrypt later" threat that intelligence agencies and sophisticated attackers have been exploiting for years. Sensitive data encrypted today with standard algorithms could be stored and decrypted once quantum machines reach sufficient scale. If your business handles data with long-term sensitivity — financial records, healthcare data, legal documents, intellectual property — the clock is already ticking.</p>
+
+        <h2>The NIST Standards Are Ready — Your Migration Should Be Too</h2>
+
+        <p>The good news is that the cryptographic community hasn't been sitting idle. In August 2024, NIST finalized its first three post-quantum cryptography (PQC) standards after an eight-year global evaluation process:</p>
+
+        <ul>
+            <li><strong>FIPS 203 (ML-KEM)</strong> — a key encapsulation mechanism for secure key exchange, replacing the quantum-vulnerable Diffie-Hellman and ECDH protocols</li>
+            <li><strong>FIPS 204 (ML-DSA)</strong> — a digital signature algorithm for authentication and integrity verification</li>
+            <li><strong>FIPS 205 (SLH-DSA)</strong> — an alternative signature scheme based on hash functions, providing a different mathematical foundation for defense-in-depth</li>
+        </ul>
+
+        <p>These standards use lattice-based and hash-based mathematical structures that are believed to be resistant to quantum attacks. Major cloud providers — AWS, Google Cloud, and Microsoft Azure — have already begun integrating PQC support into their services. If your infrastructure runs on these platforms, adoption paths exist today.</p>
+
+        <p>For organizations working with the U.S. federal government or in regulated industries, the timeline is even more concrete. NSA has set compliance deadlines beginning January 2027 for National Security Systems, and the broader $15 billion enterprise PQC migration is already underway according to industry estimates.</p>
+
+        <h2>A Practical Roadmap for Businesses</h2>
+
+        <p>You don't need to panic, but you do need a plan. Here's where to start:</p>
+
+        <p><strong>1. Conduct a cryptographic inventory.</strong> Before you can migrate, you need to know what you're running. Audit your systems for every instance of RSA, ECDSA, ECDH, and other quantum-vulnerable algorithms. This includes TLS certificates, VPN configurations, API authentication, database encryption, and code signing infrastructure. Most organizations are surprised by how deeply embedded these algorithms are.</p>
+
+        <p><strong>2. Prioritize by data sensitivity and lifespan.</strong> Not all data carries the same risk. Focus first on information that must remain confidential for years or decades — financial records, healthcare data, trade secrets, and customer PII. These are the assets most vulnerable to "harvest now, decrypt later" attacks that may already be happening.</p>
+
+        <p><strong>3. Adopt hybrid cryptography as a bridge.</strong> The safest migration approach uses hybrid schemes that combine classical and post-quantum algorithms simultaneously. If either algorithm is compromised, the other still provides protection. Chrome and other major browsers already support hybrid TLS connections using X25519+ML-KEM.</p>
+
+        <p><strong>4. Update your development practices.</strong> New applications should be built with cryptographic agility — the ability to swap underlying algorithms without rewriting entire systems. This means abstracting cryptographic operations behind clean interfaces and avoiding hard-coded algorithm choices in your codebase.</p>
+
+        <p><strong>5. Engage your vendors and partners.</strong> Your security is only as strong as your supply chain. Ask your SaaS providers, payment processors, and integration partners about their PQC migration timelines. If they don't have one, that's a red flag.</p>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li><strong>The timeline has compressed.</strong> Google's research shows quantum threats to encryption are closer than the industry assumed — 500,000 qubits instead of 10 million, with Google targeting 2029 for its own migration.</li>
+            <li><strong>Standards are finalized.</strong> NIST's post-quantum cryptography standards (FIPS 203, 204, 205) are production-ready, and major cloud providers are already offering support.</li>
+            <li><strong>This affects every business, not just crypto.</strong> Any organization using HTTPS, VPNs, email encryption, or digital certificates is running quantum-vulnerable cryptography today.</li>
+            <li><strong>"Harvest now, decrypt later" is already happening.</strong> Sensitive data encrypted today with classical algorithms may already be stockpiled for future quantum decryption.</li>
+            <li><strong>Start with an audit, not a rewrite.</strong> A cryptographic inventory is the essential first step. You can't migrate what you can't find.</li>
+        </ul>
+
+        <p>The quantum encryption threat is no longer a problem for "someday." Google's warning — coming from the very company building these quantum machines — should be the catalyst for every business to evaluate their cryptographic posture and begin the migration to post-quantum security. The organizations that act now will be protected. The ones that wait may find the window has already closed.</p>
+
+    </article>
+
+    <!-- Back to Blog -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
+        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+            Back to Blog
+        </a>
+    </div>
+
+    <!-- Sources & Further Reading -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources & Further Reading</h2>
+        <ul class="space-y-3 text-base text-gray-600">
+            <li>
+                <a href="https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Google Research — Safeguarding Cryptocurrency by Disclosing Quantum Vulnerabilities Responsibly</a>
+                — Google's official blog post on their quantum cryptography findings
+            </li>
+            <li>
+                <a href="https://siliconangle.com/2026/03/31/google-finds-quantum-computers-break-bitcoins-encryption-sooner-expected/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">SiliconANGLE — Google finds quantum computers could break encryption sooner than expected</a>
+                — Analysis of Google's whitepaper and its implications
+            </li>
+            <li>
+                <a href="https://csrc.nist.gov/projects/post-quantum-cryptography" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">NIST — Post-Quantum Cryptography Project</a>
+                — Official NIST page on PQC standards (FIPS 203, 204, 205)
+            </li>
+            <li>
+                <a href="https://www.forbes.com/sites/digital-assets/2026/03/31/google-finds-quantum-computers-could-break-bitcoin-sooner-than-expected/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Forbes — Google Finds Quantum Computers Could Break Bitcoin Sooner Than Expected</a>
+                — Forbes coverage of the business and cryptocurrency implications
+            </li>
+        </ul>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <a href="2026-04-01-openai-122b-funding-signals-ai-infrastructure-era.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-emerald-800 to-teal-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-teal-600 rounded-full">AI & Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">OpenAI's $122 Billion Raise Signals a New Era of AI as Infrastructure</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 1, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-03-31-ai-infrastructure-energy-crisis.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-orange-800 to-amber-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-orange-600 rounded-full">Cloud & Infrastructure</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Big Tech's $635 Billion AI Bet Faces an Energy Reality Check</h4>
+                        <p class="mt-2 text-sm text-gray-400">Mar 31, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-03-30-ai-agents-reshaping-software-development.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-blue-900 to-purple-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-brand rounded-full">AI & Machine Learning</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">How AI Agents Are Reshaping Software Development in 2026</h4>
+                        <p class="mt-2 text-sm text-gray-400">Mar 30, 2026</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-center">
+        <p class="text-sm text-gray-400 italic">Published by Havlek Team · Analysis based on publicly available industry data and trends</p>
+    </div>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Need help with your security posture?</h2>
+            <p class="mt-6 text-gray-400 text-lg">Let's discuss how Havlek can help future-proof your infrastructure.</p>
+            <a href="../contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="../services.html" class="hover:text-white transition">Services</a>
+                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="../about.html" class="hover:text-white transition">About</a>
+                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
+                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
