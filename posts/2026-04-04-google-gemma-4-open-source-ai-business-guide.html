@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Google's Gemma 4 launches under Apache 2.0 with 400M+ downloads. Here's why open-source AI models matter for businesses and how to leverage them.">
+    <meta name="keywords" content="Google Gemma 4, open-source AI, Apache 2.0, AI for business, on-device AI, enterprise AI, AI models 2026, Google DeepMind, open AI models, business AI strategy">
+    <link rel="canonical" href="https://havlek.ca/posts/2026-04-04-google-gemma-4-open-source-ai-business-guide.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Google Gemma 4 Goes Fully Open Source: What It Means for Your Business">
+    <meta property="og:description" content="Google's Gemma 4 launches under Apache 2.0 with 400M+ downloads. Here's why open-source AI models matter for businesses and how to leverage them.">
+    <meta property="og:url" content="https://havlek.ca/posts/2026-04-04-google-gemma-4-open-source-ai-business-guide.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/2026-04-04-google-gemma-4-open-source-ai-business-guide.png">
+    <meta property="article:published_time" content="2026-04-04">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="AI & Business">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Google Gemma 4 Goes Fully Open Source: What It Means for Your Business">
+    <meta name="twitter:description" content="Google's Gemma 4 launches under Apache 2.0 with 400M+ downloads. Here's why open-source AI models matter for businesses and how to leverage them.">
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-04-04-google-gemma-4-open-source-ai-business-guide.png">
+
+    <title>Google Gemma 4 Goes Fully Open Source: What It Means for Your Business — Havlek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose code { background: #1e293b; color: #e2e8f0; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .prose pre { background: #0f172a; color: #e2e8f0; padding: 1.5rem; border-radius: 0.75rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .prose pre code { background: none; padding: 0; }
+        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
+        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Google Gemma 4 Goes Fully Open Source: What It Means for Your Business",
+        "description": "Google's Gemma 4 launches under Apache 2.0 with 400M+ downloads. Here's why open-source AI models matter for businesses and how to leverage them.",
+        "datePublished": "2026-04-04",
+        "dateModified": "2026-04-04",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/2026-04-04-google-gemma-4-open-source-ai-business-guide.html"
+        },
+        "image": "https://havlek.ca/posts/images/2026-04-04-google-gemma-4-open-source-ai-business-guide.png",
+        "articleSection": "AI & Business",
+        "wordCount": 1150,
+        "keywords": ["Google Gemma 4", "open-source AI", "Apache 2.0", "AI for business", "enterprise AI", "on-device AI"]
+    }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="../index.html" class="hover:text-brand transition">Home</a>
+                <a href="../services.html" class="hover:text-brand transition">Services</a>
+                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="../about.html" class="hover:text-brand transition">About</a>
+                <a href="../blog.html" class="text-brand">Blog</a>
+                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="../index.html" class="block hover:text-brand">Home</a>
+            <a href="../services.html" class="block hover:text-brand">Services</a>
+            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="../about.html" class="block hover:text-brand">About</a>
+            <a href="../blog.html" class="block text-brand">Blog</a>
+            <a href="../contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="pt-20 sm:pt-24">
+        <div class="h-72 sm:h-96 bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-brand rounded-full mb-6 fade-in">AI & Business</span>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight fade-in">Google Gemma 4 Goes Fully Open Source: What It Means for Your Business</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Meta -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-100 fade-in">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold">H</div>
+            <span class="font-medium text-gray-700">Havlek Team</span>
+        </div>
+        <span>&middot;</span>
+        <span>April 4, 2026</span>
+        <span>&middot;</span>
+        <span>7 min read</span>
+
+        <!-- Share -->
+        <div class="ml-auto flex items-center gap-3">
+            <a href="https://twitter.com/intent/tweet?url=https://havlek.ca/posts/2026-04-04-google-gemma-4-open-source-ai-business-guide.html&text=Google%20Gemma%204%20Goes%20Fully%20Open%20Source%3A%20What%20It%20Means%20for%20Your%20Business" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://havlek.ca/posts/2026-04-04-google-gemma-4-open-source-ai-business-guide.html" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <button onclick="navigator.clipboard.writeText(window.location.href)" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Copy link">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-lg leading-relaxed text-gray-700 prose fade-in">
+
+        <p>For years, the most powerful AI models came with strings attached — restrictive licenses, API-only access, and terms that made lawyers nervous. That changed this week when Google released <strong>Gemma 4</strong>, its most capable open model family, under a fully permissive <strong>Apache 2.0 license</strong>. For businesses evaluating AI strategy, this is not a minor technical update. It is a fundamental shift in who controls the intelligence powering your products.</p>
+
+        <p>Gemma 4 is already the top-trending product on Product Hunt, has surpassed 400 million cumulative downloads across the Gemma family, and ranks as the #3 open model in the world on the Arena AI leaderboard — outperforming models twenty times its size. But the real story isn't benchmark scores. It's what an open-source, commercially permissive AI model means for the way businesses build, deploy, and own their technology.</p>
+
+        <h2>Why Apache 2.0 Changes the Game for Enterprise AI</h2>
+
+        <p>Previous Gemma releases came under Google's own usage license, which imposed restrictions on commercial applications and redistribution. Meta's Llama models carry similar custom terms. Apache 2.0 is different: it is one of the most permissive open-source licenses in existence. You can use Gemma 4 in commercial products, modify it, fine-tune it on proprietary data, and distribute derivative works — all without royalties, attribution requirements beyond the license notice, or the need to share your modifications back.</p>
+
+        <blockquote>
+            <p>With over 400 million downloads and 100,000 community-built variants, Gemma has already proven the demand for open AI models. Apache 2.0 removes the last barrier between that demand and full commercial deployment.</p>
+        </blockquote>
+
+        <p>For businesses, this addresses one of the biggest concerns around AI adoption: vendor lock-in. When your AI runs on a proprietary API, you are renting intelligence. When it runs on an open-source model you control, you own it. Your data never leaves your infrastructure. Your costs are predictable. And if Google changes direction tomorrow, your AI keeps running.</p>
+
+        <h2>Four Models, From Raspberry Pi to Data Center</h2>
+
+        <p>Gemma 4 ships in four sizes, each optimized for different hardware and use cases. Understanding the lineup helps clarify where each model fits in a business context:</p>
+
+        <p><strong>Gemma 4 E2B (Effective 2B parameters)</strong> and <strong>E4B (Effective 4B)</strong> are built for edge deployment. These models run entirely offline on smartphones, IoT devices, and single-board computers like a Raspberry Pi. They support vision, audio input, and a 128K context window — enough to process lengthy documents on a phone without an internet connection. For businesses with privacy-sensitive workloads, field operations, or offline requirements, this is transformative.</p>
+
+        <p><strong>Gemma 4 26B MoE (Mixture of Experts)</strong> activates only 3.8 billion of its 26 billion parameters per inference, delivering fast token generation while keeping memory footprint manageable. It runs on consumer-grade GPUs and is designed for latency-sensitive applications like coding assistants and real-time customer interactions.</p>
+
+        <p><strong>Gemma 4 31B Dense</strong> is the powerhouse — ranked #3 among all open models globally. It fits on a single NVIDIA H100 GPU in full precision and offers the deepest reasoning capabilities in the family. This is the model for fine-tuning on domain-specific tasks where raw quality matters most: legal document analysis, medical data processing, or complex financial modeling.</p>
+
+        <p>All four models support agentic workflows with native function calling, structured JSON output, and system instructions — meaning they can autonomously interact with APIs, databases, and external tools without custom middleware.</p>
+
+        <h2>The Business Case: Build vs. Rent Your AI</h2>
+
+        <p>The release of Gemma 4 under Apache 2.0 sharpens a strategic question every business should be asking: should you build your AI capabilities on proprietary APIs, or invest in owning your AI stack?</p>
+
+        <p>The API approach — using OpenAI's GPT, Anthropic's Claude, or Google's Gemini through cloud endpoints — offers convenience and cutting-edge performance. But it comes with recurring costs that scale with usage, data leaving your infrastructure, and dependency on a vendor's pricing, terms, and availability. Just this weekend, AWS infrastructure in the Gulf went offline due to geopolitical events, a stark reminder that cloud dependency carries real operational risk.</p>
+
+        <p>The open-source approach with models like Gemma 4 requires more upfront investment in infrastructure and expertise. But the returns compound: zero per-token costs after hardware investment, complete data sovereignty, the ability to fine-tune for your specific domain, and immunity from API deprecation or price changes. A Vancouver-based retailer processing customer support queries, for example, could run Gemma 4 E4B on-premises and handle thousands of interactions daily at effectively zero marginal cost.</p>
+
+        <p>The practical answer for most businesses is a hybrid strategy. Use proprietary APIs for tasks requiring frontier-level capabilities — complex research, creative generation, or tasks where you need the absolute best model. Deploy open-source models like Gemma 4 for predictable, high-volume workloads where cost control and data privacy matter most. This approach gives you the best of both worlds while building internal AI competency that appreciates over time.</p>
+
+        <h2>What This Means for Your AI Strategy in 2026</h2>
+
+        <p>Gemma 4's Apache 2.0 release is part of a broader trend. Open-source AI models are rapidly closing the gap with proprietary ones. Arcee's Trinity model, also released this week, claims performance comparable to leading proprietary models at a fraction of the cost. Meta continues to push Llama forward. The competitive pressure is relentless, and it is driving costs down while pushing capabilities up.</p>
+
+        <p>Here are the practical takeaways for business leaders:</p>
+
+        <ul>
+            <li><strong>Audit your AI dependency.</strong> If your business relies on a single proprietary AI provider, Gemma 4's release is your signal to evaluate alternatives. Open-source models have reached a quality threshold where they are viable for production workloads.</li>
+            <li><strong>Start with high-volume, cost-sensitive use cases.</strong> Customer support automation, document processing, internal knowledge search, and code assistance are ideal candidates for open-source model deployment. These workloads are predictable, high-frequency, and benefit most from eliminating per-token API costs.</li>
+            <li><strong>Invest in fine-tuning capability.</strong> The real power of open-source models is customization. A general-purpose model fine-tuned on your industry data, customer interactions, or internal documentation will outperform a much larger generic model on your specific tasks. Building this capability now creates a durable competitive advantage.</li>
+            <li><strong>Consider edge deployment for privacy-sensitive applications.</strong> Gemma 4's E2B and E4B models enable AI that runs entirely on-device with no data transmission. For healthcare, legal, financial, or any industry handling sensitive information, this solves the data sovereignty problem that has blocked many AI adoption plans.</li>
+            <li><strong>Partner with teams that understand both worlds.</strong> The most effective AI strategy combines proprietary and open-source models, cloud and on-premises deployment. Work with development partners who can architect solutions across this spectrum rather than defaulting to a single vendor.</li>
+        </ul>
+
+        <p>The age of AI as a proprietary black box controlled by a handful of companies is giving way to something more distributed, more accessible, and ultimately more powerful. Google releasing its most capable model under Apache 2.0 is not just a product launch — it is an acknowledgment that the future of AI is open. Businesses that recognize this shift and position accordingly will have a significant strategic advantage in the years ahead.</p>
+
+    </article>
+
+    <!-- Back to Blog -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
+        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+            Back to Blog
+        </a>
+    </div>
+
+    <!-- Sources & Further Reading -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources & Further Reading</h2>
+        <ul class="space-y-3 text-base text-gray-600">
+            <li>
+                <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Google Blog: Gemma 4 Announcement</a>
+                — Official release post from Google DeepMind detailing model capabilities and licensing
+            </li>
+            <li>
+                <a href="https://huggingface.co/gg-hf-gg/gemma-4-31B-it" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Gemma 4 31B on Hugging Face</a>
+                — Model weights and documentation for the flagship 31B dense model
+            </li>
+            <li>
+                <a href="https://arena.ai/leaderboard/text" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Arena AI Text Leaderboard</a>
+                — Independent benchmark rankings where Gemma 4 31B holds the #3 open-model position
+            </li>
+            <li>
+                <a href="https://www.theneuron.ai/explainer-articles/-around-the-horn-digest-everything-that-happened-in-ai-this-weekend-saturday-sunday-april-4-5-2026/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">The Neuron: AI Weekend Digest (April 4–5, 2026)</a>
+                — Comprehensive roundup of the week's major AI developments
+            </li>
+            <li>
+                <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Apache License 2.0</a>
+                — Full text of the permissive open-source license used for Gemma 4
+            </li>
+        </ul>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <a href="2026-04-02-google-quantum-encryption-warning-business-guide.html" class="group rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in">
+                    <div class="h-40 bg-gradient-to-br from-red-900 via-rose-800 to-orange-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Google's Quantum Encryption Warning: What Every Business Needs to Do Now</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 2, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-04-01-openai-122b-funding-signals-ai-infrastructure-era.html" class="group rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in">
+                    <div class="h-40 bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-teal-600 rounded-full">AI & Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">OpenAI's $122 Billion Raise Signals a New Era of AI as Infrastructure</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 1, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-03-30-ai-agents-reshaping-software-development.html" class="group rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in">
+                    <div class="h-40 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-brand rounded-full">AI & Machine Learning</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">How AI Agents Are Reshaping Software Development in 2026</h4>
+                        <p class="mt-2 text-sm text-gray-400">Mar 30, 2026</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-center">
+        <p class="text-sm text-gray-400 italic">Published by Havlek Team · Analysis based on publicly available industry data and trends</p>
+    </div>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Ready to build with open-source AI?</h2>
+            <p class="mt-6 text-gray-400 text-lg">Let's discuss how Havlek can help you deploy AI models that you own and control.</p>
+            <a href="../contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="../services.html" class="hover:text-white transition">Services</a>
+                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="../about.html" class="hover:text-white transition">About</a>
+                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
+                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

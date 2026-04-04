@@ -1,5 +1,14 @@
 [
   {
+    "slug": "2026-04-04-google-gemma-4-open-source-ai-business-guide",
+    "title": "Google Gemma 4 Goes Fully Open Source: What It Means for Your Business",
+    "excerpt": "Google's Gemma 4 launches under Apache 2.0 with 400M+ downloads. Here's why open-source AI models matter for businesses and how to leverage them.",
+    "category": "AI & Business",
+    "date": "2026-04-04",
+    "readTime": "7 min read",
+    "author": "Havlek Team"
+  },
+  {
     "slug": "2026-04-02-google-quantum-encryption-warning-business-guide",
     "title": "Google's Quantum Encryption Warning: What Every Business Needs to Do Now",
     "excerpt": "Google warns quantum computers could crack encryption 20x sooner than expected. Here's what businesses need to know about post-quantum cryptography migration.",
