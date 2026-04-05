@@ -1,5 +1,14 @@
 [
   {
+    "slug": "2026-04-05-ai-agents-autonomous-hacking-business-security",
+    "title": "When AI Agents Become Attackers: Why Every Business Needs to Rethink Security in 2026",
+    "excerpt": "An autonomous AI agent exploited FreeBSD in just four hours. Here's what offensive AI agents mean for business security — and how to prepare your defenses.",
+    "category": "Cybersecurity",
+    "date": "2026-04-05",
+    "readTime": "8 min read",
+    "author": "Havlek Team"
+  },
+  {
     "slug": "2026-04-04-google-gemma-4-open-source-ai-business-guide",
     "title": "Google Gemma 4 Goes Fully Open Source: What It Means for Your Business",
     "excerpt": "Google's Gemma 4 launches under Apache 2.0 with 400M+ downloads. Here's why open-source AI models matter for businesses and how to leverage them.",
