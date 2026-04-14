@@ -1,5 +1,41 @@
 [
   {
+    "slug": "2026-04-13-ai-deepfake-voice-cloning-phishing-business-defense",
+    "title": "AI Deepfake Phishing in 2026: How Voice Cloning Is Breaking Business Defenses",
+    "excerpt": "AI-generated voice clones and deepfake video calls are driving a new wave of seven-figure business fraud in 2026. Here's how the attacks work and what companies must do now.",
+    "category": "Cybersecurity",
+    "date": "2026-04-13",
+    "readTime": "8 min read",
+    "author": "Havlek Team"
+  },
+  {
+    "slug": "2026-04-13-economics-software-teams-ai-engineering-costs",
+    "title": "The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning",
+    "excerpt": "Most engineering orgs have no idea what their teams actually cost or produce. AI is about to make that ignorance expensive. Here's the math every business leader needs.",
+    "category": "AI & Business",
+    "date": "2026-04-13",
+    "readTime": "8 min read",
+    "author": "Havlek Team"
+  },
+  {
+    "slug": "2026-04-12-axios-supply-chain-attack-openai-npm-security",
+    "title": "The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door",
+    "excerpt": "A North Korea-linked supply chain attack compromised the Axios NPM package and hit OpenAI's macOS app signing. What businesses need to know about software supply chain security.",
+    "category": "Cybersecurity",
+    "date": "2026-04-12",
+    "readTime": "8 min read",
+    "author": "Havlek Team"
+  },
+  {
+    "slug": "2026-04-10-openai-ai-liability-shield-illinois-business-impact",
+    "title": "OpenAI's AI Liability Shield: What the Illinois Bill Means for Your Business",
+    "excerpt": "OpenAI backs an Illinois bill shielding AI labs from liability for catastrophic harms. Here's what the new AI liability push means for businesses deploying AI.",
+    "category": "AI & Business",
+    "date": "2026-04-10",
+    "readTime": "8 min read",
+    "author": "Havlek Team"
+  },
+  {
     "slug": "2026-04-09-meta-muse-spark-ai-model-business-impact",
     "title": "Meta's Muse Spark: Inside the $100 Billion AI Reboot and What It Means for Business",
     "excerpt": "Meta just launched Muse Spark, its first model from Superintelligence Labs after a $14.3B talent bet. Here's what it means for businesses betting on the AI race.",
