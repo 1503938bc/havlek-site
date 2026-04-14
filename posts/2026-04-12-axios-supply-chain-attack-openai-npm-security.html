@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door — Havlek</title>
+    <meta name="description" content="A North Korea-linked supply chain attack compromised the Axios NPM package and hit OpenAI's macOS app signing. What businesses need to know about software supply chain security.">
+    <meta name="author" content="Havlek Team">
+    <meta name="keywords" content="supply chain attack, Axios NPM, OpenAI security, software supply chain, North Korea cyber attack, NPM security, dependency management, macOS code signing, WAVESHAPER malware, 2026">
+    <link rel="canonical" href="https://havlek.ca/posts/2026-04-12-axios-supply-chain-attack-openai-npm-security.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door">
+    <meta property="og:description" content="A North Korea-linked supply chain attack compromised the Axios NPM package and hit OpenAI's macOS app signing. What businesses need to know about software supply chain security.">
+    <meta property="og:url" content="https://havlek.ca/posts/2026-04-12-axios-supply-chain-attack-openai-npm-security.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/2026-04-12-axios-supply-chain-attack-openai-npm-security.png">
+    <meta property="article:published_time" content="2026-04-12">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="Cybersecurity">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door">
+    <meta name="twitter:description" content="A North Korea-linked supply chain attack compromised the Axios NPM package and hit OpenAI's macOS app signing. What businesses need to know about software supply chain security.">
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-04-12-axios-supply-chain-attack-openai-npm-security.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door",
+        "description": "A North Korea-linked supply chain attack compromised the Axios NPM package and hit OpenAI's macOS app signing. What businesses need to know about software supply chain security.",
+        "datePublished": "2026-04-12",
+        "dateModified": "2026-04-12",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/2026-04-12-axios-supply-chain-attack-openai-npm-security.html"
+        },
+        "image": "https://havlek.ca/posts/images/2026-04-12-axios-supply-chain-attack-openai-npm-security.png",
+        "articleSection": "Cybersecurity",
+        "wordCount": 1150,
+        "keywords": ["supply chain attack", "Axios NPM", "OpenAI security", "software supply chain", "dependency management", "macOS code signing"]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
+        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
+        .prose a { color: #1a73e8; text-decoration: underline; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D0NJSVQWWE');
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="../index.html" class="hover:text-brand transition">Home</a>
+                <a href="../services.html" class="hover:text-brand transition">Services</a>
+                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="../about.html" class="hover:text-brand transition">About</a>
+                <a href="../blog.html" class="text-brand">Blog</a>
+                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="../index.html" class="block hover:text-brand">Home</a>
+            <a href="../services.html" class="block hover:text-brand">Services</a>
+            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="../about.html" class="block hover:text-brand">About</a>
+            <a href="../blog.html" class="block text-brand">Blog</a>
+            <a href="../contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="pt-20 sm:pt-24">
+        <div class="h-72 sm:h-96 bg-gradient-to-br from-red-900 via-slate-900 to-gray-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full mb-6 fade-in">Cybersecurity</span>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight fade-in">The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Meta -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-100 fade-in">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold">H</div>
+            <span class="font-medium text-gray-700">Havlek Team</span>
+        </div>
+        <span>&middot;</span>
+        <span>April 12, 2026</span>
+        <span>&middot;</span>
+        <span>8 min read</span>
+
+        <!-- Share -->
+        <div class="ml-auto flex items-center gap-3">
+            <a href="https://twitter.com/intent/tweet?url=https://havlek.ca/posts/2026-04-12-axios-supply-chain-attack-openai-npm-security.html&text=The%20Axios%20Supply%20Chain%20Attack%3A%20How%20a%20North%20Korean%20Hack%20Reached%20OpenAI%27s%20Front%20Door" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://havlek.ca/posts/2026-04-12-axios-supply-chain-attack-openai-npm-security.html" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <button onclick="navigator.clipboard.writeText(window.location.href)" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Copy link">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-lg leading-relaxed text-gray-700 prose fade-in">
+
+        <p>On March 31, 2026, attackers linked to North Korea compromised one of the most widely used JavaScript libraries in the world — Axios — and injected malware that deployed backdoors across Windows, macOS, and Linux. The blast radius was enormous: Axios typically sees over 100 million weekly downloads on NPM. Among the downstream casualties was OpenAI, whose macOS app-signing workflow pulled the poisoned package and potentially exposed the certificates used to sign ChatGPT, Codex, and other desktop applications.</p>
+
+        <p>This wasn't a theoretical vulnerability or an obscure proof-of-concept. It was a real supply chain attack that cascaded from a single compromised maintainer account all the way to the signing infrastructure of the world's most prominent AI company. For any business that depends on open-source software — which is to say, virtually every business — the implications are serious and immediate.</p>
+
+        <h2>How the Axios Supply Chain Attack Unfolded</h2>
+
+        <p>According to Google's Threat Intelligence Group (GTIG), the attack began when a threat actor designated UNC1069 — a financially motivated group with ties to North Korea that has been active since at least 2018 — compromised the maintainer account for the Axios NPM package. The attacker changed the associated email to an attacker-controlled address and published a new version (1.14.1) containing a malicious dependency called "plain-crypto-js."</p>
+
+        <p>The malicious package used NPM's <code>postinstall</code> hook to silently execute a dropper script upon installation. That script detected the target operating system and deployed platform-specific payloads — a PowerShell-based attack chain on Windows, a Mach-O binary on macOS, and an ELF executable on Linux. The malware, identified as WAVESHAPER.V2, established a backdoor granting the attackers remote access to compromised machines.</p>
+
+        <blockquote>
+            <p>Axios typically receives over 100 million weekly NPM downloads. The compromised versions were live for approximately three hours before being detected and removed — but in the NPM ecosystem, three hours is an eternity.</p>
+        </blockquote>
+
+        <p>The sophistication was notable. The dropper used custom XOR and Base64 obfuscation to hide its command-and-control URLs, dynamically loaded Node.js modules to evade static analysis, and attempted to delete itself after execution to cover forensic traces. This wasn't a smash-and-grab — it was a carefully engineered attack designed to be difficult to detect.</p>
+
+        <h2>The OpenAI Ripple Effect: When Supply Chain Meets Code Signing</h2>
+
+        <p>The most high-profile downstream impact hit OpenAI. A GitHub Actions workflow used in their macOS app-signing process downloaded and executed the compromised Axios version during the window of exposure. This workflow had access to the certificates and notarization material used to sign ChatGPT Desktop, Codex, Codex CLI, and Atlas for macOS.</p>
+
+        <p>OpenAI's internal analysis concluded that the signing certificate was "likely not successfully exfiltrated" due to timing and sequencing factors. Nevertheless, the company is treating the certificate as compromised — revoking it, rotating to new certificates, and requiring all macOS users to update their apps by May 8, 2026. After that date, older versions will no longer function.</p>
+
+        <p>The root cause on OpenAI's side? A misconfiguration in their GitHub Actions workflow. Specifically, the workflow referenced a floating tag for the Axios dependency rather than pinning to a specific commit hash, and did not enforce a minimum release age for new packages. This meant the poisoned version was automatically pulled into a security-critical pipeline with no human review and no delay buffer.</p>
+
+        <p>It's a textbook example of how a small configuration oversight in a CI/CD pipeline can create a pathway for catastrophic compromise when combined with an upstream supply chain attack.</p>
+
+        <h2>Why Supply Chain Security Is Now a Board-Level Concern</h2>
+
+        <p>This incident underscores a reality that the security community has been warning about for years: the modern software supply chain is both incredibly powerful and dangerously fragile. Most business applications — from internal tools to customer-facing products — are built on a foundation of open-source packages maintained by small teams or individual developers. A single compromised account can cascade into millions of downstream installations.</p>
+
+        <p>Consider the numbers. The average enterprise JavaScript application has hundreds of direct dependencies and thousands of transitive ones. Each of those represents a potential attack surface. And unlike traditional vulnerabilities that require exploitation, supply chain attacks deliver malware directly through trusted update channels — the same mechanisms developers rely on every day.</p>
+
+        <p>The Axios attack is part of a clear escalation pattern. The SolarWinds attack in 2020 targeted government agencies. The Codecov breach in 2021 hit CI/CD pipelines. The Log4Shell vulnerability in 2021 affected virtually every Java application on earth. The xz utils backdoor in 2024 nearly compromised Linux distributions worldwide. Each incident has been broader and harder to detect than the last. North Korean groups, in particular, have increasingly targeted the software supply chain as a vector for both espionage and financial theft.</p>
+
+        <h2>What Every Business Should Do Right Now</h2>
+
+        <p>Whether you're a startup shipping a SaaS product or an enterprise managing dozens of internal applications, the Axios incident offers concrete lessons. Here are the actions that matter most:</p>
+
+        <ul>
+            <li><strong>Pin your dependencies.</strong> Never reference floating tags or version ranges in security-critical workflows. Pin to exact versions and, where possible, specific commit hashes. OpenAI's root cause was a floating tag — don't make the same mistake.</li>
+            <li><strong>Enforce lockfiles and integrity checks.</strong> Use <code>npm ci</code> instead of <code>npm install</code> in CI/CD pipelines, and verify package integrity hashes. This prevents unexpected version changes from slipping through.</li>
+            <li><strong>Set minimum release ages.</strong> Tools like Socket.dev and npm audit signatures can flag newly published packages. A 24–72 hour delay before allowing new versions into production pipelines would have prevented this specific attack.</li>
+            <li><strong>Audit your GitHub Actions workflows.</strong> Review every third-party action and package reference. Replace tag-based references with commit SHA pins. Treat your CI/CD configuration as security-critical code, because it is.</li>
+            <li><strong>Implement Software Bills of Materials (SBOMs).</strong> Maintain a current inventory of every dependency in your stack. When the next supply chain incident drops, you need to answer "are we affected?" in minutes, not days.</li>
+            <li><strong>Monitor for anomalous package behavior.</strong> Services like Socket, Snyk, and GitHub's own dependency alerts can flag suspicious postinstall scripts, new maintainers, or unusual package changes before they reach production.</li>
+        </ul>
+
+        <p>For businesses that use OpenAI's macOS applications specifically: update to the latest versions immediately. After May 8, 2026, apps signed with the old certificate will stop functioning. Only download updates from official sources or in-app update mechanisms — do not trust links from emails, messages, or third-party sites.</p>
+
+        <h2>The Bigger Picture: Trust in the AI Era</h2>
+
+        <p>There's a broader irony here. As businesses rush to adopt AI tools — many of which are built on the same open-source ecosystems that just got compromised — the security of those foundational layers becomes exponentially more important. The AI tools that promise to transform your business are only as trustworthy as the supply chains that deliver them.</p>
+
+        <p>The Axios supply chain attack is a wake-up call, but it shouldn't be a surprise. The question for business leaders isn't whether your organization will be touched by a supply chain compromise — it's whether you'll be prepared when it happens. The companies that invest in dependency management, CI/CD hygiene, and supply chain monitoring today will be the ones that weather the next incident without scrambling.</p>
+
+        <p>Software supply chain security isn't a developer problem. It's a business risk. And after the Axios attack, it belongs on the executive agenda.</p>
+
+    </article>
+
+    <!-- Back to Blog -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
+        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+            Back to Blog
+        </a>
+    </div>
+
+    <!-- Sources & Further Reading -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources & Further Reading</h2>
+        <ul class="space-y-3 text-base text-gray-600">
+            <li>
+                <a href="https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Google Threat Intelligence Group: North Korea-Nexus Threat Actor Compromises Axios NPM Package</a>
+                — Detailed technical analysis of the attack chain, malware, and attribution
+            </li>
+            <li>
+                <a href="https://openai.com/index/axios-developer-tool-compromise/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">OpenAI: Our Response to the Axios Developer Tool Compromise</a>
+                — OpenAI's official disclosure on the impact to macOS app signing and remediation steps
+            </li>
+            <li>
+                <a href="https://www.theverge.com/tech/904146/a-popular-coding-tool-was-hijacked-to-deliver-malware" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">The Verge: A Popular Coding Tool Was Hijacked to Deliver Malware</a>
+                — News coverage of the Axios compromise and its downstream effects
+            </li>
+            <li>
+                <a href="https://socket.dev/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Socket.dev</a>
+                — Supply chain security platform for detecting compromised NPM packages
+            </li>
+        </ul>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <a href="2026-04-05-ai-agents-autonomous-hacking-business-security.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-red-800 to-rose-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">When AI Agents Become Attackers: Why Every Business Needs to Rethink Security</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 5, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-04-09-shadow-ai-hidden-security-risk-enterprise.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-slate-800 to-gray-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-gray-600 rounded-full">Cybersecurity</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Shadow AI: The Hidden Security Risk Draining Enterprise Data in 2026</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 9, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-04-02-google-quantum-encryption-warning-business-guide.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-amber-800 to-orange-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-amber-600 rounded-full">Cybersecurity</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Google's Quantum Encryption Warning: What Every Business Needs to Do Now</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 2, 2026</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-center">
+        <p class="text-sm text-gray-400 italic">Published by Havlek Team · Analysis based on publicly available industry data and trends</p>
+    </div>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Is your software supply chain secure?</h2>
+            <p class="mt-6 text-gray-400 text-lg">Let Havlek audit your dependencies, CI/CD pipelines, and security posture.</p>
+            <a href="../contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="../services.html" class="hover:text-white transition">Services</a>
+                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="../about.html" class="hover:text-white transition">About</a>
+                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
+                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning — Havlek</title>
+    <meta name="description" content="Most engineering orgs have no idea what their teams actually cost or produce. AI is about to make that ignorance expensive. Here's the math every business leader needs.">
+    <meta name="author" content="Havlek Team">
+    <meta name="keywords" content="software team economics, AI engineering costs, software development ROI, engineering team productivity, AI automation software teams, LLM developer productivity, engineering headcount, software team financial analysis, 2026">
+    <link rel="canonical" href="https://havlek.ca/posts/2026-04-13-economics-software-teams-ai-engineering-costs.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning">
+    <meta property="og:description" content="Most engineering orgs have no idea what their teams actually cost or produce. AI is about to make that ignorance expensive. Here's the math every business leader needs.">
+    <meta property="og:url" content="https://havlek.ca/posts/2026-04-13-economics-software-teams-ai-engineering-costs.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/2026-04-13-economics-software-teams-ai-engineering-costs.png">
+    <meta property="article:published_time" content="2026-04-13">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="AI & Business">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning">
+    <meta name="twitter:description" content="Most engineering orgs have no idea what their teams actually cost or produce. AI is about to make that ignorance expensive. Here's the math every business leader needs.">
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-04-13-economics-software-teams-ai-engineering-costs.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning",
+        "description": "Most engineering orgs have no idea what their teams actually cost or produce. AI is about to make that ignorance expensive. Here's the math every business leader needs.",
+        "datePublished": "2026-04-13",
+        "dateModified": "2026-04-13",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/2026-04-13-economics-software-teams-ai-engineering-costs.html"
+        },
+        "image": "https://havlek.ca/posts/images/2026-04-13-economics-software-teams-ai-engineering-costs.png",
+        "articleSection": "AI & Business",
+        "wordCount": 1150,
+        "keywords": ["software team economics", "AI engineering costs", "software development ROI", "engineering team productivity", "LLM developer productivity"]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
+        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
+        .prose a { color: #1a73e8; text-decoration: underline; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D0NJSVQWWE');
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="../index.html" class="hover:text-brand transition">Home</a>
+                <a href="../services.html" class="hover:text-brand transition">Services</a>
+                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="../about.html" class="hover:text-brand transition">About</a>
+                <a href="../blog.html" class="text-brand">Blog</a>
+                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="../index.html" class="block hover:text-brand">Home</a>
+            <a href="../services.html" class="block hover:text-brand">Services</a>
+            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="../about.html" class="block hover:text-brand">About</a>
+            <a href="../blog.html" class="block text-brand">Blog</a>
+            <a href="../contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="pt-20 sm:pt-24">
+        <div class="h-72 sm:h-96 bg-gradient-to-br from-emerald-900 via-slate-900 to-gray-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-emerald-600 rounded-full mb-6 fade-in">AI & Business</span>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight fade-in">The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Meta -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-100 fade-in">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold">H</div>
+            <span class="font-medium text-gray-700">Havlek Team</span>
+        </div>
+        <span>&middot;</span>
+        <span>April 13, 2026</span>
+        <span>&middot;</span>
+        <span>8 min read</span>
+
+        <!-- Share -->
+        <div class="ml-auto flex items-center gap-3">
+            <a href="https://twitter.com/intent/tweet?url=https://havlek.ca/posts/2026-04-13-economics-software-teams-ai-engineering-costs.html&text=The%20Real%20Economics%20of%20Software%20Teams%3A%20Why%20AI%20Is%20Forcing%20a%20Financial%20Reckoning" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://havlek.ca/posts/2026-04-13-economics-software-teams-ai-engineering-costs.html" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <button onclick="navigator.clipboard.writeText(window.location.href)" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Copy link">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-lg leading-relaxed text-gray-700 prose fade-in">
+
+        <p>Here's a number most CTOs don't want to talk about: a typical eight-person software engineering team costs over a million dollars a year. Not in Silicon Valley — in an average Western market. And in most organizations, nobody can tell you what that million dollars actually produces. A viral analysis making the rounds in the developer community this week lays bare the financial math that most engineering organizations have been quietly ignoring for two decades — and explains why AI tools are about to turn that comfortable ignorance into a serious competitive liability.</p>
+
+        <h2>The Million-Dollar Team Nobody Audits</h2>
+
+        <p>The math is straightforward but rarely confronted. A software engineer in a Western market costs roughly $150,000 to $180,000 per year when you factor in salary, benefits, equipment, office space, management overhead, and social contributions. Multiply that by eight — the size of a typical product team — and you're looking at $1.2 to $1.4 million annually. That's approximately $100,000 per month, or about $5,000 for every working day.</p>
+
+        <p>Most engineers don't know this number. Many engineering managers don't either. And in the organizations where someone does track it, the figure rarely shows up in the room where prioritization decisions happen. The result is a pervasive disconnect: teams making $60,000 decisions (a three-week sprint on a low-impact feature) without anyone framing them in those terms.</p>
+
+        <blockquote>
+            <p>A team with a 50% initiative success rate — which is already optimistic — needs its wins to cover its losses too. Break-even isn't the right bar. The realistic threshold for financial viability is 3–5x the team's annual cost.</p>
+        </blockquote>
+
+        <p>This isn't a new problem. Software development has been one of the most capital-intensive activities in modern business for years. But it's been easy to paper over the gap because labor markets were tight, growth was the priority, and nobody wanted to be the person who asked "what exactly did we get for that $1.2 million?" The economics were vibes-based, and for a long time, the vibes were good enough.</p>
+
+        <h2>Why AI Changes the Calculus Overnight</h2>
+
+        <p>Enter AI-assisted development tools. Over the past 18 months, code-generation models, automated testing frameworks, and AI-powered code review systems have matured from novelties to production-grade tools. GitHub's own data shows that developers using AI assistants complete tasks 30–55% faster on average. Newer benchmarks from companies deploying agentic coding tools — systems that can autonomously write, test, and iterate on code — suggest even larger productivity multipliers for certain categories of work.</p>
+
+        <p>This creates an uncomfortable question for every engineering organization: if a team of four engineers with AI tools can match the output of a team of eight without them, what does that mean for the team of eight?</p>
+
+        <p>The answer isn't necessarily layoffs — at least not immediately. The more likely near-term outcome is a dramatic widening of the gap between organizations that understand their engineering economics and those that don't. Companies that know what their teams cost, what they produce, and where the bottlenecks are can make strategic decisions about how to deploy AI tools for maximum leverage. Companies that are "flying blind" — to borrow the phrase gaining traction in developer communities — will either over-invest in AI tooling without capturing the value, or under-invest and watch competitors pull ahead.</p>
+
+        <p>The shift also changes hiring calculus. When an AI tool subscription costing $200 per developer per month can eliminate 20 hours of boilerplate work, the effective cost-per-output of each engineer drops. But that only matters if you're measuring output in the first place. Organizations that treat engineering as a cost center with no financial visibility will struggle to make the case for — or against — any investment in AI tooling.</p>
+
+        <h2>The Platform Team Trap and the 3x Rule</h2>
+
+        <p>Internal platform teams offer a particularly sharp illustration of the problem. These are teams whose job is to build tools and infrastructure that make other engineers more productive. They're common, they're expensive, and their value is almost never rigorously measured.</p>
+
+        <p>Consider the math: an eight-person platform team serving 100 engineers needs to save those engineers a combined 1,300+ hours per month just to break even. That's roughly 13 hours per engineer per month, or about three hours per week. A well-built platform can achieve that — eliminating manual deployments, standardizing environments, reducing configuration toil. But breaking even isn't enough. When you account for the typical 50–70% failure rate of engineering initiatives, plus the ongoing maintenance burden of the systems the team builds, the realistic financial viability threshold is 3–5x the team's annual cost.</p>
+
+        <p>For a team costing $100,000 per month, that means generating $300,000 to $500,000 in monthly value. Very few platform teams can demonstrate that kind of return — not because they aren't producing it, but because they've never been asked to measure it.</p>
+
+        <p>AI amplifies this challenge. If AI tools can automate the repetitive tasks that platform teams were built to eliminate — environment setup, boilerplate generation, deployment scripting — then the value proposition of a large platform team shifts. The teams that survive will be the ones that can articulate their economic contribution in concrete terms and demonstrate that their work compounds the productivity gains from AI tools rather than duplicating them.</p>
+
+        <h2>What Business Leaders Should Do Now</h2>
+
+        <p>The convergence of engineering economics awareness and AI capability creates a clear action plan for business leaders who want to stay ahead of the curve:</p>
+
+        <ul>
+            <li><strong>Make engineering costs visible.</strong> Every product team should know its fully loaded monthly cost. Every sprint planning session should have a rough cost attached. This isn't about micromanagement — it's about giving teams the financial context to make better decisions about what to build and what to skip.</li>
+            <li><strong>Measure output, not activity.</strong> Story points and lines of code are vanity metrics. Focus on business outcomes: revenue protected, users activated, churn reduced, time-to-market shortened. These are the numbers that tell you whether your engineering investment is paying off.</li>
+            <li><strong>Pilot AI tools with financial tracking.</strong> Don't just hand developers AI subscriptions and hope for the best. Pick a team, establish baseline productivity metrics, introduce the tools, and measure the delta. The organizations getting the most value from AI-assisted development are the ones that treat it as a measurable investment, not a perk.</li>
+            <li><strong>Audit your platform and infrastructure teams.</strong> Ask them to quantify their impact. If they can't, that's not an indictment — it's an opportunity to build the measurement framework that will determine whether AI tools complement or replace their work.</li>
+            <li><strong>Rethink team sizing and composition.</strong> The optimal team size in an AI-augmented world may be smaller, more senior, and more focused. Four experienced engineers with excellent AI tooling may outperform eight mid-level engineers working without it — and at significantly lower cost.</li>
+        </ul>
+
+        <p>The uncomfortable truth is that most engineering organizations have operated without financial accountability for years. The talent market was too tight, the growth imperative too strong, and the measurement too hard to bother with. AI is removing all three of those excuses simultaneously. Talent leverage through AI tools means smaller teams can do more. Growth is no longer guaranteed in a tighter economic environment. And AI itself makes measurement easier — from automated code analysis to intelligent project tracking.</p>
+
+        <p>The organizations that thrive in the next phase won't be the ones with the biggest engineering teams. They'll be the ones that actually understand what their teams produce, what that production costs, and how AI tools can shift both numbers in their favor. The financial reckoning has arrived. The only question is whether you'll lead it or be caught by it.</p>
+
+    </article>
+
+    <!-- Back to Blog -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
+        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+            Back to Blog
+        </a>
+    </div>
+
+    <!-- Sources & Further Reading -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources & Further Reading</h2>
+        <ul class="space-y-3 text-base text-gray-600">
+            <li>
+                <a href="https://www.viktorcessan.com/the-economics-of-software-teams/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Viktor Cessan: The Economics of Software Teams — Why Most Engineering Organizations Are Flying Blind</a>
+                — In-depth financial analysis of engineering team costs and value thresholds
+            </li>
+            <li>
+                <a href="https://www.leahtharin.com/p/the-math-behind-justifying-your-product" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Leah Tharin: The Math Behind Justifying Your Product</a>
+                — Breakdown of initiative success rates and the investment thesis behind engineering teams
+            </li>
+            <li>
+                <a href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-in-the-enterprise-with-accenture/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">GitHub Blog: Quantifying GitHub Copilot's Impact in the Enterprise</a>
+                — Enterprise research on AI-assisted developer productivity gains
+            </li>
+            <li>
+                <a href="https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">EE Times: Taking on CUDA With ROCm — One Step After Another</a>
+                — How AMD's AI software lead uses AI tools like Claude for kernel development
+            </li>
+        </ul>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <a href="2026-03-30-ai-agents-reshaping-software-development.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-blue-800 to-indigo-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-blue-600 rounded-full">AI & Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">AI Agents Are Reshaping Software Development</h4>
+                        <p class="mt-2 text-sm text-gray-400">Mar 30, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-04-09-meta-muse-spark-ai-model-business-impact.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-violet-800 to-purple-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-violet-600 rounded-full">AI & Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Meta's Muse Spark: Inside the $100 Billion AI Reboot</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 9, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-04-10-openai-ai-liability-shield-illinois-business-impact.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-slate-800 to-gray-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-gray-600 rounded-full">AI & Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">OpenAI's AI Liability Shield: What the Illinois Bill Means for Your Business</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 10, 2026</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-center">
+        <p class="text-sm text-gray-400 italic">Published by Havlek Team · Analysis based on publicly available industry data and trends</p>
+    </div>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Ready to optimize your engineering investment?</h2>
+            <p class="mt-6 text-gray-400 text-lg">Havlek helps businesses build leaner, AI-augmented development teams that deliver measurable results.</p>
+            <a href="../contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="../services.html" class="hover:text-white transition">Services</a>
+                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="../about.html" class="hover:text-white transition">About</a>
+                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
+                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
