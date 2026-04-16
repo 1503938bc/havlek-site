@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Patches Four Critical Flaws in Webex and ISE: What Every Business Must Do Right Now — Havlek</title>
+    <meta name="description" content="Cisco just patched four critical vulnerabilities in Webex and Identity Services Engine with CVSS scores up to 9.9. If your business uses either product, action is required today.">
+    <meta name="author" content="Havlek Team">
+    <meta name="keywords" content="Cisco Webex vulnerability, Cisco ISE CVE-2026-20184, critical cybersecurity patch April 2026, business network security, Cisco Identity Services Engine, CVE-2026-20147, SAML certificate update, network access control security">
+    <link rel="canonical" href="https://havlek.ca/posts/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cisco Patches Four Critical Flaws in Webex and ISE: What Every Business Must Do Right Now">
+    <meta property="og:description" content="Cisco just patched four critical vulnerabilities in Webex and Identity Services Engine with CVSS scores up to 9.9. If your business uses either product, action is required today.">
+    <meta property="og:url" content="https://havlek.ca/posts/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.png">
+    <meta property="article:published_time" content="2026-04-16">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="Cybersecurity">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cisco Patches Four Critical Flaws in Webex and ISE: What Every Business Must Do Right Now">
+    <meta name="twitter:description" content="Cisco just patched four critical vulnerabilities in Webex and Identity Services Engine with CVSS scores up to 9.9. If your business uses either product, action is required today.">
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Cisco Patches Four Critical Flaws in Webex and ISE: What Every Business Must Do Right Now",
+        "description": "Cisco just patched four critical vulnerabilities in Webex and Identity Services Engine with CVSS scores up to 9.9. If your business uses either product, action is required today.",
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-04-16",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.html"
+        },
+        "image": "https://havlek.ca/posts/images/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.png",
+        "articleSection": "Cybersecurity",
+        "wordCount": 1100,
+        "keywords": ["Cisco Webex vulnerability", "Cisco ISE patch", "CVE-2026-20184", "CVE-2026-20147", "business cybersecurity", "network access control"]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
+        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
+        .prose a { color: #1a73e8; text-decoration: underline; }
+        .cvss-badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D0NJSVQWWE');
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="../index.html" class="hover:text-brand transition">Home</a>
+                <a href="../services.html" class="hover:text-brand transition">Services</a>
+                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="../about.html" class="hover:text-brand transition">About</a>
+                <a href="../blog.html" class="text-brand">Blog</a>
+                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="../index.html" class="block hover:text-brand">Home</a>
+            <a href="../services.html" class="block hover:text-brand">Services</a>
+            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="../about.html" class="block hover:text-brand">About</a>
+            <a href="../blog.html" class="block text-brand">Blog</a>
+            <a href="../contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="pt-20 sm:pt-24">
+        <div class="h-72 sm:h-96 bg-gradient-to-br from-red-900 via-slate-900 to-gray-900 flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full mb-6 fade-in">Cybersecurity</span>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight fade-in">Cisco Patches Four Critical Flaws in Webex and ISE: What Every Business Must Do Right Now</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Meta -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-100 fade-in">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold">H</div>
+            <span class="font-medium text-gray-700">Havlek Team</span>
+        </div>
+        <span>&middot;</span>
+        <span>April 16, 2026</span>
+        <span>&middot;</span>
+        <span>8 min read</span>
+
+        <!-- Share -->
+        <div class="ml-auto flex items-center gap-3">
+            <a href="https://twitter.com/intent/tweet?url=https://havlek.ca/posts/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.html&text=Cisco%20Patches%20Four%20Critical%20Flaws%20in%20Webex%20and%20ISE%3A%20What%20Every%20Business%20Must%20Do%20Right%20Now" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://havlek.ca/posts/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.html" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Share on LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <button onclick="navigator.clipboard.writeText(window.location.href)" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand hover:text-white flex items-center justify-center transition text-gray-500" title="Copy link">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-lg leading-relaxed text-gray-700 prose fade-in">
+
+        <p>If your business runs Cisco Webex for video meetings and collaboration, or uses Cisco Identity Services Engine (ISE) to control who gets onto your corporate network, drop what you are doing. On April 16, 2026, Cisco published patches for four critical security vulnerabilities — two affecting Webex Services and two affecting ISE — with Common Vulnerability Scoring System (CVSS) ratings of 9.8 and 9.9 out of 10. That is about as severe as enterprise software vulnerabilities get. One of those flaws requires immediate action from customers even after Cisco has deployed its server-side fix.</p>
+
+        <p>This is not a "patch it sometime this quarter" situation. The vulnerabilities allow unauthenticated attackers to impersonate any user in your Webex environment, and authenticated attackers — including those with nothing more than read-only admin credentials — to execute arbitrary commands on the operating system of your Cisco ISE appliances. Here is what each flaw means in practice, and what your IT team needs to do today.</p>
+
+        <h2>The Four Vulnerabilities: A Plain-English Breakdown</h2>
+
+        <h3>CVE-2026-20184 — Webex SSO User Impersonation (CVSS 9.8)</h3>
+
+        <p>This is the flaw that demands the most immediate customer action. The vulnerability lies in how Webex Services validates the SAML certificate used for Single Sign-On (SSO) integration with Cisco Control Hub. Due to improper certificate validation, an unauthenticated remote attacker can exploit this flaw to impersonate any user within your Webex environment — including executives, IT administrators, and finance teams.</p>
+
+        <p>What that means in practice: an attacker could silently join internal Webex meetings as a trusted employee, access shared files and collaboration spaces, read private messages, and potentially use that access as a launchpad for deeper social engineering. Because the attacker appears to the platform as a legitimate, authenticated user, standard activity monitoring may not flag the intrusion.</p>
+
+        <p>Cisco has already patched the server-side component of this flaw. But here is the critical part: <strong>if your organisation uses SSO integration, you must also upload a new SAML certificate for your Identity Provider (IdP) directly to Webex Control Hub.</strong> This is a customer-side action that Cisco cannot perform for you. Organizations that skip this step remain exposed to service disruption even after the server-side patch is live.</p>
+
+        <h3>CVE-2026-20147 — ISE Remote Code Execution (CVSS 9.9)</h3>
+
+        <p>Cisco's Identity Services Engine is the network access control gatekeeper for countless enterprise environments — it decides which devices and users are allowed onto the corporate network, enforces policy, and integrates with directory services like Active Directory. A vulnerability here is not a perimeter problem. It is a core infrastructure problem.</p>
+
+        <p>CVE-2026-20147 is an insufficient validation of user-supplied input in ISE and ISE Passive Identity Connector (ISE-PIC). An authenticated remote attacker who has obtained valid administrative credentials can achieve remote code execution by sending crafted HTTP requests. The CVSS score of 9.9 reflects how catastrophic full compromise of an ISE appliance would be: an attacker with code execution on ISE effectively controls your network's front door.</p>
+
+        <h3>CVE-2026-20180 and CVE-2026-20186 — ISE Arbitrary Command Execution (CVSS 9.9 each)</h3>
+
+        <p>These two flaws are in some ways more alarming than CVE-2026-20147, because the barrier to exploitation is lower. Both vulnerabilities allow an authenticated attacker in possession of nothing more than <em>read-only admin credentials</em> to execute arbitrary commands on the underlying operating system of the affected ISE device.</p>
+
+        <p>Read-only administrative accounts are frequently handed out broadly — to auditors, compliance teams, third-party vendors, or IT staff who need visibility but theoretically no write access. These CVEs mean that any one of those accounts, if compromised, is effectively a root shell on your network access control infrastructure. Cisco has confirmed that patches are available and that there is currently no evidence of exploitation in the wild — but given the severity and the number of organisations running ISE, that window is unlikely to remain open for long.</p>
+
+        <h2>Why These Flaws Matter Beyond the Immediate Patch</h2>
+
+        <blockquote>
+            <p>Attackers are increasingly targeting the tools businesses trust most — the collaboration platforms where sensitive conversations happen and the identity infrastructure that decides who is trusted on the network in the first place.</p>
+        </blockquote>
+
+        <p>These four vulnerabilities do not exist in isolation. They fit into a broader and accelerating pattern of attacks against business network infrastructure. Barracuda's SOC Threat Radar for Q1 2026, released this week, found that brute-force authentication attempts targeting SonicWall and FortiGate network edge devices accounted for more than 56% of all confirmed security incidents in the first quarter of the year — a sharp surge compared to the same period in 2025. Over 88% of that brute-force traffic originated from IP addresses in the Middle East.</p>
+
+        <p>The strategic logic for attackers is straightforward. Network edge devices, identity platforms, and collaboration tools are high-value, high-trust targets. A successful compromise of any of them does not just give an attacker access to data — it gives them the ability to impersonate trusted identities, pivot laterally, and persist undetected inside corporate environments for weeks or months. The Cisco vulnerabilities disclosed today fall squarely in that category.</p>
+
+        <p>Webex is used by tens of millions of business users worldwide for meetings, file sharing, and internal communication. A flaw that allows silent user impersonation in that environment is not a theoretical risk — it is a ready-made tool for corporate espionage, business email compromise, and insider-threat-style fraud. ISE deployments sit at the heart of zero-trust architectures at enterprises globally. Compromising ISE does not just breach one system. It potentially compromises every system that ISE vouches for.</p>
+
+        <h2>What Your Business Needs to Do Today</h2>
+
+        <p>The remediation steps differ depending on which Cisco products your organisation uses. Here is a clear action checklist:</p>
+
+        <ul>
+            <li><strong>Webex SSO users — act immediately:</strong> Log into Cisco Control Hub and upload a new SAML certificate for your Identity Provider. This is a mandatory customer-side action. Cisco's server-side fix is already deployed, but SSO-integrated environments will remain at risk of service interruption without this step. If you are unsure whether your Webex deployment uses SSO, check with your IT team now.</li>
+            <li><strong>Webex non-SSO users:</strong> The server-side fix is already in place. No customer action is required for the authentication vulnerability, but monitor Cisco's security advisories for any follow-on guidance.</li>
+            <li><strong>ISE deployments:</strong> Apply Cisco's patches to your ISE and ISE-PIC appliances immediately. Check Cisco's official security advisory for the specific fixed versions applicable to your deployment. Do not wait for your standard patching window — the severity justifies emergency change procedures.</li>
+            <li><strong>Audit ISE administrative accounts:</strong> Review who holds ISE admin credentials, including read-only accounts. Revoke access for any accounts that are no longer needed, and rotate credentials for all remaining accounts as part of your post-patch remediation.</li>
+            <li><strong>Check for signs of prior compromise:</strong> Before celebrating the patch, look backward. Review ISE and Webex authentication logs for anomalous activity over the past 30 to 60 days. Unusual login times, unfamiliar source IPs, and unexpected privilege escalations may indicate that an attacker beat you to the vulnerability.</li>
+            <li><strong>Enforce multi-factor authentication everywhere:</strong> MFA does not eliminate these vulnerabilities, but it raises the cost of credential-based exploitation significantly. If MFA is not enforced on your ISE admin accounts and Webex SSO configuration, enabling it now reduces your exposure while patches are applied.</li>
+            <li><strong>Communicate with your MSP or IT partner:</strong> If you outsource IT management or network administration, forward this advisory to your provider today and confirm that they have a remediation timeline. Do not assume it is being handled.</li>
+        </ul>
+
+        <h2>The Bigger Picture for Business Leaders</h2>
+
+        <p>IT security teams are already stretched thin. Patch fatigue is real — the drumbeat of critical CVEs can make it tempting to triage by urgency and deprioritize anything that does not yet have a confirmed exploit in the wild. That logic breaks down when the vulnerability in question carries a CVSS score of 9.9 and sits inside a product that controls network access for your entire organisation.</p>
+
+        <p>The Cisco patches released today are a reminder that the attack surface for modern businesses extends far beyond the traditional perimeter. It includes the collaboration platforms where your teams share sensitive information, the identity systems that decide who is trusted on your network, and the firewalls and VPNs sitting at the edge. All three categories are under active, sustained pressure in 2026 — not from opportunistic attackers, but from well-resourced threat actors running systematic campaigns to find and exploit exactly this kind of high-trust, high-value infrastructure.</p>
+
+        <p>The good news is that Cisco moved quickly to patch these vulnerabilities, and there is currently no evidence of active exploitation. That gives organisations a window to act before attackers weaponise these flaws at scale. That window is measured in days, not weeks. Use it.</p>
+
+    </article>
+
+    <!-- Back to Blog -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
+        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+            Back to Blog
+        </a>
+    </div>
+
+    <!-- Sources & Further Reading -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources & Further Reading</h2>
+        <ul class="space-y-3 text-base text-gray-600">
+            <li>
+                <a href="https://thehackernews.com/2026/04/cisco-patches-four-critical-identity.html" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">The Hacker News: Cisco Patches Four Critical Identity Services, Webex Flaws Enabling Code Execution</a>
+                — Full technical breakdown of all four CVEs and their impact
+            </li>
+            <li>
+                <a href="https://www.bleepingcomputer.com/news/security/cisco-says-critical-webex-services-flaw-requires-customer-action/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">BleepingComputer: Cisco Says Critical Webex Services Flaw Requires Customer Action</a>
+                — Details on the mandatory SAML certificate upload step for SSO users
+            </li>
+            <li>
+                <a href="https://securityaffairs.com/190909/security/cisco-fixed-four-critical-flaws-in-identity-services-and-webex.html" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Security Affairs: Cisco Fixed Four Critical Flaws in Identity Services and Webex</a>
+                — Overview of the affected products and patched versions
+            </li>
+            <li>
+                <a href="https://blog.barracuda.com/2026/04/14/soc-threat-radar-april-2026" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Barracuda Networks: SOC Threat Radar — April 2026</a>
+                — Q1 2026 brute-force surge targeting SonicWall and FortiGate network edge devices
+            </li>
+            <li>
+                <a href="https://www.cybersecuritydive.com/news/brute-force-cyberattacks-originating-in-middle-east-surge-in-q1/817440/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Cybersecurity Dive: Brute-Force Cyberattacks Originating in Middle East Surge in Q1</a>
+                — Analysis of the Q1 2026 authentication attack campaign patterns
+            </li>
+        </ul>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <a href="2026-04-13-ai-deepfake-voice-cloning-phishing-business-defense.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-rose-800 to-slate-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">AI Deepfake Phishing in 2026: How Voice Cloning Is Breaking Business Defenses</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 13, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-04-12-axios-supply-chain-attack-openai-npm-security.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-orange-800 to-slate-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-orange-600 rounded-full">Cybersecurity</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 12, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-04-05-ai-agents-autonomous-hacking-business-security.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-purple-800 to-slate-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-purple-600 rounded-full">Cybersecurity</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">When AI Agents Become Attackers: Why Every Business Needs to Rethink Security in 2026</h4>
+                        <p class="mt-2 text-sm text-gray-400">Apr 5, 2026</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-center">
+        <p class="text-sm text-gray-400 italic">Published by Havlek Team · Analysis based on publicly available industry data and trends</p>
+    </div>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Is your business security posture ready for 2026?</h2>
+            <p class="mt-6 text-gray-400 text-lg">Havlek helps businesses assess their digital security, implement best practices, and respond to emerging threats before they become incidents.</p>
+            <a href="../contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="../services.html" class="hover:text-white transition">Services</a>
+                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="../about.html" class="hover:text-white transition">About</a>
+                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
+                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
