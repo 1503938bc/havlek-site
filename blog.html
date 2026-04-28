@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog — Havlek</title>
+    <link rel="canonical" href="https://havlek.ca/blog.html">
+    <link rel="next" href="https://havlek.ca/blog-page-2.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +17,6 @@
     <script>
         tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
     </script>
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -26,7 +27,6 @@
 </head>
 <body class="bg-white text-gray-900 antialiased overflow-x-hidden">
 
-    <!-- Nav -->
     <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <a href="index.html">
@@ -58,7 +58,6 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h1 class="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Insights & Analysis</h1>
@@ -66,12 +65,10 @@
         </div>
     </section>
 
-    <!-- Articles Grid -->
     <section class="py-16 sm:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="grid md:grid-cols-2 gap-8">
 
-                <!-- Article Card: Accenture Copilot Rollout -->
                 <a href="posts/2026-04-28-accenture-copilot-ai-adoption-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
                     <div class="h-56 bg-gradient-to-br from-slate-950 via-indigo-950 to-sky-900 overflow-hidden">
                         <img src="posts/images/2026-04-28-accenture-copilot-ai-adoption-business-case.png" alt="Global enterprise collaboration hub with AI productivity dashboards, digital knowledge work, and sales insight screens across a modern corporate operations center" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -88,7 +85,6 @@
                     </div>
                 </a>
 
-                <!-- Article Card: Oracle Opower AI Utility Playbook -->
                 <a href="posts/2026-04-27-oracle-opower-ai-utility-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
                     <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
                         <img src="posts/images/2026-04-27-oracle-opower-ai-utility-business-case.png" alt="Modern utility operations control room with AI-powered customer engagement dashboards, energy grid maps, and business analytics screens" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -105,7 +101,6 @@
                     </div>
                 </a>
 
-                <!-- Article Card: Salesforce Customer Zero -->
                 <a href="posts/2026-04-26-salesforce-agentforce-customer-zero-ai-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
                     <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
                         <img src="posts/images/2026-04-26-salesforce-agentforce-customer-zero-ai-business-case.png" alt="Enterprise AI control room with customer support workflows, sales lead routing, and human teams collaborating around intelligent dashboards" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -122,7 +117,6 @@
                     </div>
                 </a>
 
-                <!-- Article Card: BlackRock RockAI Playbook -->
                 <a href="posts/2026-04-25-blackrock-rockai-successful-enterprise-ai-case-study.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
                     <div class="h-56 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 overflow-hidden">
                         <img src="posts/images/2026-04-25-blackrock-rockai-successful-enterprise-ai-case-study.png" alt="Abstract enterprise AI command center with secure data workflows and financial analytics" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -139,41 +133,6 @@
                     </div>
                 </a>
 
-                <!-- Article Card: $2.5 Trillion AI Bet -->
-                <a href="posts/2026-04-18-ai-enterprise-investment-novo-nordisk-microsoft-meta.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">💡</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-emerald-600 rounded-full">AI & Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">The $2.5 Trillion AI Bet: What Novo Nordisk, Microsoft, and Meta Are Telling Every Business in 2026</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Novo Nordisk. Microsoft. Meta. The biggest enterprise AI commitments of 2026 reveal a pattern — and a window every business should act on now.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Apr 18, 2026</span>
-                            <span>&middot;</span>
-                            <span>8 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Agentic AI Explosion -->
-                <a href="posts/2026-04-17-agentic-ai-enterprise-explosion.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">🤖</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-violet-600 rounded-full">AI & Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">The Agentic AI Explosion: 40% of Enterprise Apps Will Have AI Agents by 2026</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">AI agents are moving from novelty to backbone — up from less than 5% of enterprise apps in 2025. Here's what's driving it and how businesses should respond.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Apr 17, 2026</span>
-                            <span>&middot;</span>
-                            <span>8 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Cisco Critical Vulnerabilities Webex ISE -->
                 <a href="posts/2026-04-16-cisco-critical-vulnerabilities-webex-ise-business-action.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
                     <div class="h-56 bg-gradient-to-br from-red-900 via-slate-900 to-gray-900 flex items-center justify-center p-8">
                         <span class="text-white/30 text-6xl font-bold">🔐</span>
@@ -190,7 +149,6 @@
                     </div>
                 </a>
 
-                <!-- Article Card: How Businesses Use AI Successfully -->
                 <a href="posts/2026-04-16-how-businesses-use-ai-successfully.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
                     <div class="h-56 bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 flex items-center justify-center p-8">
                         <span class="text-white/30 text-6xl font-bold">🚀</span>
@@ -206,290 +164,19 @@
                         </div>
                     </div>
                 </a>
-
-                <!-- Article Card: AI Operating Leverage -->
-                <a href="posts/2026-04-16-ai-operating-leverage-business-doing-more-with-less.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">⚙️</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-brand rounded-full">AI & Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">The AI Operating Leverage: How Smart Businesses Are Doing More with Less in 2026</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">AI is creating a new kind of operating leverage that's separating winners from laggards in 2026. Here's the playbook businesses are using to capture it.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Apr 16, 2026</span>
-                            <span>&middot;</span>
-                            <span>8 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: AI Deepfake Phishing -->
-                <a href="posts/2026-04-13-ai-deepfake-voice-cloning-phishing-business-defense.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-rose-900 via-slate-900 to-indigo-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">🎭</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">AI Deepfake Phishing in 2026: How Voice Cloning Is Breaking Business Defenses</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">AI-generated voice clones and deepfake video calls are driving a new wave of seven-figure business fraud. Here's how to defend your company.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Apr 13, 2026</span>
-                            <span>&middot;</span>
-                            <span>8 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Economics of Software Teams -->
-                <a href="posts/2026-04-13-economics-software-teams-ai-engineering-costs.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-emerald-900 via-slate-900 to-gray-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">📊</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-emerald-600 rounded-full">AI & Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Most engineering orgs have no idea what their teams actually cost or produce. AI is about to make that ignorance expensive.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Apr 13, 2026</span>
-                            <span>&middot;</span>
-                            <span>8 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Axios Supply Chain Attack -->
-                <a href="posts/2026-04-12-axios-supply-chain-attack-openai-npm-security.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-red-900 via-slate-900 to-gray-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">🔗</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">The Axios Supply Chain Attack: How a North Korean Hack Reached OpenAI's Front Door</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">A North Korea-linked supply chain attack compromised the Axios NPM package and hit OpenAI's macOS app signing. What businesses need to know about software supply chain security.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 12, 2026</span>
-                                <span>&middot;</span>
-                                <span>8 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: OpenAI AI Liability Shield -->
-                <a href="posts/2026-04-10-openai-ai-liability-shield-illinois-business-impact.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">⚖️</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-brand rounded-full">AI & Business</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">OpenAI's AI Liability Shield: What the Illinois Bill Means for Your Business</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">OpenAI backs an Illinois bill shielding AI labs from liability for catastrophic harms. Here's what the new AI liability push means for businesses deploying AI.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 10, 2026</span>
-                                <span>&middot;</span>
-                                <span>8 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Meta Muse Spark -->
-                <a href="posts/2026-04-09-meta-muse-spark-ai-model-business-impact.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-blue-900 via-sky-800 to-cyan-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">✦</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-brand rounded-full">AI & Business</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">Meta's Muse Spark: Inside the $100 Billion AI Reboot and What It Means for Business</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">Meta just launched Muse Spark, its first model from Superintelligence Labs after a $14.3B talent bet. Here's what it means for businesses betting on the AI race.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 9, 2026</span>
-                                <span>&middot;</span>
-                                <span>8 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Shadow AI -->
-                <a href="posts/2026-04-09-shadow-ai-hidden-security-risk-enterprise.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">👤</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">Shadow AI: The Hidden Security Risk Draining Enterprise Data in 2026</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">Shadow AI is quietly draining enterprise data: 80% of employees use unapproved AI tools. Here's what the hidden risk means for your business and how to govern it.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 9, 2026</span>
-                                <span>&middot;</span>
-                                <span>8 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: AI Trap -->
-                <a href="posts/2026-04-07-ai-trap-why-most-companies-see-no-productivity-gains.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-orange-900 via-red-800 to-amber-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">📉</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-orange-600 rounded-full">AI & Business</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition">The AI Trap: Why 80% of Companies See No Productivity Gains Despite Massive AI Adoption</h3>
-                        <p class="mt-2 text-gray-500">70% of companies now use AI, yet over 80% report zero productivity gains. Here's why the AI trap exists and how businesses can escape it.</p>
-                        <div class="mt-4 flex items-center gap-4 text-sm text-gray-400">
-                            <span>April 7, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: AI Agents Autonomous Hacking -->
-                <a href="posts/2026-04-05-ai-agents-autonomous-hacking-business-security.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-900 via-red-900 to-rose-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">🛡️</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">When AI Agents Become Attackers: Why Every Business Needs to Rethink Security in 2026</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">An autonomous AI agent exploited FreeBSD in just four hours. Here's what offensive AI agents mean for business security — and how to prepare your defenses.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 5, 2026</span>
-                                <span>&middot;</span>
-                                <span>8 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Google Gemma 4 Open Source -->
-                <a href="posts/2026-04-04-google-gemma-4-open-source-ai-business-guide.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">🧠</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-emerald-600 rounded-full">AI & Business</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">Google Gemma 4 Goes Fully Open Source: What It Means for Your Business</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">Google's Gemma 4 launches under Apache 2.0 with 400M+ downloads. Here's why open-source AI models matter for businesses and how to leverage them.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 4, 2026</span>
-                                <span>&middot;</span>
-                                <span>7 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: Google Quantum Encryption Warning -->
-                <a href="posts/2026-04-02-google-quantum-encryption-warning-business-guide.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-red-900 via-rose-800 to-orange-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">🔐</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full">Cybersecurity</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">Google's Quantum Encryption Warning: What Every Business Needs to Do Now</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">Google warns quantum computers could crack encryption 20x sooner than expected. Here's what businesses need to know about post-quantum cryptography migration.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 2, 2026</span>
-                                <span>&middot;</span>
-                                <span>7 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: OpenAI $122B Funding -->
-                <a href="posts/2026-04-01-openai-122b-funding-signals-ai-infrastructure-era.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">$</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-teal-600 rounded-full">AI & Business</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">OpenAI's $122 Billion Raise Signals a New Era of AI as Infrastructure</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">OpenAI just closed a record $122B funding round at an $852B valuation. Here's what this historic raise means for businesses betting on AI infrastructure.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Apr 1, 2026</span>
-                                <span>&middot;</span>
-                                <span>7 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: AI Infrastructure Energy Crisis -->
-                <a href="posts/2026-03-31-ai-infrastructure-energy-crisis.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-orange-900 via-red-800 to-amber-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">⚡</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-orange-600 rounded-full">Cloud & Infrastructure</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">Big Tech's $635 Billion AI Bet Faces an Energy Reality Check</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">S&P Global warns rising energy costs could force Big Tech to revise $635B in AI infrastructure spending. Here's what it means for businesses building on cloud and AI.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Mar 31, 2026</span>
-                                <span>&middot;</span>
-                                <span>7 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Article Card: AI Agents -->
-                <a href="posts/2026-03-30-ai-agents-reshaping-software-development.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 flex items-center justify-center p-8">
-                        <span class="text-white/30 text-6xl font-bold">AI</span>
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-brand rounded-full">AI & Machine Learning</span>
-                        <h3 class="mt-4 text-xl font-bold group-hover:text-brand transition leading-snug">How AI Agents Are Reshaping Software Development in 2026</h3>
-                        <p class="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-2">From code completion to autonomous agents — explore how the latest generation of AI coding tools is transforming the way software teams build, review, and ship products.</p>
-                        <div class="mt-5 flex items-center justify-between text-sm text-gray-400">
-                            <span>Havlek Team</span>
-                            <div class="flex items-center gap-3">
-                                <span>Mar 30, 2026</span>
-                                <span>&middot;</span>
-                                <span>8 min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-
-
             </div>
 
-            <!-- Pagination -->
-            <div class="mt-16 flex justify-center items-center gap-2 fade-in">
+            <div class="mt-16 flex flex-wrap justify-center items-center gap-3 fade-in">
+                <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-300 text-sm font-semibold cursor-not-allowed">Previous</span>
                 <span class="w-10 h-10 flex items-center justify-center rounded-full bg-brand text-white text-sm font-semibold">1</span>
-                <span class="w-10 h-10 flex items-center justify-center rounded-full text-gray-400 text-sm">2</span>
-                <span class="w-10 h-10 flex items-center justify-center rounded-full text-gray-400 text-sm">3</span>
-                <span class="text-gray-400 text-sm px-2">...</span>
+                <a href="blog-page-2.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">2</a>
+                <a href="blog-page-3.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">3</a>
+                <a href="blog-page-4.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">4</a>
+                <a href="blog-page-2.html" class="px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-600 hover:border-brand hover:text-brand transition">Next</a>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="py-16 sm:py-24 bg-gray-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
             <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Want us to write about a topic?</h2>
@@ -498,7 +185,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-12 bg-gray-950 text-gray-400">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
