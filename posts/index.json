@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-05-17-nvidia-codex-engineering-business-case",
+    "title": "NVIDIA's 10x Research Speedup: A 2026 Business Case for AI Adoption in Engineering",
+    "excerpt": "NVIDIA's latest AI case shows what successful engineering adoption looks like when AI agents compress research loops, tighten testing, and operate inside serious guardrails.",
+    "category": "AI & Business",
+    "date": "2026-05-17",
+    "readTime": "7 min read",
+    "author": "Havlek Team"
+  },
+  {
+    "slug": "2026-05-16-autoscout24-ai-marketplace-business-case",
+    "title": "AutoScout24's 10x Development Speedup: A 2026 Business Case for AI Adoption in Digital Marketplaces",
+    "excerpt": "AutoScout24's latest AI case shows what successful adoption looks like when broad access, embedded coding workflows, and internal champions compress shipping cycles from weeks to days.",
+    "category": "AI & Business",
+    "date": "2026-05-16",
+    "readTime": "7 min read",
+    "author": "Havlek Team"
+  },
+  {
     "slug": "2026-05-15-beca-nzgd-ai-infrastructure-business-case",
     "title": "Beca and MBIE's 40% AI Task Cut: A 2026 Business Case for AI Adoption in Infrastructure",
     "excerpt": "Beca's latest AI case shows how infrastructure organizations can create measurable value by wrapping natural-language AI around trusted operational data.",
