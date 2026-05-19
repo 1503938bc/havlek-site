@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miro's 5x Faster Bug Resolution: A 2026 Business Case for AI Adoption in Engineering — Havlek</title>
+    <meta name="description" content="Miro's latest AI case shows how a production bug-triage system can cut reassignments 6x, shrink median resolution time 5x, and remove years of engineering waste.">
+    <meta name="author" content="Havlek Team">
+    <meta name="keywords" content="Miro AI case study, bug triage AI, Amazon Bedrock Miro, engineering productivity AI, AI adoption software teams, developer operations AI">
+    <link rel="canonical" href="https://havlek.ca/posts/2026-05-19-miro-bugmanager-ai-engineering-business-case.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Miro's 5x Faster Bug Resolution: A 2026 Business Case for AI Adoption in Engineering">
+    <meta property="og:description" content="Miro's latest AI case shows what successful engineering adoption looks like when AI is attached to routing, root-cause context, and real production friction.">
+    <meta property="og:url" content="https://havlek.ca/posts/2026-05-19-miro-bugmanager-ai-engineering-business-case.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/2026-05-19-miro-bugmanager-ai-engineering-business-case.png">
+    <meta property="article:published_time" content="2026-05-19">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="AI &amp; Business">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Miro's 5x Faster Bug Resolution: A 2026 Business Case for AI Adoption in Engineering">
+    <meta name="twitter:description" content="A new Miro case shows how AI creates leverage when it kills misrouted work, explains its choices, and plugs into production engineering workflows.">
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-05-19-miro-bugmanager-ai-engineering-business-case.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Miro's 5x Faster Bug Resolution: A 2026 Business Case for AI Adoption in Engineering",
+        "description": "Miro's latest AI case shows how a production bug-triage system can cut reassignments 6x, shrink median resolution time 5x, and remove years of engineering waste.",
+        "datePublished": "2026-05-19",
+        "dateModified": "2026-05-19",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/2026-05-19-miro-bugmanager-ai-engineering-business-case.html"
+        },
+        "image": "https://havlek.ca/posts/images/2026-05-19-miro-bugmanager-ai-engineering-business-case.png",
+        "articleSection": "AI & Business",
+        "wordCount": 1116,
+        "keywords": ["Miro", "Amazon Bedrock", "AI adoption", "engineering productivity", "bug triage", "developer operations"]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
+        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
+        .prose a { color: #1a73e8; text-decoration: underline; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D0NJSVQWWE');
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+                <a href="../index.html" class="hover:text-brand transition">Home</a>
+                <a href="../services.html" class="hover:text-brand transition">Services</a>
+                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
+                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
+                <a href="../about.html" class="hover:text-brand transition">About</a>
+                <a href="../blog.html" class="text-brand">Blog</a>
+                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
+            <a href="../index.html" class="block hover:text-brand">Home</a>
+            <a href="../services.html" class="block hover:text-brand">Services</a>
+            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
+            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
+            <a href="../about.html" class="block hover:text-brand">About</a>
+            <a href="../blog.html" class="block text-brand">Blog</a>
+            <a href="../contact.html" class="block hover:text-brand">Contact</a>
+        </div>
+    </nav>
+
+    <section class="pt-20 sm:pt-24">
+        <div class="h-72 sm:h-96 bg-gradient-to-br from-slate-950 via-indigo-950 to-cyan-900 flex items-center justify-center relative">
+            <img src="images/2026-05-19-miro-bugmanager-ai-engineering-business-case.png" alt="Software engineering team reviewing AI bug routing suggestions, root-cause analysis panels, and issue workflow dashboards in a modern blue-indigo developer operations studio" class="absolute inset-0 w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/25 to-transparent"></div>
+            <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center text-white">
+                <span class="inline-flex px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-300/30 text-xs sm:text-sm font-semibold tracking-wide uppercase">AI &amp; Business</span>
+                <h1 class="mt-6 text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">Miro's 5x Faster Bug Resolution: A 2026 Business Case for AI Adoption in Engineering</h1>
+                <p class="mt-6 text-base sm:text-lg md:text-xl text-cyan-100 max-w-3xl mx-auto">Miro's latest AI case shows what happens when a company stops treating bug triage like administrative overhead and starts treating it like a leverage point.</p>
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-cyan-100">
+                    <span>May 19, 2026</span>
+                    <span>&middot;</span>
+                    <span>7 min read</span>
+                    <span>&middot;</span>
+                    <span>Havlek Team</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 prose prose-lg prose-slate fade-in">
+        <p>One of the more credible recent AI business cases is not about a chatbot answering generic questions or a flashy demo at a conference. It is about a boring, painful workflow that quietly eats expensive engineering time every week: routing bug reports to the right team fast enough that fixes do not stall in organizational fog.</p>
+
+        <p>In a coauthored AWS and Miro technical case published on May 11, 2026, Miro says its production bug-triage system <strong>BugManager</strong> reduced team reassignments by <strong>6x</strong> and improved median time-to-resolution by <strong>5x</strong>, turning what had taken days into hours. The company also says misrouting and repeated investigation had been costing it an estimated <strong>42 years of cumulative lost productivity annually</strong>. That is the kind of statement worth paying attention to, because it ties AI to an actual cost center rather than a vague hope.</p>
+
+        <p>This is a strong business case for AI adoption because the workflow sits close to product quality, developer throughput, and customer experience all at once. Miro serves more than <strong>95 million users globally</strong>, and its engineering organization spans nearly <strong>100 teams</strong>. In that environment, routing friction is not just irritating. It is operational drag at scale.</p>
+
+        <h2>What Actually Changed</h2>
+
+        <p>Before BugManager, Miro faced a problem most growing software companies recognize immediately. Bug reports arrive messy, incomplete, and full of mixed media. They contain text, screenshots, videos, stack traces, and user-language descriptions of what went wrong. The bug still needs to land with the right team, even as ownership shifts, products evolve, and documentation changes.</p>
+
+        <p>Traditional classifiers were not holding up. AWS says Miro's previous fine-tuned GPT-based solution degraded quickly in a dynamic environment where team responsibilities kept moving. So the company built a different system: a prompt-based triage workflow using Amazon Bedrock, retrieval-augmented generation, multimodal parsing, and a Slack-to-Jira operating loop that put the AI directly inside the daily flow of work.</p>
+
+        <p>The design is practical. BugManager parses screenshots and recordings, enriches the report with context from Confluence, GitHub READMEs, Backstage docs, resolved Jira tickets, and other internal sources, then returns up to five likely teams with rationales. It can also generate an optional root-cause analysis by retrieving relevant codebase context. That means the tool is not only routing the work. It is shrinking the research burden around the work.</p>
+
+        <blockquote>
+            <p>The best AI business cases usually do not begin with creativity. They begin with expensive confusion.</p>
+        </blockquote>
+
+        <h2>Why This Case Is Better Than Most</h2>
+
+        <p>There are three reasons this example is more useful than the average AI success story. First, the metrics are operationally specific. AWS says BugManager achieved more than <strong>75% top-1 routing accuracy</strong>, about a <strong>70% improvement</strong> over Miro's previous internal solution, while <strong>top-3 accuracy reached 95%</strong>. Average classification latency was about <strong>53 seconds</strong>, which Miro deemed practical in production. Those are not vanity adoption metrics. They describe how well the system performs on a real job.</p>
+
+        <p>Second, the workflow is central. Bug routing affects support queues, engineering attention, resolution SLAs, and ultimately the product experience for customers. When a report bounces across multiple teams, the business pays in developer time, slower fixes, and lower trust. Eliminating that friction is an example of AI creating operating leverage rather than just convenience.</p>
+
+        <p>Third, the rollout appears durable because it is connected to a broader AI operating model. In a separate AWS case study, Miro says its AI platform blueprint lets it bring new generative AI microservices to production in <strong>weeks instead of months</strong>, while some user-facing tasks that once took days now happen in seconds. That matters because strong AI adoption is rarely about one isolated tool. It is usually about an organization building enough platform muscle to move a useful use case from experiment to production without drama.</p>
+
+        <h2>How Miro Is Making Adoption Durable</h2>
+
+        <p>Another reason this case is worth studying is the governance pattern around it. The bug triage system itself is designed with human review, ranked options, and explainable rationales rather than opaque one-shot decisions. That matters because user acceptance often collapses when a system cannot explain why it made a choice.</p>
+
+        <p>Miro's broader AI product documentation points in the same direction. Its 2026 enterprise controls include <strong>AI provider availability</strong>, which lets admins restrict which models can be used across supported capabilities, and <strong>prompt blocking</strong>, which can stop employees from sending sensitive data or source code into AI prompts based on org policy. Those controls are not BugManager metrics, but they do show a company thinking about AI as governed infrastructure rather than a loose collection of prompts.</p>
+
+        <p>That governance layer is easy to overlook, but it is part of the business case. AI systems that save time but create security or compliance anxiety often stall. Systems that fit how the company already manages risk have a much better chance of becoming standard operating practice.</p>
+
+        <h2>What Business Leaders Should Learn From It</h2>
+
+        <p>The first lesson is that <strong>triage is often a better AI target than execution itself</strong>. Many companies go straight to code generation, content generation, or customer-facing agents. But a great deal of waste happens before the real work begins. Bugs are misrouted. Requests lack context. People spend hours figuring out who should even own a problem. AI can create real value by compressing that ambiguity first.</p>
+
+        <p>The second lesson is that <strong>retrieval and organizational context matter more than model novelty</strong>. Miro's system works because it is grounded in live internal knowledge: docs, resolved tickets, READMEs, and team ownership information. Businesses that try to solve the same class of problem with an isolated model and no context layer usually end up with a prettier version of the same confusion.</p>
+
+        <p>The third lesson is that <strong>explainability improves adoption</strong>. Ranked suggestions, confidence, and rationale are not decorative. They create the trust needed for human-in-the-loop operation. If employees can see why the system made a recommendation and easily override it, they are far more likely to use it in production.</p>
+
+        <h2>The Caveats</h2>
+
+        <p>The caveat is that these figures are still self-reported by Miro and AWS. We do not have an audited ROI calculation, a public cost model, or a detailed breakdown of how the gains vary across issue types and teams. We also do not know how much of the 5x resolution improvement comes from better routing versus the added root-cause context and the human-in-the-loop process.</p>
+
+        <p>There is also a company-context caveat. Miro is already an AI-heavy software organization with enough technical maturity to operate RAG, multimodal parsing, knowledge-base syncing, and Slack-Jira automation in production. Other companies should not assume they can copy the architecture one-for-one. The pattern is more portable than the stack: choose a high-friction coordination workflow, ground the system in live company context, and make the output easy for humans to verify.</p>
+
+        <h2>The Business Takeaway</h2>
+
+        <p>Miro's May 2026 case is a good reminder that successful AI adoption is often less about replacing expert work than about removing the chaos that surrounds expert work. The biggest win here is not that an LLM sounds smart. It is that expensive engineers spend less time waiting, rerouting, and re-reading context just to get to the actual fix.</p>
+
+        <p>If you are building an AI business case, this is the lesson to borrow. Look for the places where work stalls because ownership is unclear, information is scattered, and every issue begins with the same reconstruction exercise. That is where AI can produce commercial value quickly, especially when the workflow happens every day and the wasted time compounds.</p>
+    </article>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
+        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+            Back to Blog
+        </a>
+    </div>
+
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources &amp; Further Reading</h2>
+        <ul class="space-y-3 text-base text-gray-600">
+            <li>
+                <a href="https://aws.amazon.com/blogs/machine-learning/how-miro-uses-amazon-bedrock-to-boost-software-bug-routing-accuracy-and-improve-time-to-resolution-from-days-to-hours/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">AWS: How Miro uses Amazon Bedrock to boost software bug routing accuracy and improve time-to-resolution from days to hours</a>
+                — May 11, 2026 coauthored production case covering the 6x reduction in reassignments, 5x faster median resolution, 42 years of lost productivity, 75% top-1 accuracy, 95% top-3 accuracy, and 53-second latency
+            </li>
+            <li>
+                <a href="https://aws.amazon.com/solutions/case-studies/miro-generative-ai/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">AWS Case Study: Accelerating Innovation for Miro Users with Generative AI Models Built on AWS</a>
+                — broader Miro AI operating context, including microservices reaching production in weeks instead of months and user workflows moving from days to seconds
+            </li>
+            <li>
+                <a href="https://help.miro.com/hc/en-us/articles/34182831271570-AI-provider-availability-overview-Beta" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Miro Help Center: AI provider availability overview</a>
+                — enterprise admin controls showing how Miro frames AI provider selection as a governance, compliance, and risk-management layer
+            </li>
+            <li>
+                <a href="https://help.miro.com/hc/en-us/articles/29332642230546-Prompt-blocking-overview" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Miro Help Center: Prompt blocking overview</a>
+                — documentation on blocking sensitive data and source code from being sent to Miro AI under organizational policy
+            </li>
+        </ul>
+    </section>
+
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <a href="2026-05-17-nvidia-codex-engineering-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-slate-950 via-emerald-950 to-cyan-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">NVIDIA's 10x Research Speedup: A 2026 Business Case for AI Adoption in Engineering</h4>
+                        <p class="mt-2 text-sm text-gray-400">May 17, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-05-16-autoscout24-ai-marketplace-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">AutoScout24's 10x Development Speedup: A 2026 Business Case for AI Adoption in Digital Marketplaces</h4>
+                        <p class="mt-2 text-sm text-gray-400">May 16, 2026</p>
+                    </div>
+                </a>
+                <a href="2026-05-06-ibm-bob-ai-software-delivery-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
+                    <div class="h-40 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900"></div>
+                    <div class="p-5">
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
+                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">IBM Bob's 45% Productivity Gain: A 2026 Business Case for AI Adoption in Software Delivery</h4>
+                        <p class="mt-2 text-sm text-gray-400">May 6, 2026</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-gray-950 text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
+                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="../services.html" class="hover:text-white transition">Services</a>
+                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
+                    <a href="../about.html" class="hover:text-white transition">About</a>
+                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
+                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
