@@ -1004,6 +1004,26 @@ p  { color: var(--ink-mute); }
 }
 .form-note { text-align: center; font-size: 0.76rem; color: var(--ink-faint); margin-top: 10px; }
 
+.contact-details {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.cd-item { display: flex; flex-direction: column; gap: 4px; }
+.cd-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.cd-item p { margin: 0; font-size: 0.9rem; color: var(--ink-mute); line-height: 1.5; }
+.cd-item a { font-size: 0.95rem; color: var(--ink); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--coral); }
+.cd-item a:hover { color: var(--coral); }
+
 @media (max-width: 860px) {
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .form-row { grid-template-columns: 1fr; }
