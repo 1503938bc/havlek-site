@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="..">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,26 +56,6 @@
         "keywords": ["IBM Bob", "enterprise AI adoption", "software delivery AI", "AI modernization", "developer productivity", "AI governance"]
     }
     </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
-        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
-        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
-        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
-        .prose a { color: #1a73e8; text-decoration: underline; }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -83,60 +63,36 @@
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="../index.html">
-                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="../index.html" class="hover:text-brand transition">Home</a>
-                <a href="../services.html" class="hover:text-brand transition">Services</a>
-                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="../about.html" class="hover:text-brand transition">About</a>
-                <a href="../blog.html" class="text-brand">Blog</a>
-                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="../index.html" class="block hover:text-brand">Home</a>
-            <a href="../services.html" class="block hover:text-brand">Services</a>
-            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="../about.html" class="block hover:text-brand">About</a>
-            <a href="../blog.html" class="block text-brand">Blog</a>
-            <a href="../contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="post-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span>›</span><a href="../blog.html">Blog</a><span>›</span><span>Article</span>
     </nav>
+    <div class="post-hero-inner">
+      <div class="post-meta-row"><span class="post-cat">AI &amp; Business</span><span>May 6, 2026</span><span>7 min read</span><span>Havlek Team</span></div>
+      <h1>IBM Bob's 45% Productivity Gain: A 2026 Business Case for AI Adoption in Software Delivery</h1>
+      <p class="post-excerpt">IBM says more than 80,000 employees now use IBM Bob, with a self-reported 45% productivity gain and faster modernization work. Here's the business case and the caveats.</p>
+    </div>
+    <img class="post-hero-img" src="images/2026-05-06-ibm-bob-ai-software-delivery-business-case.png" alt="Software engineering teams collaborating with AI-assisted code reviews, testing dashboards, and modernization workflows inside a modern blue enterprise studio" />
+  </div>
+</section>
 
-    <section class="pt-20 sm:pt-24">
-        <div class="h-72 sm:h-96 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 flex items-center justify-center relative">
-            <img src="images/2026-05-06-ibm-bob-ai-software-delivery-business-case.png" alt="Software engineering teams collaborating with AI-assisted code reviews, testing dashboards, and modernization workflows inside a modern blue enterprise studio" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-slate-950/45"></div>
-            <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center text-white">
-                <span class="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide uppercase backdrop-blur">AI &amp; Business</span>
-                <h1 class="mt-6 text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">IBM Bob's 45% Productivity Gain: A 2026 Business Case for AI Adoption in Software Delivery</h1>
-                <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-white/80">
-                    <span>May 6, 2026</span>
-                    <span>&middot;</span>
-                    <span>7 min read</span>
-                    <span>&middot;</span>
-                    <span>Havlek Team</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 prose prose-lg text-gray-700 fade-in">
-
+<section class="post-body-wrap">
+  <div class="container">
+    <div class="post-layout">
+      <div class="post-body">
         <p>One of the more credible current AI adoption stories is coming from IBM's own software organization. On April 28, 2026, IBM announced general availability for <strong>IBM Bob</strong>, an AI development partner built to work across planning, coding, testing, deployment, and modernization. The headline number is not small: IBM says Bob is now used by <strong>more than 80,000 employees</strong> internally, and surveyed users report an average <strong>45% productivity gain</strong> across modernization, security, and new development work.</p>
 
         <p>That does not make the case perfect. IBM is the vendor, and the 45% number is explicitly described as internal and self-reported. But this is still a useful business case because it includes the ingredients many AI stories lack: meaningful scale, concrete workflow examples, governance language that fits enterprise reality, and at least one external customer example with measurable delivery outcomes.</p>
@@ -180,100 +136,65 @@
         <p>IBM Bob is a useful 2026 business case because it shows how AI adoption becomes credible when it is tied to a real operating problem: modernizing and shipping software in complex environments. The practical insight is not that every company needs IBM Bob. It is that successful AI adoption in engineering is likely to come from <strong>workflow compression with governance</strong>, not from casual access to a general chatbot.</p>
 
         <p>If you lead a software-heavy business, the takeaway is straightforward. Start where engineering time is expensive and predictable: modernization, testing, security review, documentation, and dependency upgrades. Measure time saved, defect rates, and cycle compression. If AI can change those economics while staying traceable and governed, you have the start of a real business case instead of another pilot.</p>
-
-    </article>
-
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
-        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
-            Back to Blog
-        </a>
-    </div>
-
-    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources &amp; Further Reading</h2>
-        <ul class="space-y-3 text-base text-gray-600">
-            <li>
-                <a href="https://newsroom.ibm.com/2026-04-28-introducing-ibm-bob-ai-development-partner-that-takes-enterprises-from-ai-assisted-coding-to-production-ready-software" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">IBM Newsroom: Introducing IBM Bob</a>
+        <div class="post-sources">
+          <h2>Sources &amp; Further Reading</h2>
+          <ul><li>
+                <a href="https://newsroom.ibm.com/2026-04-28-introducing-ibm-bob-ai-development-partner-that-takes-enterprises-from-ai-assisted-coding-to-production-ready-software" target="_blank" rel="noopener">IBM Newsroom: Introducing IBM Bob</a>
                 — April 28, 2026 announcement with the 80,000-plus internal users, 45% self-reported productivity gain, and team-specific time-savings figures
             </li>
             <li>
-                <a href="https://www.ibm.com/new/announcements/shifting-from-ai-assisted-coding-to-ai-assisted-delivery-with-ibm-bob" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">IBM: Shifting from AI-Assisted Coding to AI-Assisted Delivery with IBM Bob</a>
+                <a href="https://www.ibm.com/new/announcements/shifting-from-ai-assisted-coding-to-ai-assisted-delivery-with-ibm-bob" target="_blank" rel="noopener">IBM: Shifting from AI-Assisted Coding to AI-Assisted Delivery with IBM Bob</a>
                 — April 28, 2026 follow-up article with internal RevTech workflow metrics and IBM's argument for governed, end-to-end delivery
             </li>
             <li>
-                <a href="https://www.ibm.com/case-studies/blue-pearl-bob" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">IBM Case Study: Blue Pearl and Bob</a>
+                <a href="https://www.ibm.com/case-studies/blue-pearl-bob" target="_blank" rel="noopener">IBM Case Study: Blue Pearl and Bob</a>
                 — External modernization example showing a Java upgrade compressed from around 30 days to roughly 3 days, with 160-plus engineering hours preserved
             </li>
             <li>
-                <a href="https://www.ibm.com/think/news/live-from-think-2026" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">IBM Think 2026: Live from Think 2026</a>
+                <a href="https://www.ibm.com/think/news/live-from-think-2026" target="_blank" rel="noopener">IBM Think 2026: Live from Think 2026</a>
                 — Think 2026 recap restating the 80,000 users and 45% average productivity gain as IBM's current enterprise AI message
-            </li>
-        </ul>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
-            <div class="mt-10 grid md:grid-cols-3 gap-6">
-                <a href="2026-05-03-cyberagent-chatgpt-codex-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-cyan-900 to-emerald-950"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">CyberAgent's 93% AI Adoption Rate: A 2026 Business Case for ChatGPT Enterprise and Codex</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 3, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-04-13-economics-software-teams-ai-engineering-costs.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning</h4>
-                        <p class="mt-2 text-sm text-gray-400">Apr 13, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-03-30-ai-agents-reshaping-software-development.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-indigo-900 to-sky-950"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-indigo-600 rounded-full">AI &amp; Machine Learning</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">How AI Agents Are Reshaping Software Development in 2026</h4>
-                        <p class="mt-2 text-sm text-gray-400">Mar 30, 2026</p>
-                    </div>
-                </a>
-            </div>
+            </li></ul>
         </div>
-    </section>
-
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="../services.html" class="hover:text-white transition">Services</a>
-                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="../about.html" class="hover:text-white transition">About</a>
-                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+        <p style="margin-top:44px;"><a class="back-to-blog" href="../blog.html">← Back to all articles</a></p>
+      </div>
+      <aside class="post-sidebar">
+        <div class="sidebar-widget">
+          <span class="label">Havlek</span>
+          <h4 style="margin-top:10px;">Need help adopting AI?</h4>
+          <p>We help businesses turn AI from hype into measurable operating leverage — strategy, build &amp; integration.</p>
+          <a href="../contact.html" class="btn btn-primary btn-full" style="margin-top:16px;">Book free audit</a>
         </div>
-    </footer>
+      </aside>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+<section class="post-related">
+  <div class="container">
+    <div class="section-header"><span class="label">Keep Reading</span><h2>Related Articles</h2></div>
+    <div class="blog-grid">
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 3, 2026</span></div>
+          <h2><a href="2026-05-03-cyberagent-chatgpt-codex-business-case.html">CyberAgent's 93% AI Adoption Rate: A 2026 Business Case for ChatGPT Enterprise and Codex</a></h2>
+          <a class="blog-read-more" href="2026-05-03-cyberagent-chatgpt-codex-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Apr 13, 2026</span></div>
+          <h2><a href="2026-04-13-economics-software-teams-ai-engineering-costs.html">The Real Economics of Software Teams: Why AI Is Forcing a Financial Reckoning</a></h2>
+          <a class="blog-read-more" href="2026-04-13-economics-software-teams-ai-engineering-costs.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Machine Learning</span><span>Mar 30, 2026</span></div>
+          <h2><a href="2026-03-30-ai-agents-reshaping-software-development.html">How AI Agents Are Reshaping Software Development in 2026</a></h2>
+          <a class="blog-read-more" href="2026-03-30-ai-agents-reshaping-software-development.html">Read article →</a>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="../components.js"></script>
 </body>
 </html>

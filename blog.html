@@ -6,17 +6,6 @@
     <title>Blog — Havlek</title>
     <link rel="canonical" href="https://havlek.ca/blog.html">
     <link rel="next" href="https://havlek.ca/blog-page-2.html">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -24,204 +13,123 @@
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-brand transition">Home</a>
-                <a href="services.html" class="hover:text-brand transition">Services</a>
-                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="about.html" class="hover:text-brand transition">About</a>
-                <a href="blog.html" class="text-brand">Blog</a>
-                <a href="contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="index.html" class="block hover:text-brand">Home</a>
-            <a href="services.html" class="block hover:text-brand">Services</a>
-            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="about.html" class="block hover:text-brand">About</a>
-            <a href="blog.html" class="block text-brand">Blog</a>
-            <a href="contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Blog</span>
     </nav>
+    <div class="page-hero-inner">
+      <div>
+        <span class="label">Insights</span>
+        <h1>Insights & Analysis</h1>
+        <p class="page-hero-sub">Deep dives into AI, cloud computing, and modern web development.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Insights & Analysis</h1>
-            <p class="mt-6 text-xl text-gray-500 fade-in">Deep dives into AI, cloud computing, and modern web development.</p>
+<section class="services-section" style="padding-top:40px;">
+  <div class="container">
+    <div class="blog-grid">
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-06-14-doordash-marketplace-ai-business-case.html"><img class="blog-card-img" src="posts/images/2026-06-14-doordash-marketplace-ai-business-case.png" alt="Marketplace product and search leaders reviewing AI-powered query intent dashboards, grocery and retail recommendation models, and cross-vertical commerce insights in a modern red-and-charcoal operations studio" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Jun 14, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-06-14-doordash-marketplace-ai-business-case.html">DoorDash&#39;s 90.7% Query Accuracy: A 2026 Business Case for AI Adoption in Marketplaces</a></h2>
+          <p>DoorDash&#39;s June 2026 AI case shows marketplace adoption gets commercially credible when LLMs are grounded in proprietary catalog data, ranking systems, and clear cost controls.</p>
+          <a class="blog-read-more" href="posts/2026-06-14-doordash-marketplace-ai-business-case.html">Read article →</a>
         </div>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid md:grid-cols-2 gap-8">
-
-                <a href="posts/2026-06-14-doordash-marketplace-ai-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-06-14-doordash-marketplace-ai-business-case.png" alt="Marketplace product and search leaders reviewing AI-powered query intent dashboards, grocery and retail recommendation models, and cross-vertical commerce insights in a modern red-and-charcoal operations studio" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">DoorDash&#39;s 90.7% Query Accuracy: A 2026 Business Case for AI Adoption in Marketplaces</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">DoorDash&#39;s June 2026 AI case shows marketplace adoption gets commercially credible when LLMs are grounded in proprietary catalog data, ranking systems, and clear cost controls.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Jun 14, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-06-13-cisco-customer-experience-ai-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-06-13-cisco-customer-experience-ai-business-case.png" alt="Enterprise customer support leaders reviewing AI-powered case routing, service intelligence dashboards, and expert handoff workflows in a modern blue operations center" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Cisco&#39;s 88% First-Touch Routing: A 2026 Business Case for AI Adoption in Customer Experience</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Cisco&#39;s May-June 2026 case shows customer-experience AI becomes commercially credible when routing, support context, and workflow redesign move together instead of being automated in place.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Jun 13, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-06-12-paramount-skydance-streaming-ai-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-06-12-paramount-skydance-streaming-ai-business-case.png" alt="Modern streaming engineering war room with AI coding copilots, data triage dashboards, media recommendation graphs, and product teams coordinating a platform convergence launch in a teal-and-indigo control center" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Paramount Skydance&#39;s 10-Minute Data Triage: A 2026 Business Case for AI Adoption in Streaming</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Paramount Skydance&#39;s June 2026 case shows streaming AI becomes commercially useful when copilots, data triage, and platform migration are tied to hard product deadlines.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Jun 12, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-06-11-walmart-ai-warehouse-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-06-11-walmart-ai-warehouse-business-case.png" alt="Large retail distribution center with AI-coordinated robots, intelligently stacked pallets, supply chain dashboards, and warehouse teams managing store replenishment in a modern blue-green logistics hub" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Walmart&#39;s Minutes-Not-Hours Unloading: A 2026 Business Case for AI Adoption in Supply Chain</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Walmart&#39;s June 2026 warehouse AI case shows supply-chain adoption becomes commercially credible when AI, robotics, and store-level inventory logic are combined inside core distribution workflows.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Jun 11, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-06-10-nubank-ai-customer-support-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-06-10-nubank-ai-customer-support-business-case.png" alt="Abstract fintech customer-support control room with purple conversational AI panels, service dashboards, self-service metrics, and banking workflow cards" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Nubank&#39;s 37-Point AI NPS Jump: A 2026 Business Case for AI Adoption in Customer Support</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Nubank&#39;s June 2026 AI case shows customer-support adoption becomes commercially credible when evaluation, retrieval quality, and workflow design are treated as operating disciplines instead of chatbot features.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Jun 10, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-06-09-hyundai-heydi-retail-ai-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-06-09-hyundai-heydi-retail-ai-business-case.png" alt="Premium department store shoppers using a multilingual AI shopping assistant on mobile devices, with live store maps, luxury retail recommendations, and in-store digital displays in a modern Seoul retail environment" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Hyundai Department Store&#39;s 9x AI Shopping Engagement: A 2026 Business Case for AI Adoption in Retail</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Hyundai Department Store&#39;s latest AI case shows retail AI works when in-store recommendations, multilingual support, and live operational data are tied directly to customer intent.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>Jun 9, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mt-16 flex flex-wrap justify-center items-center gap-3 fade-in">
-                <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-300 text-sm font-semibold cursor-not-allowed">Previous</span>
-                <span class="w-10 h-10 flex items-center justify-center rounded-full bg-brand text-white text-sm font-semibold">1</span>
-                <a href="blog-page-2.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">2</a>
-                <a href="blog-page-3.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">3</a>
-                <a href="blog-page-4.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">4</a>
-                <a href="blog-page-5.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">5</a>
-                <a href="blog-page-6.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">6</a>
-                <a href="blog-page-7.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">7</a>
-                <a href="blog-page-8.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">8</a>
-                <a href="blog-page-9.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">9</a>
-                <a href="blog-page-10.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">10</a>
-                <a href="blog-page-11.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">11</a>
-                <a href="blog-page-2.html" class="px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-600 hover:border-brand hover:text-brand transition">Next</a>
-            </div>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-06-13-cisco-customer-experience-ai-business-case.html"><img class="blog-card-img" src="posts/images/2026-06-13-cisco-customer-experience-ai-business-case.png" alt="Enterprise customer support leaders reviewing AI-powered case routing, service intelligence dashboards, and expert handoff workflows in a modern blue operations center" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Jun 13, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-06-13-cisco-customer-experience-ai-business-case.html">Cisco&#39;s 88% First-Touch Routing: A 2026 Business Case for AI Adoption in Customer Experience</a></h2>
+          <p>Cisco&#39;s May-June 2026 case shows customer-experience AI becomes commercially credible when routing, support context, and workflow redesign move together instead of being automated in place.</p>
+          <a class="blog-read-more" href="posts/2026-06-13-cisco-customer-experience-ai-business-case.html">Read article →</a>
         </div>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Want us to write about a topic?</h2>
-            <p class="mt-6 text-gray-400 text-lg">We're always looking for new subjects to explore.</p>
-            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Get in Touch</a>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-06-12-paramount-skydance-streaming-ai-business-case.html"><img class="blog-card-img" src="posts/images/2026-06-12-paramount-skydance-streaming-ai-business-case.png" alt="Modern streaming engineering war room with AI coding copilots, data triage dashboards, media recommendation graphs, and product teams coordinating a platform convergence launch in a teal-and-indigo control center" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Jun 12, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-06-12-paramount-skydance-streaming-ai-business-case.html">Paramount Skydance&#39;s 10-Minute Data Triage: A 2026 Business Case for AI Adoption in Streaming</a></h2>
+          <p>Paramount Skydance&#39;s June 2026 case shows streaming AI becomes commercially useful when copilots, data triage, and platform migration are tied to hard product deadlines.</p>
+          <a class="blog-read-more" href="posts/2026-06-12-paramount-skydance-streaming-ai-business-case.html">Read article →</a>
         </div>
-    </section>
-
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="services.html" class="hover:text-white transition">Services</a>
-                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="about.html" class="hover:text-white transition">About</a>
-                    <a href="blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-06-11-walmart-ai-warehouse-business-case.html"><img class="blog-card-img" src="posts/images/2026-06-11-walmart-ai-warehouse-business-case.png" alt="Large retail distribution center with AI-coordinated robots, intelligently stacked pallets, supply chain dashboards, and warehouse teams managing store replenishment in a modern blue-green logistics hub" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Jun 11, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-06-11-walmart-ai-warehouse-business-case.html">Walmart&#39;s Minutes-Not-Hours Unloading: A 2026 Business Case for AI Adoption in Supply Chain</a></h2>
+          <p>Walmart&#39;s June 2026 warehouse AI case shows supply-chain adoption becomes commercially credible when AI, robotics, and store-level inventory logic are combined inside core distribution workflows.</p>
+          <a class="blog-read-more" href="posts/2026-06-11-walmart-ai-warehouse-business-case.html">Read article →</a>
         </div>
-    </footer>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-06-10-nubank-ai-customer-support-business-case.html"><img class="blog-card-img" src="posts/images/2026-06-10-nubank-ai-customer-support-business-case.png" alt="Abstract fintech customer-support control room with purple conversational AI panels, service dashboards, self-service metrics, and banking workflow cards" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Jun 10, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-06-10-nubank-ai-customer-support-business-case.html">Nubank&#39;s 37-Point AI NPS Jump: A 2026 Business Case for AI Adoption in Customer Support</a></h2>
+          <p>Nubank&#39;s June 2026 AI case shows customer-support adoption becomes commercially credible when evaluation, retrieval quality, and workflow design are treated as operating disciplines instead of chatbot features.</p>
+          <a class="blog-read-more" href="posts/2026-06-10-nubank-ai-customer-support-business-case.html">Read article →</a>
+        </div>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-06-09-hyundai-heydi-retail-ai-business-case.html"><img class="blog-card-img" src="posts/images/2026-06-09-hyundai-heydi-retail-ai-business-case.png" alt="Premium department store shoppers using a multilingual AI shopping assistant on mobile devices, with live store maps, luxury retail recommendations, and in-store digital displays in a modern Seoul retail environment" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Jun 9, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-06-09-hyundai-heydi-retail-ai-business-case.html">Hyundai Department Store&#39;s 9x AI Shopping Engagement: A 2026 Business Case for AI Adoption in Retail</a></h2>
+          <p>Hyundai Department Store&#39;s latest AI case shows retail AI works when in-store recommendations, multilingual support, and live operational data are tied directly to customer intent.</p>
+          <a class="blog-read-more" href="posts/2026-06-09-hyundai-heydi-retail-ai-business-case.html">Read article →</a>
+        </div>
+      </article>
+    </div>
+    <div class="blog-pagination">
+      <span class="page-link disabled">Previous</span>
+      <span class="page-link active">1</span>
+      <a class="page-link" href="blog-page-2.html">2</a>
+      <a class="page-link" href="blog-page-3.html">3</a>
+      <a class="page-link" href="blog-page-4.html">4</a>
+      <a class="page-link" href="blog-page-5.html">5</a>
+      <a class="page-link" href="blog-page-6.html">6</a>
+      <a class="page-link" href="blog-page-7.html">7</a>
+      <a class="page-link" href="blog-page-8.html">8</a>
+      <a class="page-link" href="blog-page-9.html">9</a>
+      <a class="page-link" href="blog-page-10.html">10</a>
+      <a class="page-link" href="blog-page-11.html">11</a>
+      <a class="page-link" href="blog-page-2.html">Next</a>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+<section class="callout-band">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto;">
+      <span class="label">Suggest a Topic</span>
+      <h2 style="margin-bottom:20px;">Want us to write about a topic?</h2>
+      <p style="margin-bottom:32px;">We're always looking for new subjects to explore. Tell us what AI question matters to your business.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="components.js"></script>
 </body>
 </html>

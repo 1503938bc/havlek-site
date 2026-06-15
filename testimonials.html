@@ -1,157 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root=".">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials — Havlek</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D0NJSVQWWE');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials — Havlek | Client Reviews & Success Stories</title>
+  <meta name="description" content="What our clients say about working with Havlek. Real feedback from businesses we've helped with AI, web, e-commerce, and mobile development — Uniserve, Saje, Sunny Sports and more." />
+  <meta name="keywords" content="Havlek reviews, Havlek testimonials, client feedback, Vancouver AI agency reviews, Henry Hong developer reviews" />
+  <link rel="canonical" href="https://havlek.ca/testimonials.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://havlek.ca/testimonials.html" />
+  <meta property="og:title"       content="Testimonials — Havlek" />
+  <meta property="og:description" content="Real feedback from businesses we've helped. What clients say about working with Havlek." />
+  <meta property="og:image"       content="https://havlek.ca/images/og-home.png" />
+  <meta name="twitter:card"  content="summary_large_image" />
+  <meta name="twitter:image" content="https://havlek.ca/images/og-home.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Testimonials — Havlek",
+    "url": "https://havlek.ca/testimonials.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://havlek.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "Testimonials", "item": "https://havlek.ca/testimonials.html" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Havlek",
+      "legalName": "Hong Marketing Inc.",
+      "url": "https://havlek.ca",
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Hiring Henry allowed us to maximize results on a number of projects where we were expecting to hire several new staff but had the work done in less time with better results and for lower cost. We will continue to use Henry to help manage our projects going forward wherever possible. Great Results, Expert, High Integrity.",
+          "author": { "@type": "Person", "name": "Bruce" },
+          "itemReviewed": { "@type": "Organization", "name": "Havlek" }
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "I would absolutely recommend Henry's eCommerce and web development services. He is responsive, quick and always goes above and beyond the task at hand.",
+          "author": { "@type": "Person", "name": "Julia" },
+          "itemReviewed": { "@type": "Organization", "name": "Havlek" }
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Henry is doing such a great job for us and we would highly recommend his multi-faceted services to fit any of your specific needs.",
+          "author": { "@type": "Person", "name": "Ivy" },
+          "itemReviewed": { "@type": "Organization", "name": "Havlek" }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    /* Testimonials page flourishes */
+    .t-stats {
+      display: flex;
+      gap: 40px;
+      align-self: center;
+      flex-wrap: wrap;
+    }
+    .t-stat-val {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .t-stat-val span { color: var(--olive); }
+    .t-stat-label {
+      margin-top: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .testimonial {
+      position: relative;
+      overflow: hidden;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .testimonial:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--line-hover);
+    }
+    .t-mark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 5rem;
+      line-height: .8;
+      color: var(--coral);
+      display: block;
+      margin-bottom: 8px;
+      height: 36px;
+    }
+    .t-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line-soft);
+    }
+    .t-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--bone);
+      background: var(--olive);
+    }
+    .t-name { font-weight: 700; color: var(--ink); font-size: 1rem; }
+    .t-role { font-size: 0.85rem; color: var(--ink-faint); margin-top: 2px; }
+    .t-quote { font-style: normal; }
+    @media (max-width: 640px) {
+      .t-stats { gap: 28px; margin-top: 8px; }
+      .t-stat-val { font-size: 2rem; }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="testimonials">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Testimonials</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">Vancouver · Est. 2014</span></div>
+<div id="site-nav"></div>
 
-    <!-- Nav -->
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-brand transition">Home</a>
-                <a href="services.html" class="hover:text-brand transition">Services</a>
-                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="testimonials.html" class="text-brand">Testimonials</a>
-                <a href="about.html" class="hover:text-brand transition">About</a>
-                <a href="blog.html" class="hover:text-brand transition">Blog</a>
-                <a href="contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="index.html" class="block hover:text-brand">Home</a>
-            <a href="services.html" class="block hover:text-brand">Services</a>
-            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="testimonials.html" class="block text-brand">Testimonials</a>
-            <a href="about.html" class="block hover:text-brand">About</a>
-            <a href="blog.html" class="block hover:text-brand">Blog</a>
-            <a href="contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Testimonials</span>
     </nav>
-
-    <!-- Hero -->
-    <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Testimonials</h1>
-            <p class="mt-6 text-xl text-gray-500 fade-in">What our clients have to say about working with us.</p>
+    <div class="page-hero-inner">
+      <div>
+        <span class="label">Client Testimonials</span>
+        <h1>Results that<br/><em class="coral-text">speak for themselves</em></h1>
+        <p class="page-hero-sub">Over a decade of work for retailers, telecoms, and international brands — here's what the people we've partnered with have to say.</p>
+      </div>
+      <div class="t-stats">
+        <div>
+          <div class="t-stat-val">10<span>+</span></div>
+          <div class="t-stat-label">Years</div>
         </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
-
-            <!-- Testimonial 1 -->
-            <div class="p-5 sm:p-10 rounded-3xl bg-gray-50 fade-in">
-                <div class="text-brand text-6xl leading-none mb-6">"</div>
-                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">Hiring Henry allowed us to maximize results on a number of projects where we were expecting to hire several new staff but had the work done in less time with better results and for lower cost. We will continue to use Henry to help manage our projects going forward wherever possible. Great Results, Expert, High Integrity.</p>
-                <div class="mt-8 flex items-center gap-4">
-                    <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white font-bold text-lg">B</div>
-                    <div>
-                        <p class="font-semibold text-lg">Bruce</p>
-                        <p class="text-gray-500">President of Uniserve, Vancouver, BC</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="p-5 sm:p-10 rounded-3xl bg-gray-50 fade-in">
-                <div class="text-brand text-6xl leading-none mb-6">"</div>
-                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">On behalf of my team, I would absolutely recommend Henry's eCommerce and web development services. He is responsive, quick and always goes above and beyond the task at hand. I have never experienced a day where Henry wasn't accessible, he provides a peace of mind and takes care of urgent issues immediately. Henry came to our rescue after the first year of our website launch and assisted us with various back-end upgrades and front-end updates to optimize the speed and sever architecture.</p>
-                <div class="mt-8 flex items-center gap-4">
-                    <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white font-bold text-lg">J</div>
-                    <div>
-                        <p class="font-semibold text-lg">Julia</p>
-                        <p class="text-gray-500">eCommerce Manager of Saje, Vancouver, BC</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="p-5 sm:p-10 rounded-3xl bg-gray-50 fade-in">
-                <div class="text-brand text-6xl leading-none mb-6">"</div>
-                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">Henry is doing such a great job for us and we would highly recommend his multi-faceted services to fit any of your specific needs. We rely heavily on his expertise with online marketing and on software development for our business. Henry basically launched our business and kept it a success for us. We will continue to work with Henry for many and more profitable years to come!</p>
-                <div class="mt-8 flex items-center gap-4">
-                    <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white font-bold text-lg">I</div>
-                    <div>
-                        <p class="font-semibold text-lg">Ivy</p>
-                        <p class="text-gray-500">G.M. of Sunny Sports, Los Angeles, CA</p>
-                    </div>
-                </div>
-            </div>
-
+        <div>
+          <div class="t-stat-val">50<span>+</span></div>
+          <div class="t-stat-label">Projects</div>
         </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-16 sm:py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Ready to become our next success story?</h2>
-            <p class="mt-6 text-gray-400 text-lg">Let's build something great together.</p>
-            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Get Started</a>
+        <div>
+          <div class="t-stat-val">100<span>%</span></div>
+          <div class="t-stat-label">Recommend</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="services.html" class="hover:text-white transition">Services</a>
-                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="about.html" class="hover:text-white transition">About</a>
-                    <a href="blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+<!-- TESTIMONIALS -->
+<section class="clients-section" style="padding:80px 0;border-top:1px solid var(--line-soft);">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">What Clients Say</span>
+      <h2>Trusted across retail, e-commerce &amp; telecom</h2>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial" data-reveal>
+        <span class="t-mark">&ldquo;</span>
+        <p class="t-quote">Hiring Henry allowed us to maximize results on a number of projects where we were expecting to hire several new staff but had the work done in less time with better results and for lower cost. We will continue to use Henry to help manage our projects going forward wherever possible. Great Results, Expert, High Integrity.</p>
+        <div class="t-head">
+          <div class="t-avatar">B</div>
+          <div>
+            <div class="t-name">Bruce</div>
+            <div class="t-role">President · Uniserve, Vancouver, BC</div>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+      <div class="testimonial" data-reveal>
+        <span class="t-mark">&ldquo;</span>
+        <p class="t-quote">On behalf of my team, I would absolutely recommend Henry's eCommerce and web development services. He is responsive, quick and always goes above and beyond the task at hand. I have never experienced a day where Henry wasn't accessible — he provides peace of mind and takes care of urgent issues immediately. Henry came to our rescue after the first year of our website launch and assisted us with various back-end upgrades and front-end updates to optimize the speed and server architecture.</p>
+        <div class="t-head">
+          <div class="t-avatar">J</div>
+          <div>
+            <div class="t-name">Julia</div>
+            <div class="t-role">eCommerce Manager · Saje, Vancouver, BC</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial" data-reveal>
+        <span class="t-mark">&ldquo;</span>
+        <p class="t-quote">Henry is doing such a great job for us and we would highly recommend his multi-faceted services to fit any of your specific needs. We rely heavily on his expertise with online marketing and on software development for our business. Henry basically launched our business and kept it a success for us. We will continue to work with Henry for many and more profitable years to come!</p>
+        <div class="t-head">
+          <div class="t-avatar">I</div>
+          <div>
+            <div class="t-name">Ivy</div>
+            <div class="t-role">General Manager · Sunny Sports, Los Angeles, CA</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="callout-band" style="margin-top:0;">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto;">
+      <span class="label">Get Started</span>
+      <h2 style="margin-bottom:20px;">Ready to become our next success story?</h2>
+      <p style="margin-bottom:32px;">Book a free 30-minute consultation. We'll listen to your situation and recommend the right starting point — no pressure, no jargon.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Book free consultation</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="components.js"></script>
 </body>
 </html>

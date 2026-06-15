@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="..">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,26 +56,6 @@
         "keywords": ["Dow", "Kyndryl Bridge", "IT operations AI", "predictive analytics", "observability", "enterprise AI adoption"]
     }
     </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
-        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
-        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
-        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
-        .prose a { color: #1a73e8; text-decoration: underline; }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -83,63 +63,36 @@
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="../index.html">
-                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="../index.html" class="hover:text-brand transition">Home</a>
-                <a href="../services.html" class="hover:text-brand transition">Services</a>
-                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="../about.html" class="hover:text-brand transition">About</a>
-                <a href="../blog.html" class="text-brand">Blog</a>
-                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="../index.html" class="block hover:text-brand">Home</a>
-            <a href="../services.html" class="block hover:text-brand">Services</a>
-            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="../about.html" class="block hover:text-brand">About</a>
-            <a href="../blog.html" class="block text-brand">Blog</a>
-            <a href="../contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="post-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span>›</span><a href="../blog.html">Blog</a><span>›</span><span>Article</span>
     </nav>
+    <div class="post-hero-inner">
+      <div class="post-meta-row"><span class="post-cat">AI &amp; Business</span><span>May 12, 2026</span><span>7 min read</span><span>Havlek Team</span></div>
+      <h1>Dow&#39;s 93% Major Incident Drop: A 2026 Business Case for AI Adoption in IT Operations</h1>
+      <p class="post-excerpt">This is what AI looks like when it is aimed at preventing operational failures, not just helping teams react to them faster.</p>
+    </div>
+    <img class="post-hero-img" src="images/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.png" alt="Enterprise operations teams monitoring AI-driven observability dashboards, incident prediction maps, and industrial reliability analytics in a modern blue command center" />
+  </div>
+</section>
 
-    <section class="pt-20 sm:pt-24">
-        <div class="h-72 sm:h-96 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 flex items-center justify-center relative">
-            <img src="images/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.png" alt="Enterprise operations teams monitoring AI-driven observability dashboards, incident prediction maps, and industrial reliability analytics in a modern blue command center" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-slate-950/55"></div>
-            <div class="relative max-w-4xl px-6 text-center text-white">
-                <span class="inline-flex items-center rounded-full bg-white/15 px-4 py-1 text-sm font-semibold tracking-wide backdrop-blur">AI &amp; Business</span>
-                <h1 class="mt-6 text-3xl sm:text-5xl md:text-6xl font-bold leading-tight">Dow&#39;s 93% Major Incident Drop: A 2026 Business Case for AI Adoption in IT Operations</h1>
-                <p class="mt-6 text-base sm:text-xl text-blue-50 max-w-3xl mx-auto">This is what AI looks like when it is aimed at preventing operational failures, not just helping teams react to them faster.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-10 sm:py-12 border-b border-gray-100">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 flex flex-wrap items-center gap-4 text-sm text-gray-500 fade-in">
-            <span>May 12, 2026</span>
-            <span>&middot;</span>
-            <span>7 min read</span>
-            <span>&middot;</span>
-            <span>By Havlek Team</span>
-        </div>
-    </section>
-
-    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 prose prose-lg text-gray-700 fade-in">
+<section class="post-body-wrap">
+  <div class="container">
+    <div class="post-layout">
+      <div class="post-body">
         <p>Plenty of AI projects still live in the shallow end of enterprise value. They summarize meetings, suggest drafts, or answer internal questions a little faster. That can be useful, but it is rarely enough to change how a business runs. The stronger cases in 2026 look different. They reduce expensive failure, compress operational response time, and make important systems more reliable. That is why the latest Dow example deserves attention.</p>
 
         <p>In recent Kyndryl materials, Dow is highlighted as a customer using the AI capabilities of Kyndryl Bridge to generate predictive analytics that reduced major IT incidents by 93% and overall IT incidents by 50%. Kyndryl then expanded that story on May 7, saying its new prediction-and-prevention capability is now running across more than 1,400 Kyndryl Bridge customers, generating more than 16 million AI insights each month and driving aggregate customer savings of roughly $3 billion annually. The vendor is also claiming that root-cause analysis for major incidents can fall from weeks to hours, which points to a bigger shift than simple dashboarding.</p>
@@ -193,99 +146,65 @@
         <p>Dow's latest IT-operations case is a practical 2026 reminder that successful AI adoption often starts in the least glamorous part of the business. Not in brainstorming. Not in slide generation. In the operational systems where noise, outages, and manual diagnosis consume money and attention every week.</p>
 
         <p>If your company runs a complex technology estate, the takeaway is simple. Find a workflow where failure is already visible and expensive. Instrument the system, identify the patterns that precede disruption, and use AI to shrink the gap between signal and intervention. That is how AI stops being an assistant and starts becoming operating leverage.</p>
-    </article>
-
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
-        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
-            Back to Blog
-        </a>
-    </div>
-
-    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources &amp; Further Reading</h2>
-        <ul class="space-y-3 text-base text-gray-600">
-            <li>
-                <a href="https://www.kyndryl.com/in/en/about-us/news/2026/05/kyndryl-bridge-agentic-ai-proactive-it-operations" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Kyndryl: AI capability to proactively prevent IT outages</a>
+        <div class="post-sources">
+          <h2>Sources &amp; Further Reading</h2>
+          <ul><li>
+                <a href="https://www.kyndryl.com/in/en/about-us/news/2026/05/kyndryl-bridge-agentic-ai-proactive-it-operations" target="_blank" rel="noopener">Kyndryl: AI capability to proactively prevent IT outages</a>
                 — May 7, 2026 release with the latest platform metrics, including 1,400-plus customers, 16 million monthly AI insights, 200,000 devices, and up to 50% incident reduction
             </li>
             <li>
-                <a href="https://www.kyndryl.com/gb/en/services/platform" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Kyndryl Bridge platform page</a>
+                <a href="https://www.kyndryl.com/gb/en/services/platform" target="_blank" rel="noopener">Kyndryl Bridge platform page</a>
                 — Official page highlighting Dow's 93% reduction in major IT incidents and 50% reduction in overall IT incidents
             </li>
             <li>
-                <a href="https://www.kyndryl.com/us/en/about-us/news/2026/02/india-ai-impact-summit-2026" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Kyndryl: IT Delivery, the link between AI vision and impact</a>
+                <a href="https://www.kyndryl.com/us/en/about-us/news/2026/02/india-ai-impact-summit-2026" target="_blank" rel="noopener">Kyndryl: IT Delivery, the link between AI vision and impact</a>
                 — February 23, 2026 article reinforcing the Dow result and framing Kyndryl Bridge as an AI-for-efficiency use case
             </li>
             <li>
-                <a href="https://investors.dow.com/en/news/news-details/2026/Dow-reports-fourth-quarter-2025-results/default.aspx" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Dow Investor Relations: Fourth-Quarter 2025 Results</a>
+                <a href="https://investors.dow.com/en/news/news-details/2026/Dow-reports-fourth-quarter-2025-results/default.aspx" target="_blank" rel="noopener">Dow Investor Relations: Fourth-Quarter 2025 Results</a>
                 — Official Dow financial context showing 2025 net sales of $39.968 billion, which helps explain why reliability improvements carry real economic weight
-            </li>
-        </ul>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
-            <div class="mt-10 grid md:grid-cols-3 gap-6">
-                <a href="2026-05-11-openreach-ai-broadband-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Openreach&#39;s One-Third Contact Drop: A 2026 Business Case for AI Adoption at Infrastructure Scale</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 11, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-05-06-ibm-bob-ai-software-delivery-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">IBM Bob&#39;s 45% Productivity Gain: A 2026 Business Case for AI Adoption in Software Delivery</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 6, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-04-27-oracle-opower-ai-utility-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-cyan-950 to-sky-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Oracle Opower&#39;s $4.3 Billion AI Utility Playbook: A 2026 Business Case for AI Adoption That Works</h4>
-                        <p class="mt-2 text-sm text-gray-400">Apr 27, 2026</p>
-                    </div>
-                </a>
-            </div>
+            </li></ul>
         </div>
-    </section>
-
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="../services.html" class="hover:text-white transition">Services</a>
-                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="../about.html" class="hover:text-white transition">About</a>
-                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+        <p style="margin-top:44px;"><a class="back-to-blog" href="../blog.html">← Back to all articles</a></p>
+      </div>
+      <aside class="post-sidebar">
+        <div class="sidebar-widget">
+          <span class="label">Havlek</span>
+          <h4 style="margin-top:10px;">Need help adopting AI?</h4>
+          <p>We help businesses turn AI from hype into measurable operating leverage — strategy, build &amp; integration.</p>
+          <a href="../contact.html" class="btn btn-primary btn-full" style="margin-top:16px;">Book free audit</a>
         </div>
-    </footer>
+      </aside>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+<section class="post-related">
+  <div class="container">
+    <div class="section-header"><span class="label">Keep Reading</span><h2>Related Articles</h2></div>
+    <div class="blog-grid">
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 11, 2026</span></div>
+          <h2><a href="2026-05-11-openreach-ai-broadband-business-case.html">Openreach&#39;s One-Third Contact Drop: A 2026 Business Case for AI Adoption at Infrastructure Scale</a></h2>
+          <a class="blog-read-more" href="2026-05-11-openreach-ai-broadband-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 6, 2026</span></div>
+          <h2><a href="2026-05-06-ibm-bob-ai-software-delivery-business-case.html">IBM Bob&#39;s 45% Productivity Gain: A 2026 Business Case for AI Adoption in Software Delivery</a></h2>
+          <a class="blog-read-more" href="2026-05-06-ibm-bob-ai-software-delivery-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>Apr 27, 2026</span></div>
+          <h2><a href="2026-04-27-oracle-opower-ai-utility-business-case.html">Oracle Opower&#39;s $4.3 Billion AI Utility Playbook: A 2026 Business Case for AI Adoption That Works</a></h2>
+          <a class="blog-read-more" href="2026-04-27-oracle-opower-ai-utility-business-case.html">Read article →</a>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="../components.js"></script>
 </body>
 </html>

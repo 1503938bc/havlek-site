@@ -7,17 +7,6 @@
     <link rel="canonical" href="https://havlek.ca/blog-page-6.html">
     <link rel="prev" href="https://havlek.ca/blog-page-5.html">
     <link rel="next" href="https://havlek.ca/blog-page-7.html">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -25,205 +14,123 @@
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-brand transition">Home</a>
-                <a href="services.html" class="hover:text-brand transition">Services</a>
-                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="about.html" class="hover:text-brand transition">About</a>
-                <a href="blog.html" class="text-brand">Blog</a>
-                <a href="contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="index.html" class="block hover:text-brand">Home</a>
-            <a href="services.html" class="block hover:text-brand">Services</a>
-            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="about.html" class="block hover:text-brand">About</a>
-            <a href="blog.html" class="block text-brand">Blog</a>
-            <a href="contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span><a href="blog.html">Blog</a><span>›</span><span>Page 6</span>
     </nav>
+    <div class="page-hero-inner">
+      <div>
+        <span class="label">Archive · Page 6</span>
+        <h1>Insights & Analysis</h1>
+        <p class="page-hero-sub">Deep dives into AI, cloud computing, and modern web development.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <p class="text-sm font-semibold tracking-[0.25em] uppercase text-brand fade-in">Archive Page 6</p>
-            <h1 class="mt-3 text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Insights & Analysis</h1>
-            <p class="mt-6 text-xl text-gray-500 fade-in">Deep dives into AI, cloud computing, and modern web development.</p>
+<section class="services-section" style="padding-top:40px;">
+  <div class="container">
+    <div class="blog-grid">
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-05-15-beca-nzgd-ai-infrastructure-business-case.html"><img class="blog-card-img" src="posts/images/2026-05-15-beca-nzgd-ai-infrastructure-business-case.png" alt="Infrastructure and geotechnical engineers reviewing an AI-powered digital twin map with terrain layers, site investigation data, and construction planning dashboards in a modern blue operations studio" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 15, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-05-15-beca-nzgd-ai-infrastructure-business-case.html">Beca and MBIE&#39;s 40% AI Task Cut: A 2026 Business Case for AI Adoption in Infrastructure</a></h2>
+          <p>Beca&#39;s latest AI case shows how infrastructure organizations can create measurable value by wrapping natural-language AI around trusted operational data.</p>
+          <a class="blog-read-more" href="posts/2026-05-15-beca-nzgd-ai-infrastructure-business-case.html">Read article →</a>
         </div>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid md:grid-cols-2 gap-8">
-
-                <a href="posts/2026-05-15-beca-nzgd-ai-infrastructure-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-05-15-beca-nzgd-ai-infrastructure-business-case.png" alt="Infrastructure and geotechnical engineers reviewing an AI-powered digital twin map with terrain layers, site investigation data, and construction planning dashboards in a modern blue operations studio" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Beca and MBIE&#39;s 40% AI Task Cut: A 2026 Business Case for AI Adoption in Infrastructure</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Beca&#39;s latest AI case shows how infrastructure organizations can create measurable value by wrapping natural-language AI around trusted operational data.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>May 15, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-05-14-navien-ai-manufacturing-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-05-14-navien-ai-manufacturing-business-case.png" alt="Manufacturing leaders reviewing AI-driven process dashboards, procurement analytics, and global operations data in a modern blue industrial control room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Navien&#39;s 28,000-Hour AI Gain: A 2026 Business Case for AI Adoption in Manufacturing</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Navien&#39;s latest AI case shows what successful manufacturing adoption looks like when process redesign, cloud cleanup, self-service data, and role-specific AI move together.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>May 14, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-05-13-obeikan-o3ai-manufacturing-ai-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-05-13-obeikan-o3ai-manufacturing-ai-business-case.png" alt="Manufacturing leaders reviewing AI-driven production dashboards, connected machines, and factory efficiency analytics in a modern blue industrial control room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Obeikan&#39;s 30% Efficiency Boost: A 2026 Business Case for AI Adoption in Manufacturing</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Obeikan&#39;s latest AI case shows what successful adoption looks like when connected machines, real-time insight, and factory copilots compress operational friction instead of adding more dashboard theater.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>May 13, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.png" alt="Enterprise operations teams monitoring AI-driven observability dashboards, incident prediction maps, and industrial reliability analytics in a modern blue command center" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Dow&#39;s 93% Major Incident Drop: A 2026 Business Case for AI Adoption in IT Operations</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Dow&#39;s latest AI case shows what successful adoption looks like when predictive analytics cut major IT incidents, reduce operational noise, and improve resilience instead of just accelerating response.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>May 12, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-05-11-openreach-ai-broadband-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-05-11-openreach-ai-broadband-business-case.png" alt="Broadband network operations and customer service teams using proactive AI dashboards, appointment routing, and fibre rollout maps in a modern blue command center" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">Openreach&#39;s One-Third Contact Drop: A 2026 Business Case for AI Adoption at Infrastructure Scale</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">Openreach&#39;s latest AI case shows what successful adoption looks like when proactive service automation reduces avoidable contacts, protects appointments, and improves trust at national scale.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>May 11, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="posts/2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="posts/images/2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.png" alt="Healthcare operations team coordinating AI-driven mobile diagnostics scheduling, routing dashboards, and patient service workflows in a modern blue control center" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">TridentCare&#39;s 96% Scheduling Automation: A 2026 Business Case for AI Adoption in Healthcare Operations</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">TridentCare&#39;s latest AI case shows what successful adoption looks like when automation attacks a messy, high-volume operations workflow and turns exceptions into the only human work left.</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>May 9, 2026</span>
-                            <span>&middot;</span>
-                            <span>7 min read</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mt-16 flex flex-wrap justify-center items-center gap-3 fade-in">
-                <a href="blog-page-5.html" class="px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-600 hover:border-brand hover:text-brand transition">Previous</a>
-                <a href="blog.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">1</a>
-                <a href="blog-page-2.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">2</a>
-                <a href="blog-page-3.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">3</a>
-                <a href="blog-page-4.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">4</a>
-                <a href="blog-page-5.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">5</a>
-                <span class="w-10 h-10 flex items-center justify-center rounded-full bg-brand text-white text-sm font-semibold">6</span>
-                <a href="blog-page-7.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">7</a>
-                <a href="blog-page-8.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">8</a>
-                <a href="blog-page-9.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">9</a>
-                <a href="blog-page-10.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">10</a>
-                <a href="blog-page-11.html" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">11</a>
-                <a href="blog-page-7.html" class="px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-600 hover:border-brand hover:text-brand transition">Next</a>
-            </div>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-05-14-navien-ai-manufacturing-business-case.html"><img class="blog-card-img" src="posts/images/2026-05-14-navien-ai-manufacturing-business-case.png" alt="Manufacturing leaders reviewing AI-driven process dashboards, procurement analytics, and global operations data in a modern blue industrial control room" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 14, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-05-14-navien-ai-manufacturing-business-case.html">Navien&#39;s 28,000-Hour AI Gain: A 2026 Business Case for AI Adoption in Manufacturing</a></h2>
+          <p>Navien&#39;s latest AI case shows what successful manufacturing adoption looks like when process redesign, cloud cleanup, self-service data, and role-specific AI move together.</p>
+          <a class="blog-read-more" href="posts/2026-05-14-navien-ai-manufacturing-business-case.html">Read article →</a>
         </div>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Want us to write about a topic?</h2>
-            <p class="mt-6 text-gray-400 text-lg">We're always looking for new subjects to explore.</p>
-            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Get in Touch</a>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-05-13-obeikan-o3ai-manufacturing-ai-business-case.html"><img class="blog-card-img" src="posts/images/2026-05-13-obeikan-o3ai-manufacturing-ai-business-case.png" alt="Manufacturing leaders reviewing AI-driven production dashboards, connected machines, and factory efficiency analytics in a modern blue industrial control room" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 13, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-05-13-obeikan-o3ai-manufacturing-ai-business-case.html">Obeikan&#39;s 30% Efficiency Boost: A 2026 Business Case for AI Adoption in Manufacturing</a></h2>
+          <p>Obeikan&#39;s latest AI case shows what successful adoption looks like when connected machines, real-time insight, and factory copilots compress operational friction instead of adding more dashboard theater.</p>
+          <a class="blog-read-more" href="posts/2026-05-13-obeikan-o3ai-manufacturing-ai-business-case.html">Read article →</a>
         </div>
-    </section>
-
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="services.html" class="hover:text-white transition">Services</a>
-                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="about.html" class="hover:text-white transition">About</a>
-                    <a href="blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.html"><img class="blog-card-img" src="posts/images/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.png" alt="Enterprise operations teams monitoring AI-driven observability dashboards, incident prediction maps, and industrial reliability analytics in a modern blue command center" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 12, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.html">Dow&#39;s 93% Major Incident Drop: A 2026 Business Case for AI Adoption in IT Operations</a></h2>
+          <p>Dow&#39;s latest AI case shows what successful adoption looks like when predictive analytics cut major IT incidents, reduce operational noise, and improve resilience instead of just accelerating response.</p>
+          <a class="blog-read-more" href="posts/2026-05-12-dow-kyndryl-bridge-ai-it-operations-business-case.html">Read article →</a>
         </div>
-    </footer>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-05-11-openreach-ai-broadband-business-case.html"><img class="blog-card-img" src="posts/images/2026-05-11-openreach-ai-broadband-business-case.png" alt="Broadband network operations and customer service teams using proactive AI dashboards, appointment routing, and fibre rollout maps in a modern blue command center" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 11, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-05-11-openreach-ai-broadband-business-case.html">Openreach&#39;s One-Third Contact Drop: A 2026 Business Case for AI Adoption at Infrastructure Scale</a></h2>
+          <p>Openreach&#39;s latest AI case shows what successful adoption looks like when proactive service automation reduces avoidable contacts, protects appointments, and improves trust at national scale.</p>
+          <a class="blog-read-more" href="posts/2026-05-11-openreach-ai-broadband-business-case.html">Read article →</a>
+        </div>
+      </article>
+      <article class="blog-card has-img" data-reveal>
+        <a href="posts/2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.html"><img class="blog-card-img" src="posts/images/2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.png" alt="Healthcare operations team coordinating AI-driven mobile diagnostics scheduling, routing dashboards, and patient service workflows in a modern blue control center" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 9, 2026</span><span>7 min read</span></div>
+          <h2><a href="posts/2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.html">TridentCare&#39;s 96% Scheduling Automation: A 2026 Business Case for AI Adoption in Healthcare Operations</a></h2>
+          <p>TridentCare&#39;s latest AI case shows what successful adoption looks like when automation attacks a messy, high-volume operations workflow and turns exceptions into the only human work left.</p>
+          <a class="blog-read-more" href="posts/2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.html">Read article →</a>
+        </div>
+      </article>
+    </div>
+    <div class="blog-pagination">
+      <a class="page-link" href="blog-page-5.html">Previous</a>
+      <a class="page-link" href="blog.html">1</a>
+      <a class="page-link" href="blog-page-2.html">2</a>
+      <a class="page-link" href="blog-page-3.html">3</a>
+      <a class="page-link" href="blog-page-4.html">4</a>
+      <a class="page-link" href="blog-page-5.html">5</a>
+      <span class="page-link active">6</span>
+      <a class="page-link" href="blog-page-7.html">7</a>
+      <a class="page-link" href="blog-page-8.html">8</a>
+      <a class="page-link" href="blog-page-9.html">9</a>
+      <a class="page-link" href="blog-page-10.html">10</a>
+      <a class="page-link" href="blog-page-11.html">11</a>
+      <a class="page-link" href="blog-page-7.html">Next</a>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+<section class="callout-band">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto;">
+      <span class="label">Suggest a Topic</span>
+      <h2 style="margin-bottom:20px;">Want us to write about a topic?</h2>
+      <p style="margin-bottom:32px;">We're always looking for new subjects to explore. Tell us what AI question matters to your business.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="components.js"></script>
 </body>
 </html>

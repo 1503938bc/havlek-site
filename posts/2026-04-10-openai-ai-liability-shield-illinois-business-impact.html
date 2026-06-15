@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="..">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,24 +25,6 @@
     <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-04-10-openai-ai-liability-shield-illinois-business-impact.png">
 
     <title>OpenAI's AI Liability Shield: What the Illinois Bill Means for Your Business — Havlek</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
-        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
-        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
-        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -84,67 +66,35 @@
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <!-- Nav -->
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="../index.html">
-                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="../index.html" class="hover:text-brand transition">Home</a>
-                <a href="../services.html" class="hover:text-brand transition">Services</a>
-                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="../about.html" class="hover:text-brand transition">About</a>
-                <a href="../blog.html" class="text-brand">Blog</a>
-                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="../index.html" class="block hover:text-brand">Home</a>
-            <a href="../services.html" class="block hover:text-brand">Services</a>
-            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="../about.html" class="block hover:text-brand">About</a>
-            <a href="../blog.html" class="block text-brand">Blog</a>
-            <a href="../contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="post-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span>›</span><a href="../blog.html">Blog</a><span>›</span><span>Article</span>
     </nav>
-
-    <!-- Article Hero -->
-    <section class="pt-20 sm:pt-24">
-        <div class="h-72 sm:h-96 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center relative">
-            <div class="absolute inset-0 bg-black/30"></div>
-            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-                <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-brand rounded-full mb-6 fade-in">AI & Business</span>
-                <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight fade-in">OpenAI's AI Liability Shield: What the Illinois Bill Means for Your Business</h1>
-            </div>
-        </div>
-    </section>
-
-    <!-- Article Meta -->
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-100 fade-in">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold">H</div>
-            <span class="font-medium text-gray-700">Havlek Team</span>
-        </div>
-        <span>&middot;</span>
-        <span>April 10, 2026</span>
-        <span>&middot;</span>
-        <span>8 min read</span>
+    <div class="post-hero-inner">
+      <div class="post-meta-row"><span class="post-cat">AI & Business</span><span>April 10, 2026</span><span>8 min read</span><span>Havlek Team</span></div>
+      <h1>OpenAI's AI Liability Shield: What the Illinois Bill Means for Your Business</h1>
+      <p class="post-excerpt">OpenAI backs an Illinois bill shielding AI labs from liability for catastrophic harms. Here's what the new AI liability push means for businesses deploying AI.</p>
     </div>
+  </div>
+</section>
 
-    <!-- Article Body -->
-    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-lg leading-relaxed text-gray-700 prose fade-in">
-
+<section class="post-body-wrap">
+  <div class="container">
+    <div class="post-layout">
+      <div class="post-body">
         <p>For the first time in years, the AI liability conversation is not about whether model makers should be accountable — it is about how aggressively they are lobbying to make sure they are not. This week, OpenAI publicly threw its weight behind an Illinois state bill that would shield frontier AI developers from legal responsibility when their models are implicated in catastrophic harm, including mass casualty events and billion-dollar financial disasters. For businesses building on top of these models, the implications land closer to home than most boardrooms realize.</p>
 
         <p>Illinois Senate Bill 3444 is narrowly drawn on paper and enormous in practice. It applies only to "frontier" models trained with more than $100 million in compute, which is a club currently limited to a handful of labs. But the legal precedent it sets — and OpenAI's willingness to publicly testify in favor of it — signals a decisive shift in how the AI industry wants risk to flow through the software supply chain. Spoiler: not toward them.</p>
@@ -194,85 +144,42 @@
         </ul>
 
         <p>OpenAI's support for SB 3444 is a signal, not an outlier. The AI industry is maturing into its regulatory adolescence, and the fights over who holds the bag when things go wrong are only beginning. The businesses that come out ahead will be the ones who assumed, from the start, that some of that liability was going to land on them — and built their AI strategy accordingly. The ones that assumed someone else would catch it are going to find out, the hard way, that nobody did.</p>
-
-    </article>
-
-    <!-- Back to Blog -->
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
-        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
-            Back to Blog
-        </a>
-    </div>
-
-    <!-- Sources & Further Reading -->
-    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources & Further Reading</h2>
-        <ul class="space-y-3 text-base text-gray-600">
-            <li>
-                <a href="https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">WIRED: OpenAI Backs Bill That Would Limit Liability for AI-Enabled Mass Deaths or Financial Disasters</a>
+        <div class="post-sources">
+          <h2>Sources &amp; Further Reading</h2>
+          <ul><li>
+                <a href="https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/" target="_blank" rel="noopener">WIRED: OpenAI Backs Bill That Would Limit Liability for AI-Enabled Mass Deaths or Financial Disasters</a>
                 — Reporting on OpenAI's testimony in support of Illinois SB 3444
             </li>
             <li>
-                <a href="https://www.ilga.gov/legislation/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Illinois General Assembly</a>
+                <a href="https://www.ilga.gov/legislation/" target="_blank" rel="noopener">Illinois General Assembly</a>
                 — Official source for the full text and status of SB 3444
             </li>
             <li>
-                <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">EU AI Act</a>
+                <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener">EU AI Act</a>
                 — The European regulatory framework taking the opposite approach on AI liability
             </li>
             <li>
-                <a href="https://openai.com/policies/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">OpenAI Policy Center</a>
+                <a href="https://openai.com/policies/" target="_blank" rel="noopener">OpenAI Policy Center</a>
                 — OpenAI's public position on AI governance and regulation
-            </li>
-        </ul>
-    </section>
-
-    <!-- Disclaimer -->
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-center">
-        <p class="text-sm text-gray-400 italic">Published by Havlek Team · Analysis based on publicly available industry data and trends</p>
+            </li></ul>
+        </div>
+        <p style="margin-top:44px;"><a class="back-to-blog" href="../blog.html">← Back to all articles</a></p>
+      </div>
+      <aside class="post-sidebar">
+        <div class="sidebar-widget">
+          <span class="label">Havlek</span>
+          <h4 style="margin-top:10px;">Need help adopting AI?</h4>
+          <p>We help businesses turn AI from hype into measurable operating leverage — strategy, build &amp; integration.</p>
+          <a href="../contact.html" class="btn btn-primary btn-full" style="margin-top:16px;">Book free audit</a>
+        </div>
+      </aside>
     </div>
+  </div>
+</section>
 
-    <!-- CTA -->
-    <section class="py-16 sm:py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Building an AI-powered product? Let's de-risk it together.</h2>
-            <p class="mt-6 text-gray-400 text-lg">Havlek helps businesses deploy AI with clear governance, safeguards, and operational resilience.</p>
-            <a href="../contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="../services.html" class="hover:text-white transition">Services</a>
-                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="../about.html" class="hover:text-white transition">About</a>
-                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="../components.js"></script>
 </body>
 </html>

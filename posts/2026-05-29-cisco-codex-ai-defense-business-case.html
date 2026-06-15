@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="..">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,26 +56,6 @@
         "keywords": ["Cisco", "Codex", "AI Defense", "enterprise engineering", "software delivery", "AI adoption"]
     }
     </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
-        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
-        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
-        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
-        .prose a { color: #1a73e8; text-decoration: underline; }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -83,60 +63,36 @@
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="../index.html">
-                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="../index.html" class="hover:text-brand transition">Home</a>
-                <a href="../services.html" class="hover:text-brand transition">Services</a>
-                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="../about.html" class="hover:text-brand transition">About</a>
-                <a href="../blog.html" class="text-brand">Blog</a>
-                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="../index.html" class="block hover:text-brand">Home</a>
-            <a href="../services.html" class="block hover:text-brand">Services</a>
-            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="../about.html" class="block hover:text-brand">About</a>
-            <a href="../blog.html" class="block text-brand">Blog</a>
-            <a href="../contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="post-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span>›</span><a href="../blog.html">Blog</a><span>›</span><span>Article</span>
     </nav>
+    <div class="post-hero-inner">
+      <div class="post-meta-row"><span class="post-cat">AI &amp; Business</span><span>May 29, 2026</span><span>7 min read</span><span>Havlek Team</span></div>
+      <h1>Cisco's 1,500-Hour Codex Gain: A 2026 Business Case for AI Adoption in Enterprise Engineering</h1>
+      <p class="post-excerpt">Cisco's latest AI case shows what successful adoption looks like when coding agents are embedded in the real workflows that determine product velocity, code quality, and security response.</p>
+    </div>
+    <img class="post-hero-img" src="images/2026-05-29-cisco-codex-ai-defense-business-case.png" alt="Enterprise software and cybersecurity engineers reviewing AI-generated code, defect repair loops, and secure build dashboards in a modern blue Cisco-style engineering command center" />
+  </div>
+</section>
 
-    <section class="pt-20 sm:pt-24">
-        <div class="h-72 sm:h-96 bg-gradient-to-br from-slate-950 via-cyan-950 to-blue-900 flex items-center justify-center relative">
-            <img src="images/2026-05-29-cisco-codex-ai-defense-business-case.png" alt="Enterprise software and cybersecurity engineers reviewing AI-generated code, defect repair loops, and secure build dashboards in a modern blue Cisco-style engineering command center" class="absolute inset-0 w-full h-full object-cover opacity-80">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/25 to-transparent"></div>
-            <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center text-white">
-                <span class="inline-flex px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-300/30 text-xs sm:text-sm font-semibold tracking-wide uppercase">AI &amp; Business</span>
-                <h1 class="mt-6 text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">Cisco's 1,500-Hour Codex Gain: A 2026 Business Case for AI Adoption in Enterprise Engineering</h1>
-                <p class="mt-6 text-base sm:text-lg md:text-xl text-cyan-100 max-w-3xl mx-auto">Cisco's latest AI case shows what successful adoption looks like when coding agents are embedded in the real workflows that determine product velocity, code quality, and security response.</p>
-                <div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-cyan-100">
-                    <span>May 29, 2026</span>
-                    <span>&middot;</span>
-                    <span>7 min read</span>
-                    <span>&middot;</span>
-                    <span>Havlek Team</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 prose prose-lg prose-slate fade-in">
+<section class="post-body-wrap">
+  <div class="container">
+    <div class="post-layout">
+      <div class="post-body">
         <p>One of the cleaner AI business cases in the market right now is not about writing a few lines of code faster. It is Cisco showing what happens when an AI agent is attached to difficult enterprise engineering workflows that already matter to the business: build systems, defect repair, framework migrations, and the delivery of a real security product.</p>
 
         <p>On May 27, OpenAI published a new Cisco customer story that is more useful than most vendor case studies because it includes operating metrics, concrete workflows, and a business context that holds up. Cisco says Codex now writes the majority of its AI Defense platform and nearly every new feature under development. It also says Codex cut build times by about <strong>20%</strong>, saved more than <strong>1,500 engineering hours per month</strong>, and increased defect-resolution throughput by <strong>10 to 15 times</strong> in a large-scale remediation workflow.</p>
@@ -188,99 +144,65 @@
         <p>Cisco is a strong 2026 AI adoption case because it shows where the real gains come from. Not from generic AI enthusiasm. Not from a one-team experiment. From embedding agents inside the workflows that already control build speed, defect closure, and product delivery.</p>
 
         <p>If you are building your own AI business case, copy the pattern rather than the headline. Find the engineering or operations loop that creates the most waiting, manual rework, and delayed releases. Measure it. Attach AI directly to that loop. Keep human review where judgment matters. That is how AI stops being a demo and starts becoming operating leverage.</p>
-    </article>
-
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
-        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
-            Back to Blog
-        </a>
-    </div>
-
-    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources &amp; Further Reading</h2>
-        <ul class="space-y-3 text-base text-gray-600">
-            <li>
-                <a href="https://openai.com/ko-KR/index/cisco/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">OpenAI: Cisco and OpenAI redefine enterprise engineering with Codex</a>
+        <div class="post-sources">
+          <h2>Sources &amp; Further Reading</h2>
+          <ul><li>
+                <a href="https://openai.com/ko-KR/index/cisco/" target="_blank" rel="noopener">OpenAI: Cisco and OpenAI redefine enterprise engineering with Codex</a>
                 — May 27, 2026 customer story covering the majority-of-features claim for AI Defense, the 20% build-time reduction, 1,500+ engineering hours saved per month, and 10 to 15x defect-resolution throughput
             </li>
             <li>
-                <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m02/cisco-redefines-security-for-the-agentic-era.html" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Cisco: Cisco Redefines Security for the Agentic Era with AI Defense Expansion and AI-Aware SASE</a>
+                <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m02/cisco-redefines-security-for-the-agentic-era.html" target="_blank" rel="noopener">Cisco: Cisco Redefines Security for the Agentic Era with AI Defense Expansion and AI-Aware SASE</a>
                 — February 10, 2026 Cisco release defining AI Defense as a core enterprise security platform for safe agentic AI adoption
             </li>
             <li>
-                <a href="https://blogs.cisco.com/cisco-on-cisco/how-cisco-defends-against-ai-threats" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Cisco Blogs: A new model for infrastructure security: How Cisco defends against AI threats</a>
+                <a href="https://blogs.cisco.com/cisco-on-cisco/how-cisco-defends-against-ai-threats" target="_blank" rel="noopener">Cisco Blogs: A new model for infrastructure security: How Cisco defends against AI threats</a>
                 — May 27, 2026 Cisco blog showing why compressed security and remediation cycles now matter in AI-era infrastructure defense
             </li>
             <li>
-                <a href="https://openai.com/index/gartner-2026-agentic-coding-leader/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">OpenAI: OpenAI named a Leader in enterprise coding agents by Gartner</a>
+                <a href="https://openai.com/index/gartner-2026-agentic-coding-leader/" target="_blank" rel="noopener">OpenAI: OpenAI named a Leader in enterprise coding agents by Gartner</a>
                 — May 20, 2026 note reiterating Cisco's use of Codex to build the majority of AI Defense and shorten delivery from quarters to weeks
-            </li>
-        </ul>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
-            <div class="mt-10 grid md:grid-cols-3 gap-6">
-                <a href="2026-05-26-ramp-codex-code-review-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-teal-950 to-cyan-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Ramp's Minutes-Not-Hours Code Review: A 2026 Business Case for AI Adoption in Engineering</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 26, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-05-23-virgin-atlantic-codex-software-delivery-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Virgin Atlantic's Zero-P1 Launch: A 2026 Business Case for AI Adoption in Software Delivery</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 23, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-05-17-nvidia-codex-engineering-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-indigo-950 to-cyan-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">NVIDIA's 10x Research Speedup: A 2026 Business Case for AI Adoption in Engineering</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 17, 2026</p>
-                    </div>
-                </a>
-            </div>
+            </li></ul>
         </div>
-    </section>
-
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="../services.html" class="hover:text-white transition">Services</a>
-                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="../about.html" class="hover:text-white transition">About</a>
-                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+        <p style="margin-top:44px;"><a class="back-to-blog" href="../blog.html">← Back to all articles</a></p>
+      </div>
+      <aside class="post-sidebar">
+        <div class="sidebar-widget">
+          <span class="label">Havlek</span>
+          <h4 style="margin-top:10px;">Need help adopting AI?</h4>
+          <p>We help businesses turn AI from hype into measurable operating leverage — strategy, build &amp; integration.</p>
+          <a href="../contact.html" class="btn btn-primary btn-full" style="margin-top:16px;">Book free audit</a>
         </div>
-    </footer>
+      </aside>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-    </script>
+<section class="post-related">
+  <div class="container">
+    <div class="section-header"><span class="label">Keep Reading</span><h2>Related Articles</h2></div>
+    <div class="blog-grid">
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 26, 2026</span></div>
+          <h2><a href="2026-05-26-ramp-codex-code-review-business-case.html">Ramp's Minutes-Not-Hours Code Review: A 2026 Business Case for AI Adoption in Engineering</a></h2>
+          <a class="blog-read-more" href="2026-05-26-ramp-codex-code-review-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 23, 2026</span></div>
+          <h2><a href="2026-05-23-virgin-atlantic-codex-software-delivery-business-case.html">Virgin Atlantic's Zero-P1 Launch: A 2026 Business Case for AI Adoption in Software Delivery</a></h2>
+          <a class="blog-read-more" href="2026-05-23-virgin-atlantic-codex-software-delivery-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 17, 2026</span></div>
+          <h2><a href="2026-05-17-nvidia-codex-engineering-business-case.html">NVIDIA's 10x Research Speedup: A 2026 Business Case for AI Adoption in Engineering</a></h2>
+          <a class="blog-read-more" href="2026-05-17-nvidia-codex-engineering-business-case.html">Read article →</a>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="../components.js"></script>
 </body>
 </html>

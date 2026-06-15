@@ -1,225 +1,470 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root=".">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Havlek — Web Design | Application Development | SEO | Online Marketing</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .logo-scroll { animation: scroll 30s linear infinite; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { brand: '#1a73e8' }
-                }
-            }
-        }
-    </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D0NJSVQWWE');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Havlek — AI Solutions & Digital Innovation for Businesses</title>
+  <meta name="description" content="Havlek helps businesses unlock AI — from strategy to implementation. Vancouver-based agency specializing in AI integration, web development, e-commerce, and mobile apps." />
+  <meta name="keywords" content="AI solutions Vancouver, AI consulting Canada, web development Vancouver, e-commerce Magento, AI integration, business automation" />
+  <link rel="canonical" href="https://havlek.ca/" />
+  <meta name="theme-color" content="#fafafa" />
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://havlek.ca/" />
+  <meta property="og:site_name"   content="Havlek" />
+  <meta property="og:title"       content="Havlek — AI Solutions & Digital Innovation" />
+  <meta property="og:description" content="Vancouver agency helping businesses unlock AI: chatbots, process automation, AI integration, web & e-commerce development." />
+  <meta property="og:image"       content="https://havlek.ca/images/og-home.png" />
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Havlek — AI Solutions & Digital Innovation" />
+  <meta name="twitter:description" content="Vancouver agency helping businesses unlock AI: chatbots, process automation, AI integration, web & e-commerce development." />
+  <meta name="twitter:image"       content="https://havlek.ca/images/og-home.png" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Havlek",
+    "legalName": "Hong Marketing Inc.",
+    "url": "https://havlek.ca",
+    "logo": "https://havlek.ca/images/logo-trans.png",
+    "description": "Vancouver-based AI solutions and digital innovation agency specializing in AI integration, web development, e-commerce, and mobile applications.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "#111 16033 108 Ave., PO Box 74057 Fraser Heights PO",
+      "addressLocality": "Surrey",
+      "addressRegion": "BC",
+      "postalCode": "V4N 1P0",
+      "addressCountry": "CA"
+    },
+    "email": "info@havlek.ca",
+    "areaServed": "Worldwide",
+    "foundingDate": "2014",
+    "sameAs": ["https://havlek.ca"]
+  }
+  </script>
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="home">
+<div class="shell">
 
-    <!-- Nav -->
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="index.html" class="text-brand">Home</a>
-                <a href="services.html" class="hover:text-brand transition">Services</a>
-                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="about.html" class="hover:text-brand transition">About</a>
-                <a href="blog.html" class="hover:text-brand transition">Blog</a>
-                <a href="contact.html" class="hover:text-brand transition">Contact</a>
+<!-- SIDE RAILS -->
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Vancouver · Canada</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Solutions · Est. 2014</span></div>
+
+<!-- NAV (injected by components.js) -->
+<div id="site-nav"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="pulse"></span>
+      AI-powered digital solutions · Vancouver, Canada
+    </div>
+    <h1 class="hero-title">
+      Your business,<br/>
+      <em>powered by AI</em>
+    </h1>
+    <p class="hero-sub">
+      Most companies know AI is changing everything — but don't know where to start.
+      Havlek bridges that gap: practical AI built on 10+ years of enterprise web expertise.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary btn-lg">Book a free AI audit</a>
+      <a href="#ai-services" class="btn btn-outline btn-lg">See what's possible</a>
+    </div>
+    <div class="hero-clients">
+      <span class="clients-label-small">Trusted by</span>
+      <span class="clients-divider"></span>
+      <div class="clients-names">
+        <span>MEC</span>
+        <span>Ingram Micro</span>
+        <span>Saje</span>
+        <span>JYSK</span>
+        <span>ELLE</span>
+        <span>Allecon</span>
+        <span>Uniserve</span>
+        <span>S.U.C.C.E.S.S.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero illustration -->
+  <div class="container" style="margin-top:64px;">
+    <div class="hero-visual">
+      <img src="images/hero-illustration.png" alt="AI-powered business workspace" style="width:100%;height:auto;display:block;border-radius:16px;" />
+    </div>
+  </div>
+</section>
+
+<!-- CALLOUT BAND -->
+<section class="callout-band">
+  <div class="container">
+    <div class="callout-inner">
+      <div class="callout-text">
+        <span class="label">The Challenge</span>
+        <h2>Everyone's talking about AI. Few know what to actually do with it.</h2>
+        <p>Executives are asked to "leverage AI" — but without a clear plan, companies either over-invest in hype or fall behind competitors who found the right applications first.</p>
+        <p>Havlek cuts through the noise. We identify exactly where AI creates measurable ROI in your specific workflows, then build and integrate the solution.</p>
+        <a href="#ai-services" class="btn btn-outline">Explore AI services</a>
+      </div>
+      <div>
+        <img src="images/ai-network.png" alt="AI neural network visualization" class="callout-illustration" />
+        <div class="stats-stack" data-reveal>
+          <div class="stat-row">
+            <div class="stat-num">77<span>%</span></div>
+            <div class="stat-body">
+              <div class="stat-label">of companies say AI is a priority — but lack a concrete implementation plan</div>
             </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="index.html" class="block text-brand">Home</a>
-            <a href="services.html" class="block hover:text-brand">Services</a>
-            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="about.html" class="block hover:text-brand">About</a>
-            <a href="blog.html" class="block hover:text-brand">Blog</a>
-            <a href="contact.html" class="block hover:text-brand">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="pt-24 pb-16 sm:pt-32 md:min-h-screen md:flex md:items-center md:justify-center bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h1 class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight fade-in">
-                Web Design<span class="text-brand">.</span><br>
-                <span class="whitespace-nowrap">Application Development<span class="text-brand">.</span></span><br>
-                <span class="whitespace-nowrap">SEO &amp; Online Marketing<span class="text-brand">.</span></span>
-            </h1>
-            <p class="mt-6 sm:mt-8 text-lg md:text-2xl text-gray-500 max-w-2xl mx-auto fade-in">
-                Comprehensive online solutions for businesses worldwide.
-            </p>
-            <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center fade-in">
-                <a href="services.html" class="inline-flex px-8 py-3 sm:py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">View Services</a>
-                <a href="contact.html" class="inline-flex px-8 py-3 sm:py-4 border border-gray-300 rounded-full text-sm font-semibold hover:border-brand hover:text-brand transition">Get in Touch</a>
+          </div>
+          <div class="stat-row">
+            <div class="stat-num">3<span>×</span></div>
+            <div class="stat-body">
+              <div class="stat-label">faster execution for teams that integrate AI into their core workflows</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-center fade-in">What We Do</h2>
-            <p class="mt-4 text-gray-500 text-center text-lg max-w-2xl mx-auto fade-in">Expert solutions across development, design, and digital marketing.</p>
-            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="text-4xl mb-4">💻</div>
-                    <h3 class="font-semibold text-lg">Web Development</h3>
-                    <p class="mt-2 text-gray-500 text-sm">PHP, Zend Framework, Ruby on Rails, and modern CMS platforms.</p>
-                </div>
-                <div class="p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="text-4xl mb-4">🛒</div>
-                    <h3 class="font-semibold text-lg">E-Commerce</h3>
-                    <p class="mt-2 text-gray-500 text-sm">Adobe Commerce (Magento), X-Cart, and Zen Cart solutions.</p>
-                </div>
-                <div class="p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="text-4xl mb-4">📱</div>
-                    <h3 class="font-semibold text-lg">Mobile Apps</h3>
-                    <p class="mt-2 text-gray-500 text-sm">Native Apple & Android application development.</p>
-                </div>
-                <div class="p-5 sm:p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition fade-in">
-                    <div class="text-4xl mb-4">📈</div>
-                    <h3 class="font-semibold text-lg">Online Marketing</h3>
-                    <p class="mt-2 text-gray-500 text-sm">SEO, PPC, social media, and search engine marketing.</p>
-                </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-num">60<span>%</span></div>
+            <div class="stat-body">
+              <div class="stat-label">of business tasks have components that can be partially or fully automated with AI</div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Client Logos -->
-    <section class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-center fade-in">Trusted By</h2>
-            <p class="mt-4 text-gray-500 text-center text-lg fade-in">Companies that rely on our expertise.</p>
-            <div class="mt-16 overflow-hidden">
-                <div class="flex items-center gap-16 logo-scroll" style="width: max-content;">
-                    <img src="images/mec.png" alt="MEC" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/ingram.png" alt="Ingram Micro Commerce" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/saje.png" alt="Saje" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/jysj.jpg" alt="JYSK" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/elle.png" alt="ELLE" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/allecon.png" alt="Allecon" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/tnw.png" alt="TNW Corp" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/uniserve.png" alt="Uniserve" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/graffiti-removal-canadasmall.png" alt="Goodbye Graffiti" class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <img src="images/success.png" alt="S.U.C.C.E.S.S." class="h-12 grayscale hover:grayscale-0 transition opacity-60 hover:opacity-100">
-                    <!-- Duplicate for seamless scroll -->
-                    <img src="images/mec.png" alt="MEC" class="h-12 grayscale opacity-60">
-                    <img src="images/ingram.png" alt="Ingram Micro Commerce" class="h-12 grayscale opacity-60">
-                    <img src="images/saje.png" alt="Saje" class="h-12 grayscale opacity-60">
-                    <img src="images/jysj.jpg" alt="JYSK" class="h-12 grayscale opacity-60">
-                    <img src="images/elle.png" alt="ELLE" class="h-12 grayscale opacity-60">
-                    <img src="images/allecon.png" alt="Allecon" class="h-12 grayscale opacity-60">
-                    <img src="images/tnw.png" alt="TNW Corp" class="h-12 grayscale opacity-60">
-                    <img src="images/uniserve.png" alt="Uniserve" class="h-12 grayscale opacity-60">
-                    <img src="images/graffiti-removal-canadasmall.png" alt="Goodbye Graffiti" class="h-12 grayscale opacity-60">
-                    <img src="images/success.png" alt="S.U.C.C.E.S.S." class="h-12 grayscale opacity-60">
-                </div>
-            </div>
+<!-- AI SERVICES -->
+<section class="services-section" id="ai-services">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">AI Services</span>
+      <h2>Practical AI, built for your business</h2>
+      <p>We don't sell AI as a concept. We identify the highest-value opportunities in your operation and build solutions that deliver measurable results.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card service-card--featured" data-reveal>
+        <span class="sc-icon">🎯</span>
+        <h3>AI Strategy & Audit</h3>
+        <p>We map your workflows, identify where AI creates the most value, and deliver a prioritized roadmap — before you invest a dollar in implementation.</p>
+        <ul class="sc-list">
+          <li>Workflow audit & opportunity mapping</li>
+          <li>ROI prioritization framework</li>
+          <li>Vendor & tool recommendations</li>
+          <li>90-day implementation roadmap</li>
+        </ul>
+        <a href="#contact" class="sc-link">Start with a free audit →</a>
+      </div>
+
+      <div class="service-card" data-reveal>
+        <span class="sc-icon">💬</span>
+        <h3>AI Chatbots & Virtual Agents</h3>
+        <p>Intelligent customer-facing assistants that handle support, sales qualification, bookings, and FAQs — 24/7, without additional headcount.</p>
+        <ul class="sc-list">
+          <li>Custom-trained on your content</li>
+          <li>Website, WhatsApp & Slack integration</li>
+          <li>Handoff to human agents</li>
+          <li>Analytics dashboard included</li>
+        </ul>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+
+      <div class="service-card" data-reveal>
+        <span class="sc-icon">⚙️</span>
+        <h3>Process Automation</h3>
+        <p>Replace repetitive, rule-based tasks with AI-powered workflows — from data entry to report generation, invoice processing to email triage.</p>
+        <ul class="sc-list">
+          <li>Document processing & extraction</li>
+          <li>Email triage & response drafts</li>
+          <li>Invoice & order automation</li>
+          <li>CRM data enrichment</li>
+        </ul>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+
+      <div class="service-card" data-reveal>
+        <span class="sc-icon">🔌</span>
+        <h3>AI Integration</h3>
+        <p>Add AI capabilities to your existing website, app, or software — no full rebuild required. We integrate LLMs and AI APIs directly into your stack.</p>
+        <ul class="sc-list">
+          <li>LLM API integration (Claude, GPT, Gemini)</li>
+          <li>Search & recommendation engines</li>
+          <li>Product description generation</li>
+          <li>E-commerce AI upsell flows</li>
+        </ul>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+
+      <div class="service-card" data-reveal>
+        <span class="sc-icon">📊</span>
+        <h3>AI Analytics & Insights</h3>
+        <p>Turn raw business data into actionable decisions with AI-powered dashboards, anomaly detection, and natural-language reporting.</p>
+        <ul class="sc-list">
+          <li>AI-powered BI dashboards</li>
+          <li>Sales & churn forecasting</li>
+          <li>Inventory intelligence</li>
+          <li>Ask-your-data interfaces</li>
+        </ul>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+
+      <div class="service-card" data-reveal>
+        <span class="sc-icon">✍️</span>
+        <h3>AI Content & Marketing</h3>
+        <p>Scale your content output without scaling your team — AI-assisted copywriting, SEO optimization, and personalized marketing campaigns.</p>
+        <ul class="sc-list">
+          <li>AI product content at scale</li>
+          <li>Personalized email campaigns</li>
+          <li>SEO content pipelines</li>
+          <li>Social media automation</li>
+        </ul>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Our Process</span>
+      <h2>From "we should do AI" to results in 90 days</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step" data-reveal>
+        <div class="step-num">01 — Discover</div>
+        <h3>Audit your workflows</h3>
+        <p>We map your pain points and goals to identify the highest-ROI AI opportunities specific to your business and industry.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="step-num">02 — Design</div>
+        <h3>Architect the right solution</h3>
+        <p>We choose the best AI models, tools, and integration points — without over-engineering. Right-sized for your actual needs.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="step-num">03 — Build</div>
+        <h3>Integrate without disruption</h3>
+        <p>Our team builds into your existing systems incrementally. No big-bang rebuilds — testable, phased delivery with clear milestones.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="step-num">04 — Measure</div>
+        <h3>Track ROI, iterate</h3>
+        <p>We instrument every solution from day one and continuously refine — so performance compounds over time, not plateaus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH SERVICES -->
+<section class="tech-section" id="tech-services">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Core Solutions</span>
+      <h2>Full-stack expertise — now AI-enhanced</h2>
+      <p>Our foundation in enterprise web development means AI isn't bolted on — it's integrated into every layer of your digital presence.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">🛒</span>
+        <h3>E-Commerce</h3>
+        <div class="ai-badge">+ AI enhanced</div>
+        <p>Adobe Commerce (Magento), X-Cart, and Zen Cart — from platform setup to AI-powered product recommendations and dynamic pricing.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">🌐</span>
+        <h3>Web Development</h3>
+        <div class="ai-badge">+ AI enhanced</div>
+        <p>Enterprise PHP, Ruby on Rails, and modern frameworks. Scalable backends built to support AI workloads from day one.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">📱</span>
+        <h3>Mobile Apps</h3>
+        <div class="ai-badge">+ AI enhanced</div>
+        <p>Native iOS and Android applications with on-device AI capabilities for smarter, faster, more personalized user experiences.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">☁️</span>
+        <h3>Cloud Infrastructure</h3>
+        <div class="ai-badge">+ AI enhanced</div>
+        <p>AWS-based scalable infrastructure designed for AI workloads — auto-scaling instances, model endpoints, and data pipelines.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">📣</span>
+        <h3>Digital Marketing</h3>
+        <div class="ai-badge">+ AI enhanced</div>
+        <p>SEO, PPC, and social media — supercharged with AI-generated content, automated A/B testing, and predictive audience targeting.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">📋</span>
+        <h3>CMS & Content</h3>
+        <div class="ai-badge">+ AI enhanced</div>
+        <p>WordPress, Drupal, and Joomla with AI content workflows built in — generate, review, and publish at scale without extra headcount.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients-section" id="clients">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Clients</span>
+      <h2>Trusted by leading brands</h2>
+    </div>
+    <div class="clients-logo-row">
+      <div class="client-tile"><img src="images/mec.png" alt="MEC" /></div>
+      <div class="client-tile"><img src="images/ingram.png" alt="Ingram Micro Commerce" /></div>
+      <div class="client-tile"><img src="images/saje.png" alt="Saje" /></div>
+      <div class="client-tile"><img src="images/jysj.jpg" alt="JYSK" /></div>
+      <div class="client-tile"><img src="images/elle.png" alt="ELLE" /></div>
+      <div class="client-tile"><img src="images/allecon.png" alt="Allecon" /></div>
+      <div class="client-tile"><img src="images/tnw.png" alt="TNW Corp" /></div>
+      <div class="client-tile"><img src="images/uniserve.png" alt="Uniserve" /></div>
+      <div class="client-tile"><img src="images/success.png" alt="S.U.C.C.E.S.S." /></div>
+      <div class="client-tile"><img src="images/graffiti-removal-canadasmall.png" alt="Goodbye Graffiti" /></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial" data-reveal>
+        <p class="t-quote">"Havlek delivered a faster, better result than we expected — and at a fraction of the time we budgeted. Their ability to understand the business goal, not just the technical spec, is what sets them apart."</p>
+        <div class="t-author">— Enterprise Client, E-Commerce</div>
+      </div>
+      <div class="testimonial" data-reveal>
+        <p class="t-quote">"They don't just build what you ask for — they understand your business goals and build what you actually need. We've cut our ops overhead by 30% since the AI automation rollout."</p>
+        <div class="t-author">— Operations Director, Retail Brand</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="label">About Havlek</span>
+        <h2>A strategy partner,<br/>not just a vendor</h2>
+        <p>Hong Marketing Inc. (DBA Havlek) is a Vancouver-based digital agency with 10+ years of enterprise technology and marketing experience. We've built e-commerce platforms, mobile apps, and cloud infrastructure for some of North America's most recognized brands.</p>
+        <p>Today, we're extending that expertise into AI — not because it's trendy, but because it's the most impactful lever available to businesses right now. Our job is to make AI practical and profitable for you.</p>
+        <div class="about-nums">
+          <div class="about-num">
+            <div class="about-num-val">10+</div>
+            <div class="about-num-label">Years</div>
+          </div>
+          <div class="about-num">
+            <div class="about-num-val">50+</div>
+            <div class="about-num-label">Projects</div>
+          </div>
+          <div class="about-num">
+            <div class="about-num-val">5</div>
+            <div class="about-num-label">Enterprise brands</div>
+          </div>
+          <div class="about-num">
+            <div class="about-num-val">YVR</div>
+            <div class="about-num-label">Vancouver</div>
+          </div>
         </div>
-    </section>
-
-    <!-- Featured Testimonials -->
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-center fade-in">What Clients Say</h2>
-            <div class="mt-16 grid md:grid-cols-2 gap-8">
-                <div class="p-5 sm:p-8 rounded-2xl bg-gray-50 fade-in">
-                    <div class="text-brand text-4xl mb-4">"</div>
-                    <p class="text-gray-600 leading-relaxed">Hiring Henry allowed us to maximize results on a number of projects where we were expecting to hire several new staff but had the work done in less time with better results and for lower cost.</p>
-                    <div class="mt-6">
-                        <p class="font-semibold">Bruce</p>
-                        <p class="text-sm text-gray-500">President of Uniserve, Vancouver, BC</p>
-                    </div>
-                </div>
-                <div class="p-5 sm:p-8 rounded-2xl bg-gray-50 fade-in">
-                    <div class="text-brand text-4xl mb-4">"</div>
-                    <p class="text-gray-600 leading-relaxed">Henry is doing such a great job for us and we would highly recommend his multi-faceted services to fit any of your specific needs. We rely heavily on his expertise with online marketing and on software development.</p>
-                    <div class="mt-6">
-                        <p class="font-semibold">Ivy</p>
-                        <p class="text-sm text-gray-500">G.M. of Sunny Sports, Los Angeles, CA</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-10 text-center fade-in">
-                <a href="testimonials.html" class="text-brand font-semibold hover:underline">Read all testimonials →</a>
-            </div>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">🔍</span>
+          <h4>Clarity first</h4>
+          <p>We tell you exactly what AI can and can't do for your business — no hype, no overselling.</p>
         </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-16 sm:py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Ready to grow your business online?</h2>
-            <p class="mt-6 text-gray-400 text-lg">Let's discuss how we can help you achieve your goals.</p>
-            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">🔧</span>
+          <h4>Hands-on build</h4>
+          <p>We don't just consult — we design, build, and integrate the solution end to end.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="services.html" class="hover:text-white transition">Services</a>
-                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="about.html" class="hover:text-white transition">About</a>
-                    <a href="blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">📐</span>
+          <h4>Right-sized</h4>
+          <p>We match the solution to your actual needs. No over-engineered platforms. No wasted spend.</p>
         </div>
-    </footer>
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">🤝</span>
+          <h4>Long-term partner</h4>
+          <p>AI evolves fast. We stay with you — optimizing, retraining, and expanding over time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Mobile menu
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-text">
+        <span class="label">Get Started</span>
+        <h2>Ready to see what AI can do for your business?</h2>
+        <p>Book a free 30-minute AI audit. We'll identify 3–5 specific opportunities where AI can save time, reduce cost, or increase revenue in your operation — no strings attached.</p>
+        <div class="contact-benefits">
+          <div class="cb"><span class="cb-check">✓</span> Free, no-obligation consultation</div>
+          <div class="cb"><span class="cb-check">✓</span> Specific to your industry & workflows</div>
+          <div class="cb"><span class="cb-check">✓</span> Clear ROI estimate before any commitment</div>
+          <div class="cb"><span class="cb-check">✓</span> Response within 1 business day</div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@company.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" placeholder="Company name" />
+        </div>
+        <div class="form-group">
+          <label for="interest">What are you most interested in?</label>
+          <select id="interest">
+            <option value="">Select a service...</option>
+            <option>AI Strategy & Audit</option>
+            <option>AI Chatbots & Virtual Agents</option>
+            <option>Process Automation</option>
+            <option>AI Integration into Existing Systems</option>
+            <option>AI Analytics & Insights</option>
+            <option>AI Content & Marketing</option>
+            <option>Web / E-Commerce Development</option>
+            <option>Not sure yet — just exploring</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us about your business challenge</label>
+          <textarea id="message" rows="4" placeholder="What's taking too much time? What do you wish could be automated? What are your biggest bottlenecks?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Book free AI audit</button>
+        <p class="form-note">We respond within 1 business day. No spam, ever.</p>
+      </form>
+    </div>
+  </div>
+</section>
 
-        // Footer year
-        document.getElementById('year').textContent = new Date().getFullYear();
+<!-- FOOTER (injected by components.js) -->
+<div id="site-footer"></div>
 
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+</div><!-- /.shell -->
+<script src="components.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  e.target.innerHTML = '<div class="form-success"><div class="form-success-icon">✅</div><h3>Thanks — we\'ll be in touch.</h3><p>We respond within 1 business day.</p></div>';
+}
+</script>
 </body>
 </html>

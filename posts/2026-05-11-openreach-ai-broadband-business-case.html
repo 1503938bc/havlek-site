@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="..">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,26 +56,6 @@
         "keywords": ["Openreach", "NiCE Cognigy", "proactive AI agents", "customer service automation", "broadband operations", "enterprise AI adoption"]
     }
     </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .prose h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
-        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
-        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose blockquote { border-left: 4px solid #1a73e8; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f8fafc; border-radius: 0 0.5rem 0.5rem 0; }
-        .prose blockquote p { font-style: italic; font-size: 1.15rem; color: #334155; margin-bottom: 0; }
-        .prose a { color: #1a73e8; text-decoration: underline; }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -83,63 +63,36 @@
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="../index.html">
-                <img src="../images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="../index.html" class="hover:text-brand transition">Home</a>
-                <a href="../services.html" class="hover:text-brand transition">Services</a>
-                <a href="../portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="../testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="../about.html" class="hover:text-brand transition">About</a>
-                <a href="../blog.html" class="text-brand">Blog</a>
-                <a href="../contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="../index.html" class="block hover:text-brand">Home</a>
-            <a href="../services.html" class="block hover:text-brand">Services</a>
-            <a href="../portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="../testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="../about.html" class="block hover:text-brand">About</a>
-            <a href="../blog.html" class="block text-brand">Blog</a>
-            <a href="../contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="post-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span>›</span><a href="../blog.html">Blog</a><span>›</span><span>Article</span>
     </nav>
+    <div class="post-hero-inner">
+      <div class="post-meta-row"><span class="post-cat">AI &amp; Business</span><span>May 11, 2026</span><span>7 min read</span><span>Havlek Team</span></div>
+      <h1>Openreach&#39;s One-Third Contact Drop: A 2026 Business Case for AI Adoption at Infrastructure Scale</h1>
+      <p class="post-excerpt">This is what AI looks like when it removes operational friction from a national infrastructure rollout instead of just answering questions faster.</p>
+    </div>
+    <img class="post-hero-img" src="images/2026-05-11-openreach-ai-broadband-business-case.png" alt="Broadband network operations and customer service teams using proactive AI dashboards, appointment routing, and fibre rollout maps in a modern blue command center" />
+  </div>
+</section>
 
-    <section class="pt-20 sm:pt-24">
-        <div class="h-72 sm:h-96 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 flex items-center justify-center relative">
-            <img src="images/2026-05-11-openreach-ai-broadband-business-case.png" alt="Broadband network operations and customer service teams using proactive AI dashboards, appointment routing, and fibre rollout maps in a modern blue command center" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-slate-950/55"></div>
-            <div class="relative max-w-4xl px-6 text-center text-white">
-                <span class="inline-flex items-center rounded-full bg-white/15 px-4 py-1 text-sm font-semibold tracking-wide backdrop-blur">AI &amp; Business</span>
-                <h1 class="mt-6 text-3xl sm:text-5xl md:text-6xl font-bold leading-tight">Openreach&#39;s One-Third Contact Drop: A 2026 Business Case for AI Adoption at Infrastructure Scale</h1>
-                <p class="mt-6 text-base sm:text-xl text-blue-50 max-w-3xl mx-auto">This is what AI looks like when it removes operational friction from a national infrastructure rollout instead of just answering questions faster.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-10 sm:py-12 border-b border-gray-100">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 flex flex-wrap items-center gap-4 text-sm text-gray-500 fade-in">
-            <span>May 11, 2026</span>
-            <span>&middot;</span>
-            <span>7 min read</span>
-            <span>&middot;</span>
-            <span>By Havlek Team</span>
-        </div>
-    </section>
-
-    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 prose prose-lg text-gray-700 fade-in">
+<section class="post-body-wrap">
+  <div class="container">
+    <div class="post-layout">
+      <div class="post-body">
         <p>Many AI projects still behave like a digital suggestion box. A customer asks a question, a bot answers, and everyone calls it transformation. The stronger 2026 business cases look different. They use AI to remove avoidable work before the customer ever needs help. That is why Openreach is worth paying attention to.</p>
 
         <p>On April 7, NiCE said Openreach deployed proactive AI agents across 15 million customer journeys in its U.K. broadband upgrade program. The company said missed appointments and inbound contact volumes each fell by one-third, repeat contacts also declined, and the program generated tens of millions in financial benefits for Openreach and its clients. Openreach also said customer satisfaction improved sharply, with its Trustpilot rating rising to 4.7 out of 5 from 2.0 after the rollout.</p>
@@ -193,99 +146,65 @@
         <p>Openreach offers a practical 2026 playbook for AI adoption. Find a high-volume journey where customers repeatedly ask the same questions because the business is not communicating clearly enough. Use AI to detect the moment uncertainty is about to create work. Then resolve that uncertainty before the contact happens.</p>
 
         <p>If you can reduce avoidable demand, protect service execution, and improve trust at the same time, you have the beginnings of a real AI business case. Openreach suggests that the next wave of winners will not just automate support. They will redesign the demand pattern that support teams are forced to absorb.</p>
-    </article>
-
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-8 fade-in">
-        <a href="../blog.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
-            Back to Blog
-        </a>
-    </div>
-
-    <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-12 fade-in">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Sources &amp; Further Reading</h2>
-        <ul class="space-y-3 text-base text-gray-600">
-            <li>
-                <a href="https://www.nice.com/press-releases/openreach-uses-nice-cognigy-ai-agents-to-upgrade-u-k-broadband-deployment-to-deliver-tens-of-millions-in-financial-benefits-for-openreach" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">NiCE: Openreach uses AI agents to upgrade U.K. broadband deployment</a>
+        <div class="post-sources">
+          <h2>Sources &amp; Further Reading</h2>
+          <ul><li>
+                <a href="https://www.nice.com/press-releases/openreach-uses-nice-cognigy-ai-agents-to-upgrade-u-k-broadband-deployment-to-deliver-tens-of-millions-in-financial-benefits-for-openreach" target="_blank" rel="noopener">NiCE: Openreach uses AI agents to upgrade U.K. broadband deployment</a>
                 — April 7, 2026 announcement with the core metrics: 15 million journeys, one-third reductions in missed appointments and inbound contacts, lower repeat contacts, and improved customer satisfaction
             </li>
             <li>
-                <a href="https://www.openreach.com/fibre-broadband/where-when-building-ultrafast-full-fibre-broadband" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Openreach: Where and when we&#39;re building Full Fibre Broadband</a>
+                <a href="https://www.openreach.com/fibre-broadband/where-when-building-ultrafast-full-fibre-broadband" target="_blank" rel="noopener">Openreach: Where and when we&#39;re building Full Fibre Broadband</a>
                 — Official rollout page confirming the 25 million premises target by the end of 2026 and the national scale of the underlying build program
             </li>
             <li>
-                <a href="https://www.openreach.com/help-and-support/questions-about-fibre-availability/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">Openreach: Questions about fibre availability</a>
+                <a href="https://www.openreach.com/help-and-support/questions-about-fibre-availability/" target="_blank" rel="noopener">Openreach: Questions about fibre availability</a>
                 — Official support page stating Openreach has already connected 19 million premises and plans to reach 25 million by December 2026
             </li>
             <li>
-                <a href="https://www.bt.com/about/annual-reports/2025summary/" target="_blank" rel="noopener" class="text-brand hover:underline font-medium">BT Group: Annual Review 2025</a>
+                <a href="https://www.bt.com/about/annual-reports/2025summary/" target="_blank" rel="noopener">BT Group: Annual Review 2025</a>
                 — Background context on BT and Openreach&#39;s broader strategic and operational scale
-            </li>
-        </ul>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 class="text-2xl md:text-3xl font-bold fade-in">Related Articles</h2>
-            <div class="mt-10 grid md:grid-cols-3 gap-6">
-                <a href="2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">TridentCare&#39;s 96% Scheduling Automation: A 2026 Business Case for AI Adoption in Healthcare Operations</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 9, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-05-08-thomson-reuters-cocounsel-ai-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Thomson Reuters&#39; 30% AI Revenue Mix: A 2026 Business Case for AI Adoption in Regulated Work</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 8, 2026</p>
-                    </div>
-                </a>
-                <a href="2026-05-07-xpress-boats-ai-manufacturing-business-case.html" class="rounded-2xl overflow-hidden bg-white border border-gray-100 fade-in group">
-                    <div class="h-40 bg-gradient-to-br from-slate-950 via-cyan-950 to-sky-900"></div>
-                    <div class="p-5">
-                        <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-cyan-600 rounded-full">AI &amp; Business</span>
-                        <h4 class="mt-3 font-bold leading-snug group-hover:text-brand transition">Xpress Boats&#39; 50% Shipping Cost Cut: A 2026 Business Case for AI Adoption in Manufacturing</h4>
-                        <p class="mt-2 text-sm text-gray-400">May 7, 2026</p>
-                    </div>
-                </a>
-            </div>
+            </li></ul>
         </div>
-    </section>
-
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="../images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="../services.html" class="hover:text-white transition">Services</a>
-                    <a href="../portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="../about.html" class="hover:text-white transition">About</a>
-                    <a href="../blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
+        <p style="margin-top:44px;"><a class="back-to-blog" href="../blog.html">← Back to all articles</a></p>
+      </div>
+      <aside class="post-sidebar">
+        <div class="sidebar-widget">
+          <span class="label">Havlek</span>
+          <h4 style="margin-top:10px;">Need help adopting AI?</h4>
+          <p>We help businesses turn AI from hype into measurable operating leverage — strategy, build &amp; integration.</p>
+          <a href="../contact.html" class="btn btn-primary btn-full" style="margin-top:16px;">Book free audit</a>
         </div>
-    </footer>
+      </aside>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+<section class="post-related">
+  <div class="container">
+    <div class="section-header"><span class="label">Keep Reading</span><h2>Related Articles</h2></div>
+    <div class="blog-grid">
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 9, 2026</span></div>
+          <h2><a href="2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.html">TridentCare&#39;s 96% Scheduling Automation: A 2026 Business Case for AI Adoption in Healthcare Operations</a></h2>
+          <a class="blog-read-more" href="2026-05-09-servicenow-tridentcare-ai-healthcare-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 8, 2026</span></div>
+          <h2><a href="2026-05-08-thomson-reuters-cocounsel-ai-business-case.html">Thomson Reuters&#39; 30% AI Revenue Mix: A 2026 Business Case for AI Adoption in Regulated Work</a></h2>
+          <a class="blog-read-more" href="2026-05-08-thomson-reuters-cocounsel-ai-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>May 7, 2026</span></div>
+          <h2><a href="2026-05-07-xpress-boats-ai-manufacturing-business-case.html">Xpress Boats&#39; 50% Shipping Cost Cut: A 2026 Business Case for AI Adoption in Manufacturing</a></h2>
+          <a class="blog-read-more" href="2026-05-07-xpress-boats-ai-manufacturing-business-case.html">Read article →</a>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="../components.js"></script>
 </body>
 </html>

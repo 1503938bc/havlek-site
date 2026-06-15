@@ -1,212 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root=".">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Havlek</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D0NJSVQWWE');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Havlek — Vancouver AI & Web Agency | Hong Marketing Inc.</title>
+  <meta name="description" content="Havlek (Hong Marketing Inc.) is a Vancouver-based AI solutions and digital agency with 10+ years experience serving MEC, Ingram Micro, Saje, JYSK, ELLE and more." />
+  <meta name="keywords" content="Havlek about, Hong Marketing Inc., Vancouver web agency, AI consulting Vancouver, Henry Hong developer" />
+  <link rel="canonical" href="https://havlek.ca/about.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://havlek.ca/about.html" />
+  <meta property="og:title"       content="About Havlek — Vancouver AI & Web Agency" />
+  <meta property="og:description" content="10+ years enterprise web & AI expertise. Hong Marketing Inc. (DBA Havlek) — Vancouver, BC, Canada." />
+  <meta property="og:image"       content="https://havlek.ca/images/og-about.png" />
+  <meta name="twitter:card"  content="summary_large_image" />
+  <meta name="twitter:image" content="https://havlek.ca/images/og-about.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Havlek",
+    "url": "https://havlek.ca/about.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://havlek.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://havlek.ca/about.html" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Havlek",
+      "legalName": "Hong Marketing Inc.",
+      "url": "https://havlek.ca",
+      "foundingDate": "2014",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Surrey",
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewBody": "Hiring Henry allowed us to maximize results on a number of projects where we were expecting to hire several new staff but had the work done in less time with better results and for lower cost.",
+          "author": { "@type": "Person", "name": "Bruce" },
+          "itemReviewed": { "@type": "Organization", "name": "Havlek" }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="about">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · About</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">Vancouver · Est. 2014</span></div>
+<div id="site-nav"></div>
 
-    <!-- Nav -->
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-brand transition">Home</a>
-                <a href="services.html" class="hover:text-brand transition">Services</a>
-                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="about.html" class="text-brand">About</a>
-                <a href="blog.html" class="hover:text-brand transition">Blog</a>
-                <a href="contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="index.html" class="block hover:text-brand">Home</a>
-            <a href="services.html" class="block hover:text-brand">Services</a>
-            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="about.html" class="block text-brand">About</a>
-            <a href="blog.html" class="block hover:text-brand">Blog</a>
-            <a href="contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>About</span>
     </nav>
+    <div class="page-hero-inner">
+      <div>
+        <span class="label">About Havlek</span>
+        <h1>A strategy partner,<br/><em class="coral-text">not just a vendor</em></h1>
+        <p class="page-hero-sub">Hong Marketing Inc. (DBA Havlek) is a Vancouver-based digital agency with 10+ years of enterprise technology and marketing experience — now extending that expertise into AI.</p>
+      </div>
+      <div class="about-nums" style="align-self:center;">
+        <div class="about-num"><div class="about-num-val">10+</div><div class="about-num-label">Years</div></div>
+        <div class="about-num"><div class="about-num-val">50+</div><div class="about-num-label">Projects</div></div>
+        <div class="about-num"><div class="about-num-val">10+</div><div class="about-num-label">Clients</div></div>
+        <div class="about-num"><div class="about-num-val">YVR</div><div class="about-num-label">Vancouver</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Hero -->
-    <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">About Havlek</h1>
-            <p class="mt-6 text-xl text-gray-500 fade-in">Worldwide online solutions, based in Vancouver, Canada.</p>
+<!-- STORY -->
+<section style="padding:80px 0;border-top:1px solid var(--line-soft);">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="label">Our Story</span>
+        <h2>Built on real enterprise experience</h2>
+        <p>Havlek was founded by Henry, a full-stack developer and digital marketer with over a decade of experience delivering enterprise-grade technology solutions across Canada, the US, and internationally.</p>
+        <p>What started as a web development and digital marketing practice has grown into a comprehensive digital agency — one that combines deep technical expertise with genuine business strategy thinking. We've built e-commerce platforms for national retailers, cloud infrastructure for telecom providers, mobile apps for international publishers, and dispatch systems for national service companies.</p>
+        <p>Today, we're extending that foundation into AI. Not because it's trendy — but because it's the most impactful lever available to businesses right now, and one that very few agencies are equipped to deliver practically and honestly.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">🔍</span>
+          <h4>Clarity first</h4>
+          <p>We tell you exactly what AI can and can't do for your business — no hype, no overselling.</p>
         </div>
-    </section>
-
-    <!-- Company Story -->
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <div class="fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold">Who We Are</h2>
-                <p class="mt-8 text-lg text-gray-600 leading-relaxed">Hong Marketing Inc. (DBA: Havlek) is a worldwide service provider for businesses looking for comprehensive online solutions. Located in Vancouver, Canada, we have serviced a multitude of clients from industries such as:</p>
-                <div class="mt-8 grid sm:grid-cols-2 gap-4">
-                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
-                        <span class="text-brand text-xl">&#10003;</span>
-                        <span class="font-medium">Professional Marketing Services</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
-                        <span class="text-brand text-xl">&#10003;</span>
-                        <span class="font-medium">E-commerce</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
-                        <span class="text-brand text-xl">&#10003;</span>
-                        <span class="font-medium">Apple and Android App</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-4 rounded-xl bg-gray-50">
-                        <span class="text-brand text-xl">&#10003;</span>
-                        <span class="font-medium">Advanced Technology</span>
-                    </div>
-                </div>
-            </div>
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">🔧</span>
+          <h4>Hands-on build</h4>
+          <p>We don't just consult — we design, build, and integrate the solution end to end.</p>
         </div>
-    </section>
-
-    <!-- Solutions -->
-    <section class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <div class="fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold">Comprehensive Solutions</h2>
-                <p class="mt-8 text-lg text-gray-600 leading-relaxed">Our clients have the unique experience of a comprehensive online business solution. NOT ONLY do we provide web-design and cloud infrastructure specialists to your business, but our experienced marketing team will help your business thrive in the competitive online market.</p>
-                <div class="mt-10 space-y-4">
-                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
-                        <h4 class="font-semibold">Web Design</h4>
-                        <p class="mt-1 text-gray-500">Adapted to proven search engine-friendly optimizations</p>
-                    </div>
-                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
-                        <h4 class="font-semibold">Consultations & Tips</h4>
-                        <p class="mt-1 text-gray-500">Establish online goals and determine priorities</p>
-                    </div>
-                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
-                        <h4 class="font-semibold">Search Engine Marketing</h4>
-                        <p class="mt-1 text-gray-500">Highest rank in Google, Yahoo, MSN</p>
-                    </div>
-                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
-                        <h4 class="font-semibold">Marketing Consultation</h4>
-                        <p class="mt-1 text-gray-500">Social Media and Search Engine Marketing</p>
-                    </div>
-                    <div class="p-5 rounded-xl bg-white border border-gray-100 fade-in">
-                        <h4 class="font-semibold">Customer Service</h4>
-                        <p class="mt-1 text-gray-500">Amazing customer service for optimal management because it's all about you</p>
-                    </div>
-                </div>
-            </div>
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">📐</span>
+          <h4>Right-sized</h4>
+          <p>We match the solution to your actual needs. No over-engineered platforms. No wasted spend.</p>
         </div>
-    </section>
-
-    <!-- Technical Expertise -->
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <div class="fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold">Technical Expertise</h2>
-                <p class="mt-8 text-lg text-gray-600 leading-relaxed">We are also technical experts in the following technologies:</p>
-                <div class="mt-10 grid sm:grid-cols-2 gap-6">
-                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
-                        <div class="text-4xl mb-3">🟢</div>
-                        <h4 class="font-bold text-lg">Node.js</h4>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
-                        <div class="text-4xl mb-3">🐧</div>
-                        <h4 class="font-bold text-lg">LAMP Stack</h4>
-                        <p class="text-sm text-gray-500 mt-1">Linux. Apache. MySQL. PHP</p>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
-                        <div class="text-4xl mb-3">📱</div>
-                        <h4 class="font-bold text-lg">Mobile Platform Development</h4>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-gray-50 text-center fade-in">
-                        <div class="text-4xl mb-3">🔍</div>
-                        <h4 class="font-bold text-lg">Search Engine Marketing</h4>
-                    </div>
-                </div>
-            </div>
+        <div class="pillar" data-reveal>
+          <span class="pillar-icon">🤝</span>
+          <h4>Long-term partner</h4>
+          <p>AI evolves fast. We stay with you — optimizing, retraining, and expanding over time.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Mission -->
-    <section class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <div class="fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold">Your Strategy Partner</h2>
-                <p class="mt-8 text-lg text-gray-600 leading-relaxed">Havlek supports all kinds of businesses. From family owned businesses looking to expand their reach to large corporations looking for a fresh take on interactive internet marketing, Havlek ensures the utmost success for you.</p>
-                <p class="mt-6 text-lg text-gray-600 leading-relaxed">Havlek Inc. provides you with a Strategy Partner to guide you along the best and latest internet business optimizations. We know how to approach internet sales targets as a whole, rather than as disconnected parts of a puzzle.</p>
-                <p class="mt-6 text-lg text-gray-600 leading-relaxed">With a combined 10 years of technology and online marketing experience, our specialists know that the success of your project is the ONLY viable solution.</p>
-            </div>
-        </div>
-    </section>
+<!-- EXPERTISE -->
+<section class="callout-band">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Technical Expertise</span>
+      <h2>Full-stack, cross-platform, AI-ready</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">🤖</span>
+        <h3>AI & Machine Learning</h3>
+        <p>LLM integration (Claude, GPT-4o, Gemini), RAG pipelines, vector databases, AI workflow automation, chatbot development.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">🛒</span>
+        <h3>E-Commerce Platforms</h3>
+        <p>Magento / Adobe Commerce, X-Cart, Zen Cart. ERP integrations with Dynamics NAV, Compass, QuickBooks. AWS hosting.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">🌐</span>
+        <h3>Web Development</h3>
+        <p>PHP, Zend Framework, Ruby on Rails, Node.js. WordPress, Drupal, Joomla. LAMP stack. REST & GraphQL APIs.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">📱</span>
+        <h3>Mobile Development</h3>
+        <p>Native iOS (Objective-C / Swift), Android, cross-platform (React Native, PhoneGap). App Store submission & ASO.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">☁️</span>
+        <h3>Cloud & DevOps</h3>
+        <p>Amazon AWS (EC2, S3, RDS, Lambda), Joyent SmartMachines. VoIP (OpenSIPS), auto-scaling, load balancing.</p>
+      </div>
+      <div class="tech-card" data-reveal>
+        <span class="tc-icon">📣</span>
+        <h3>Digital Marketing</h3>
+        <p>Google Ads / PPC management, SEO strategy, SEM, social media marketing. AI-powered content generation and A/B testing.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- CTA -->
-    <section class="py-16 sm:py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Let's work together</h2>
-            <p class="mt-6 text-gray-400 text-lg">Ready to transform your online presence?</p>
-            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Contact Us</a>
-        </div>
-    </section>
+<!-- CLIENTS -->
+<section style="padding:80px 0;border-top:1px solid var(--line-soft);">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Clients</span>
+      <h2>Trusted by leading organizations</h2>
+    </div>
+    <div class="clients-logo-row">
+      <div class="client-tile"><img src="images/mec.png" alt="MEC" /></div>
+      <div class="client-tile"><img src="images/ingram.png" alt="Ingram Micro" /></div>
+      <div class="client-tile"><img src="images/saje.png" alt="Saje" /></div>
+      <div class="client-tile"><img src="images/jysj.jpg" alt="JYSK" /></div>
+      <div class="client-tile"><img src="images/elle.png" alt="ELLE" /></div>
+      <div class="client-tile"><img src="images/allecon.png" alt="Allecon" /></div>
+      <div class="client-tile"><img src="images/tnw.png" alt="TNW Corp" /></div>
+      <div class="client-tile"><img src="images/uniserve.png" alt="Uniserve" /></div>
+      <div class="client-tile"><img src="images/success.png" alt="S.U.C.C.E.S.S." /></div>
+      <div class="client-tile"><img src="images/graffiti-removal-canadasmall.png" alt="Goodbye Graffiti" /></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="services.html" class="hover:text-white transition">Services</a>
-                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="about.html" class="hover:text-white transition">About</a>
-                    <a href="blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>© <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<!-- TESTIMONIALS -->
+<section class="clients-section" style="border-top:none;padding-top:0;">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">What Clients Say</span>
+      <h2>Results that speak for themselves</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial" data-reveal>
+        <p class="t-quote">"Hiring Henry allowed us to maximize results on a number of projects where we were expecting to hire several new staff but had the work done in less time with better results and for lower cost."</p>
+        <div class="t-author">— Bruce, President · Uniserve, Vancouver, BC</div>
+      </div>
+      <div class="testimonial" data-reveal>
+        <p class="t-quote">"He is responsive, quick and always goes above and beyond the task at hand. I have never experienced a day where Henry wasn't accessible."</p>
+        <div class="t-author">— Julia, eCommerce Manager · Saje, Vancouver, BC</div>
+      </div>
+      <div class="testimonial" data-reveal>
+        <p class="t-quote">"Henry is doing such a great job for us and we would highly recommend his multi-faceted services to fit any of your specific needs."</p>
+        <div class="t-author">— Ivy, General Manager · Sunny Sports, Los Angeles, CA</div>
+      </div>
+      <div class="testimonial" data-reveal>
+        <p class="t-quote">"Henry provides exceptional multi-faceted services. We depend on his expertise in online marketing and software development to drive our growth."</p>
+        <div class="t-author">— Client · E-Commerce, North America</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="components.js"></script>
 </body>
 </html>
