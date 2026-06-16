@@ -15,7 +15,7 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
-function formatDate(dateIso) {
+function formatShortDate(dateIso) {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "numeric",
@@ -32,197 +32,143 @@ function pageUrl(pageNumber) {
   return `https://havlek.ca/${pageFile(pageNumber)}`;
 }
 
-function pillClass(category) {
-  if (category === "Cybersecurity") return "bg-red-600";
-  if (category === "AI & Development") return "bg-indigo-600";
-  return "bg-cyan-600";
-}
-
 function readHeroMeta(slug) {
   const postPath = path.join(repoRoot, "posts", `${slug}.html`);
   const html = fs.readFileSync(postPath, "utf8");
-  const match = html.match(/<img src="images\/[^"]+" alt="([^"]+)"/);
-  const imagePath = path.join(repoRoot, "posts", "images", `${slug}.png`);
+  const srcMatch = html.match(/<img[^>]*class="post-hero-img"[^>]*src="([^"]+)"/);
+  const altMatch = html.match(/<img[^>]*class="post-hero-img"[^>]*alt="([^"]+)"/);
+  const imageSrc = srcMatch ? srcMatch[1].replace(/^\.?\//, "") : `images/${slug}.png`;
   return {
-    imageExists: fs.existsSync(imagePath),
-    imageSrc: `posts/images/${slug}.png`,
-    imageAlt: match ? match[1] : "",
+    imageExists: fs.existsSync(path.join(repoRoot, "posts", imageSrc)),
+    imageSrc,
+    imageAlt: altMatch ? altMatch[1] : "",
   };
 }
 
 function renderCard(post) {
   const hero = readHeroMeta(post.slug);
-  const media = hero.imageExists
-    ? `<div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 overflow-hidden">
-                        <img src="${escapeHtml(hero.imageSrc)}" alt="${escapeHtml(hero.imageAlt)}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>`
-    : `<div class="h-56 bg-gradient-to-br from-slate-950 via-sky-950 to-cyan-900 flex items-center justify-center p-8">
-                        <span class="text-white/70 text-3xl font-bold tracking-[0.2em] uppercase">${escapeHtml(post.category.replace(/[^A-Za-z]/g, "").slice(0, 4) || "Post")}</span>
-                    </div>`;
-  return `
-                <a href="posts/${escapeHtml(post.slug)}.html" class="group rounded-2xl overflow-hidden bg-gray-50 hover:shadow-lg transition fade-in">
-                    ${media}
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-white ${pillClass(post.category)} rounded-full">${escapeHtml(post.category)}</span>
-                        <h3 class="mt-3 text-xl font-bold leading-snug group-hover:text-brand transition">${escapeHtml(post.title)}</h3>
-                        <p class="mt-2 text-gray-500 text-sm leading-relaxed">${escapeHtml(post.excerpt)}</p>
-                        <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                            <span>${escapeHtml(formatDate(post.date))}</span>
-                            <span>&middot;</span>
-                            <span>${escapeHtml(post.readTime)}</span>
-                        </div>
-                    </div>
-                </a>`;
+  if (!hero.imageExists) {
+    return `      <article class="blog-card" data-reveal>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">${escapeHtml(post.category)}</span><span>${escapeHtml(formatShortDate(post.date))}</span><span>${escapeHtml(post.readTime)}</span></div>
+          <h2><a href="posts/${escapeHtml(post.slug)}.html">${escapeHtml(post.title)}</a></h2>
+          <p>${escapeHtml(post.excerpt)}</p>
+          <a class="blog-read-more" href="posts/${escapeHtml(post.slug)}.html">Read article →</a>
+        </div>
+      </article>`;
+  }
+  return `      <article class="blog-card has-img" data-reveal>
+        <a href="posts/${escapeHtml(post.slug)}.html"><img class="blog-card-img" src="posts/${escapeHtml(hero.imageSrc)}" alt="${escapeHtml(hero.imageAlt)}" /></a>
+        <div class="blog-card-pad">
+          <div class="blog-card-meta"><span class="blog-cat">${escapeHtml(post.category)}</span><span>${escapeHtml(formatShortDate(post.date))}</span><span>${escapeHtml(post.readTime)}</span></div>
+          <h2><a href="posts/${escapeHtml(post.slug)}.html">${escapeHtml(post.title)}</a></h2>
+          <p>${escapeHtml(post.excerpt)}</p>
+          <a class="blog-read-more" href="posts/${escapeHtml(post.slug)}.html">Read article →</a>
+        </div>
+      </article>`;
 }
 
 function renderPagination(currentPage, totalPages) {
-  const previous = currentPage === 1
-    ? `<span class="px-4 py-2 rounded-full bg-gray-100 text-gray-300 text-sm font-semibold cursor-not-allowed">Previous</span>`
-    : `<a href="${pageFile(currentPage - 1)}" class="px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-600 hover:border-brand hover:text-brand transition">Previous</a>`;
+  const parts = [];
+  if (currentPage === 1) {
+    parts.push('      <span class="page-link disabled">Previous</span>');
+  } else {
+    parts.push(`      <a class="page-link" href="${pageFile(currentPage - 1)}">Previous</a>`);
+  }
 
-  const pageLinks = Array.from({ length: totalPages }, (_, index) => {
-    const pageNumber = index + 1;
+  for (let pageNumber = 1; pageNumber <= totalPages; pageNumber += 1) {
     if (pageNumber === currentPage) {
-      return `<span class="w-10 h-10 flex items-center justify-center rounded-full bg-brand text-white text-sm font-semibold">${pageNumber}</span>`;
+      parts.push(`      <span class="page-link active">${pageNumber}</span>`);
+      continue;
     }
-    return `<a href="${pageFile(pageNumber)}" class="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 text-sm font-semibold transition">${pageNumber}</a>`;
-  }).join("\n                ");
+    parts.push(`      <a class="page-link" href="${pageFile(pageNumber)}">${pageNumber}</a>`);
+  }
 
-  const next = currentPage === totalPages
-    ? `<span class="px-4 py-2 rounded-full bg-gray-100 text-gray-300 text-sm font-semibold cursor-not-allowed">Next</span>`
-    : `<a href="${pageFile(currentPage + 1)}" class="px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-600 hover:border-brand hover:text-brand transition">Next</a>`;
+  if (currentPage === totalPages) {
+    parts.push('      <span class="page-link disabled">Next</span>');
+  } else {
+    parts.push(`      <a class="page-link" href="${pageFile(currentPage + 1)}">Next</a>`);
+  }
 
-  return `
-            <div class="mt-16 flex flex-wrap justify-center items-center gap-3 fade-in">
-                ${previous}
-                ${pageLinks}
-                ${next}
-            </div>`;
+  return parts.join("\n");
 }
 
 function renderPage(pageNumber, totalPages, pagePosts) {
-  const pageHeading = pageNumber === 1
-    ? `<h1 class="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Insights & Analysis</h1>`
-    : `<p class="text-sm font-semibold tracking-[0.25em] uppercase text-brand fade-in">Archive Page ${pageNumber}</p>
-            <h1 class="mt-3 text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight fade-in">Insights & Analysis</h1>`;
-
   const prevMeta = pageNumber > 1 ? `    <link rel="prev" href="${pageUrl(pageNumber - 1)}">\n` : "";
   const nextMeta = pageNumber < totalPages ? `    <link rel="next" href="${pageUrl(pageNumber + 1)}">\n` : "";
+  const title = pageNumber === 1 ? "Blog" : `Blog Page ${pageNumber}`;
+  const breadcrumb = pageNumber === 1
+    ? '      <a href="index.html">Home</a><span>›</span><span>Blog</span>'
+    : `      <a href="index.html">Home</a><span>›</span><a href="blog.html">Blog</a><span>›</span><span>Page ${pageNumber}</span>`;
+  const label = pageNumber === 1 ? "Insights" : `Archive · Page ${pageNumber}`;
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${pageNumber === 1 ? "Blog" : `Blog Page ${pageNumber}`} — Havlek</title>
+    <title>${title} — Havlek</title>
     <link rel="canonical" href="${pageUrl(pageNumber)}">
-${prevMeta}${nextMeta}    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .frosted { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(255,255,255,0.72); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: '#1a73e8' } } } }
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
+${prevMeta}${nextMeta}    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-D0NJSVQWWE');
     </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI Business Cases</span></div>
+<div id="site-nav"></div>
 
-    <nav class="frosted fixed top-0 w-full z-50 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="images/logo-trans.png" alt="Havlek" class="h-8">
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-brand transition">Home</a>
-                <a href="services.html" class="hover:text-brand transition">Services</a>
-                <a href="portfolio.html" class="hover:text-brand transition">Portfolio</a>
-                <a href="testimonials.html" class="hover:text-brand transition">Testimonials</a>
-                <a href="about.html" class="hover:text-brand transition">About</a>
-                <a href="blog.html" class="text-brand">Blog</a>
-                <a href="contact.html" class="hover:text-brand transition">Contact</a>
-            </div>
-            <button id="menuBtn" class="md:hidden text-gray-600" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden px-4 sm:px-6 pb-4 space-y-3 text-sm font-medium text-gray-600">
-            <a href="index.html" class="block hover:text-brand">Home</a>
-            <a href="services.html" class="block hover:text-brand">Services</a>
-            <a href="portfolio.html" class="block hover:text-brand">Portfolio</a>
-            <a href="testimonials.html" class="block hover:text-brand">Testimonials</a>
-            <a href="about.html" class="block hover:text-brand">About</a>
-            <a href="blog.html" class="block text-brand">Blog</a>
-            <a href="contact.html" class="block hover:text-brand">Contact</a>
-        </div>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+${breadcrumb}
     </nav>
+    <div class="page-hero-inner">
+      <div>
+        <span class="label">${label}</span>
+        <h1>Insights & Analysis</h1>
+        <p class="page-hero-sub">Deep dives into AI, cloud computing, and modern web development.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            ${pageHeading}
-            <p class="mt-6 text-xl text-gray-500 fade-in">Deep dives into AI, cloud computing, and modern web development.</p>
-        </div>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid md:grid-cols-2 gap-8">
+<section class="services-section" style="padding-top:40px;">
+  <div class="container">
+    <div class="blog-grid">
 ${pagePosts.map(renderCard).join("\n")}
-            </div>
+    </div>
+    <div class="blog-pagination">
 ${renderPagination(pageNumber, totalPages)}
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="py-16 sm:py-24 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold">Want us to write about a topic?</h2>
-            <p class="mt-6 text-gray-400 text-lg">We're always looking for new subjects to explore.</p>
-            <a href="contact.html" class="inline-block mt-10 px-8 py-4 bg-brand text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition">Get in Touch</a>
-        </div>
-    </section>
+<section class="callout-band">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto;">
+      <span class="label">Suggest a Topic</span>
+      <h2 style="margin-bottom:20px;">Want us to write about a topic?</h2>
+      <p style="margin-bottom:32px;">We're always looking for new subjects to explore. Tell us what AI question matters to your business.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Get in touch</a>
+    </div>
+  </div>
+</section>
 
-    <footer class="py-12 bg-gray-950 text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <img src="images/logo-trans.png" alt="Havlek" class="h-6 brightness-200">
-                    <p class="mt-2 text-sm">Hong Marketing Inc. (DBA: Havlek)</p>
-                </div>
-                <div class="flex gap-6 text-sm">
-                    <a href="services.html" class="hover:text-white transition">Services</a>
-                    <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="about.html" class="hover:text-white transition">About</a>
-                    <a href="blog.html" class="hover:text-white transition">Blog</a>
-                    <a href="contact.html" class="hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; <span id="year"></span> Hong Marketing Inc. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="components.js"></script>
 </body>
 </html>
 `;
