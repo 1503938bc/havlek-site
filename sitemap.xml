@@ -32,9 +32,15 @@
   </url>
   <url>
     <loc>https://havlek.ca/blog.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://havlek.ca/posts/2026-06-21-salesforce-agentforce-infrastructure-ai-business-case.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://havlek.ca/posts/2026-06-19-fin-customer-service-ai-business-case.html</loc>
