@@ -108,6 +108,9 @@ function renderPage(pageNumber, totalPages, pagePosts) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} — Havlek</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href="${pageUrl(pageNumber)}">
 ${prevMeta}${nextMeta}    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
     <script>
