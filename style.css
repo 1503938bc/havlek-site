@@ -1357,16 +1357,10 @@ p  { color: var(--ink-mute); }
   background: var(--olive);
   color: var(--bone);
 }
-.pcard-link {
-  display: inline-block;
-  margin-top: 14px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: .03em;
-  color: var(--olive);
-  text-decoration: none;
-}
-.pcard-link:hover { color: var(--ink); text-decoration: underline; }
+/* A card may itself be a link (whole card clickable). Inherit the card's own
+   typography so it looks identical to the non-linked cards. */
+a.pcard { text-decoration: none; color: inherit; }
+a.pcard h3 { color: var(--ink); }
 
 .pcard h3 { font-size: 1rem; margin-bottom: 10px; }
 .pcard > p { font-size: 0.86rem; margin-bottom: 14px; flex: 1; }
