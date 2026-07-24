@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-root="..">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Native in Practice: How We Designed, Built, Shipped and Marketed a Product With AI — Havlek</title>
+    <meta name="description" content="We took a consumer AI product from idea to a paid, live App Store listing with AI executing the design, engineering, release, compliance and marketing. Here is what an AI-native operating model actually looks like in practice.">
+    <meta name="author" content="Havlek Team">
+    <meta name="keywords" content="AI-native business, AI operating model, AI product development, AI marketing automation, AI release automation, agentic development, AI adoption strategy">
+    <link rel="canonical" href="https://havlek.ca/posts/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AI-Native in Practice: How We Designed, Built, Shipped and Marketed a Product With AI">
+    <meta property="og:description" content="A first-hand account of running every business function — design, engineering, release, compliance and marketing — through AI, and shipping a paid product to the App Store." />
+    <meta property="og:url" content="https://havlek.ca/posts/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.html">
+    <meta property="og:site_name" content="Havlek">
+    <meta property="og:image" content="https://havlek.ca/posts/images/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.png">
+    <meta property="article:published_time" content="2026-07-24">
+    <meta property="article:author" content="Havlek Team">
+    <meta property="article:section" content="AI &amp; Business">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI-Native in Practice: How We Designed, Built, Shipped and Marketed a Product With AI">
+    <meta name="twitter:description" content="Design, engineering, release, compliance and marketing — all executed by AI, on our own product, shipped to the App Store." />
+    <meta name="twitter:image" content="https://havlek.ca/posts/images/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AI-Native in Practice: How We Designed, Built, Shipped and Marketed a Product With AI",
+        "description": "A first-hand account of running every business function — design, engineering, release, compliance and marketing — through AI, and shipping a paid product to the App Store.",
+        "datePublished": "2026-07-24",
+        "dateModified": "2026-07-24",
+        "author": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Havlek",
+            "url": "https://havlek.ca",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://havlek.ca/images/logo-trans.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://havlek.ca/posts/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.html"
+        },
+        "image": "https://havlek.ca/posts/images/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.png",
+        "articleSection": "AI & Business",
+        "wordCount": 1605,
+        "keywords": ["AI-native", "AI operating model", "AI product development", "release automation", "AI marketing", "agentic workflows"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="blog">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Blog</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">AI-Native Operating Model</span></div>
+<div id="site-nav"></div>
+
+<main>
+<section class="post-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span>›</span><a href="../blog.html">Blog</a><span>›</span><span>Article</span>
+    </nav>
+    <div class="post-hero-inner">
+      <div class="post-meta-row"><span class="post-cat">AI &amp; Business</span><span>July 24, 2026</span><span>9 min read</span><span>Havlek Team</span></div>
+      <h1>AI-Native in Practice: How We Designed, Built, Shipped and Marketed a Product With AI</h1>
+      <p class="post-excerpt">Most of what we publish here examines how other companies adopt AI. This one is ours. We took a consumer product from idea to a paid, live App Store listing — with AI executing the design, the engineering, the release, the compliance work and the marketing.</p>
+    </div>
+    <img class="post-hero-img" src="images/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.png" alt="The Photo to Video app icon beside a checklist showing design, engineering, release, compliance and marketing all executed by AI" />
+  </div>
+</section>
+
+<section class="post-body-wrap">
+  <div class="container">
+    <div class="post-layout">
+      <div class="post-body">
+        <p>Nearly every article on this blog analyses someone else's AI adoption. This one is a first-hand report on our own.</p>
+
+        <p>We built <strong>Photo to Video</strong>, a consumer app that turns a still photo or a text prompt into a short AI-generated video. It is <a href="../photo-to-video/">live on the App Store</a>, it takes payments, and it went through Apple's full review process. What makes it worth writing about is not the app. It is <em>how</em> it was made: every function that would normally require a separate specialist — visual design, engineering, release management, regulatory compliance, and marketing — was executed by AI, with one person directing the work rather than performing it.</p>
+
+        <p>We did this on our own product, at our own expense, before recommending the approach to anyone else. This is what we found.</p>
+
+        <blockquote>
+            <p>Most "AI adoption" means putting an AI feature into your product. AI-native means changing how the work of the company itself gets done. Those are very different projects, and only one of them changes your cost structure.</p>
+        </blockquote>
+
+        <h2>What "AI-Native" Actually Means</h2>
+
+        <p>The phrase gets used loosely. When most companies say they are adopting AI, they mean they are adding a capability to their product — a chatbot, a summarizer, a recommendation engine. That is a feature decision. It can be valuable, but it leaves the operating model untouched: the same teams do the same work in the same sequence, with one more thing to maintain.</p>
+
+        <p>An AI-native approach asks a different question: which parts of <em>our own execution</em> can be delegated to AI, and what does that do to how fast and how cheaply we can ship? The interesting answer, which we did not fully believe until we tested it, is that the delegable share is now much larger than most operators assume — and it extends well past writing code.</p>
+
+        <h2>Design</h2>
+
+        <p>The product's visual identity was AI-generated. The app icon, the marketing imagery, the layout and copy of the product's landing page, and the illustration at the top of this article were all produced through AI rather than commissioned or built by hand.</p>
+
+        <p>The practical benefit was not cost — it was iteration speed. Design revisions that would normally involve briefing someone, waiting, and reviewing a round became immediate. When the first App Store submission was rejected for shipping a placeholder icon, the replacement was designed, exported at every required size, and back in a build the same day.</p>
+
+        <h2>Engineering</h2>
+
+        <p>Effectively all of the production code was written by an AI agent working from direction rather than from detailed specifications: the app itself, the integration with the AI generation models, the payment and credit system, the cloud backend, and the anti-abuse layer that prevents people from farming free credits.</p>
+
+        <p>Two observations matter more than the volume of code. First, the work included genuinely non-trivial engineering, not just boilerplate — diagnosing why long-running generation jobs were failing in production, redesigning them around an asynchronous submit-and-poll model, and building a device-attestation scheme to block automated abuse. Second, the constraint shifted. The bottleneck stopped being how quickly code could be written and became how quickly it could be <em>reviewed and decided upon</em>. That shift is the whole story of AI-native work, and we will return to it.</p>
+
+        <h2>Release</h2>
+
+        <p>This is the part that surprises people most. The entire App Store release pipeline runs through the API, executed by the agent: bump the version, archive and sign the build, upload it, poll until Apple finishes processing, attach it to the store version, set the release notes, and submit for review. No manual clicking through a build tool's interface, no hand-assembled submission.</p>
+
+        <p>The value shows up in the unglamorous edge cases. On a recent metadata-only update we hit a rejection from Apple's API that was not obvious from the error text: the existing live build could not be reused for the new version. Diagnosing it meant checking how builds are grouped, discovering that a store version only accepts a build from its own matching version series, and concluding that a fresh build was unavoidable even though not a single line of code had changed. That investigation, the rebuild, the upload and the resubmission were all completed in a single working session.</p>
+
+        <h2>Compliance</h2>
+
+        <p>Our submission was not rejected once but several times, and each rejection uncovered a different requirement. AI drafted the response to every one of them.</p>
+
+        <p>The substantive issue was consent. Because the app sends user-submitted photos and prompts to a third-party AI provider for generation, Apple requires explicit in-app permission <em>before</em> the first transmission, with a disclosure naming what is sent and who receives it. Crucially, covering this in the Terms of Service and Privacy Policy is <strong>explicitly not sufficient</strong> — it has to be a screen the user actively agrees to. We designed and shipped that consent flow.</p>
+
+        <p>Because the app accepts photos that may contain a person, we also received a detailed questionnaire on face data: what is collected, how it is used, whether it is shared, how long it is retained, and where this is disclosed — with a request to quote the passage. The answer that resolved it was precise and true: the app collects <strong>no biometric identifier</strong>, performs no face detection or recognition, and creates no faceprint or template. A dedicated privacy-policy section was written so there was a passage to quote.</p>
+
+        <p>One warning worth passing on. When Apple asks whether your app sends user data to a third-party AI, answering honestly <em>escalates</em> the review into a deeper audit of your consent flow and privacy policy. It is still the only correct answer. Plan for the escalation rather than trying to route around it.</p>
+
+        <h2>Marketing</h2>
+
+        <p>The marketing work was also delegated. That included competitor research across the category, pulling real keyword popularity data from Apple's own advertising tools rather than guessing, and rewriting the store subtitle and keyword field around what that data actually showed. The store metadata update was then submitted through the same automated release pipeline.</p>
+
+        <p>It extends to the words you are reading. This article was written by AI, as was the product's landing page and its entry in our portfolio. The research behind the keyword strategy — including verifying how App Store search actually matches terms, rather than repeating widely circulated assumptions — was done the same way.</p>
+
+        <h2>What The Human Still Does</h2>
+
+        <p>It would be dishonest, and unhelpful, to describe this as a process with no person in it. The distinction is between execution and judgement, and judgement did not move.</p>
+
+        <p>A human decided what to build and for whom, set the pricing, owned the Apple developer account and every credential, made the call on which rejections to argue and which to concede, chose what to say publicly about the product, and reviewed the output before anything shipped. When the AI proposed a marketing claim that overstated what we could support, a human caught it and cut it. Accountability for a live product that takes real money from real customers sits with a person, and no amount of automation moves it.</p>
+
+        <p>What changed is the ratio. Far less time goes into producing the artefact, and far more into specifying the intent and checking the result. The skill that matters most in this model is not prompt-writing — it is knowing what "correct" looks like well enough to spot when it is not.</p>
+
+        <h2>What This Means For Your Business</h2>
+
+        <ul>
+            <li><strong>Start where output is verifiable.</strong> Code either runs or does not. A build either uploads or errors. These functions are safe to delegate early because mistakes surface immediately. Delegate judgement-heavy, hard-to-verify work last.</li>
+            <li><strong>Expect the bottleneck to move, not disappear.</strong> When production accelerates, review becomes the constraint. Teams that do not plan for this simply relocate the queue instead of shortening it.</li>
+            <li><strong>Automate the boring pipeline, not just the creative work.</strong> The release automation delivered more compounding value than any single piece of generated content, because it turned a slow, error-prone, once-a-release ritual into something repeatable.</li>
+            <li><strong>Keep accountability human and explicit.</strong> Especially where money, personal data, or regulated claims are involved. This is what makes the speed defensible rather than reckless.</li>
+            <li><strong>Test it on yourself first.</strong> We would not put a client's launch timeline behind an approach we had not personally taken all the way to a live, paying product.</li>
+        </ul>
+
+        <h2>The Havlek Takeaway</h2>
+
+        <p>The reason we did this is straightforward. We advise businesses on AI adoption, and the credibility of that advice depends on having done the work rather than having read about it. Photo to Video is a real product with real customers, built and shipped under an operating model where AI performs the execution across design, engineering, release, compliance and marketing, and a person directs and remains accountable.</p>
+
+        <p>The transferable conclusion is that the limiting factor on AI-native work is no longer model capability. It is organisational: knowing which functions to hand over, in what order, with what verification, and keeping clear judgement at the decision layer. If you are trying to work out what that looks like inside your own business, that is exactly the conversation we are set up to have.</p>
+
+        <div class="post-sources">
+          <h2>Sources &amp; Further Reading</h2>
+          <ul>
+            <li>
+                <a href="../photo-to-video/">Photo to Video — the product described in this article</a>
+                — Our own consumer AI app, live on the App Store, and the source of every observation in this post
+            </li>
+            <li>
+                <a href="https://developer.apple.com/app-store/review/guidelines/" target="_blank" rel="noopener">Apple App Review Guidelines</a>
+                — The governing document for the review requirements described above, including accurate metadata, consent for transmitting user content to third parties, and in-app purchase rules
+            </li>
+            <li>
+                <a href="https://developer.apple.com/documentation/appstoreconnectapi" target="_blank" rel="noopener">App Store Connect API documentation</a>
+                — The interface behind the automated release pipeline: build upload, version management, and review submission without manual steps
+            </li>
+          </ul>
+        </div>
+        <p style="margin-top:44px;"><a class="back-to-blog" href="../blog.html">← Back to all articles</a></p>
+      </div>
+      <aside class="post-sidebar">
+        <div class="sidebar-widget">
+          <span class="label">Havlek</span>
+          <h4 style="margin-top:10px;">Want an AI-native workflow?</h4>
+          <p>We ran our own product this way end to end — design, build, release and marketing. We help clients do the same.</p>
+          <a href="../contact.html" class="btn btn-primary btn-full" style="margin-top:16px;">Book free audit</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="post-related">
+  <div class="container">
+    <div class="section-header"><span class="label">Keep Reading</span><h2>Related Articles</h2></div>
+    <div class="blog-grid">
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>July 24, 2026</span></div>
+          <h2><a href="2026-07-24-brown-brown-claude-code-insurance-business-case.html">Brown &amp; Brown's 8x Productivity Pilot: A 2026 Business Case for AI Adoption in Insurance</a></h2>
+          <a class="blog-read-more" href="2026-07-24-brown-brown-claude-code-insurance-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>June 2, 2026</span></div>
+          <h2><a href="2026-06-02-braintrust-codex-product-engineering-business-case.html">Braintrust's 50% Codex Shift: A 2026 Business Case for AI Adoption in Product Engineering</a></h2>
+          <a class="blog-read-more" href="2026-06-02-braintrust-codex-product-engineering-business-case.html">Read article →</a>
+        </article>
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-meta"><span class="blog-cat">AI &amp; Business</span><span>June 1, 2026</span></div>
+          <h2><a href="2026-06-01-endava-codex-software-services-business-case.html">Endava's Weeks-to-Hours AI Workflow: A 2026 Business Case for AI Adoption in Software Services</a></h2>
+          <a class="blog-read-more" href="2026-06-01-endava-codex-software-services-business-case.html">Read article →</a>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="../components.js"></script>
+</body>
+</html>
