@@ -71,6 +71,7 @@
   <div class="container">
     <div class="filter-tabs" id="filterTabs">
       <button class="ftab active" data-filter="all">All Projects</button>
+      <button class="ftab" data-filter="ai">AI</button>
       <button class="ftab" data-filter="ecommerce">E-Commerce</button>
       <button class="ftab" data-filter="web">Web / CMS</button>
       <button class="ftab" data-filter="mobile">Mobile</button>
@@ -78,6 +79,18 @@
     </div>
 
     <div class="portfolio-grid" id="portfolioGrid">
+
+      <!-- HAVLEK'S OWN PRODUCT — featured, pinned first -->
+      <article class="pcard pcard-featured" data-cat="ai mobile" data-reveal>
+        <div class="pcard-top">
+          <img src="images/photo-to-video-icon.png" alt="Photo to Video app icon" class="pcard-logo" />
+          <div class="pcard-tags"><span class="pcard-tag-own">Havlek Product</span><span>AI</span><span>iOS</span></div>
+        </div>
+        <h3>Photo to Video — AI Video Generator</h3>
+        <p>Our own consumer AI product, built and shipped end to end: multi-model image-to-video generation, a native iOS app with in-app purchases, and a serverless cloud backend. Live on the App Store.</p>
+        <div class="pcard-tech">Native iOS App · AI Model Integration · Cloud Backend · In-App Purchases</div>
+        <a class="pcard-link" href="photo-to-video/">View the Photo to Video app →</a>
+      </article>
 
       <!-- ECOMMERCE PROJECTS -->
       <article class="pcard" data-cat="ecommerce" data-reveal>
@@ -260,7 +273,10 @@ document.getElementById('filterTabs').addEventListener('click', e => {
   btn.classList.add('active');
   const filter = btn.dataset.filter;
   document.querySelectorAll('.pcard').forEach(card => {
-    const show = filter === 'all' || card.dataset.cat === filter;
+    // data-cat accepts several space-separated categories, so a project can
+    // appear under more than one tab (e.g. "ai mobile").
+    const cats = (card.dataset.cat || '').split(/\s+/).filter(Boolean);
+    const show = filter === 'all' || cats.includes(filter);
     card.style.display = show ? '' : 'none';
   });
 });

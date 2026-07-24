@@ -1335,6 +1335,39 @@ p  { color: var(--ink-mute); }
   border-radius: 4px;
   padding: 3px 7px;
 }
+/* Featured card — Havlek's own product, not client work. Reads as a highlight
+   rather than the 16th portfolio item. */
+.pcard-featured {
+  border-color: var(--coral-soft);
+  background: linear-gradient(180deg, var(--coral-tint) 0%, var(--bone) 45%);
+}
+.pcard-featured:hover {
+  border-color: var(--olive);
+  background: linear-gradient(180deg, var(--coral-tint) 0%, var(--paper-warm) 45%);
+}
+/* Client logos are deliberately desaturated; our own app icon shows in full colour. */
+.pcard-featured .pcard-logo {
+  height: 44px;
+  filter: none;
+  opacity: 1;
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+}
+.pcard-tags span.pcard-tag-own {
+  background: var(--olive);
+  color: var(--bone);
+}
+.pcard-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  color: var(--olive);
+  text-decoration: none;
+}
+.pcard-link:hover { color: var(--ink); text-decoration: underline; }
+
 .pcard h3 { font-size: 1rem; margin-bottom: 10px; }
 .pcard > p { font-size: 0.86rem; margin-bottom: 14px; flex: 1; }
 .pcard-tech {
