@@ -46,25 +46,83 @@
     gtag('config', 'G-D0NJSVQWWE');
   </script>
   <style>
-    /* Page-scoped: app-store button + phone mockups (on-brand tokens only) */
-    .pv-appstore{display:inline-flex;align-items:center;gap:10px}
-    .pv-appstore svg{width:20px;height:20px;fill:currentColor}
-    .pv-cta{text-align:center}
-    .pv-cta .btn{margin-top:8px}
-    /* Hero video — the app in motion, which a still can't convey */
-    .pv-video{margin:60px auto 0;width:290px;border-radius:44px;padding:10px;
-      background:var(--bone);border:1px solid var(--line);box-shadow:var(--shadow)}
-    .pv-video video{width:100%;display:block;border-radius:34px}
-    @media (max-width:720px){.pv-video{width:74%;max-width:300px}}
-    /* Gallery — these images already carry their own device frame and captions,
-       so they sit flat rather than inside another phone mockup. */
-    .pv-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:52px}
-    /* height:auto is required — the width/height attrs (there to reserve layout space
-       and avoid CLS) would otherwise pin the box to the intrinsic 1384px. */
-    .pv-gallery img{width:100%;height:auto;display:block;border-radius:18px;
-      border:1px solid var(--line);box-shadow:var(--shadow-card)}
-    @media (max-width:900px){.pv-gallery{grid-template-columns:repeat(3,1fr)}}
-    @media (max-width:560px){.pv-gallery{grid-template-columns:repeat(2,1fr);gap:14px}}
+    /* ------------------------------------------------------------------
+       Apple-style product page. Deliberately scoped to this page: full-bleed
+       alternating light/dark stages, oversized type, and the product carrying
+       the message. The site's own nav/footer still wrap it.
+       ------------------------------------------------------------------ */
+    .ap{--ink:#1d1d1f;--ink-soft:#6e6e73;--paper:#fff;--paper-alt:#f5f5f7;
+        --night:#000;--night-soft:#a1a1a6;--accent:#ff7a18;
+        font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Albert Sans",
+        "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    .ap section{padding:110px 22px;text-align:center}
+    .ap .in{max-width:1000px;margin:0 auto}
+    .ap .wide{max-width:1180px}
+    .ap h1,.ap h2{font-weight:700;letter-spacing:-.028em;line-height:1.05;
+        margin:0;text-wrap:balance}
+    .ap h1{font-size:clamp(44px,7.2vw,88px)}
+    .ap h2{font-size:clamp(36px,5.4vw,64px)}
+    .ap .lede{font-size:clamp(19px,2.1vw,26px);line-height:1.42;color:var(--ink-soft);
+        margin:22px auto 0;max-width:660px;font-weight:400}
+    .ap .eyebrow{font-size:19px;font-weight:600;color:var(--accent);margin-bottom:14px}
+    /* stages */
+    .ap .light{background:var(--paper);color:var(--ink)}
+    .ap .alt{background:var(--paper-alt);color:var(--ink)}
+    .ap .night{background:var(--night);color:#f5f5f7}
+    /* site-wide style.css sets an explicit dark colour on h1/h2/h3/p, so inheriting
+       from the stage isn't enough — the dark stages must state their own. */
+    .ap .light h1,.ap .light h2,.ap .light h3,.ap .alt h1,.ap .alt h2,.ap .alt h3{color:var(--ink)}
+    .ap .night h1,.ap .night h2,.ap .night h3{color:#f5f5f7}
+    .ap .light p,.ap .alt p{color:var(--ink-soft)}
+    .ap .night p{color:var(--night-soft)}
+    .ap .night .lede,.ap .night .sub{color:var(--night-soft)}
+    /* links + buttons */
+    .ap .cta{margin-top:34px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .ap .btn-ap{display:inline-flex;align-items:center;gap:9px;border-radius:980px;
+        padding:14px 26px;font-size:18px;font-weight:500;text-decoration:none;
+        background:var(--accent);color:#fff;transition:filter .2s}
+    .ap .btn-ap:hover{filter:brightness(1.08)}
+    .ap .btn-ap svg{width:19px;height:19px;fill:currentColor}
+    .ap .link{display:inline-flex;align-items:center;gap:5px;font-size:18px;
+        color:var(--accent);text-decoration:none}
+    .ap .link:hover{text-decoration:underline}
+    /* device */
+    .ap .device{margin:56px auto 0;width:min(300px,72vw);border-radius:46px;padding:11px;
+        background:linear-gradient(160deg,#3a3a3f,#111 45%,#33333a);
+        box-shadow:0 50px 90px -40px rgba(0,0,0,.6)}
+    .ap .device video,.ap .device img{width:100%;display:block;border-radius:36px}
+    /* full-bleed showcase */
+    .ap .stage{margin:54px auto 0;max-width:1000px;border-radius:26px;overflow:hidden;
+        box-shadow:0 50px 90px -40px rgba(0,0,0,.55)}
+    .ap .stage video{width:100%;display:block}
+    /* mode grid */
+    .ap .modes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;text-align:left}
+    .ap .mode{background:var(--paper);border-radius:22px;overflow:hidden;
+        box-shadow:0 2px 5px rgba(0,0,0,.05)}
+    .ap .night .mode{background:#1d1d1f}
+    .ap .mode img{width:100%;height:196px;object-fit:cover;display:block}
+    .ap .mode .t{padding:22px 24px 26px}
+    .ap .mode h3{font-size:22px;font-weight:600;margin:0 0 7px;letter-spacing:-.01em}
+    .ap .mode p{font-size:16px;line-height:1.45;color:var(--ink-soft);margin:0}
+    .ap .night .mode p{color:var(--night-soft)}
+    @media(max-width:900px){.ap .modes{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.ap .modes{grid-template-columns:1fr}
+      .ap section{padding:76px 20px}}
+    /* model wall */
+    .ap .wall{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:48px}
+    .ap .wall span{font-size:clamp(20px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;
+        color:#f5f5f7;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);
+        border-radius:980px;padding:12px 26px}
+    .ap .wall span.hot{background:linear-gradient(135deg,#ff7a18,#f43f5e);border-color:transparent}
+    /* price */
+    .ap .price{font-size:clamp(80px,14vw,164px);font-weight:700;letter-spacing:-.045em;
+        line-height:1;margin-top:12px;
+        background:linear-gradient(135deg,#ff9a3c,#ff5f6d);-webkit-background-clip:text;
+        -webkit-text-fill-color:transparent}
+    .ap .facts{display:flex;gap:44px;justify-content:center;flex-wrap:wrap;margin-top:56px}
+    .ap .fact{max-width:250px}
+    .ap .fact b{display:block;font-size:19px;font-weight:600;margin-bottom:6px}
+    .ap .fact span{font-size:16px;line-height:1.45;color:var(--night-soft)}
   </style>
 </head>
 <body data-page="photo-to-video">
@@ -73,100 +131,114 @@
 <div class="side-rail right" aria-hidden="true"><span class="rail-text">iOS · AI Video</span></div>
 <div id="site-nav"></div>
 
-<main>
+<main class="ap">
 
 <!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-eyebrow">
-      <span class="pulse"></span>
-      Now on the App Store · iPhone
-    </div>
-    <h1 class="hero-title">
-      Turn photos into<br/>
-      <em>AI videos</em>
-    </h1>
-    <p class="hero-sub">
-      Pick a photo or type a prompt, choose a style, and let cutting-edge AI animate it into
-      smooth, cinematic motion — in seconds. No editing skills required.
-    </p>
-    <div class="hero-actions">
-      <a href="https://apps.apple.com/app/id6788599776" class="btn btn-primary btn-lg pv-appstore">
+<section class="light">
+  <div class="in">
+    <p class="eyebrow">Photo to Video</p>
+    <h1>Bring your photos<br/>to life.</h1>
+    <p class="lede">Pick a photo or type a prompt. Sixteen AI models turn it into
+      smooth, cinematic motion — in seconds, on your iPhone.</p>
+    <div class="cta">
+      <a href="https://apps.apple.com/app/id6788599776" class="btn-ap">
         <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
         Download on the App Store
       </a>
-      <a href="#features" class="btn btn-outline btn-lg">See what it does</a>
+      <a href="#modes" class="link">See what it does &rsaquo;</a>
     </div>
-
-    <div class="pv-video" data-reveal>
+    <div class="device" data-reveal>
       <video src="app-preview.mp4" poster="app-preview-poster.jpg"
              autoplay muted loop playsinline preload="metadata"
-             aria-label="Photo to Video — a still photo animating into video"></video>
-    </div>
-
-    <div class="pv-gallery">
-      <img src="shot-01.jpg" alt="Turn any photo into a video" loading="lazy" width="640" height="1384" />
-      <img src="shot-02.jpg" alt="Sixteen AI models in one app" loading="lazy" width="640" height="1384" />
-      <img src="shot-03.jpg" alt="Morph between two frames" loading="lazy" width="640" height="1384" />
-      <img src="shot-04.jpg" alt="Ten creative modes" loading="lazy" width="640" height="1384" />
-      <img src="shot-05.jpg" alt="No subscription — buy credits only when you create" loading="lazy" width="640" height="1384" />
+             aria-label="A photo being turned into a video inside the app"></video>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="services-section" id="features">
-  <div class="container">
-    <div class="section-header">
-      <span class="label">Creative Modes</span>
-      <h2>One app, many ways to create</h2>
-      <p>From a single photo to a full text-to-video scene — choose the mode that fits your idea, and pick from leading AI video models.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card service-card--featured" data-reveal>
-        <span class="sc-icon">🎬</span>
-        <h3>Photo to Video</h3>
-        <p>Animate any still image into lifelike, natural motion — portraits, products, landscapes, and more.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <span class="sc-icon">✍️</span>
-        <h3>Text to Video</h3>
-        <p>Describe a scene in words and watch it come to life as a fully generated clip.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <span class="sc-icon">🔀</span>
-        <h3>Transition</h3>
-        <p>Upload two frames and let AI morph beautifully between them.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <span class="sc-icon">✨</span>
-        <h3>Fusion</h3>
-        <p>Combine multiple subjects or backgrounds into a single, cohesive video.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <span class="sc-icon">🕹️</span>
-        <h3>Motion Control</h3>
-        <p>Drive a character with a reference video to control the movement.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <span class="sc-icon">🎚️</span>
-        <h3>Extend, Upscale &amp; Audio</h3>
-        <p>Continue clips, sharpen resolution, and add sound to finish your results.</p>
-      </div>
+<!-- SHOWCASE -->
+<section class="night">
+  <div class="in">
+    <h2>A still photo.<br/>Then it moves.</h2>
+    <p class="lede">One image in. Natural, believable motion out — no keyframes,
+      no timeline, no editing experience.</p>
+    <div class="stage" data-reveal>
+      <video src="showcase.mp4" poster="showcase-poster.jpg"
+             autoplay muted loop playsinline preload="none"
+             aria-label="An AI-generated video of a dancer in motion"></video>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="callout-band">
-  <div class="container pv-cta">
-    <span class="label">Get started</span>
-    <h2>Bring your photos to life</h2>
-    <p>No subscription — buy credits only when you need them.</p>
-    <a href="https://apps.apple.com/app/id6788599776" class="btn btn-primary btn-lg pv-appstore">
-      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-      Download on the App Store
-    </a>
+<!-- MODES -->
+<section class="alt" id="modes">
+  <div class="in wide">
+    <h2>Ten ways to create.</h2>
+    <p class="lede">Start from a photo, two frames, several subjects, or nothing but a sentence.</p>
+    <div class="modes">
+      <div class="mode" data-reveal><img src="m-photo.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Photo to Video</h3><p>Animate any still image into lifelike motion — portraits, products, landscapes.</p></div></div>
+      <div class="mode" data-reveal><img src="m-text.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Text to Video</h3><p>Describe a scene in words and watch it built into a clip from scratch.</p></div></div>
+      <div class="mode" data-reveal><img src="m-transition.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Transition</h3><p>Give it a first and last frame. AI fills in everything between them.</p></div></div>
+      <div class="mode" data-reveal><img src="m-fusion.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Fusion</h3><p>Combine up to seven subjects or backgrounds into one cohesive scene.</p></div></div>
+      <div class="mode" data-reveal><img src="m-motion.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Motion Control</h3><p>Drive your character with a reference video and copy its movement exactly.</p></div></div>
+      <div class="mode" data-reveal><img src="m-imageedit.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Edit Image</h3><p>Change a photo with a prompt. Faces, lighting and colour stay intact.</p></div></div>
+      <div class="mode" data-reveal><img src="m-editvideo.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Edit Video</h3><p>Restyle a clip, or change one element in it, by describing the change.</p></div></div>
+      <div class="mode" data-reveal><img src="m-createimage.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Create Image</h3><p>Generate original images from a prompt, square through ultra-wide.</p></div></div>
+      <div class="mode" data-reveal><img src="m-extend.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Extend, Upscale &amp; Audio</h3><p>Continue a clip, sharpen it to 4K, and give it a synced soundtrack.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section class="night">
+  <div class="in wide">
+    <h2>Sixteen AI models.<br/>One app.</h2>
+    <p class="lede">Every model has its own strengths. Switch between them at any time —
+      no extra account, no extra subscription.</p>
+    <div class="wall">
+      <span class="hot">Sora 2</span><span class="hot">Veo 3.1</span><span class="hot">Seedance 2.0</span>
+      <span>Kling 3</span><span>Kling O1</span><span>Seedance 1.0 Pro</span><span>Wan 2.7</span>
+      <span>Vidu Q3</span><span>Hailuo-02</span><span>Grok Imagine</span><span>Happy Horse</span>
+      <span>GPT Image 2</span><span>Flux Pro</span><span>SeedVR</span><span>MMAudio</span><span>PixVerse</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="light">
+  <div class="in">
+    <h2>No subscription.</h2>
+    <p class="price">$0</p>
+    <p class="lede">per month, forever. Buy credits only when you actually create something.</p>
+    <div class="cta">
+      <a href="https://apps.apple.com/app/id6788599776" class="btn-ap">
+        <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        Download on the App Store
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="night">
+  <div class="in">
+    <h2>Made by Havlek.</h2>
+    <p class="lede">We build AI products end to end — and we ship our own.
+      Photo to Video is one of them.</p>
+    <div class="cta"><a href="../contact.html" class="link">Talk to us about your project &rsaquo;</a></div>
+    <div class="facts">
+      <div class="fact"><b>Private by design</b><span>Your photos are used to make your video. Nothing is used to train models.</span></div>
+      <div class="fact"><b>No account needed</b><span>Open the app and start creating. Sign-in only when you buy credits.</span></div>
+      <div class="fact"><b>Built in Vancouver</b><span>By Hong Marketing Inc., a Canadian studio.</span></div>
+    </div>
   </div>
 </section>
 
