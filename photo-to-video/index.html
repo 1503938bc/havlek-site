@@ -16,11 +16,11 @@
   <meta property="og:site_name"   content="Havlek" />
   <meta property="og:title"       content="Photo to Video — Turn photos into AI videos" />
   <meta property="og:description" content="Turn any photo or text prompt into a stunning AI video, right from your iPhone." />
-  <meta property="og:image"       content="https://havlek.ca/photo-to-video/2-modes-gallery.png" />
+  <meta property="og:image"       content="https://havlek.ca/photo-to-video/og-cover.jpg" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Photo to Video — Turn photos into AI videos" />
   <meta name="twitter:description" content="Turn any photo or text prompt into a stunning AI video, right from your iPhone." />
-  <meta name="twitter:image"       content="https://havlek.ca/photo-to-video/2-modes-gallery.png" />
+  <meta name="twitter:image"       content="https://havlek.ca/photo-to-video/og-cover.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
@@ -49,14 +49,22 @@
     /* Page-scoped: app-store button + phone mockups (on-brand tokens only) */
     .pv-appstore{display:inline-flex;align-items:center;gap:10px}
     .pv-appstore svg{width:20px;height:20px;fill:currentColor}
-    .pv-shots{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:60px}
-    .pv-phone{width:232px;border-radius:38px;padding:10px;background:var(--bone);
-      border:1px solid var(--line);box-shadow:var(--shadow);}
-    .pv-phone img{width:100%;display:block;border-radius:28px}
-    .pv-phone.mid{transform:translateY(-24px)}
-    @media (max-width:720px){.pv-phone.mid{transform:none}.pv-phone{width:66%;max-width:260px}}
     .pv-cta{text-align:center}
     .pv-cta .btn{margin-top:8px}
+    /* Hero video — the app in motion, which a still can't convey */
+    .pv-video{margin:60px auto 0;width:290px;border-radius:44px;padding:10px;
+      background:var(--bone);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .pv-video video{width:100%;display:block;border-radius:34px}
+    @media (max-width:720px){.pv-video{width:74%;max-width:300px}}
+    /* Gallery — these images already carry their own device frame and captions,
+       so they sit flat rather than inside another phone mockup. */
+    .pv-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:52px}
+    /* height:auto is required — the width/height attrs (there to reserve layout space
+       and avoid CLS) would otherwise pin the box to the intrinsic 1384px. */
+    .pv-gallery img{width:100%;height:auto;display:block;border-radius:18px;
+      border:1px solid var(--line);box-shadow:var(--shadow-card)}
+    @media (max-width:900px){.pv-gallery{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:560px){.pv-gallery{grid-template-columns:repeat(2,1fr);gap:14px}}
   </style>
 </head>
 <body data-page="photo-to-video">
@@ -90,10 +98,18 @@
       <a href="#features" class="btn btn-outline btn-lg">See what it does</a>
     </div>
 
-    <div class="pv-shots">
-      <div class="pv-phone" data-reveal><img src="1-home-creator.png" alt="Photo to Video — create screen" loading="lazy" /></div>
-      <div class="pv-phone mid" data-reveal><img src="2-modes-gallery.png" alt="Photo to Video — creative modes" loading="lazy" /></div>
-      <div class="pv-phone" data-reveal><img src="3-transition-mode.png" alt="Photo to Video — Transition mode" loading="lazy" /></div>
+    <div class="pv-video" data-reveal>
+      <video src="app-preview.mp4" poster="app-preview-poster.jpg"
+             autoplay muted loop playsinline preload="metadata"
+             aria-label="Photo to Video — a still photo animating into video"></video>
+    </div>
+
+    <div class="pv-gallery">
+      <img src="shot-01.jpg" alt="Turn any photo into a video" loading="lazy" width="640" height="1384" />
+      <img src="shot-02.jpg" alt="Sixteen AI models in one app" loading="lazy" width="640" height="1384" />
+      <img src="shot-03.jpg" alt="Morph between two frames" loading="lazy" width="640" height="1384" />
+      <img src="shot-04.jpg" alt="Ten creative modes" loading="lazy" width="640" height="1384" />
+      <img src="shot-05.jpg" alt="No subscription — buy credits only when you create" loading="lazy" width="640" height="1384" />
     </div>
   </div>
 </section>
