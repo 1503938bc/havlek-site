@@ -112,12 +112,12 @@ function renderPage(pageNumber, totalPages, pagePosts) {
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href="${pageUrl(pageNumber)}">
-${prevMeta}${nextMeta}    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
+${prevMeta}${nextMeta}    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ68DBPDFV"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-D0NJSVQWWE');
+      gtag('config', 'G-DZ68DBPDFV');
     </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

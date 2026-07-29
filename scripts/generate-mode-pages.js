@@ -364,12 +364,12 @@ ${ld(howTo)}
 ${ld(crumbs)}
 ${ld(faqLd)}
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ68DBPDFV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-D0NJSVQWWE');
+    gtag('config', 'G-DZ68DBPDFV');
   </script>
 </head>
 <body data-page="photo-to-video">
