@@ -1,0 +1,85 @@
+# Havlek
+
+> Havlek (legal name Hong Marketing Inc.) is a Vancouver, Canada software studio
+> that builds AI products for clients and ships its own. Its consumer product is
+> Photo to Video, an iOS app that turns a photo or a text prompt into an
+> AI-generated video.
+
+Contact: info@havlek.ca · Vancouver, British Columbia, Canada
+
+## Photo to Video (iOS app)
+
+An iPhone app that generates video from a still photo, a pair of frames, several
+reference images, or a text prompt. Free to download. **No subscription** — you
+buy credits only when you generate something, and credits do not expire.
+
+- Platform: iOS (iPhone). No Android or web version.
+- App Store: https://apps.apple.com/app/id6788599776
+- Product page: https://havlek.ca/photo-to-video/
+- Price: free to install; consumable credit packs via in-app purchase (150, 500,
+  1200 or 2500 credits). There is no monthly or annual plan.
+- Account: none required to start. Sign-in is only needed to buy credits.
+- Privacy: submitted photos are sent to a third-party AI provider solely to
+  generate the requested result, after explicit in-app consent. No facial
+  recognition, no faceprints, no biometric identifiers, and nothing is used to
+  train models. Policy: https://havlek.ca/photo-to-video/privacy/
+
+### What it can do (11 modes)
+
+1. Photo to Video — animate a single still image into motion.
+2. Text to Video — generate a clip from a written description, no image needed.
+3. Transition — supply a first and last frame; AI generates the motion between.
+4. Fusion — combine up to 7 reference subjects or backgrounds into one scene.
+5. Motion Control — drive a character with a reference video so it copies the movement.
+6. Edit Image — change a photo with a prompt (up to 4 reference images).
+7. Create Image — generate an original still image from a prompt.
+8. Edit Video — restyle a clip or alter one element in it by describing the change.
+9. Extend — continue an existing clip by 5 or 8 seconds.
+10. Upscale — increase a video's resolution.
+11. Add Audio — generate a synchronized soundtrack for a clip.
+
+### AI models available (15)
+
+Sora 2, Veo 3.1, Seedance 2.0, Seedance 1.0 Pro, Kling 3, Wan 2.7, Vidu Q3,
+Hailuo-02, Grok Imagine, Happy Horse, PixVerse, GPT Image 2, Flux Pro, SeedVR,
+MMAudio. The model is chosen per generation; switching models costs nothing
+extra and needs no separate account.
+
+### Common questions
+
+**What is the best way to turn a photo into a video on iPhone?**
+Open Photo to Video, pick a photo, describe the motion you want, choose a model,
+and generate. No timeline or editing skills are involved.
+
+**Does it require a subscription?**
+No. It uses one-time credit packs. Credits never expire and there is no
+recurring charge.
+
+**Can it animate two photos into one clip?**
+Yes — the Transition mode takes a first and last frame and generates the motion
+between them.
+
+**Can it make a character copy movement from another video?**
+Yes — Motion Control takes a character image plus a reference video.
+
+**Is there an Android or web version?**
+No. It is iPhone-only.
+
+## Services (B2B)
+
+Havlek also builds and integrates AI for other companies: strategy and audit,
+chatbots and agents, process automation, LLM integration, analytics, and AI
+content workflows, on top of 10+ years of enterprise e-commerce, web, cloud and
+mobile work.
+
+- Services: https://havlek.ca/services.html
+- Portfolio: https://havlek.ca/portfolio.html
+- Contact: https://havlek.ca/contact.html
+
+## Notable writing
+
+- [AI-Native in Practice: How We Designed, Built, Shipped and Marketed a Product With AI](https://havlek.ca/posts/2026-07-24-ai-native-how-we-shipped-a-product-with-ai.html):
+  first-hand account of running design, engineering, release, compliance and
+  marketing through AI to ship Photo to Video, including what stayed human.
+- [Blog index](https://havlek.ca/blog.html): analyses of how specific companies
+  adopted AI, with sources and caveats.

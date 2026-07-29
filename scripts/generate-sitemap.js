@@ -39,9 +39,17 @@ function main() {
   const staticPages = [
     renderUrl("https://havlek.ca/", posts[0].date, "weekly", "1.0"),
     renderUrl("https://havlek.ca/services.html", "2026-06-14", "monthly", "0.9"),
+    // The app's own landing page: our only shipped product, and the page every
+    // App Store and AI-answer citation should point at. It was missing here.
+    renderUrl("https://havlek.ca/photo-to-video/", "2026-07-29", "weekly", "0.9"),
     renderUrl("https://havlek.ca/portfolio.html", "2026-06-14", "monthly", "0.8"),
+    renderUrl("https://havlek.ca/testimonials.html", "2026-06-14", "monthly", "0.7"),
     renderUrl("https://havlek.ca/about.html", "2026-06-14", "monthly", "0.7"),
     renderUrl("https://havlek.ca/contact.html", "2026-06-14", "monthly", "0.8"),
+    // Required by App Store review and cited from the listing, so keep them
+    // crawlable — low priority, they are not meant to rank.
+    renderUrl("https://havlek.ca/photo-to-video/privacy/", "2026-07-19", "yearly", "0.3"),
+    renderUrl("https://havlek.ca/photo-to-video/support/", "2026-07-19", "yearly", "0.3"),
   ];
 
   const blogPages = [];

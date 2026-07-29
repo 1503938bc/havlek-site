@@ -1,4 +1,24 @@
 User-agent: *
 Allow: /
 
+# Answer-engine crawlers, named explicitly so a future blanket rule can't cut
+# them off by accident. Being retrievable by these is the whole GEO play.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://havlek.ca/sitemap.xml

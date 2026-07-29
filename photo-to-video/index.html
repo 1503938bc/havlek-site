@@ -37,6 +37,78 @@
     "url": "https://havlek.ca/photo-to-video/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you turn a photo into a video on iPhone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open Photo to Video, pick a photo, describe the motion you want, choose a model, and generate. There is no timeline and no editing experience required — the AI produces the movement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You buy credits only when you generate something, and they never expire. There is no monthly or annual charge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it animate between two different photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Transition mode takes a first and last frame and generates the motion between them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a character copy the movement from another video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Motion Control takes a character image plus a reference video, and the character performs the same movement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI models does it use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fifteen, including Sora 2, Veo 3.1, Seedance 2.0, Kling 3, Wan 2.7 and Vidu Q3. You pick the model per generation, at no extra cost and with no separate account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you need an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not to start. You can install the app and create straight away; signing in is only required to buy credits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to the photos you upload?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "They are sent to our AI provider solely to generate the result you asked for, after you explicitly agree in the app. Nothing is used to train models, and the app performs no facial recognition and creates no faceprint."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there an Android or web version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Photo to Video is iPhone-only."
+        }
+      }
+    ]
+  }
+  </script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NJSVQWWE"></script>
   <script>
@@ -123,6 +195,11 @@
     .ap .fact{max-width:250px}
     .ap .fact b{display:block;font-size:19px;font-weight:600;margin-bottom:6px}
     .ap .fact span{font-size:16px;line-height:1.45;color:var(--night-soft)}
+    /* faq */
+    .ap .faq{margin-top:52px;text-align:left;display:grid;gap:14px}
+    .ap .qa{background:var(--paper);border-radius:18px;padding:26px 28px}
+    .ap .qa h3{font-size:20px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+    .ap .qa p{font-size:17px;line-height:1.5;margin:0}
   </style>
 </head>
 <body data-page="photo-to-video">
@@ -138,7 +215,7 @@
   <div class="in">
     <p class="eyebrow">Photo to Video</p>
     <h1>Bring your photos<br/>to life.</h1>
-    <p class="lede">Pick a photo or type a prompt. Sixteen AI models turn it into
+    <p class="lede">Pick a photo or type a prompt. Fifteen AI models turn it into
       smooth, cinematic motion — in seconds, on your iPhone.</p>
     <div class="cta">
       <a href="https://apps.apple.com/app/id6788599776" class="btn-ap">
@@ -172,7 +249,7 @@
 <!-- MODES -->
 <section class="alt" id="modes">
   <div class="in wide">
-    <h2>Ten ways to create.</h2>
+    <h2>Eleven ways to create.</h2>
     <p class="lede">Start from a photo, two frames, several subjects, or nothing but a sentence.</p>
     <div class="modes">
       <div class="mode" data-reveal><img src="m-photo.jpg" alt="" loading="lazy" />
@@ -200,12 +277,12 @@
 <!-- MODELS -->
 <section class="night">
   <div class="in wide">
-    <h2>Sixteen AI models.<br/>One app.</h2>
+    <h2>Fifteen AI models.<br/>One app.</h2>
     <p class="lede">Every model has its own strengths. Switch between them at any time —
       no extra account, no extra subscription.</p>
     <div class="wall">
       <span class="hot">Sora 2</span><span class="hot">Veo 3.1</span><span class="hot">Seedance 2.0</span>
-      <span>Kling 3</span><span>Kling O1</span><span>Seedance 1.0 Pro</span><span>Wan 2.7</span>
+      <span>Kling 3</span><span>Seedance 1.0 Pro</span><span>Wan 2.7</span>
       <span>Vidu Q3</span><span>Hailuo-02</span><span>Grok Imagine</span><span>Happy Horse</span>
       <span>GPT Image 2</span><span>Flux Pro</span><span>SeedVR</span><span>MMAudio</span><span>PixVerse</span>
     </div>
@@ -223,6 +300,49 @@
         <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
         Download on the App Store
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ — answer-shaped on purpose: a question as the heading and the answer in
+     the first sentence is the form both search snippets and AI answer engines
+     lift from. Mirrored in FAQPage JSON-LD below. -->
+<section class="alt" id="faq">
+  <div class="in">
+    <h2>Questions.</h2>
+    <div class="faq">
+      <div class="qa">
+        <h3>How do you turn a photo into a video on iPhone?</h3>
+        <p>Open Photo to Video, pick a photo, describe the motion you want, choose a model, and generate. There is no timeline and no editing experience required — the AI produces the movement.</p>
+      </div>
+      <div class="qa">
+        <h3>Is there a subscription?</h3>
+        <p>No. You buy credits only when you generate something, and they never expire. There is no monthly or annual charge.</p>
+      </div>
+      <div class="qa">
+        <h3>Can it animate between two different photos?</h3>
+        <p>Yes. Transition mode takes a first and last frame and generates the motion between them.</p>
+      </div>
+      <div class="qa">
+        <h3>Can a character copy the movement from another video?</h3>
+        <p>Yes. Motion Control takes a character image plus a reference video, and the character performs the same movement.</p>
+      </div>
+      <div class="qa">
+        <h3>Which AI models does it use?</h3>
+        <p>Fifteen, including Sora 2, Veo 3.1, Seedance 2.0, Kling 3, Wan 2.7 and Vidu Q3. You pick the model per generation, at no extra cost and with no separate account.</p>
+      </div>
+      <div class="qa">
+        <h3>Do you need an account?</h3>
+        <p>Not to start. You can install the app and create straight away; signing in is only required to buy credits.</p>
+      </div>
+      <div class="qa">
+        <h3>What happens to the photos you upload?</h3>
+        <p>They are sent to our AI provider solely to generate the result you asked for, after you explicitly agree in the app. Nothing is used to train models, and the app performs no facial recognition and creates no faceprint.</p>
+      </div>
+      <div class="qa">
+        <h3>Is there an Android or web version?</h3>
+        <p>No. Photo to Video is iPhone-only.</p>
+      </div>
     </div>
   </div>
 </section>
