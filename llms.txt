@@ -24,6 +24,18 @@ buy credits only when you generate something, and credits do not expire.
   recognition, no faceprints, no biometric identifiers, and nothing is used to
   train models. Policy: https://havlek.ca/photo-to-video/privacy/
 
+### Detailed pages, one per capability
+
+- [Turn a photo into a video](https://havlek.ca/photo-to-video/animate-photo/)
+- [Morph one photo into another](https://havlek.ca/photo-to-video/transition/)
+- [Make a video from a text prompt](https://havlek.ca/photo-to-video/text-to-video/)
+- [Make a character copy movement from another video](https://havlek.ca/photo-to-video/motion-control/)
+- [Combine several photos into one video](https://havlek.ca/photo-to-video/fusion/)
+- [Edit a photo by describing the change](https://havlek.ca/photo-to-video/edit-image/)
+
+Each covers the steps, the models that support that mode, the length and
+resolution limits, and how to get a usable result.
+
 ### What it can do (11 modes)
 
 1. Photo to Video — animate a single still image into motion.

@@ -117,90 +117,7 @@
     gtag('js', new Date());
     gtag('config', 'G-D0NJSVQWWE');
   </script>
-  <style>
-    /* ------------------------------------------------------------------
-       Apple-style product page. Deliberately scoped to this page: full-bleed
-       alternating light/dark stages, oversized type, and the product carrying
-       the message. The site's own nav/footer still wrap it.
-       ------------------------------------------------------------------ */
-    .ap{--ink:#1d1d1f;--ink-soft:#6e6e73;--paper:#fff;--paper-alt:#f5f5f7;
-        --night:#000;--night-soft:#a1a1a6;--accent:#ff7a18;
-        font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Albert Sans",
-        "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-    .ap section{padding:110px 22px;text-align:center}
-    .ap .in{max-width:1000px;margin:0 auto}
-    .ap .wide{max-width:1180px}
-    .ap h1,.ap h2{font-weight:700;letter-spacing:-.028em;line-height:1.05;
-        margin:0;text-wrap:balance}
-    .ap h1{font-size:clamp(44px,7.2vw,88px)}
-    .ap h2{font-size:clamp(36px,5.4vw,64px)}
-    .ap .lede{font-size:clamp(19px,2.1vw,26px);line-height:1.42;color:var(--ink-soft);
-        margin:22px auto 0;max-width:660px;font-weight:400}
-    .ap .eyebrow{font-size:19px;font-weight:600;color:var(--accent);margin-bottom:14px}
-    /* stages */
-    .ap .light{background:var(--paper);color:var(--ink)}
-    .ap .alt{background:var(--paper-alt);color:var(--ink)}
-    .ap .night{background:var(--night);color:#f5f5f7}
-    /* site-wide style.css sets an explicit dark colour on h1/h2/h3/p, so inheriting
-       from the stage isn't enough — the dark stages must state their own. */
-    .ap .light h1,.ap .light h2,.ap .light h3,.ap .alt h1,.ap .alt h2,.ap .alt h3{color:var(--ink)}
-    .ap .night h1,.ap .night h2,.ap .night h3{color:#f5f5f7}
-    .ap .light p,.ap .alt p{color:var(--ink-soft)}
-    .ap .night p{color:var(--night-soft)}
-    .ap .night .lede,.ap .night .sub{color:var(--night-soft)}
-    /* links + buttons */
-    .ap .cta{margin-top:34px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .ap .btn-ap{display:inline-flex;align-items:center;gap:9px;border-radius:980px;
-        padding:14px 26px;font-size:18px;font-weight:500;text-decoration:none;
-        background:var(--accent);color:#fff;transition:filter .2s}
-    .ap .btn-ap:hover{filter:brightness(1.08)}
-    .ap .btn-ap svg{width:19px;height:19px;fill:currentColor}
-    .ap .link{display:inline-flex;align-items:center;gap:5px;font-size:18px;
-        color:var(--accent);text-decoration:none}
-    .ap .link:hover{text-decoration:underline}
-    /* device */
-    .ap .device{margin:56px auto 0;width:min(300px,72vw);border-radius:46px;padding:11px;
-        background:linear-gradient(160deg,#3a3a3f,#111 45%,#33333a);
-        box-shadow:0 50px 90px -40px rgba(0,0,0,.6)}
-    .ap .device video,.ap .device img{width:100%;display:block;border-radius:36px}
-    /* full-bleed showcase */
-    .ap .stage{margin:54px auto 0;max-width:1000px;border-radius:26px;overflow:hidden;
-        box-shadow:0 50px 90px -40px rgba(0,0,0,.55)}
-    .ap .stage video{width:100%;display:block}
-    /* mode grid */
-    .ap .modes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;text-align:left}
-    .ap .mode{background:var(--paper);border-radius:22px;overflow:hidden;
-        box-shadow:0 2px 5px rgba(0,0,0,.05)}
-    .ap .night .mode{background:#1d1d1f}
-    .ap .mode img{width:100%;height:196px;object-fit:cover;display:block}
-    .ap .mode .t{padding:22px 24px 26px}
-    .ap .mode h3{font-size:22px;font-weight:600;margin:0 0 7px;letter-spacing:-.01em}
-    .ap .mode p{font-size:16px;line-height:1.45;color:var(--ink-soft);margin:0}
-    .ap .night .mode p{color:var(--night-soft)}
-    @media(max-width:900px){.ap .modes{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:600px){.ap .modes{grid-template-columns:1fr}
-      .ap section{padding:76px 20px}}
-    /* model wall */
-    .ap .wall{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:48px}
-    .ap .wall span{font-size:clamp(20px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;
-        color:#f5f5f7;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);
-        border-radius:980px;padding:12px 26px}
-    .ap .wall span.hot{background:linear-gradient(135deg,#ff7a18,#f43f5e);border-color:transparent}
-    /* price */
-    .ap .price{font-size:clamp(80px,14vw,164px);font-weight:700;letter-spacing:-.045em;
-        line-height:1;margin-top:12px;
-        background:linear-gradient(135deg,#ff9a3c,#ff5f6d);-webkit-background-clip:text;
-        -webkit-text-fill-color:transparent}
-    .ap .facts{display:flex;gap:44px;justify-content:center;flex-wrap:wrap;margin-top:56px}
-    .ap .fact{max-width:250px}
-    .ap .fact b{display:block;font-size:19px;font-weight:600;margin-bottom:6px}
-    .ap .fact span{font-size:16px;line-height:1.45;color:var(--night-soft)}
-    /* faq */
-    .ap .faq{margin-top:52px;text-align:left;display:grid;gap:14px}
-    .ap .qa{background:var(--paper);border-radius:18px;padding:26px 28px}
-    .ap .qa h3{font-size:20px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
-    .ap .qa p{font-size:17px;line-height:1.5;margin:0}
-  </style>
+  <link rel="stylesheet" href="product.css" />
 </head>
 <body data-page="photo-to-video">
 <div class="shell">
@@ -252,18 +169,18 @@
     <h2>Eleven ways to create.</h2>
     <p class="lede">Start from a photo, two frames, several subjects, or nothing but a sentence.</p>
     <div class="modes">
-      <div class="mode" data-reveal><img src="m-photo.jpg" alt="" loading="lazy" />
-        <div class="t"><h3>Photo to Video</h3><p>Animate any still image into lifelike motion — portraits, products, landscapes.</p></div></div>
-      <div class="mode" data-reveal><img src="m-text.jpg" alt="" loading="lazy" />
-        <div class="t"><h3>Text to Video</h3><p>Describe a scene in words and watch it built into a clip from scratch.</p></div></div>
-      <div class="mode" data-reveal><img src="m-transition.jpg" alt="" loading="lazy" />
-        <div class="t"><h3>Transition</h3><p>Give it a first and last frame. AI fills in everything between them.</p></div></div>
-      <div class="mode" data-reveal><img src="m-fusion.jpg" alt="" loading="lazy" />
-        <div class="t"><h3>Fusion</h3><p>Combine up to seven subjects or backgrounds into one cohesive scene.</p></div></div>
-      <div class="mode" data-reveal><img src="m-motion.jpg" alt="" loading="lazy" />
-        <div class="t"><h3>Motion Control</h3><p>Drive your character with a reference video and copy its movement exactly.</p></div></div>
-      <div class="mode" data-reveal><img src="m-imageedit.jpg" alt="" loading="lazy" />
-        <div class="t"><h3>Edit Image</h3><p>Change a photo with a prompt. Faces, lighting and colour stay intact.</p></div></div>
+      <a class="mode" href="animate-photo/" data-reveal><img src="m-photo.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Photo to Video</h3><p>Animate any still image into lifelike motion — portraits, products, landscapes.</p></div></a>
+      <a class="mode" href="text-to-video/" data-reveal><img src="m-text.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Text to Video</h3><p>Describe a scene in words and watch it built into a clip from scratch.</p></div></a>
+      <a class="mode" href="transition/" data-reveal><img src="m-transition.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Transition</h3><p>Give it a first and last frame. AI fills in everything between them.</p></div></a>
+      <a class="mode" href="fusion/" data-reveal><img src="m-fusion.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Fusion</h3><p>Combine up to seven subjects or backgrounds into one cohesive scene.</p></div></a>
+      <a class="mode" href="motion-control/" data-reveal><img src="m-motion.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Motion Control</h3><p>Drive your character with a reference video and copy its movement exactly.</p></div></a>
+      <a class="mode" href="edit-image/" data-reveal><img src="m-imageedit.jpg" alt="" loading="lazy" />
+        <div class="t"><h3>Edit Image</h3><p>Change a photo with a prompt. Faces, lighting and colour stay intact.</p></div></a>
       <div class="mode" data-reveal><img src="m-editvideo.jpg" alt="" loading="lazy" />
         <div class="t"><h3>Edit Video</h3><p>Restyle a clip, or change one element in it, by describing the change.</p></div></div>
       <div class="mode" data-reveal><img src="m-createimage.jpg" alt="" loading="lazy" />
