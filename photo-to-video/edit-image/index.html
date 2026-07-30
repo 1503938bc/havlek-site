@@ -204,6 +204,23 @@
       <li>Iterate on the cheaper model, then re-run the wording that worked on GPT Image 2.</li>
     </ul>
 
+    <h2>What people use it for</h2>
+    <h3>Changing a background without reshooting</h3>
+    <p>State that the subject must stay exactly as it is, or the model reinterprets them along with the background.</p>
+    <p class="pex"><span>Prompt</span> keep her face, pose and clothing exactly as they are; replace the background with a snowy street at dusk</p>
+    <h3>Colour and material variants of a product</h3>
+    <p>One photo becomes a range. Flux is cheap enough to generate every variant and keep what works.</p>
+    <p class="pex"><span>Prompt</span> change the chair upholstery to olive green linen, keep the frame, lighting and shadows identical</p>
+    <h3>Removing something you cannot crop out</h3>
+    <p>A sign, a bystander, a cable. Say what should be there instead, not only what to remove.</p>
+    <p class="pex"><span>Prompt</span> remove the parked car; continue the brick wall and pavement behind it</p>
+    <h3>Getting a still ready to animate</h3>
+    <p>Fix the frame first, then send it to Photo to Video. Cleaning up a still is far cheaper than regenerating a video that inherited the problem.</p>
+    <p class="pex"><span>Prompt</span> remove the date stamp in the corner, keep everything else untouched</p>
+
+    <h2>Where it struggles</h2>
+    <p>Several instructions in one prompt get applied partially — one change per pass. Output is 1024 pixels, so this is not a retouching tool for print. Text in the image is as unreliable here as anywhere else.</p>
+
     <h2>Questions</h2>
     <div class="faq">
       <div class="qa">

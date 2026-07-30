@@ -109,3 +109,10 @@
 .ap a.mode{text-decoration:none;color:inherit;display:block;transition:transform .15s,box-shadow .15s}
 .ap a.mode:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.10)}
 .ap a.mode h3{color:var(--ink)}
+
+/* A worked prompt example. Monospaced so it reads as something to copy, not prose. */
+.ap .doc p.pex{background:var(--paper-alt);border-left:3px solid var(--accent);
+  border-radius:0 10px 10px 0;padding:12px 16px;font-size:15.5px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink)}
+.ap .doc p.pex span{display:block;font-family:var(--sans),sans-serif;font-size:11px;
+  font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}

@@ -61,6 +61,29 @@ const MODES = [
       "Start at 4–5 seconds. It costs a fraction of a 20-second clip and tells you whether the prompt works.",
       "If one model refuses an image, try another — each has its own content rules and switching is free.",
     ],
+    useCases: [
+      [
+            "A family photo you have only ever seen as a still",
+            "One image is all it needs, and the prompt is optional — leave it blank and the model infers breathing, blinking and small head movement on its own. Start on Seedance 1.0 Pro at 4 seconds; longer clips tend to drift on faces.",
+            "she breathes and blinks, small natural head movement, camera holds still"
+      ],
+      [
+            "A portrait for a profile or a post",
+            "Subtle motion reads as intentional where a big movement reads as an effect. Keep it under 5 seconds and ask for one thing.",
+            "hair lifts slightly in a breeze, she turns her eyes toward the camera"
+      ],
+      [
+            "A landscape or travel shot",
+            "Skies, water and foliage animate more convincingly than people, because small inaccuracies go unnoticed. This is where longer clips are worth the credits.",
+            "clouds drift left, water ripples, grass moves in the wind, slow push in"
+      ],
+      [
+            "A product shot for a listing",
+            "Rotation and light movement sell an object without misrepresenting it. Veo 3.1 if the listing needs 4K.",
+            "the bottle rotates slowly on its axis, highlight sweeps across the glass"
+      ]
+],
+    limits: "Hands, teeth and any text in the image are where it breaks first. Fast or full-body movement from a single still is unreliable — that is what Motion Control is for. Group photos degrade faster than a single subject, because every face is another chance to go wrong.",
     faq: [
       ["Can AI animate a still photo?", "Yes. Given one image it generates frames of that scene in motion, rather than panning or zooming across the original."],
       ["Do you need to write a prompt?", "No. For this mode the prompt is optional — without one the model infers motion from the image. A prompt gives you control over what moves."],
@@ -106,6 +129,29 @@ const MODES = [
       "Start short. A 4-second clip costs a fraction of a 12-second one and tells you whether the prompt is working.",
       "If a model refuses the images, try another \u2014 each has its own content rules, and switching costs nothing.",
     ],
+    useCases: [
+      [
+            "A before and after you want as one continuous shot",
+            "Renovations, haircuts, fitness progress, a repaint. The two frames give the endpoints; the prompt decides whether it reads as a reveal or a morph.",
+            "the room transforms as the camera holds still, old furniture dissolving into the new layout"
+      ],
+      [
+            "The same place in two seasons or times of day",
+            "Shoot from roughly the same spot and the result looks like a timelapse you never shot.",
+            "the scene shifts from summer afternoon to winter dusk, snow gathering, lights coming on"
+      ],
+      [
+            "Two outfits, two colourways, two product variants",
+            "Useful in retail where a side-by-side would be flat. Keep the pose and framing identical between the two frames.",
+            "the jacket changes from black to tan, she stays in the same pose"
+      ],
+      [
+            "A character turning to face you",
+            "First frame in profile, last frame to camera. Kling 3 handles this most convincingly.",
+            "she turns her head toward the camera and smiles"
+      ]
+],
+    limits: "Two images that disagree on framing, lighting or subject give a stylised morph rather than movement — occasionally interesting, rarely what you asked for. It cannot invent a middle it has no basis for: endpoints that imply a cut will look like a cut.",
     faq: [
       ["Can AI create the frames between two photos?", "Yes. Transition mode generates the motion connecting a start and end frame, rather than cross-fading between the two images."],
       ["How long can a transition clip be?", "It depends on the model: Seedance 1.0 Pro covers 2\u201312 seconds, Wan 2.7 up to 15, and Vidu Q3 up to 16. Hailuo-02 offers fixed 6 or 10 second clips."],
@@ -151,6 +197,29 @@ const MODES = [
       "Name a medium and a light source: \u201coil painting, late afternoon side light\u201d does more work than a list of adjectives.",
       "If you plan to animate the result, leave some empty space around the subject \u2014 tightly cropped images have less room to move.",
     ],
+    useCases: [
+      [
+            "A still you intend to animate",
+            "Generating the frame first and animating it second gives you control over composition that one text-to-video pass does not. Leave space around the subject so there is room to move.",
+            "a lone red umbrella on an empty beach, overcast light, wide composition, 16:9"
+      ],
+      [
+            "Cover art or a thumbnail at a specific shape",
+            "Nine aspect ratios, so you generate at the shape you need instead of cropping down to it.",
+            "bold graphic portrait, high contrast, single light source, 9:16"
+      ],
+      [
+            "Iterating on a concept before committing",
+            "Flux at 2 credits against GPT Image 2 at 17 makes exploration nearly free. Settle the wording cheaply, render the final once.",
+            "concept sketch of a folding electric scooter, three-quarter view, studio grey"
+      ],
+      [
+            "An image containing readable text",
+            "GPT Image 2 is the only model here that renders text with any reliability, and it earns its credits when the text is the point.",
+            "a vintage enamel sign reading OPEN ALL NIGHT, chipped paint, warm light"
+      ]
+],
+    limits: "Output is fixed at 1024 pixels — fine for screens, not for anything printed large. Flux is fast and cheap but follows instructions loosely; if the brief is precise, the cheap model will fight you. Neither model reliably reproduces a specific real person or brand.",
     faq: [
       ["Can this app generate images, not just video?", "Yes. Create Image produces a still image at 1024 pixels from a prompt, with no video involved."],
       ["Which image model is cheaper?", "Flux, at 2 credits per image versus 17 for GPT Image 2 \u2014 about an eighth of the cost."],
@@ -197,6 +266,29 @@ const MODES = [
       "One change per pass. Stacked instructions get applied partially.",
       "Test the wording on a 3-second cut before committing to the full clip.",
     ],
+    useCases: [
+      [
+            "Restyling footage to match a look",
+            "The most reliable use of this mode: change the overall grade, era or medium of a clip rather than one element inside it.",
+            "restyle this clip as 1970s 16mm film, warm grain, softer contrast"
+      ],
+      [
+            "Changing the season or time of day",
+            "A whole-scene change the model applies consistently across frames, which is where video-to-video beats editing stills one by one.",
+            "change the scene to winter: bare trees, snow on the ground, overcast light; keep the subject and camera move"
+      ],
+      [
+            "Replacing a background you cannot reshoot",
+            "Say explicitly what holds still. Without that, the subject gets reinterpreted along with the background.",
+            "keep the subject and their movement exactly; replace the background with a quiet city street at night"
+      ],
+      [
+            "Fixing one distracting element",
+            "Possible, but the least reliable use — the model works the whole frame, so a local change can pull the rest with it. Trim to the shortest cut containing the problem.",
+            "remove the bright sign in the top right; keep everything else identical"
+      ]
+],
+    limits: "This is the most expensive mode per second in the app, because video-to-video bills the clip going in as well as the one coming out — trim before you edit, not after. Localised changes are unreliable next to whole-scene ones, and the maximum length is 15 seconds.",
     faq: [
       ["Can AI edit an existing video from a text instruction?", "Yes. Edit Video re-renders your clip with the described change applied, and leaves the original untouched."],
       ["How long a clip can it edit?", "3 to 15 seconds, at 720p or 1080p."],
@@ -243,6 +335,29 @@ const MODES = [
       "Chain extensions to go further than 8 seconds, checking each pass; drift accumulates.",
       "A short prompt helps when you want the continuation to go somewhere specific rather than simply carry on.",
     ],
+    useCases: [
+      [
+            "A clip that is a beat too short for where it is going",
+            "Platform minimums and music cuts are the usual reason. Five extra seconds is often all that is missing.",
+            "prompt optional — leave it blank to simply carry on"
+      ],
+      [
+            "Getting past a model's maximum length",
+            "Generate at a model's ceiling, then extend. Chaining passes goes further than any single generation allows.",
+            "check each pass; drift accumulates across chained extensions"
+      ],
+      [
+            "Room for a voiceover or caption to land",
+            "Cheaper than regenerating the whole clip longer, and it keeps the part you already approved.",
+            "extend by 8 seconds, hold the same camera move"
+      ],
+      [
+            "Continuing your own camera footage",
+            "It works on camera-roll video, not only generated clips — useful when real footage stops just before the moment you wanted.",
+            "the wave finishes breaking and washes up the sand"
+      ]
+],
+    limits: "A clip that has already come to rest gives the model nothing to continue, so extensions of static endings look invented. Drift compounds when you chain passes — check each rather than stacking three and hoping. Only 5 or 8 seconds per pass.",
     faq: [
       ["Can AI make a short video longer?", "Yes. Extend generates 5 or 8 additional seconds that continue the existing motion and style, rather than looping or holding a frame."],
       ["How much longer can it make a clip?", "5 or 8 seconds per pass. You can run it again on the result to go further."],
@@ -288,6 +403,29 @@ const MODES = [
       "Name the look explicitly — “shot on 35mm, shallow depth of field”, “stop-motion”, “drone footage”.",
       "Iterate short. Generate at 4 seconds until the prompt is right, then re-run it longer.",
     ],
+    useCases: [
+      [
+            "A shot you need but have no footage for",
+            "An establishing shot, a texture, a mood insert. Faster than sourcing stock and specific to your brief.",
+            "low-angle shot of a red kite rising over wet sand at dusk, camera tilts up, 35mm"
+      ],
+      [
+            "B-roll to cut between talking-head footage",
+            "Generate several 4-second variations and keep the two that cut cleanly. This is where the cheaper models earn their place.",
+            "hands close a laptop on a wooden desk, warm window light, shallow depth of field"
+      ],
+      [
+            "Testing an ad idea before committing to a shoot",
+            "A rough generated version answers whether the concept reads at all, for a fraction of a day's production.",
+            "a runner crosses an empty bridge at sunrise, camera tracks alongside, breath visible"
+      ],
+      [
+            "A clip that needs its own sound",
+            "Veo 3.1 generates synchronised audio in the same pass, which no other model here does.",
+            "rain on a tin roof at night, a single lamp swinging, distant thunder"
+      ]
+],
+    limits: "Text inside the frame comes out wrong more often than right. Prompts asking for a sequence of events tend to deliver neither half. Anything needing a specific real person, logo or place will be an approximation, not that thing.",
     faq: [
       ["Can AI make a video from just text?", "Yes. Text to Video generates the footage from a written description alone, with no photo or video input."],
       ["How long can a text-to-video clip be?", "1 to 16 seconds depending on the model. Veo 3.1 is fixed at 4, 6 or 8 seconds."],
@@ -333,6 +471,29 @@ const MODES = [
       "Simple, large movements transfer best. Fast footwork and hand detail are where it breaks down.",
       "Because clips can run to 30 seconds, cost adds up quickly — prove the pairing at a few seconds first.",
     ],
+    useCases: [
+      [
+            "Making a character perform a dance or routine",
+            "The reference clip supplies timing and body mechanics, which is why this works where a prompt alone would not. Frame your character head to foot to match.",
+            "no prompt needed — the reference video carries the movement"
+      ],
+      [
+            "Reusing one performance across several characters",
+            "Pick the movement once, then run it against each character image. The motion stays consistent in a way separate generations never would.",
+            "same reference clip, a different character image each run"
+      ],
+      [
+            "Giving an illustrated character believable body movement",
+            "Drawn and rendered characters work, provided the proportions are roughly human — the transfer maps a skeleton it needs to recognise.",
+            "keep the character fully visible, no tight crop"
+      ],
+      [
+            "A longer sequence than other modes allow",
+            "This mode reaches 30 seconds, the longest in the app, making it the only route to a full routine in one clip.",
+            "prove the pairing at a few seconds before paying for thirty"
+      ]
+],
+    limits: "Fast footwork, hand detail and limbs crossing the body are where the transfer visibly fails. Crowded reference clips confuse it — one clearly visible person only. Output is fixed at 720p, so this is not the mode for something that must look sharp full screen.",
     faq: [
       ["Can AI make a photo copy a dance from a video?", "Yes. Motion Control takes a character image and a reference video and generates your character performing the same movement."],
       ["What is the maximum length?", "30 seconds, which is longer than any other mode in the app."],
@@ -378,6 +539,29 @@ const MODES = [
       "Use a clean cut-out or plain background for a subject you need kept intact.",
       "Reference images that disagree on lighting produce a composite that looks like one. Match them roughly.",
     ],
+    useCases: [
+      [
+            "Two people who were never photographed together",
+            "Supply each as a reference and say which is which. Seedance 2.0, the default, is the most reliable at keeping both recognisable.",
+            "the woman from the first image and the man from the second walk side by side along the shore"
+      ],
+      [
+            "A product in a setting you do not have access to",
+            "One reference for the product, one for the location. Cheaper than a location shoot, and repeatable.",
+            "the sneaker from the first image sits on the wet rocks from the second, waves behind"
+      ],
+      [
+            "Borrowing a look you cannot put into words",
+            "Use a reference purely for style and say so — otherwise the model treats it as a subject to include.",
+            "the subject from the first image, in the colour palette and grain of the second"
+      ],
+      [
+            "Building a scene from parts",
+            "Subject, background and a prop as three references. Two or three beat seven — more references compete rather than combine.",
+            "the dog from the first image runs through the field in the second, ball from the third in its mouth"
+      ]
+],
+    limits: "Recognisability drops as you add references — seven is the ceiling, not the target. References that disagree on lighting produce a composite that looks composited. For a face that must stay exact, edit an image instead.",
     faq: [
       ["How many photos can Fusion combine?", "Up to seven reference images in one generation."],
       ["Can it put two different people in the same video?", "Yes. Supply each as a reference and describe how they interact. Keeping both recognisable is easiest on the default model, Seedance 2.0."],
@@ -423,6 +607,29 @@ const MODES = [
       "Add a reference image for a look you cannot describe well in words.",
       "Iterate on the cheaper model, then re-run the wording that worked on GPT Image 2.",
     ],
+    useCases: [
+      [
+            "Changing a background without reshooting",
+            "State that the subject must stay exactly as it is, or the model reinterprets them along with the background.",
+            "keep her face, pose and clothing exactly as they are; replace the background with a snowy street at dusk"
+      ],
+      [
+            "Colour and material variants of a product",
+            "One photo becomes a range. Flux is cheap enough to generate every variant and keep what works.",
+            "change the chair upholstery to olive green linen, keep the frame, lighting and shadows identical"
+      ],
+      [
+            "Removing something you cannot crop out",
+            "A sign, a bystander, a cable. Say what should be there instead, not only what to remove.",
+            "remove the parked car; continue the brick wall and pavement behind it"
+      ],
+      [
+            "Getting a still ready to animate",
+            "Fix the frame first, then send it to Photo to Video. Cleaning up a still is far cheaper than regenerating a video that inherited the problem.",
+            "remove the date stamp in the corner, keep everything else untouched"
+      ]
+],
+    limits: "Several instructions in one prompt get applied partially — one change per pass. Output is 1024 pixels, so this is not a retouching tool for print. Text in the image is as unreliable here as anywhere else.",
     faq: [
       ["Can AI edit a photo from a text instruction?", "Yes. Edit Image re-renders the photo with your described change applied, preserving facial structure, lighting and colour tone."],
       ["Does it output a video?", "No. This mode produces an image at 1024 pixels. The video modes are separate."],
@@ -546,6 +753,14 @@ ${m.spec.map(([k, v]) => `      <tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).
     <ul>
 ${m.tips.map((t) => `      <li>${esc(t)}</li>`).join("\n")}
     </ul>
+
+    <h2>What people use it for</h2>
+${m.useCases.map(([sit, why, prompt]) => `    <h3>${esc(sit)}</h3>
+    <p>${esc(why)}</p>
+    <p class="pex"><span>Prompt</span> ${esc(prompt)}</p>`).join("\n")}
+
+    <h2>Where it struggles</h2>
+    <p>${esc(m.limits)}</p>
 
     <h2>Questions</h2>
     <div class="faq">
