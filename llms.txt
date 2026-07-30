@@ -32,6 +32,9 @@ buy credits only when you generate something, and credits do not expire.
 - [Make a character copy movement from another video](https://havlek.ca/photo-to-video/motion-control/)
 - [Combine several photos into one video](https://havlek.ca/photo-to-video/fusion/)
 - [Edit a photo by describing the change](https://havlek.ca/photo-to-video/edit-image/)
+- [Generate an image from a text prompt](https://havlek.ca/photo-to-video/create-image/)
+- [Edit a video by describing the change](https://havlek.ca/photo-to-video/edit-video/)
+- [Make a video longer](https://havlek.ca/photo-to-video/extend-video/)
 
 Each covers the steps, the models that support that mode, the length and
 resolution limits, and how to get a usable result.
