@@ -129,6 +129,23 @@ const MODES = [
       "Start short. A 4-second clip costs a fraction of a 12-second one and tells you whether the prompt is working.",
       "If a model refuses the images, try another \u2014 each has its own content rules, and switching costs nothing.",
     ],
+    sample: {
+      "heading": "A worked example: staging an empty room",
+      "intro": "A real estate listing needs the room to feel lived in, and reshooting a staged unit is not always possible. Here the two frames are the same room — one empty, one virtually staged — and Transition generates the furniture appearing rather than cutting between the photos. Both frames and the clip below are unretouched output.",
+      "before": "t-staging-before.jpg",
+      "beforeAlt": "An empty condominium living room with hardwood floors, a fireplace and a corner window",
+      "beforeCap": "First frame — the room as photographed, empty.",
+      "after": "t-staging-after.jpg",
+      "afterAlt": "The same living room virtually staged with sofas, a rug, a coffee table and artwork",
+      "afterCap": "Last frame — the same room, virtually staged.",
+      "video": "t-staging.mp4",
+      "poster": "t-staging-poster.jpg",
+      "videoAlt": "A generated clip in which furniture appears in an empty living room",
+      "videoCap": "The generated transition. The camera holds still while the room fills.",
+      "uploadDate": "2026-07-30",
+      "duration": "PT2S",
+      "prompt": "the empty room fills with furniture, camera holds still, natural daylight unchanged"
+},
     useCases: [
       [
             "A before and after you want as one continuous shot",
@@ -706,7 +723,16 @@ function page(m) {
   <link rel="stylesheet" href="../product.css" />
 ${ld(howTo)}
 ${ld(crumbs)}
-${ld(faqLd)}
+${ld(faqLd)}${m.sample ? "\n" + ld({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: m.sample.heading,
+    description: strip(m.sample.intro),
+    thumbnailUrl: [`https://havlek.ca/photo-to-video/${m.sample.poster}`],
+    contentUrl: `https://havlek.ca/photo-to-video/${m.sample.video}`,
+    uploadDate: m.sample.uploadDate,
+    duration: m.sample.duration,
+  }) : ""}
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ68DBPDFV"></script>
   <script>
@@ -754,6 +780,19 @@ ${m.spec.map(([k, v]) => `      <tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).
 ${m.tips.map((t) => `      <li>${esc(t)}</li>`).join("\n")}
     </ul>
 
+${m.sample ? `
+    <h2>${esc(m.sample.heading)}</h2>
+    <p>${m.sample.intro}</p>
+    <div class="io">
+      <figure><img src="../${m.sample.before}" alt="${esc(m.sample.beforeAlt)}" loading="lazy" /><figcaption>${esc(m.sample.beforeCap)}</figcaption></figure>
+      <figure><img src="../${m.sample.after}" alt="${esc(m.sample.afterAlt)}" loading="lazy" /><figcaption>${esc(m.sample.afterCap)}</figcaption></figure>
+    </div>
+    <figure>
+      <video src="../${m.sample.video}" poster="../${m.sample.poster}" muted loop playsinline controls preload="none" aria-label="${esc(m.sample.videoAlt)}"></video>
+      <figcaption>${esc(m.sample.videoCap)}</figcaption>
+    </figure>
+    <p class="pex"><span>Prompt used</span> ${esc(m.sample.prompt)}</p>
+` : ""}
     <h2>What people use it for</h2>
 ${m.useCases.map(([sit, why, prompt]) => `    <h3>${esc(sit)}</h3>
     <p>${esc(why)}</p>

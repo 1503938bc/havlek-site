@@ -144,6 +144,20 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "A worked example: staging an empty room",
+    "description": "A real estate listing needs the room to feel lived in, and reshooting a staged unit is not always possible. Here the two frames are the same room — one empty, one virtually staged — and Transition generates the furniture appearing rather than cutting between the photos. Both frames and the clip below are unretouched output.",
+    "thumbnailUrl": [
+      "https://havlek.ca/photo-to-video/t-staging-poster.jpg"
+    ],
+    "contentUrl": "https://havlek.ca/photo-to-video/t-staging.mp4",
+    "uploadDate": "2026-07-30",
+    "duration": "PT2S"
+  }
+  </script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ68DBPDFV"></script>
   <script>
@@ -203,6 +217,19 @@
       <li>Start short. A 4-second clip costs a fraction of a 12-second one and tells you whether the prompt is working.</li>
       <li>If a model refuses the images, try another — each has its own content rules, and switching costs nothing.</li>
     </ul>
+
+
+    <h2>A worked example: staging an empty room</h2>
+    <p>A real estate listing needs the room to feel lived in, and reshooting a staged unit is not always possible. Here the two frames are the same room — one empty, one virtually staged — and Transition generates the furniture appearing rather than cutting between the photos. Both frames and the clip below are unretouched output.</p>
+    <div class="io">
+      <figure><img src="../t-staging-before.jpg" alt="An empty condominium living room with hardwood floors, a fireplace and a corner window" loading="lazy" /><figcaption>First frame — the room as photographed, empty.</figcaption></figure>
+      <figure><img src="../t-staging-after.jpg" alt="The same living room virtually staged with sofas, a rug, a coffee table and artwork" loading="lazy" /><figcaption>Last frame — the same room, virtually staged.</figcaption></figure>
+    </div>
+    <figure>
+      <video src="../t-staging.mp4" poster="../t-staging-poster.jpg" muted loop playsinline controls preload="none" aria-label="A generated clip in which furniture appears in an empty living room"></video>
+      <figcaption>The generated transition. The camera holds still while the room fills.</figcaption>
+    </figure>
+    <p class="pex"><span>Prompt used</span> the empty room fills with furniture, camera holds still, natural daylight unchanged</p>
 
     <h2>What people use it for</h2>
     <h3>A before and after you want as one continuous shot</h3>

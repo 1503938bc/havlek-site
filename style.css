@@ -1618,3 +1618,19 @@ a.pcard h3 { color: var(--ink); }
 .cib-value { font-size: 0.9rem; color: var(--ink-mute); line-height: 1.5; }
 .cib-value a { color: var(--olive); text-decoration: none; }
 .cib-value a:hover { text-decoration: underline; }
+
+/* Second sidebar widget on posts: the service this case is adjacent to, plus
+   the portfolio. Quieter than the audit CTA above it — it is a route onward,
+   not a second ask. */
+.sidebar-widget.sw-related { margin-top: 16px; }
+.sidebar-widget.sw-related p { margin-bottom: 12px; }
+.sw-link {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--olive);
+  text-decoration: none;
+  padding: 7px 0;
+  border-top: 1px solid var(--line-soft);
+}
+.sw-link:hover { color: var(--ink); }

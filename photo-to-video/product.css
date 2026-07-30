@@ -116,3 +116,10 @@
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink)}
 .ap .doc p.pex span{display:block;font-family:var(--sans),sans-serif;font-size:11px;
   font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+
+/* Worked example: the two inputs side by side above the clip they produced. */
+.ap .doc .io{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0}
+.ap .doc .io figure{margin:0}
+.ap .doc .io img{border-radius:12px}
+.ap .doc video{width:100%;border-radius:18px;display:block;background:#000}
+@media(max-width:640px){.ap .doc .io{grid-template-columns:1fr}}
