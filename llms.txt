@@ -3,7 +3,9 @@
 > Havlek (legal name Hong Marketing Inc.) is a Vancouver, Canada software studio
 > that builds AI products for clients and ships its own. Its consumer product is
 > Photo to Video, an iOS app that turns a photo or a text prompt into an
-> AI-generated video.
+> AI-generated video. Its developer product is Video Pipeline, a package of AI
+> agent skills that takes a news story from topic selection to a finished,
+> captioned video file.
 
 Contact: info@havlek.ca · Vancouver, British Columbia, Canada
 
@@ -79,6 +81,72 @@ Yes — Motion Control takes a character image plus a reference video.
 
 **Is there an Android or web version?**
 No. It is iPhone-only.
+
+## Video Pipeline (AI agent skill)
+
+A package of four SKILL.md agent skills that takes a news story from topic
+selection to a rendered, captioned video file. Sold once, runs entirely on the
+buyer's own machine. Not a hosted service and not an app.
+
+- Platform: any agent that reads the open SKILL.md standard — Claude Code,
+  Cursor, Codex CLI, Gemini CLI, VS Code Copilot and others.
+- Product page: https://havlek.ca/video-pipeline/
+- Buy: https://www.agensi.io/skills/short-video-pipeline-topic-script-finished-cut
+- Price: **US$15, one-time.** No subscription and no per-render cost.
+- Requirements: Node 18+, ffmpeg (libfreetype, libx264), ffprobe, yt-dlp,
+  edge-tts. All free and open source. The package orchestrates them; it does not
+  bundle them. An included `doctor.mjs` preflight reports what is missing and
+  exits non-zero.
+- Language: **Latin-language build only.** Pointed at Chinese or Japanese copy,
+  on-screen text renders as empty boxes (ffmpeg's drawtext does not fall back
+  when given an explicit fontfile) and subtitles do not wrap (the wrapper breaks
+  on whitespace, which CJK lacks). Both are documented in the package.
+- Contents: 33 files — four SKILL.md definitions, nine Node scripts, reference
+  docs, a troubleshooting guide, and a commercial licence.
+
+### The four skills
+
+1. `topic-scan` — scans a configured source list, validates every URL, scores
+   candidates on reach, engagement, freshness and fit, returns a ranked Top 6.
+2. `script-writing` — title, frame, research, draft, sign-off. Cross-checks facts
+   against at least three independent outlets. Five category templates.
+3. `news-short-video` — TTS voiceover, sourced b-roll, data and quote cards,
+   burned-in subtitles, QA stills, covers, distribution copy, optional upload.
+   Nine Node scripts, three render tiers, 16:9 and 9:16.
+4. `video-pipeline` — chains the other three and owns the handoffs between them.
+
+### Two human checkpoints, by design
+
+The pipeline stops twice and waits: once for the operator to choose the title,
+once to sign off the script. It is not one-click video. Those two stops carry the
+angle of the piece and its factual liability.
+
+### Worked examples
+
+Two published videos, both produced end to end by this pipeline in one pass:
+- Long cut, 16:9, 3:52 — https://www.youtube.com/watch?v=RIgpSjUw_hM
+- Short cut, 9:16, 2:41 — https://www.youtube.com/watch?v=sPMsLv1DURI
+
+The two cuts have separate scripts (733 and 502 words), not one script trimmed
+twice, because a wide aerial shot is unusable in a vertical crop.
+
+### Common questions
+
+**Is it one-click video?**
+No, deliberately. The operator picks the title and signs off the script;
+everything between and after is automated.
+
+**Can it cover a different subject area?**
+Yes. Three config files — persona, source list, filter keywords — are edited
+once. The method is fixed; the beat is the buyer's.
+
+**Does it work in Chinese or Japanese?**
+No. It is the Latin-language build and the documentation says why.
+
+**Who owns the footage, and is the voice licensed?**
+Footage rights are the buyer's; the package prefers first-party sources and
+credits them on screen, but clearing a clip for commercial publication is the
+buyer's call. The voiceover is synthetic, generated locally by edge-tts.
 
 ## Services (B2B)
 

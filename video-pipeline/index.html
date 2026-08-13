@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-root="..">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Pipeline — Topic to finished cut, for AI agents | Havlek</title>
+  <meta name="description" content="Four agent skills that take a news beat from &quot;what should I make today&quot; to a rendered, captioned video — topic scan, fact-checked script, TTS, sourced footage, scene plan, render, QA. Works with Claude Code, Cursor, Codex CLI." />
+  <meta name="keywords" content="AI agent skill, SKILL.md, automated video production, news video pipeline, Claude Code skill, ffmpeg automation, AI video workflow" />
+  <link rel="canonical" href="https://havlek.ca/video-pipeline/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#fafafa" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://havlek.ca/video-pipeline/" />
+  <meta property="og:site_name"   content="Havlek" />
+  <meta property="og:title"       content="Video Pipeline — topic → script → finished cut" />
+  <meta property="og:description" content="Four agent skills that take a news beat to a rendered, captioned video. Two human checkpoints, on purpose." />
+  <meta property="og:image"       content="https://havlek.ca/video-pipeline/og-cover.jpg" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Video Pipeline — topic → script → finished cut" />
+  <meta name="twitter:description" content="Four agent skills that take a news beat to a rendered, captioned video. Two human checkpoints, on purpose." />
+  <meta name="twitter:image"       content="https://havlek.ca/video-pipeline/og-cover.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Video Pipeline",
+    "alternateName": "Short-video pipeline: topic → script → finished cut",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Linux",
+    "softwareRequirements": "Node 18+, ffmpeg, ffprobe, yt-dlp, edge-tts",
+    "offers": { "@type": "Offer", "price": "15", "priceCurrency": "USD", "url": "https://www.agensi.io/skills/short-video-pipeline-topic-script-finished-cut" },
+    "publisher": { "@type": "Organization", "name": "Havlek", "legalName": "Hong Marketing Inc." },
+    "url": "https://havlek.ca/video-pipeline/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this one-click video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, and deliberately not. You pick the title and you sign off the script. Everything between and after those two points — research, voiceover, footage, scene plan, render, QA stills, cover, distribution copy — the agent does. Those two stay with you because the title sets the angle of the whole piece and the script carries the factual liability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use it for a different beat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Nothing about the beat is hardcoded. Three config files, edited once: persona and positioning, your source list, and 20 to 50 filter keywords. The method is fixed; the beat is yours. Switching from EV coverage to biotech means editing those three files and nothing else."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I have to install, and does it cost anything to run?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Node 18+, ffmpeg with libfreetype and libx264, ffprobe, yt-dlp and edge-tts. All free and open source, no API keys and no accounts. Run the included doctor.mjs first — one command reports exactly what is missing and exits non-zero, so a broken setup cannot slip past."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work in Chinese or Japanese?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. This is the Latin-language build. Two things break: ffmpeg's drawtext does not fall back to another face when handed an explicit fontfile, so CJK on-screen text draws as empty boxes and still exits 0; and the caption wrapper breaks on whitespace, which Chinese and Japanese do not have. TROUBLESHOOTING.md documents both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the footage, and is the voice licensed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Footage rights are yours. It fetches from public channels for commentary and citation and prefers first-party sources, but clearing a clip for commercial publication is your call. The voiceover is synthetic, generated locally by edge-tts. Every platform has a disclosure control and you should use it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which agents does it work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Any agent that reads the open SKILL.md standard — Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot and others. The package is four SKILL.md definitions plus nine Node scripts; there is no runtime to install beyond the command-line tools it orchestrates."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ68DBPDFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DZ68DBPDFV');
+  </script>
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body data-page="video-pipeline">
+<div class="shell">
+<div class="side-rail left"  aria-hidden="true"><span class="rail-text">Havlek · Video Pipeline</span></div>
+<div class="side-rail right" aria-hidden="true"><span class="rail-text">Agent Skill · SKILL.md</span></div>
+<div id="site-nav"></div>
+
+<main class="ap">
+
+<!-- HERO -->
+<section class="light">
+  <div class="in">
+    <p class="eyebrow">Video Pipeline</p>
+    <h1>From today's news<br/>to a finished cut.</h1>
+    <p class="lede">Four agent skills that take a news beat from &ldquo;what should I make
+      today&rdquo; to a rendered, captioned, publishable video — with two deliberate
+      human checkpoints.</p>
+    <div class="cta">
+      <a href="https://www.agensi.io/skills/short-video-pipeline-topic-script-finished-cut" class="btn-ap" rel="noopener">
+        Get it on Agensi — $15
+      </a>
+      <a href="#pipeline" class="link">See how it works &rsaquo;</a>
+    </div>
+    <div class="stage" data-reveal>
+      <video src="showcase.mp4" poster="showcase-poster.jpg"
+             autoplay muted loop playsinline preload="metadata"
+             aria-label="Fifteen seconds of a finished cut: sourced footage with an on-screen card and burned-in subtitle, then a data card, then a quote card"></video>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT COMES OUT -->
+<section class="night">
+  <div class="in wide">
+    <h2>Not a showreel.<br/>Two finished videos.</h2>
+    <p class="lede">Both public, both produced start to finish by this pipeline in a
+      single pass. Watch them before you decide anything — they are the honest
+      output.</p>
+    <div class="proof">
+      <a class="pf" href="https://www.youtube.com/watch?v=RIgpSjUw_hM" rel="noopener">
+        <b>Long cut — 16:9, 3:52</b>
+        <span>733 words of narration, 40 scenes, data and quote cards, burned-in
+          subtitles, sourced footage credited on screen.</span>
+        <u>Watch on YouTube &rsaquo;</u>
+      </a>
+      <a class="pf" href="https://www.youtube.com/watch?v=sPMsLv1DURI" rel="noopener">
+        <b>Short cut — 9:16, 2:41</b>
+        <span>502 words, its own script and its own scene list. Not the long cut
+          trimmed — a wide aerial is meaningless in a vertical crop.</span>
+        <u>Watch on YouTube &rsaquo;</u>
+      </a>
+    </div>
+    <figure class="shot" data-reveal>
+      <img src="shot-two-cuts.jpg" alt="The same story as a 16:9 cut and a 9:16 cut, side by side" loading="lazy" />
+      <figcaption>A wide aerial that works at 16:9 keeps about the middle third of
+        its width at 9:16. That is why the two plans are authored separately rather
+        than one scene list reused.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- THE PIPELINE -->
+<section class="alt" id="pipeline">
+  <div class="in wide">
+    <h2>Four skills.<br/>Eleven stages.</h2>
+    <p class="lede">Each skill is correct on its own. The fourth one exists because
+      what actually breaks is the seams between them.</p>
+    <div class="flow">
+      <span>scan topics</span><span class="you">you pick the title</span>
+      <span>write the script</span><span class="you">you sign off</span><span>voiceover</span>
+      <span>source footage</span><span>scene plan</span><span>render</span><span>QA</span>
+      <span>cover</span><span>distribution copy</span>
+    </div>
+    <div class="skills">
+      <div class="skill" data-reveal>
+        <code>topic-scan</code>
+        <h3>What is worth making today</h3>
+        <p>Scans your source list in priority order, verifies every URL actually
+          resolves, scores candidates on reach, engagement, freshness and fit, and
+          returns a ranked Top 6 with the lead flagged.</p>
+      </div>
+      <div class="skill" data-reveal>
+        <code>script-writing</code>
+        <h3>A script you can defend</h3>
+        <p>Title, frame, research, draft, sign-off. Cross-checks facts against at
+          least three independent outlets before they reach the page, and picks one
+          of five category templates for the cold open and closing form.</p>
+      </div>
+      <div class="skill" data-reveal>
+        <code>news-short-video</code>
+        <h3>The finished file</h3>
+        <p>TTS, sourced b-roll, data and quote cards, burned-in subtitles, QA stills,
+          covers, distribution copy, optional upload. Nine Node scripts, three render
+          tiers, 16:9 and 9:16.</p>
+      </div>
+      <div class="skill" data-reveal>
+        <code>video-pipeline</code>
+        <h3>The seams</h3>
+        <p>Chains the three and owns what falls between them: facts arriving
+          unverified, a word-count line getting read aloud by the TTS, a script
+          written to the wrong length for the platform it is going to.</p>
+      </div>
+    </div>
+    <figure class="shot" data-reveal>
+      <img src="shot-cards.jpg" alt="A data card and a quote card as rendered in a finished video" loading="lazy" />
+      <figcaption>Cards are authored as rows and lines in the scene plan. Every scene
+        boundary is taken from a caption cue edge, never a rounded second, so cuts
+        land on sentence boundaries.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CHECKPOINTS -->
+<section class="night">
+  <div class="in">
+    <h2>Two stops.<br/>Both yours.</h2>
+    <p class="lede">You pick the title, and you sign off the script. Everything in
+      between — the research, the scene plan, the render, the QA stills, the cover —
+      the agent does.</p>
+    <p class="lede">Those two stay with you because the title sets the angle of the
+      whole piece and the script carries the factual liability. This is not one-click
+      video, and it is not trying to be.</p>
+    <figure class="shot" data-reveal>
+      <img src="shot-frame.jpg" alt="A frame from a published cut showing an on-screen card, a source credit and a burned-in subtitle" loading="lazy" />
+      <figcaption>A real frame from a published cut — on-screen card, source credit,
+        burned-in subtitle.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- WHAT IT CATCHES -->
+<section class="light">
+  <div class="in wide">
+    <h2>Most of what<br/>you are buying.</h2>
+    <p class="lede">A truncated narration, a mislabelled clip, a contradictory caption:
+      every one of these renders cleanly, plays fine, and returns exit code 0. The
+      only way to catch them is to look — so looking is a stage, not an option.</p>
+    <figure class="shot" data-reveal>
+      <img src="shot-qa.jpg" alt="A grid of QA stills pulled across a finished cut" loading="lazy" />
+      <figcaption>Stills pulled across the finished cut and actually read. On this
+        video they caught a label reading &ldquo;Gen 2&rdquo; over footage while the
+        narration discussed the third generation.</figcaption>
+    </figure>
+    <figure class="shot" data-reveal>
+      <img src="shot-labelled.jpg" alt="A video frame labelled on screen as file footage rather than the event being discussed" loading="lazy" />
+      <figcaption>The best available footage was from a different day, so it says so
+        on screen — in the video that shipped, not in a disclaimer nobody reads.</figcaption>
+    </figure>
+    <div class="term" data-reveal>
+      <b>$ node scripts/doctor.mjs</b><br/>
+      <i>ok</i>&nbsp; ffmpeg &middot; libfreetype &nbsp;&nbsp;<em>present</em><br/>
+      <i>ok</i>&nbsp; yt-dlp &nbsp;&nbsp;<em>2026.03.17</em><br/>
+      <i>ok</i>&nbsp; fonts &middot; style &ldquo;editorial&rdquo; &nbsp;&nbsp;<em>3 file(s) found</em><br/>
+      <i>ok</i>&nbsp; font fallback is silent &nbsp;&nbsp;<em>confirmed</em>
+    </div>
+    <p class="lede" style="margin-top:26px;font-size:17px;">One command before you start.
+      It exits non-zero, because several of these dependencies fail silently — a
+      missing font makes ffmpeg substitute a face and return success.</p>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="alt">
+  <div class="in">
+    <h2>One-time.</h2>
+    <p class="price">$15</p>
+    <p class="lede">No subscription and no runtime cost. The tools it orchestrates —
+      ffmpeg, yt-dlp, edge-tts, Node — are free and open source, and it does not
+      bundle them.</p>
+    <div class="cta">
+      <a href="https://www.agensi.io/skills/short-video-pipeline-topic-script-finished-cut" class="btn-ap" rel="noopener">
+        Get it on Agensi — $15
+      </a>
+    </div>
+    <p class="lede" style="font-size:16px;margin-top:20px;">33 files. Four SKILL.md
+      definitions, nine Node scripts, reference docs, a troubleshooting guide for the
+      failures that pass <code style="font-family:ui-monospace,Menlo,monospace;">ffprobe</code>
+      cleanly, and a commercial licence.</p>
+  </div>
+</section>
+
+<!-- FAQ — answer-shaped on purpose: a question as the heading and the answer in
+     the first sentence is the form both search snippets and AI answer engines
+     lift from. Mirrored in FAQPage JSON-LD above. -->
+<section class="light" id="faq">
+  <div class="in">
+    <h2>Questions.</h2>
+    <div class="faq">
+      <div class="qa">
+        <h3>Is this one-click video?</h3>
+        <p>No, and deliberately not. You pick the title and you sign off the script. Everything between and after those two points — research, voiceover, footage, scene plan, render, QA stills, cover, distribution copy — the agent does. Those two stay with you because the title sets the angle of the whole piece and the script carries the factual liability.</p>
+      </div>
+      <div class="qa">
+        <h3>Can I use it for a different beat?</h3>
+        <p>Yes. Nothing about the beat is hardcoded. Three config files, edited once: persona and positioning, your source list, and 20 to 50 filter keywords. The method is fixed; the beat is yours. Switching from EV coverage to biotech means editing those three files and nothing else.</p>
+      </div>
+      <div class="qa">
+        <h3>What do I have to install, and does it cost anything to run?</h3>
+        <p>Node 18+, ffmpeg with libfreetype and libx264, ffprobe, yt-dlp and edge-tts. All free and open source, no API keys and no accounts. Run the included <code style="font-family:ui-monospace,Menlo,monospace;">doctor.mjs</code> first — one command reports exactly what is missing and exits non-zero, so a broken setup cannot slip past.</p>
+      </div>
+      <div class="qa">
+        <h3>Does it work in Chinese or Japanese?</h3>
+        <p>No. This is the Latin-language build. Two things break: ffmpeg's drawtext does not fall back to another face when handed an explicit fontfile, so CJK on-screen text draws as empty boxes and still exits 0; and the caption wrapper breaks on whitespace, which Chinese and Japanese do not have. TROUBLESHOOTING.md documents both.</p>
+      </div>
+      <div class="qa">
+        <h3>Who owns the footage, and is the voice licensed?</h3>
+        <p>Footage rights are yours. It fetches from public channels for commentary and citation and prefers first-party sources, but clearing a clip for commercial publication is your call. The voiceover is synthetic, generated locally by edge-tts. Every platform has a disclosure control and you should use it.</p>
+      </div>
+      <div class="qa">
+        <h3>Which agents does it work with?</h3>
+        <p>Any agent that reads the open SKILL.md standard — Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot and others. The package is four SKILL.md definitions plus nine Node scripts; there is no runtime to install beyond the command-line tools it orchestrates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="night">
+  <div class="in">
+    <h2>Made by Havlek.</h2>
+    <p class="lede">We build AI products end to end — and we ship our own. Video
+      Pipeline runs a live channel, not a demo account.</p>
+    <div class="stat">
+      <b>130,000</b>
+      <span>views on one cut produced with it. That one was Chinese-language; this is
+        the Latin-language build. The number is evidence the method works, not a
+        promise about your channel.</span>
+    </div>
+    <div class="cta"><a href="../contact.html" class="link">Talk to us about your project &rsaquo;</a></div>
+    <div class="facts">
+      <div class="fact"><b>Runs on your machine</b><span>No service to sign up for, no API keys, nothing phoning home.</span></div>
+      <div class="fact"><b>Open standard</b><span>Four SKILL.md definitions. Works with any agent that reads them.</span></div>
+      <div class="fact"><b>Built in Vancouver</b><span>By Havlek, an AI Native Company.</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+</div><!-- /.shell -->
+<script src="../components.js"></script>
+</body>
+</html>

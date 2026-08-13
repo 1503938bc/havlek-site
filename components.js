@@ -94,6 +94,7 @@
         <a href="${R}/about.html">About Havlek</a>
         <a href="${R}/portfolio.html">Portfolio</a>
         <a href="${R}/photo-to-video/">Photo to Video — our iOS app</a>
+        <a href="${R}/video-pipeline/">Video Pipeline — our agent skill</a>
         <a href="${R}/testimonials.html">Testimonials</a>
         <a href="${R}/blog.html">Blog</a>
         <a href="${R}/contact.html">Contact Us</a>
