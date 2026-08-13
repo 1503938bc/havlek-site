@@ -97,10 +97,15 @@ buyer's own machine. Not a hosted service and not an app.
   edge-tts. All free and open source. The package orchestrates them; it does not
   bundle them. An included `doctor.mjs` preflight reports what is missing and
   exits non-zero.
-- Language: **English build.** Pointed at Chinese or Japanese copy,
-  on-screen text renders as empty boxes (ffmpeg's drawtext does not fall back
-  when given an explicit fontfile) and subtitles do not wrap (the wrapper breaks
-  on whitespace, which CJK lacks). Both are documented in the package.
+- Language: **ships configured for English, but not limited to it.** Another
+  language needs two settings — a font that has the glyphs (ffmpeg's drawtext
+  does not fall back when given an explicit fontfile, so it draws empty boxes
+  and still exits 0) and the matching TTS voice. For a script without spaces
+  (Chinese, Japanese) there is one thing to work around: the caption
+  line-breaker splits on whitespace, so cues must be authored inside the line
+  limit — 30 characters at 9:16, 40 at 16:9 — rather than relying on it to
+  wrap. A cue under that limit passes through untouched. The publisher runs a
+  Chinese channel on this pipeline; one cut passed 130,000 views.
 - Contents: 33 files — four SKILL.md definitions, nine Node scripts, reference
   docs, a troubleshooting guide, and a commercial licence.
 
@@ -141,7 +146,9 @@ Yes. Three config files — persona, source list, filter keywords — are edited
 once. The method is fixed; the beat is the buyer's.
 
 **Does it work in Chinese or Japanese?**
-No. It is the English build and the documentation says why.
+Yes, with configuration: set a font that has the glyphs and the matching TTS
+voice, and keep caption cues inside the line limit, because the line-breaker
+splits on spaces. What ships is set up for English.
 
 **Who owns the footage, and is the voice licensed?**
 Footage rights are the buyer's; the package prefers first-party sources and

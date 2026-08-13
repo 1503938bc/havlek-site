@@ -73,7 +73,7 @@
         "name": "Does it work in Chinese or Japanese?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. This is the English build. Two things break: ffmpeg's drawtext does not fall back to another face when handed an explicit fontfile, so CJK on-screen text draws as empty boxes and still exits 0; and the caption wrapper breaks on whitespace, which Chinese and Japanese do not have. TROUBLESHOOTING.md documents both."
+          "text": "Yes, with configuration. We run a Chinese channel on this pipeline — one of those cuts passed 130,000 views. Two things to set: point the plan's font at a face that has the glyphs, because ffmpeg's drawtext does not fall back when handed an explicit fontfile and will draw empty boxes while still exiting 0; and choose the matching voice, for example zh-CN-YunxiNeural. One thing to work around: the caption line-breaker splits on spaces, so in a script that has none, keep each cue inside the line limit (30 characters at 9:16, 40 at 16:9) instead of relying on it to wrap — a cue under that limit passes through untouched. What ships is set up for English: the docs, the config templates and the default voice."
         }
       },
       {
@@ -306,7 +306,7 @@
       </div>
       <div class="qa">
         <h3>Does it work in Chinese or Japanese?</h3>
-        <p>No. This is the English build. Two things break: ffmpeg's drawtext does not fall back to another face when handed an explicit fontfile, so CJK on-screen text draws as empty boxes and still exits 0; and the caption wrapper breaks on whitespace, which Chinese and Japanese do not have. TROUBLESHOOTING.md documents both.</p>
+        <p>Yes, with configuration. We run a Chinese channel on this pipeline — one of those cuts passed 130,000 views. Two things to set: point the plan's font at a face that has the glyphs, because ffmpeg's drawtext does not fall back when handed an explicit fontfile and will draw empty boxes while still exiting 0; and choose the matching voice, for example zh-CN-YunxiNeural. One thing to work around: the caption line-breaker splits on spaces, so in a script that has none, keep each cue inside the line limit (30 characters at 9:16, 40 at 16:9) instead of relying on it to wrap — a cue under that limit passes through untouched. What ships is set up for English: the docs, the config templates and the default voice.</p>
       </div>
       <div class="qa">
         <h3>Who owns the footage, and is the voice licensed?</h3>
@@ -328,9 +328,9 @@
       Pipeline runs a live channel, not a demo account.</p>
     <div class="stat">
       <b>130,000</b>
-      <span>views on one cut produced with it. That one was Chinese-language; this is
-        the English build. The number is evidence the method works, not a promise
-        about your channel.</span>
+      <span>views on one cut produced with it. That one was Chinese-language — what
+        ships is configured for English, not limited to it. The number is evidence
+        the method works, not a promise about your channel.</span>
     </div>
     <div class="cta"><a href="../contact.html" class="link">Talk to us about your project &rsaquo;</a></div>
     <div class="facts">
