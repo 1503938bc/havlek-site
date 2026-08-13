@@ -97,7 +97,7 @@ buyer's own machine. Not a hosted service and not an app.
   edge-tts. All free and open source. The package orchestrates them; it does not
   bundle them. An included `doctor.mjs` preflight reports what is missing and
   exits non-zero.
-- Language: **Latin-language build only.** Pointed at Chinese or Japanese copy,
+- Language: **English build.** Pointed at Chinese or Japanese copy,
   on-screen text renders as empty boxes (ffmpeg's drawtext does not fall back
   when given an explicit fontfile) and subtitles do not wrap (the wrapper breaks
   on whitespace, which CJK lacks). Both are documented in the package.
@@ -141,7 +141,7 @@ Yes. Three config files — persona, source list, filter keywords — are edited
 once. The method is fixed; the beat is the buyer's.
 
 **Does it work in Chinese or Japanese?**
-No. It is the Latin-language build and the documentation says why.
+No. It is the English build and the documentation says why.
 
 **Who owns the footage, and is the voice licensed?**
 Footage rights are the buyer's; the package prefers first-party sources and
