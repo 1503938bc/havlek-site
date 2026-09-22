@@ -123,3 +123,16 @@
 .ap .doc .io img{border-radius:12px}
 .ap .doc video{width:100%;border-radius:18px;display:block;background:#000}
 @media(max-width:640px){.ap .doc .io{grid-template-columns:1fr}}
+
+/* ---------------- Song Booth: whole phone screens ----------------
+   The stock card frames its image in a 196px landscape band. That suits a
+   video still and cannot suit a phone screenshot: a 1290x2796 screen cropped
+   to 3:2 shows one stripe of itself, which is what the first version of this
+   page shipped. These cards carry whole screens instead — the image keeps the
+   phone's own aspect and is padded onto the app's own ink rather than cropped.
+
+   The cards get tall. That is simply what a whole phone screen costs, and at a
+   third of 1180px each screen still renders near its real size, so the thing
+   the card exists to show is legible. */
+body[data-page="song-booth"] .ap .mode img{
+  height:auto;aspect-ratio:1290/2796;object-fit:contain;background:#141110}
