@@ -53,7 +53,7 @@ function main() {
     renderUrl("https://havlek.ca/contact.html", "2026-06-14", "monthly", "0.8"),
     // Required by App Store review and cited from the listing, so keep them
     // crawlable — low priority, they are not meant to rank.
-    renderUrl("https://havlek.ca/photo-to-video/privacy/", "2026-07-19", "yearly", "0.3"),
+    renderUrl("https://havlek.ca/photo-to-video/privacy/", "2026-10-17", "yearly", "0.3"),
     renderUrl("https://havlek.ca/photo-to-video/support/", "2026-07-19", "yearly", "0.3"),
   ];
 
