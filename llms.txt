@@ -55,10 +55,10 @@ resolution limits, and how to get a usable result.
 10. Upscale — increase a video's resolution.
 11. Add Audio — generate a synchronized soundtrack for a clip.
 
-### AI models available (15)
+### AI models available (14)
 
 Veo 3.1, Seedance 2.0, MiniMax H3 Max, Seedance 1.0 Pro, Kling 3, Wan 2.7, Vidu Q3,
-Hailuo-02, Grok Imagine, Happy Horse, PixVerse, GPT Image 2, Flux Pro, SeedVR,
+Hailuo-02, Happy Horse, PixVerse, GPT Image 2, Flux Pro, SeedVR,
 MMAudio. The model is chosen per generation; switching models costs nothing
 extra and needs no separate account.
 

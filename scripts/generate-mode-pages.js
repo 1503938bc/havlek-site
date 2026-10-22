@@ -48,13 +48,13 @@ const MODES = [
       ["Input", "One image"],
       ["Output", "Video, 480p to 4K depending on model"],
       ["Length", "1–20 seconds depending on model"],
-      ["Models", "Seedance 1.0 Pro (default), Seedance 2.0, Sora 2, Veo 3.1, Kling 3, Wan 2.7, Vidu Q3, Hailuo-02, Grok Imagine, Happy Horse"],
+      ["Models", "Seedance 1.0 Pro (default), Seedance 2.0, MiniMax H3 Max, Veo 3.1, Kling 3, Wan 2.7, Vidu Q3, Hailuo-02, Happy Horse"],
       ["Prompt", "Optional"],
       ["Platform", "iPhone (iOS). No Android or web version."],
       ["Pricing", "Credits per second of output, by model. No subscription."],
     ],
     modelGuidance:
-      "<strong>Seedance 1.0 Pro</strong> is the default and the cheapest per second — the right first try for any photo. <strong>Veo 3.1</strong> is the one to pick when you need 4K or synchronised audio. <strong>Sora 2</strong> and <strong>Seedance 2.0</strong> handle complex scenes and camera movement most convincingly, at a higher cost per second. <strong>Hailuo-02</strong> and <strong>Grok Imagine</strong> are quick, cheaper options for simple subject motion.",
+      "<strong>Seedance 1.0 Pro</strong> is the default and the cheapest per second — the right first try for any photo. <strong>Veo 3.1</strong> is the one to pick when you need 4K or synchronised audio. <strong>Seedance 2.0</strong> handles complex scenes and camera movement most convincingly, at a higher cost per second. <strong>MiniMax H3 Max</strong> is the one that gives a character lip-synced speech. <strong>Hailuo-02</strong> is a quick, cheaper option for simple subject motion.",
     tips: [
       "A clear single subject animates far better than a busy scene. Crop before you generate.",
       "Describe movement, not appearance. “Her hair lifts in the wind” gives the model something to do; “beautiful photo” does not.",
@@ -87,7 +87,7 @@ const MODES = [
     faq: [
       ["Can AI animate a still photo?", "Yes. Given one image it generates frames of that scene in motion, rather than panning or zooming across the original."],
       ["Do you need to write a prompt?", "No. For this mode the prompt is optional — without one the model infers motion from the image. A prompt gives you control over what moves."],
-      ["How long can the video be?", "From 1 to 20 seconds depending on the model. Sora 2 and Seedance 2.0 allow the longest clips; Veo 3.1 is fixed at 4, 6 or 8 seconds."],
+      ["How long can the video be?", "From 1 to 16 seconds depending on the model. Vidu Q3 allows the longest clips; Veo 3.1 is fixed at 4, 6 or 8 seconds."],
       ["Can it produce 4K?", "Yes, with Veo 3.1. The other models top out at 1080p."],
       ["Is it free?", "The app is free to install and there is no subscription. Generating uses credits, which you buy in one-time packs and which never expire."],
     ],
@@ -407,7 +407,7 @@ const MODES = [
       ["Input", "A text prompt only"],
       ["Output", "Video, 480p to 4K depending on model"],
       ["Length", "1–16 seconds depending on model"],
-      ["Models", "Seedance 1.0 Pro (default), Seedance 2.0, Veo 3.1, Kling 3, Wan 2.7, Vidu Q3, Hailuo-02, Grok Imagine, Happy Horse"],
+      ["Models", "Seedance 1.0 Pro (default), Seedance 2.0, Veo 3.1, Kling 3, Wan 2.7, Vidu Q3, Hailuo-02, Happy Horse"],
       ["Prompt", "Required"],
       ["Platform", "iPhone (iOS). No Android or web version."],
       ["Pricing", "Credits per second of output, by model. No subscription."],
