@@ -140,7 +140,7 @@ ${breadcrumb}
       <div>
         <span class="label">${label}</span>
         <h1>Insights & Analysis</h1>
-        <p class="page-hero-sub">Deep dives into AI, cloud computing, and modern web development.</p>
+        <p class="page-hero-sub">Field notes on how real businesses put AI to work, from the engineers at Havlek.</p>
       </div>
     </div>
   </div>

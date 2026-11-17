@@ -1,13 +1,45 @@
 # Havlek
 
-> Havlek (legal name Hong Marketing Inc.) is a Vancouver, Canada software studio
-> that builds AI products for clients and ships its own. Its consumer product is
-> Photo to Video, an iOS app that turns a photo or a text prompt into an
-> AI-generated video. Its developer product is Video Pipeline, a package of AI
-> agent skills that takes a news story from topic selection to a finished,
-> captioned video file.
+> Havlek (legal name Hong Marketing Inc.) is a Vancouver, Canada engineering firm
+> that provides Forward Deployed Engineers (FDEs) for the AI era: an engineer
+> embeds with a client's team, works inside its real systems and data, and ships
+> AI that runs in production. Havlek also turned its 10+ years of web expertise
+> into Done4Me, an AI employee that builds and maintains small-business websites.
+> Its other products are Photo to Video and Song Booth (iOS apps) and Video
+> Pipeline (AI agent skills).
 
 Contact: info@havlek.ca · Vancouver, British Columbia, Canada
+
+## Forward Deployed Engineering (main service)
+
+An FDE engagement puts a Havlek engineer inside the client's team until the AI
+is in production and the client's team owns it. The engineer who scopes the
+problem writes and ships the code; there is no hand-off to a separate team.
+
+- Steps: Embed (work alongside the team, pick the first problem), Ship (a working
+  version early, inside the existing stack), Harden (evaluations, monitoring,
+  cost controls, guardrails), Hand over (documentation, training, ongoing support).
+- Typical builds: AI agents and assistants with human approval, process
+  automation, AI added to existing websites/stores/software, data and
+  forecasting, content pipelines, production hardening.
+- Foundation: 10+ years of Magento/Adobe Commerce, PHP, Rails, mobile, AWS and
+  CMS work for brands including MEC, Ingram Micro, Saje, JYSK and ELLE. This
+  work is still offered directly.
+- Services: https://havlek.ca/services.html
+- Contact (free 30-minute call with an engineer): https://havlek.ca/contact.html
+
+## Done4Me (AI employee for small-business websites)
+
+Havlek's own web expertise, turned into an AI employee. A small-business owner
+describes what they need in plain words, in any language; Done4Me builds the
+site, makes changes and shows a preview. Nothing goes live until the owner
+approves it, and every version is kept.
+
+- Website: https://done4me.app/
+- Price: free plan to start; paid plans from $20/month (USD).
+- Includes hosting, SSL, contact form, own-domain support and team access.
+- Not yet built in: online bookings, payments, customer logins (those are
+  custom work for a Havlek FDE).
 
 ## Photo to Video (iOS app)
 
@@ -155,12 +187,10 @@ Footage rights are the buyer's; the package prefers first-party sources and
 credits them on screen, but clearing a clip for commercial publication is the
 buyer's call. The voiceover is synthetic, generated locally by edge-tts.
 
-## Services (B2B)
+## Other services
 
-Havlek also builds and integrates AI for other companies: strategy and audit,
-chatbots and agents, process automation, LLM integration, analytics, and AI
-content workflows, on top of 10+ years of enterprise e-commerce, web, cloud and
-mobile work.
+Besides FDE engagements, Havlek still takes on e-commerce, web, mobile, cloud
+and digital-marketing projects directly.
 
 - Services: https://havlek.ca/services.html
 - Portfolio: https://havlek.ca/portfolio.html

@@ -17,6 +17,10 @@
     { id: 'about',         label: 'About',          href: `${R}/about.html` },
   ];
 
+  // On the homepage the primary CTA scrolls to the on-page form; elsewhere it opens contact.html
+  const CTA     = (page === 'home') ? '#contact' : `${R}/contact.html`;
+  const D4M     = 'https://done4me.app/';
+
   function navItem({ id, label, href }) {
     const active = (page === id) ? ' is-active' : '';
     return `<li><a href="${href}" data-nav="${id}" class="${active}">${label}</a></li>`;
@@ -27,12 +31,12 @@
   <div class="topbar">
     <div class="container">
       <div class="topbar-inner">
-        <span><span class="coral-pill"><span class="pulse"></span> AI integration services now available</span></span>
+        <span><span class="coral-pill"><span class="pulse"></span> Forward Deployed Engineers for the AI era</span></span>
         <span style="display:flex;gap:24px;">
-          <span>Web · Mobile · E-Commerce · AI</span>
+          <span>AI · Web · E-Commerce · Mobile</span>
           <span><b>Vancouver, Canada</b></span>
         </span>
-        <span><a class="topbar-link" href="${R}/contact.html">Book free audit →</a></span>
+        <span><a class="topbar-link" href="${CTA}">Talk to an engineer →</a></span>
       </div>
     </div>
   </div>
@@ -46,8 +50,8 @@
           <ul class="nav-links">${navLinks.map(navItem).join('')}</ul>
         </nav>
         <div class="nav-side">
-          <a href="${R}/contact.html" class="btn btn-outline">Contact</a>
-          <a href="${R}/contact.html" class="btn btn-primary">Free AI Audit</a>
+          <a href="${D4M}" class="btn btn-outline" target="_blank" rel="noopener">Done4Me ↗</a>
+          <a href="${CTA}" class="btn btn-primary">Talk to an engineer</a>
         </div>
         <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
           <span></span><span></span><span></span>
@@ -57,7 +61,8 @@
     <div class="nav-mobile" id="navMobile">
       ${navLinks.map(({ label, href }) => `<a href="${href}" onclick="toggleMobileMenu()">${label}</a>`).join('')}
       <a href="${R}/contact.html" onclick="toggleMobileMenu()">Contact</a>
-      <a href="${R}/contact.html" class="btn btn-primary" onclick="toggleMobileMenu()">Free AI Audit</a>
+      <a href="${D4M}" target="_blank" rel="noopener" onclick="toggleMobileMenu()">Done4Me ↗</a>
+      <a href="${CTA}" class="btn btn-primary" onclick="toggleMobileMenu()">Talk to an engineer</a>
     </div>
   </div>
 </div>`;
@@ -70,19 +75,19 @@
         <a href="${R}/index.html" class="brand footer-brand-logo">
           <img src="${R}/images/logo-trans.png" alt="Havlek" class="brand-logo-img brand-logo-invert" />
         </a>
-        <p>AI solutions & digital innovation for businesses worldwide.<br/>Hong Marketing Inc. — Vancouver, BC, Canada.</p>
+        <p>Forward Deployed Engineers for the AI era. Makers of Done4Me.<br/>Hong Marketing Inc. — Vancouver, BC, Canada.</p>
         <p style="margin-top:10px;font-size:11px;opacity:.4;">info@havlek.ca</p>
       </div>
       <div class="fl-col">
-        <h4>AI Services</h4>
-        <a href="${R}/services.html#ai-strategy">AI Strategy & Audit</a>
-        <a href="${R}/services.html#chatbots">Chatbots & Agents</a>
+        <h4>What we do</h4>
+        <a href="${R}/services.html#fde">FDE Engagement</a>
+        <a href="${R}/services.html#chatbots">AI Agents & Assistants</a>
         <a href="${R}/services.html#automation">Process Automation</a>
-        <a href="${R}/services.html#integration">AI Integration</a>
-        <a href="${R}/services.html#analytics">Analytics & Insights</a>
+        <a href="${R}/services.html#integration">AI in Your Existing Stack</a>
+        <a href="${R}/services.html#analytics">Data & Insights</a>
       </div>
       <div class="fl-col">
-        <h4>Solutions</h4>
+        <h4>Foundation</h4>
         <a href="${R}/services.html#ecommerce">E-Commerce</a>
         <a href="${R}/services.html#web">Web Development</a>
         <a href="${R}/services.html#mobile">Mobile Apps</a>
@@ -90,11 +95,14 @@
         <a href="${R}/services.html#marketing">Digital Marketing</a>
       </div>
       <div class="fl-col">
-        <h4>Company</h4>
+        <h4>Products</h4>
+        <a href="${D4M}" target="_blank" rel="noopener">Done4Me — AI employee ↗</a>
+        <a href="${R}/photo-to-video/">Photo to Video — iOS app</a>
+        <a href="${R}/song-booth/">Song Booth — iOS app</a>
+        <a href="${R}/video-pipeline/">Video Pipeline — agent skill</a>
+        <h4 class="fl-subhead">Company</h4>
         <a href="${R}/about.html">About Havlek</a>
         <a href="${R}/portfolio.html">Portfolio</a>
-        <a href="${R}/photo-to-video/">Photo to Video — our iOS app</a>
-        <a href="${R}/video-pipeline/">Video Pipeline — our agent skill</a>
         <a href="${R}/testimonials.html">Testimonials</a>
         <a href="${R}/blog.html">Blog</a>
         <a href="${R}/contact.html">Contact Us</a>

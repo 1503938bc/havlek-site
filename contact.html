@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Havlek — Book a Free AI Audit | Vancouver, BC</title>
-  <meta name="description" content="Get in touch with Havlek. Book a free AI audit or discuss your web, mobile, or e-commerce project. info@havlek.ca — Surrey / Vancouver, BC, Canada." />
-  <meta name="keywords" content="contact Havlek, AI audit Vancouver, AI consulting contact, Hong Marketing Inc., book consultation" />
+  <title>Contact Havlek — Talk to an Engineer | Vancouver, BC</title>
+  <meta name="description" content="Talk to a Havlek engineer about an AI project, Done4Me, or your web, mobile or e-commerce work. info@havlek.ca — Surrey / Vancouver, BC, Canada." />
+  <meta name="keywords" content="contact Havlek, forward deployed engineer, AI engineering Vancouver, Hong Marketing Inc., book consultation" />
   <link rel="canonical" href="https://havlek.ca/contact.html" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://havlek.ca/contact.html" />
-  <meta property="og:title"       content="Contact Havlek — Book a Free AI Audit" />
-  <meta property="og:description" content="Tell us about your business challenge. Free, no-obligation consultation — response within 1 business day." />
+  <meta property="og:title"       content="Contact Havlek — Talk to an Engineer" />
+  <meta property="og:description" content="Book a free 30-minute call with a Havlek engineer. Response within 1 business day." />
   <meta property="og:image"       content="https://havlek.ca/images/og-about.png" />
   <meta name="twitter:card"  content="summary_large_image" />
   <meta name="twitter:image" content="https://havlek.ca/images/og-about.png" />
@@ -76,7 +76,7 @@
       <div>
         <span class="label">Contact</span>
         <h1>Let's talk about<br/><em class="coral-text">your business</em></h1>
-        <p class="page-hero-sub">Book a free 30-minute AI audit, or just tell us about your web, mobile, or e-commerce project. We respond within one business day — no obligation.</p>
+        <p class="page-hero-sub">Book a free 30-minute call with a Havlek engineer about an AI project, or tell us about your web, mobile or e-commerce work. We respond within one business day, no obligation.</p>
       </div>
     </div>
   </div>
@@ -88,14 +88,15 @@
     <div class="contact-grid">
       <div class="contact-text">
         <span class="label">Get Started</span>
-        <h2>Ready to see what AI can do for you?</h2>
-        <p>Send us a message and we'll identify 3–5 specific opportunities where AI can save time, reduce cost, or increase revenue in your operation — no strings attached.</p>
+        <h2>Have a problem AI should be solving? Put an engineer on it.</h2>
+        <p>Tell us where time or money is leaking. We'll tell you honestly whether AI can fix it and what a first version would look like.</p>
         <div class="contact-benefits">
-          <div class="cb"><span class="cb-check">✓</span> Free, no-obligation consultation</div>
-          <div class="cb"><span class="cb-check">✓</span> Specific to your industry &amp; workflows</div>
-          <div class="cb"><span class="cb-check">✓</span> Clear ROI estimate before any commitment</div>
+          <div class="cb"><span class="cb-check">✓</span> Free, no-obligation call</div>
+          <div class="cb"><span class="cb-check">✓</span> You talk to an engineer, not a salesperson</div>
+          <div class="cb"><span class="cb-check">✓</span> A concrete first step, specific to your business</div>
           <div class="cb"><span class="cb-check">✓</span> Response within 1 business day</div>
         </div>
+        <p class="contact-fork">Only need a website? <a href="https://done4me.app/" target="_blank" rel="noopener">Start free on Done4Me →</a></p>
 
         <div class="contact-details">
           <div class="cd-item">
@@ -125,13 +126,25 @@
             <input type="email" id="emailInput" name="from_email" placeholder="you@company.com" required />
           </div>
         </div>
-        <div class="form-group">
-          <label for="subjectInput">Subject</label>
-          <input type="text" id="subjectInput" name="subject" placeholder="What's this about?" required />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="companyInput">Company <span class="form-optional">(optional)</span></label>
+            <input type="text" id="companyInput" placeholder="Company name" />
+          </div>
+          <div class="form-group">
+            <label for="topicSelect">What is this about?</label>
+            <select id="topicSelect" required>
+              <option value="FDE / AI project">An AI project (FDE)</option>
+              <option value="Done4Me question">A Done4Me question</option>
+              <option value="Web, e-commerce or mobile work">Web, e-commerce or mobile work</option>
+              <option value="Something else">Something else</option>
+            </select>
+          </div>
         </div>
+        <input type="hidden" name="subject" id="hiddenSubject" />
         <div class="form-group">
-          <label for="messageInput">Tell us about your business challenge</label>
-          <textarea id="messageInput" name="message" rows="5" placeholder="What's taking too much time? What do you wish could be automated? What are your biggest bottlenecks?" required></textarea>
+          <label for="messageInput">What problem should an engineer look at?</label>
+          <textarea id="messageInput" name="message" rows="5" placeholder="What's taking too much time? Which systems are involved? What would 'solved' look like?" required></textarea>
         </div>
         <button type="submit" id="submitBtn" class="btn btn-primary btn-full">Send message</button>
         <p class="form-note" id="formStatus">We respond within 1 business day. No spam, ever.</p>
@@ -159,6 +172,10 @@
 
     // Mirror name into from_name (avoids form.name property ambiguity)
     document.getElementById('hiddenFromName').value = document.getElementById('nameInput').value;
+    // Topic + optional company travel in the existing {{subject}} template field
+    const company = document.getElementById('companyInput').value.trim();
+    document.getElementById('hiddenSubject').value =
+      document.getElementById('topicSelect').value + (company ? ' — ' + company : '');
 
     emailjs.sendForm('service_3kteq44', 'template_2cmuu07', form)
       .then(() => {
