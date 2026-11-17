@@ -104,6 +104,7 @@
         <a href="${R}/about.html">About Havlek</a>
         <a href="${R}/portfolio.html">Portfolio</a>
         <a href="${R}/testimonials.html">Testimonials</a>
+        <a href="https://www.udemy.com/course/zero-to-app-store-build-your-first-iphone-app-with-ai/" target="_blank" rel="noopener">Founder's course ↗</a>
         <a href="${R}/blog.html">Blog</a>
         <a href="${R}/contact.html">Contact Us</a>
       </div>

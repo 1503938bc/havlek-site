@@ -6,7 +6,7 @@
 > AI that runs in production. Havlek also turned its 10+ years of web expertise
 > into Done4Me, an AI employee that builds and maintains small-business websites.
 > Its other products are Photo to Video and Song Booth (iOS apps) and Video
-> Pipeline (AI agent skills).
+> Pipeline (AI agent skills). Founded in 2014 by Henry Zou.
 
 Contact: info@havlek.ca · Vancouver, British Columbia, Canada
 
@@ -186,6 +186,16 @@ splits on spaces. What ships is set up for English.
 Footage rights are the buyer's; the package prefers first-party sources and
 credits them on screen, but clearing a clip for commercial publication is the
 buyer's call. The voiceover is synthetic, generated locally by edge-tts.
+
+## Founder's course
+
+Havlek's founder, Henry Zou, teaches "Zero to App Store: Build Your First iPhone App
+with AI" on Udemy: 17 lessons (about 2 hours) on using Claude Code to plan,
+build, test on TestFlight and submit an iPhone app to the App Store, aimed at
+beginners with no coding background. It includes an App Skills toolkit of
+Claude Code skills.
+
+- Course: https://www.udemy.com/course/zero-to-app-store-build-your-first-iphone-app-with-ai/
 
 ## Other services
 
