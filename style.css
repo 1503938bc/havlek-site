@@ -1980,3 +1980,13 @@ a.hero-fork:hover { border-color: var(--olive); box-shadow: var(--shadow-card); 
   .product-band { grid-template-columns: 1fr; padding: 28px; gap: 24px; }
   .product-band-cta .btn { white-space: normal; }
 }
+/* Homepage contact CTA card (form lives on contact.html) */
+.contact-cta-card {
+  background: var(--bone);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+}
+.contact-cta-card .contact-benefits { margin-bottom: 24px; }
+.contact-cta-card .contact-fork { margin-top: 18px; text-align: center; }

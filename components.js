@@ -17,8 +17,8 @@
     { id: 'about',         label: 'About',          href: `${R}/about.html` },
   ];
 
-  // On the homepage the primary CTA scrolls to the on-page form; elsewhere it opens contact.html
-  const CTA     = (page === 'home') ? '#contact' : `${R}/contact.html`;
+  // Every "Talk to an engineer" CTA opens the single contact form on contact.html
+  const CTA     = `${R}/contact.html`;
   const D4M     = 'https://done4me.app/';
 
   function navItem({ id, label, href }) {
