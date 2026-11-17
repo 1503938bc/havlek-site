@@ -4,7 +4,7 @@
 > that provides Forward Deployed Engineers (FDEs) for the AI era: an engineer
 > embeds with a client's team, works inside its real systems and data, and ships
 > AI that runs in production. Havlek also turned its 10+ years of web expertise
-> into Done4Me, an AI employee that builds and maintains small-business websites.
+> into Done4Me, an AI employee that builds and maintains local business websites.
 > Its other products are Photo to Video and Song Booth (iOS apps) and Video
 > Pipeline (AI agent skills). Founded in 2011 by Henry Zou.
 
@@ -28,9 +28,9 @@ problem writes and ships the code; there is no hand-off to a separate team.
 - Services: https://havlek.ca/services.html
 - Contact (free 30-minute call with an engineer): https://havlek.ca/contact.html
 
-## Done4Me (AI employee for small-business websites)
+## Done4Me (AI employee for local business websites)
 
-Havlek's own web expertise, turned into an AI employee. A small-business owner
+Havlek's own web expertise, turned into an AI employee. A local business owner
 describes what they need in plain words, in any language; Done4Me builds the
 site, makes changes and shows a preview. Nothing goes live until the owner
 approves it, and every version is kept.
